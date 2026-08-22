@@ -1,0 +1,28 @@
+{
+  "id": "gen1_auto_continue",
+  "title": "Gen1AutoContinue",
+  "author": "Wild",
+  "summary": "Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window.",
+  "version": "1.2.0",
+  "categories": [
+    "QOL",
+    "UI"
+  ],
+  "tags": [
+    "quality of life",
+    "ui",
+    "boot"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1AutoContinue",
+  "github": "wild1walker/Gen1AutoContinue",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-dev <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [],
+  "games": [
+    "gen1"
+  ],
+  "license": "MIT"
+}

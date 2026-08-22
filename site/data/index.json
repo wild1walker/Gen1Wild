@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T20:58:31Z",
-  "count": 1,
+  "generated_at": "2026-08-22T21:07:02Z",
+  "count": 2,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -17,6 +17,36 @@
     "OTHER"
   ],
   "mods": [
+    {
+      "id": "gen1_auto_continue",
+      "title": "Gen1AutoContinue",
+      "author": "Wild",
+      "summary": "Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window.",
+      "version": "1.2.0",
+      "categories": [
+        "QOL",
+        "UI"
+      ],
+      "tags": [
+        "quality of life",
+        "ui",
+        "boot"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1AutoContinue",
+      "github": "wild1walker/Gen1AutoContinue",
+      "api": 2,
+      "game_version": ">=0.0.0-dev <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [],
+      "games": [
+        "gen1"
+      ],
+      "license": "MIT",
+      "folder": "Wild@gen1_auto_continue",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_auto_continue/description.md",
+      "update_check": "no installable release"
+    },
     {
       "id": "gen1autosave",
       "title": "Gen1AutoSave",
@@ -63,7 +93,7 @@
       },
       "downloads": {
         "total": 11,
-        "as_of": "2026-08-22T20:58:31Z"
+        "as_of": "2026-08-22T21:07:02Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
