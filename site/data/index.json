@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T22:06:28Z",
+  "generated_at": "2026-08-22T22:44:31Z",
   "count": 5,
   "categories": [
     "GAMEPLAY",
@@ -48,7 +48,25 @@
       ],
       "folder": "Wild@Gen1MenuManager",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/description.md",
-      "update_check": "no installable release"
+      "update_check": "ok",
+      "latest": {
+        "version": "0.2.0",
+        "tag": "v0.2.0",
+        "name": "v0.2.0",
+        "prerelease": false,
+        "published_at": "2026-08-22T22:39:20Z",
+        "zip": {
+          "name": "Gen1MenuManager0.2.0.zip",
+          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.0/Gen1MenuManager0.2.0.zip",
+          "size": 16169
+        }
+      },
+      "downloads": {
+        "total": 0,
+        "as_of": "2026-08-22T22:44:29Z"
+      },
+      "first_release": "2026-08-22T22:39:20Z",
+      "last_release": "2026-08-22T22:39:20Z"
     },
     {
       "id": "gen1arena",
@@ -81,7 +99,13 @@
       ],
       "folder": "Wild@gen1arena",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/description.md",
-      "update_check": "no installable release"
+      "update_check": "no installable release",
+      "downloads": {
+        "total": 0,
+        "as_of": "2026-08-22T22:44:30Z"
+      },
+      "first_release": "2026-08-22T22:26:51Z",
+      "last_release": "2026-08-22T22:26:51Z"
     },
     {
       "id": "gen1_auto_continue",
@@ -125,8 +149,8 @@
         }
       },
       "downloads": {
-        "total": 0,
-        "as_of": "2026-08-22T22:06:28Z"
+        "total": 3,
+        "as_of": "2026-08-22T22:44:30Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -176,8 +200,8 @@
         }
       },
       "downloads": {
-        "total": 14,
-        "as_of": "2026-08-22T22:06:28Z"
+        "total": 16,
+        "as_of": "2026-08-22T22:44:31Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
