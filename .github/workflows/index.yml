@@ -1,0 +1,65 @@
+name: Build index
+
+# The feed is metadata about releases that live in other repos, so it goes
+# stale on its own schedule rather than on this repo's: nightly picks up a mod
+# that tagged a release, a push picks up an entry that was edited here.
+#
+# site/** is deliberately not a trigger -- this job commits into it, and a
+# rebuild that changes nothing keeps the old generated_at, so the nightly run
+# is silent unless something actually moved.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'mods/**'
+      - 'tools/**'
+      - '.github/workflows/index.yml'
+  schedule:
+    - cron: '17 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: index
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the feed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 tools/build_index.py
+
+      - name: Check it is a feed the launcher can read
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          feed = json.load(open("site/data/index.json", encoding="utf-8"))
+          assert feed["schema_version"] == 1, feed["schema_version"]
+          assert isinstance(feed["mods"], list) and feed["mods"], "no mods"
+          for m in feed["mods"]:
+              assert m.get("id"), m
+              assert m.get("title"), m
+          print(f"{len(feed['mods'])} mod(s), schema {feed['schema_version']}")
+          PY
+
+      - name: Commit the feed if it moved
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- site/data/index.json; then
+            echo "feed unchanged; nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/index.json
+          git commit -m "Rebuild the mod index feed"
+          git push
