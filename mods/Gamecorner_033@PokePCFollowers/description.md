@@ -14,5 +14,11 @@ top of upstream 0.8.3:
 - The party submenu label fits the eight-character window: `FOLLOWER` for the
   active follower, `FOLLOW?` as the prompt on other party members.
 
-The mod id is unchanged from upstream, since the engine keys enable state,
-per-version options and mod-sync entries by id.
+## Mod id
+
+This build uses the id `PokePCFollowers`, dropping the `_VoxelMerge` suffix the
+upstream mod carries. The engine keys enable state, per-version options and
+mod-sync entries by id, so it installs alongside an existing
+`PokePCFollowers_VoxelMerge` rather than upgrading it: enable state and
+follower-size options start fresh, and anything resolving the old provider id
+will not find this build. Uninstall the old entry first if you do not want both.

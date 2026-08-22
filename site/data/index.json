@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T22:44:31Z",
+  "generated_at": "2026-08-22T23:09:50Z",
   "count": 5,
   "categories": [
     "GAMEPLAY",
@@ -63,8 +63,8 @@
         }
       },
       "downloads": {
-        "total": 0,
-        "as_of": "2026-08-22T22:44:29Z"
+        "total": 1,
+        "as_of": "2026-08-22T23:09:48Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-22T22:39:20Z"
@@ -101,10 +101,22 @@
       "folder": "Wild@gen1arena",
       "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/thumbnail.png",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/description.md",
-      "update_check": "no installable release",
+      "update_check": "ok",
+      "latest": {
+        "version": "0.18.0",
+        "tag": "v0.18.0",
+        "name": "v0.18.0",
+        "prerelease": false,
+        "published_at": "2026-08-22T22:26:51Z",
+        "zip": {
+          "name": "gen1arena0.18.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.18.0/gen1arena0.18.0.zip",
+          "size": 664719
+        }
+      },
       "downloads": {
         "total": 0,
-        "as_of": "2026-08-22T22:44:30Z"
+        "as_of": "2026-08-22T23:09:49Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-22T22:26:51Z"
@@ -153,7 +165,7 @@
       },
       "downloads": {
         "total": 3,
-        "as_of": "2026-08-22T22:44:30Z"
+        "as_of": "2026-08-22T23:09:49Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -204,15 +216,16 @@
       },
       "downloads": {
         "total": 16,
-        "as_of": "2026-08-22T22:44:31Z"
+        "as_of": "2026-08-22T23:09:50Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
     },
     {
-      "id": "PokePCFollowers_VoxelMerge",
-      "title": "PokéPC Followers (W/Voxel Support)",
+      "id": "PokePCFollowers",
+      "title": "PokéPC Followers",
       "author": "Gamecorner_033",
+      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support.",
       "version": "0.8.6",
       "categories": [
         "GAMEPLAY",
@@ -220,15 +233,48 @@
         "ART",
         "LIBRARY"
       ],
+      "tags": [
+        "followers",
+        "overworld",
+        "sprites",
+        "graphics",
+        "voxel"
+      ],
       "repo": "https://github.com/wild1walker/PokePCFollowers",
       "github": "wild1walker/PokePCFollowers",
-      "downloadURL": "https://github.com/wild1walker/PokePCFollowers/releases/download/v0.8.6/PokePCFollowers-0.8.6.zip",
       "api": 2,
+      "game_version": "0.0.0-dev || >=0.1.86 <2.0.0",
       "profile": "content",
-      "folder": "Gamecorner_033@PokePCFollowers_VoxelMerge",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers_VoxelMerge/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers_VoxelMerge/description.md",
-      "update_check": "no installable release"
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "games": [
+        "gen1",
+        "gen2"
+      ],
+      "folder": "Gamecorner_033@PokePCFollowers",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "0.8.6",
+        "tag": "v0.8.6",
+        "name": "PokePCFollowers 0.8.6",
+        "prerelease": false,
+        "published_at": "2026-08-22T22:47:40Z",
+        "zip": {
+          "name": "PokePCFollowers-0.8.6.zip",
+          "url": "https://github.com/wild1walker/PokePCFollowers/releases/download/v0.8.6/PokePCFollowers-0.8.6.zip",
+          "size": 515435
+        }
+      },
+      "downloads": {
+        "total": 0,
+        "as_of": "2026-08-22T23:09:48Z"
+      },
+      "first_release": "2026-08-22T22:47:40Z",
+      "last_release": "2026-08-22T22:47:40Z"
     }
   ]
 }

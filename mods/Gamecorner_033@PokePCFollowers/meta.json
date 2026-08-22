@@ -1,0 +1,34 @@
+{
+  "id": "PokePCFollowers",
+  "title": "PokéPC Followers",
+  "author": "Gamecorner_033",
+  "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support.",
+  "version": "0.8.6",
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "ART",
+    "LIBRARY"
+  ],
+  "tags": [
+    "followers",
+    "overworld",
+    "sprites",
+    "graphics",
+    "voxel"
+  ],
+  "repo": "https://github.com/wild1walker/PokePCFollowers",
+  "github": "wild1walker/PokePCFollowers",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": "0.0.0-dev || >=0.1.86 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "gen1",
+    "gen2"
+  ]
+}

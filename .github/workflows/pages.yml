@@ -1,0 +1,72 @@
+name: Pages
+
+# Publishes site/ so the launcher's first choice of URL answers:
+#
+#   https://wild1walker.github.io/gen1wild-mod-index/data/index.json
+#
+# ModIndex tries that before the raw file on main, so with Pages up the feed
+# is served from a CDN instead of arriving on the fallback.  site/index.html
+# becomes the page at the root.
+#
+# Pages has to be turned on once by hand first:
+#
+#   Settings > Pages > Build and deployment > Source: GitHub Actions
+#
+# enablement: true below asks the API to create the site, but creating one
+# needs admin rights on the repository and the Actions token does not have
+# them ("Resource not accessible by integration").  Once the site exists the
+# step finds it and moves on, so the line is worth keeping and costs nothing.
+#
+# It has to be the Actions source rather than a branch: branch publishing only
+# offers the repo root or /docs, and the feed lives in site/.
+#
+# It runs after Build index as well as on a push, because that job commits a
+# regenerated feed and the deploy has to follow it rather than race it.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/pages.yml'
+  workflow_run:
+    workflows: ["Build index"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable and configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload site/
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+      - name: Deploy
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Say where it landed
+        run: |
+          echo "Pages URL: ${{ steps.deploy.outputs.page_url }}"
+          echo "Feed:      ${{ steps.deploy.outputs.page_url }}data/index.json"

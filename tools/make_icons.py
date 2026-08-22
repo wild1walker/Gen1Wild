@@ -248,7 +248,7 @@ ICONS = {
     "Wild@gen1_auto_continue": auto_continue,
     "Wild@gen1arena": arena,
     "Wild@Gen1MenuManager": menu_manager,
-    "Gamecorner_033@PokePCFollowers_VoxelMerge": poke_pc,
+    "Gamecorner_033@PokePCFollowers": poke_pc,
 }
 
 
