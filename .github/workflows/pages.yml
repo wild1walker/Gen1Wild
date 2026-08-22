@@ -8,10 +8,17 @@ name: Pages
 # is served from a CDN instead of arriving on the fallback.  site/index.html
 # becomes the page at the root.
 #
-# configure-pages enables Pages on the repository itself the first time this
-# runs (enablement: true), which is why there is nothing to switch on by hand.
-# The source becomes "GitHub Actions" rather than a branch, so what ships is
-# whatever this job uploads.
+# Pages has to be turned on once by hand first:
+#
+#   Settings > Pages > Build and deployment > Source: GitHub Actions
+#
+# enablement: true below asks the API to create the site, but creating one
+# needs admin rights on the repository and the Actions token does not have
+# them ("Resource not accessible by integration").  Once the site exists the
+# step finds it and moves on, so the line is worth keeping and costs nothing.
+#
+# It has to be the Actions source rather than a branch: branch publishing only
+# offers the repo root or /docs, and the feed lives in site/.
 #
 # It runs after Build index as well as on a push, because that job commits a
 # regenerated feed and the deploy has to follow it rather than race it.

@@ -111,10 +111,16 @@ https://wild1walker.github.io/gen1wild-mod-index/data/index.json   (Pages)
 https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/site/data/index.json
 ```
 
-`.github/workflows/pages.yml` publishes `site/` to Pages, and enables Pages on
-the repository itself the first time it runs — there is nothing to switch on
-by hand. The source is **GitHub Actions**, not a branch, so what is served is
-whatever that job uploads; `site/index.html` becomes the page at the root.
+`.github/workflows/pages.yml` publishes `site/` to Pages. Pages itself has to
+be turned on once by hand — **Settings > Pages > Build and deployment >
+Source: GitHub Actions** — because creating a Pages site needs admin rights on
+the repository and the Actions token does not have them. After that the
+workflow keeps it up to date on its own.
+
+It has to be the **GitHub Actions** source rather than a branch: branch
+publishing only offers the repo root or `/docs`, and the feed lives in
+`site/`. What is served is whatever the job uploads, so `site/index.html`
+becomes the page at the root.
 
 It deploys after **Build index** as well as on a push, because that job
 commits a regenerated feed and the deploy has to follow it rather than race
