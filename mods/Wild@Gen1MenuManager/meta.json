@@ -1,0 +1,31 @@
+{
+  "id": "Gen1MenuManager",
+  "title": "Gen1 Menu Manager",
+  "author": "Wild",
+  "summary": "Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own.",
+  "version": "0.2.0",
+  "categories": [
+    "TOOL",
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "menu",
+    "start menu",
+    "pc",
+    "quality of life",
+    "pins",
+    "reorder"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1MenuManager",
+  "github": "wild1walker/Gen1MenuManager",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-dev <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [],
+  "games": [
+    "all"
+  ]
+}
