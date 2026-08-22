@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T21:07:02Z",
-  "count": 2,
+  "generated_at": "2026-08-22T22:03:35Z",
+  "count": 3,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -45,7 +45,25 @@
       "license": "MIT",
       "folder": "Wild@gen1_auto_continue",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_auto_continue/description.md",
-      "update_check": "no installable release"
+      "update_check": "ok",
+      "latest": {
+        "version": "1.2.0",
+        "tag": "v1.2.0",
+        "name": "1.2.0",
+        "prerelease": false,
+        "published_at": "2026-08-22T22:02:54Z",
+        "zip": {
+          "name": "gen1_auto_continue-1.2.0.zip",
+          "url": "https://github.com/wild1walker/Gen1AutoContinue/releases/download/v1.2.0/gen1_auto_continue-1.2.0.zip",
+          "size": 6509
+        }
+      },
+      "downloads": {
+        "total": 0,
+        "as_of": "2026-08-22T22:03:34Z"
+      },
+      "first_release": "2026-08-22T22:02:54Z",
+      "last_release": "2026-08-22T22:02:54Z"
     },
     {
       "id": "gen1autosave",
@@ -92,11 +110,31 @@
         }
       },
       "downloads": {
-        "total": 11,
-        "as_of": "2026-08-22T21:07:02Z"
+        "total": 14,
+        "as_of": "2026-08-22T22:03:35Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
+    },
+    {
+      "id": "PokePCFollowers_VoxelMerge",
+      "title": "PokéPC Followers (W/Voxel Support)",
+      "author": "Gamecorner_033",
+      "version": "0.8.6",
+      "categories": [
+        "GAMEPLAY",
+        "CONTENT",
+        "ART",
+        "LIBRARY"
+      ],
+      "repo": "https://github.com/wild1walker/PokePCFollowers",
+      "github": "wild1walker/PokePCFollowers",
+      "downloadURL": "https://github.com/wild1walker/PokePCFollowers/releases/download/v0.8.6/PokePCFollowers-0.8.6.zip",
+      "api": 2,
+      "profile": "content",
+      "folder": "Gamecorner_033@PokePCFollowers_VoxelMerge",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers_VoxelMerge/description.md",
+      "update_check": "no installable release"
     }
   ]
 }
