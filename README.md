@@ -1,7 +1,7 @@
 # gen1wild mod index
 
-A personal mod index for [gen1recomp](https://github.com/bryanthaboi/gen1recomp).
-One link, every mod in it, updates picked up on their own.
+A personal mod index for [gen1recomp](https://github.com/bryanthaboi/gen1recomp):
+my mods, one link, updates picked up on their own.
 
 ## Adding it in the game
 
@@ -30,6 +30,18 @@ refuses an archive whose manifest id is not the one being installed.
   sync. Add the feed and open **FIND MODS** once on each device before sharing
   a mod list.
 
+## Whose mods are in here
+
+Mine, and only mine. Every entry is a mod I maintain, and I am not taking
+listings for anyone else's. That is not a verdict on other people's work --
+adding an index is an act of trust, and this one is only worth trusting
+because the list stays short enough that I can vouch for every line in it. A
+wider list is what the community index is for.
+
+Contributions to my mods are the opposite: always welcome. Issues, fixes,
+art, translations, ideas -- they belong in the mod's own repo, behind the
+**source** link on its card, and I would rather have them than not.
+
 ## What is in here
 
 Metadata, and nothing else. No mod is vendored: every entry points at a
@@ -43,9 +55,12 @@ mods/<Author>@<mod id>/
 site/data/index.json   generated; this is the feed
 ```
 
-## Adding a mod
+## Adding one of mine
 
-Make the folder, write `meta.json`, push. The rest happens on its own.
+Make the folder, write `meta.json`, push. The rest happens on its own. It is
+written down because I forget, not because the index is open -- but it is also
+the shape to match if you are working on one of my mods and the entry needs to
+change with it.
 
 ```jsonc
 {
@@ -128,11 +143,12 @@ https://wild1walker.github.io/gen1wild-mod-index/data/index.json   (Pages)
 https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/site/data/index.json
 ```
 
-`.github/workflows/pages.yml` publishes `site/` to Pages. Pages itself has to
-be turned on once by hand — **Settings > Pages > Build and deployment >
-Source: GitHub Actions** — because creating a Pages site needs admin rights on
-the repository and the Actions token does not have them. After that the
-workflow keeps it up to date on its own.
+`.github/workflows/pages.yml` publishes `site/` to Pages, and Pages is on, so
+the first URL answers. Turning it on was a one-time manual step —
+**Settings > Pages > Build and deployment > Source: GitHub Actions** — because
+creating a Pages site needs admin rights on the repository and the Actions
+token does not have them; the workflow keeps it up to date from here on
+without being touched.
 
 It has to be the **GitHub Actions** source rather than a branch: branch
 publishing only offers the repo root or `/docs`, and the feed lives in
@@ -143,6 +159,20 @@ It deploys after **Build index** as well as on a push, because that job
 commits a regenerated feed and the deploy has to follow it rather than race
 it. The fallback stays a fallback: if Pages is ever off or mid-deploy, the raw
 file on `main` still answers.
+
+## How this is written
+
+Worth saying plainly, because it changes how much weight to give any of it:
+none of this comes from expertise. The code here, and in the mods this index
+lists, is either borrowed from other people's work or vibe coded — generated,
+then baby-sat by me through a long run of trial and error until it did what it
+was supposed to. What is actually mine is the testing, the fixing, and the
+call on what ships.
+
+Two things follow. Credit for the borrowed parts stays with whoever earned it,
+named in the description of the mod that uses it. And a bug report is worth
+more here than on a project with someone's expertise behind it — trial and
+error is how everything else got found, so if something breaks, tell me.
 
 ## Licence
 
