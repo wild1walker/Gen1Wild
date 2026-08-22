@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-22T20:58:31Z",
+  "count": 1,
+  "categories": [
+    "GAMEPLAY",
+    "CONTENT",
+    "BALANCE",
+    "ART",
+    "AUDIO",
+    "UI",
+    "QOL",
+    "TRANSLATION",
+    "TOTAL_CONVERSION",
+    "LIBRARY",
+    "TOOL",
+    "OTHER"
+  ],
+  "mods": [
+    {
+      "id": "gen1autosave",
+      "title": "Gen1AutoSave",
+      "author": "Wild",
+      "summary": "Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups.",
+      "version": "1.2.1",
+      "categories": [
+        "QOL",
+        "GAMEPLAY"
+      ],
+      "tags": [
+        "autosave",
+        "save",
+        "quality of life",
+        "backups",
+        "rollback"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1AutoSave",
+      "github": "wild1walker/Gen1AutoSave",
+      "api": 2,
+      "game_version": ">=0.0.0-dev <1.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [],
+      "conflicts": [
+        "recomp-autosave"
+      ],
+      "license": "MIT",
+      "folder": "Wild@gen1autosave",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1autosave/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1autosave/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "1.2.1",
+        "tag": "v1.2.1",
+        "name": "1.2.1",
+        "prerelease": false,
+        "published_at": "2026-08-22T19:49:52Z",
+        "zip": {
+          "name": "gen1autosave-1.2.1.zip",
+          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.2.1/gen1autosave-1.2.1.zip",
+          "size": 10926
+        }
+      },
+      "downloads": {
+        "total": 11,
+        "as_of": "2026-08-22T20:58:31Z"
+      },
+      "first_release": "2026-08-21T07:44:31Z",
+      "last_release": "2026-08-22T19:49:52Z"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "gen1autosave",
+  "title": "Gen1AutoSave",
+  "author": "Wild",
+  "summary": "Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups.",
+  "version": "1.2.1",
+  "categories": [
+    "QOL",
+    "GAMEPLAY"
+  ],
+  "tags": [
+    "autosave",
+    "save",
+    "quality of life",
+    "backups",
+    "rollback"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1AutoSave",
+  "github": "wild1walker/Gen1AutoSave",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [],
+  "conflicts": [
+    "recomp-autosave"
+  ],
+  "license": "MIT"
+}
