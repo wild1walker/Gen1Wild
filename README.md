@@ -1,7 +1,7 @@
 # gen1wild mod index
 
 A personal mod index for [gen1recomp](https://github.com/bryanthaboi/gen1recomp):
-my mods, one link, updates picked up on their own.
+the mods I maintain, one link, updates picked up on their own.
 
 ## Adding it in the game
 
@@ -32,15 +32,23 @@ refuses an archive whose manifest id is not the one being installed.
 
 ## Whose mods are in here
 
-Mine, and only mine. Every entry is a mod I maintain, and I am not taking
-listings for anyone else's. That is not a verdict on other people's work --
-adding an index is an act of trust, and this one is only worth trusting
-because the list stays short enough that I can vouch for every line in it. A
-wider list is what the community index is for.
+Ones I maintain -- which is not the same as ones I wrote. Some started here.
+Others are someone else's mod that I forked and tweaked until it did what I
+wanted, and those keep the original authors' credit and their own licence:
+PokéPC Followers is a fork of Antigravity and gamecorner33's work, and
+Gen1Arena's backdrops come from the Battle Backgrounds Patch FR. Where a mod
+is a fork, or leans on someone else's art, its description says so and names
+who it belongs to.
 
-Contributions to my mods are the opposite: always welcome. Issues, fixes,
-art, translations, ideas -- they belong in the mod's own repo, behind the
-**source** link on its card, and I would rather have them than not.
+What this index does not take is listings for mods I have nothing to do with.
+Adding an index is an act of trust, and this one is only worth trusting
+because the list stays short enough that I can vouch for every line in it --
+which I can only do for something I maintain. A wider list is what the
+community index is for.
+
+Contributions are the opposite of unwelcome: issues, fixes, art,
+translations, ideas. They belong in the mod's own repo, behind the **source**
+link on its card, and I would rather have them than not.
 
 ## What is in here
 
