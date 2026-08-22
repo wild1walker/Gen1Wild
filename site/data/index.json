@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T22:54:51Z",
+  "generated_at": "2026-08-22T22:59:10Z",
   "count": 5,
   "categories": [
     "GAMEPLAY",
@@ -63,7 +63,7 @@
       },
       "downloads": {
         "total": 1,
-        "as_of": "2026-08-22T22:54:50Z"
+        "as_of": "2026-08-22T22:59:09Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-22T22:39:20Z"
@@ -114,7 +114,7 @@
       },
       "downloads": {
         "total": 0,
-        "as_of": "2026-08-22T22:54:51Z"
+        "as_of": "2026-08-22T22:59:10Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-22T22:26:51Z"
@@ -162,7 +162,7 @@
       },
       "downloads": {
         "total": 3,
-        "as_of": "2026-08-22T22:54:50Z"
+        "as_of": "2026-08-22T22:59:09Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -213,15 +213,16 @@
       },
       "downloads": {
         "total": 16,
-        "as_of": "2026-08-22T22:54:51Z"
+        "as_of": "2026-08-22T22:59:10Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
     },
     {
-      "id": "PokePCFollowers_VoxelMerge",
-      "title": "PokéPC Followers (W/Voxel Support)",
+      "id": "PokePCFollowers",
+      "title": "PokéPC Followers",
       "author": "Gamecorner_033",
+      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support.",
       "version": "0.8.6",
       "categories": [
         "GAMEPLAY",
@@ -229,31 +230,30 @@
         "ART",
         "LIBRARY"
       ],
+      "tags": [
+        "followers",
+        "overworld",
+        "sprites",
+        "graphics",
+        "voxel"
+      ],
       "repo": "https://github.com/wild1walker/PokePCFollowers",
       "github": "wild1walker/PokePCFollowers",
+      "downloadURL": "https://github.com/wild1walker/PokePCFollowers/releases/download/v0.8.6/PokePCFollowers-0.8.6.zip",
       "api": 2,
+      "game_version": "0.0.0-dev || >=0.1.86 <2.0.0",
       "profile": "content",
-      "folder": "Gamecorner_033@PokePCFollowers_VoxelMerge",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers_VoxelMerge/description.md",
-      "update_check": "ok",
-      "latest": {
-        "version": "0.8.6",
-        "tag": "v0.8.6",
-        "name": "PokePCFollowers 0.8.6",
-        "prerelease": false,
-        "published_at": "2026-08-22T22:47:40Z",
-        "zip": {
-          "name": "PokePCFollowers_VoxelMerge-0.8.6.zip",
-          "url": "https://github.com/wild1walker/PokePCFollowers/releases/download/v0.8.6/PokePCFollowers_VoxelMerge-0.8.6.zip",
-          "size": 11572
-        }
-      },
-      "downloads": {
-        "total": 0,
-        "as_of": "2026-08-22T22:54:49Z"
-      },
-      "first_release": "2026-08-22T22:47:40Z",
-      "last_release": "2026-08-22T22:47:40Z"
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "games": [
+        "gen1",
+        "gen2"
+      ],
+      "folder": "Gamecorner_033@PokePCFollowers",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers/description.md",
+      "update_check": "off"
     }
   ]
 }
