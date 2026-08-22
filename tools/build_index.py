@@ -21,7 +21,7 @@ Each mods/<Author>@<id>/ folder holds:
 
     meta.json        required -- id, title, author, version, categories, repo
     description.md   optional -- the long form the card links to
-    thumbnail.png    optional -- 16:9 reads best on a card
+    thumbnail.png    optional -- a square icon, drawn by make_icons.py
 
 Releases are resolved from GitHub so a listing does not go stale: tag a
 release in the mod's own repo and the nightly rebuild picks it up.  Set
