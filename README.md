@@ -39,7 +39,7 @@ release in that mod's own repo.
 mods/<Author>@<mod id>/
   meta.json        required
   description.md   optional — the long form the card links to
-  thumbnail.png    optional — 16:9 reads best on a card
+  thumbnail.png    optional — a square icon; tools/make_icons.py draws them
 site/data/index.json   generated; this is the feed
 ```
 
@@ -89,6 +89,22 @@ shown when no release can be resolved.
 
 Opt out with `"automatic_version_check": false` and give the entry its own
 `"downloadURL"` pointing at an installable `.zip`.
+
+## The icons
+
+Every entry's `thumbnail.png` is a square 512x512 icon drawn by
+
+```sh
+python3 tools/make_icons.py            # redraw every icon
+python3 tools/make_icons.py gen1arena  # ... or just the ones named
+```
+
+Each one is pixel art on a 32x32 grid scaled 16x with no resampling, so a
+drawn pixel stays a hard-edged block, and nothing is read off disk -- no font,
+no source image -- so any machine redraws the same bytes. A new mod gets an
+icon by adding a draw function to that file and listing it in `ICONS` against
+the mod's folder name; run without arguments, the script names any folder it
+has no icon for.
 
 ## Rebuilding the feed
 

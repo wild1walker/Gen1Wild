@@ -47,6 +47,7 @@
         "all"
       ],
       "folder": "Wild@Gen1MenuManager",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/thumbnail.png",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/description.md",
       "update_check": "ok",
       "latest": {
@@ -98,6 +99,7 @@
         "gen1"
       ],
       "folder": "Wild@gen1arena",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/thumbnail.png",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/description.md",
       "update_check": "no installable release",
       "downloads": {
@@ -134,6 +136,7 @@
       ],
       "license": "MIT",
       "folder": "Wild@gen1_auto_continue",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_auto_continue/thumbnail.png",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_auto_continue/description.md",
       "update_check": "ok",
       "latest": {
@@ -223,6 +226,7 @@
       "api": 2,
       "profile": "content",
       "folder": "Gamecorner_033@PokePCFollowers_VoxelMerge",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers_VoxelMerge/thumbnail.png",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers_VoxelMerge/description.md",
       "update_check": "no installable release"
     }
