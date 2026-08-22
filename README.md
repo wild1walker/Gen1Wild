@@ -101,12 +101,25 @@ CI does it on every push that touches `mods/` or `tools/`, nightly at 05:17
 UTC, and on demand from the Actions tab. A rebuild that changes nothing keeps
 the previous `generated_at` and commits nothing, so a quiet night stays quiet.
 
-## GitHub Pages is optional
+## Where it is served from
 
 The launcher tries the Pages URL first and falls back to the raw file on
-`main`, so the index works with Pages switched off. Turning it on for `/site`
-on `main` makes the first URL answer, and serves the small page in
-`site/index.html` that lists what is in here.
+`main`:
+
+```
+https://wild1walker.github.io/gen1wild-mod-index/data/index.json   (Pages)
+https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/site/data/index.json
+```
+
+`.github/workflows/pages.yml` publishes `site/` to Pages, and enables Pages on
+the repository itself the first time it runs — there is nothing to switch on
+by hand. The source is **GitHub Actions**, not a branch, so what is served is
+whatever that job uploads; `site/index.html` becomes the page at the root.
+
+It deploys after **Build index** as well as on a push, because that job
+commits a regenerated feed and the deploy has to follow it rather than race
+it. The fallback stays a fallback: if Pages is ever off or mid-deploy, the raw
+file on `main` still answers.
 
 ## Licence
 
