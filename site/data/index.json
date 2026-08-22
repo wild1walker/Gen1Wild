@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T22:49:15Z",
+  "generated_at": "2026-08-22T22:54:51Z",
   "count": 5,
   "categories": [
     "GAMEPLAY",
@@ -62,8 +62,8 @@
         }
       },
       "downloads": {
-        "total": 0,
-        "as_of": "2026-08-22T22:49:14Z"
+        "total": 1,
+        "as_of": "2026-08-22T22:54:50Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-22T22:39:20Z"
@@ -99,10 +99,22 @@
       ],
       "folder": "Wild@gen1arena",
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/description.md",
-      "update_check": "no installable release",
+      "update_check": "ok",
+      "latest": {
+        "version": "0.18.0",
+        "tag": "v0.18.0",
+        "name": "v0.18.0",
+        "prerelease": false,
+        "published_at": "2026-08-22T22:26:51Z",
+        "zip": {
+          "name": "gen1arena0.18.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.18.0/gen1arena0.18.0.zip",
+          "size": 664719
+        }
+      },
       "downloads": {
         "total": 0,
-        "as_of": "2026-08-22T22:49:15Z"
+        "as_of": "2026-08-22T22:54:51Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-22T22:26:51Z"
@@ -150,7 +162,7 @@
       },
       "downloads": {
         "total": 3,
-        "as_of": "2026-08-22T22:49:15Z"
+        "as_of": "2026-08-22T22:54:50Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -201,7 +213,7 @@
       },
       "downloads": {
         "total": 16,
-        "as_of": "2026-08-22T22:49:15Z"
+        "as_of": "2026-08-22T22:54:51Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
@@ -227,7 +239,7 @@
       "latest": {
         "version": "0.8.6",
         "tag": "v0.8.6",
-        "name": "0.8.6",
+        "name": "PokePCFollowers 0.8.6",
         "prerelease": false,
         "published_at": "2026-08-22T22:47:40Z",
         "zip": {
@@ -238,7 +250,7 @@
       },
       "downloads": {
         "total": 0,
-        "as_of": "2026-08-22T22:49:14Z"
+        "as_of": "2026-08-22T22:54:49Z"
       },
       "first_release": "2026-08-22T22:47:40Z",
       "last_release": "2026-08-22T22:47:40Z"
