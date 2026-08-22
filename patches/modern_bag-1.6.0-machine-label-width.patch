@@ -1,0 +1,51 @@
+Modern Bag — TM/HM machine labels clip past the right edge of the item window
+
+Upstream: FAFF0x/gen1recomp, modern_bag 1.6.0 (modern_bag_v1.6.0.zip)
+Target:   modern_bag/main.lua, compactMachineLabel (line 294 in 1.6.0)
+
+compactMachineLabel budgets the label at 15 characters, which is wider than the
+row actually shows. A 15-character label such as "TM01 MEGA PUNCH" therefore
+fails the "#label > maxChars" test, is never truncated, and draws past the right
+border. A 17-character label is cut to 14 characters plus ".", still 15, so the
+ellipsis lands outside the window and the truncation is invisible.
+
+13 is the widest budget that stops the overflow. The marked branch keeps the
+same 4-character gap below the unmarked budget that 1.6.0 already used, so
+marker behaviour is unchanged.
+
+Verified with Lua 5.4:
+  - applies clean to stock modern_bag_v1.6.0.zip with "patch -p1"
+  - patched main.lua passes "luac5.4 -p"
+  - both shipped test files pass before and after, unmodified:
+      lua5.4 tests/modern_bag_test.lua
+      lua5.4 tests/modern_ui_compat_test.lua
+NOT verified on-device.
+
+Known wart: at width 13 "TM03 SWORDS DANCE" renders "TM03 SWORDS ." — the cut
+lands on a space, so the period floats. Left alone; it is a separate change.
+
+Apply from the unpacked mod's parent directory with: patch -p1 < this file
+
+--- a/modern_bag/main.lua
++++ b/modern_bag/main.lua
+@@ -291,8 +291,19 @@
+   }
+ end
+ 
++-- Machine rows are budgeted by character count. The item window fits fewer
++-- glyphs than the previous budget of 15 assumed, so 15-character labels such
++-- as "TM01 MEGA PUNCH" never reached the truncation branch below and drew
++-- past the right border. 13 is the widest budget that stops the overflow in
++-- the TM/HM pocket; the marked variant keeps the original 4-character gap
++-- reserved for the "P"/"F"/"PF" row markers.
++-- Lower these if your display still clips.
++local MACHINE_LABEL_WIDTH = 13
++local MACHINE_LABEL_WIDTH_MARKED = 9
++
+ local function compactMachineLabel(info, markers)
+-  local maxChars = markers ~= "" and 11 or 15
++  local maxChars = markers ~= "" and MACHINE_LABEL_WIDTH_MARKED
++    or MACHINE_LABEL_WIDTH
+   local label = info.code .. " " .. info.name
+   if #label > maxChars then label = label:sub(1, maxChars - 1) .. "." end
+   return label
