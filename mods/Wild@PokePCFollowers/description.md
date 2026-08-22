@@ -1,6 +1,10 @@
 All 251 Gen 1 and Gen 2 overworld followers with Pokédex-proportional sizing
 and full 3D Voxel compatibility for Red, Blue, Yellow, and Gold.
 
+Originally by **Antigravity & gamecorner33**. This is Wild's fork, listed here
+under Wild because the build and the fixes below are Wild's; the mod itself is
+theirs.
+
 This entry serves a 0.8.6 build carrying three follower HP-handling fixes on
 top of upstream 0.8.3:
 

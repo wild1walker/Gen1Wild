@@ -1,8 +1,8 @@
 {
   "id": "PokePCFollowers",
   "title": "PokéPC Followers",
-  "author": "Gamecorner_033",
-  "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support.",
+  "author": "Wild",
+  "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Fork of the mod by Antigravity & gamecorner33.",
   "version": "0.8.6",
   "categories": [
     "GAMEPLAY",
