@@ -11,7 +11,7 @@ can install and update it, use the community index instead.
 
 | Mod | ID | Version | Repo | Notes |
 |---|---|---|---|---|
-| Gen1AutoSave | `gen1autosave` | 1.2.0 | [wild1walker/Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave) | Submitted to the community index |
+| Gen1AutoSave | `gen1autosave` | 1.2.1 | [wild1walker/Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave) | Community-index submission still open, not merged |
 
 ## Patches to other people's mods
 
