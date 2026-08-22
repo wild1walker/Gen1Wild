@@ -1,74 +1,113 @@
-# gen1wild-mod-index
+# gen1wild mod index
 
-A personal gen1recomp mod index. The launcher reads `index.json` directly, so
-the whole feed is one static file served over https.
+A personal mod index for [gen1recomp](https://github.com/bryanthaboi/gen1recomp).
+One link, every mod in it, updates picked up on their own.
 
-## Feed URL
+## Adding it in the game
+
+**MODS > FIND MODS**, add the index
 
 ```
-https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/index.json
+wild1walker/gen1wild-mod-index
 ```
 
-Add it in the launcher under **Find mods → add index source**. `ModIndex`
-accepts any https URL ending in `.json` that returns the flat
-`{schema_version, count, mods: [...]}` shape.
+The repo page URL, the Pages root and the feed URL itself all resolve to the
+same source, so any of them works in that box.
 
-Two things worth knowing when a mod here shares an id with the community index:
+Adding an index is a deliberate act of trusting whoever publishes it. A
+listing buys a mod no trust it would not otherwise have: installing from a
+card runs the same import an **Import mod .zip** does, and the installer still
+refuses an archive whose manifest id is not the one being installed.
+
+## When a mod here is also in the community index
 
 - **Duplicate ids.** Both feeds are cached separately and merged in the UI
-  layer, so which entry wins is worth eyeballing in **Find mods** rather than
+  layer, so which entry wins is worth eyeballing in **FIND MODS** rather than
   reasoning about. A higher `version` generally helps.
 - **Cache ordering.** Mod-sync resolves entries from *cached* index data before
   it runs its "add index source" step, so a device that has never opened
-  **Find mods** since the feed was added reports the mod missing on its first
-  sync. Add the feed and open **Find mods** once on each device before sharing
+  **FIND MODS** since the feed was added reports the mod missing on its first
+  sync. Add the feed and open **FIND MODS** once on each device before sharing
   a mod list.
 
-## Layout
+## What is in here
+
+Metadata, and nothing else. No mod is vendored: every entry points at a
+release in that mod's own repo.
 
 ```
-index.json                     generated feed — do not hand-edit
-mods/<Author>@<id>/meta.json   one entry per mod, the source of truth
-mods/<Author>@<id>/description.md
-build_index.py                 regenerates index.json from mods/
+mods/<Author>@<mod id>/
+  meta.json        required
+  description.md   optional — the long form the card links to
+  thumbnail.png    optional — 16:9 reads best on a card
+site/data/index.json   generated; this is the feed
 ```
 
 ## Adding a mod
 
-1. Create `mods/<Author>@<id>/meta.json`:
+Make the folder, write `meta.json`, push. The rest happens on its own.
 
-   ```json
-   {
-     "id": "MOD_ID",
-     "title": "Display name",
-     "author": "Original author",
-     "version": "1.0.0",
-     "categories": ["GAMEPLAY"],
-     "repo": "https://github.com/owner/repo",
-     "github": "owner/repo",
-     "downloadURL": "https://github.com/owner/repo/releases/download/v1.0.0/mod.zip",
-     "api": 2,
-     "profile": "content"
-   }
-   ```
+```jsonc
+{
+  "id": "your_mod",              // must equal the mod's manifest.json id
+  "title": "Your Mod",
+  "author": "Wild",
+  "summary": "One line for the card.",
+  "version": "1.0.0",
+  "categories": ["GAMEPLAY"],    // GAMEPLAY CONTENT BALANCE ART AUDIO UI QOL
+                                 // TRANSLATION TOTAL_CONVERSION LIBRARY TOOL OTHER
+  "tags": ["something", "else"],
+  "repo": "https://github.com/wild1walker/YourMod",
+  "github": "wild1walker/YourMod",
+  "api": 2,
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "profile": "content",
+  "license": "MIT"
+}
+```
 
-2. Run `python3 build_index.py` and commit both the entry and `index.json`.
+`id`, `title`, `author`, `version`, `categories` and `repo` are required; the
+build fails and names anything missing.
 
-Rules the installer enforces, so the build script checks what it can:
+Three rules the installer enforces, so an entry is worth checking against them
+before it goes in:
 
 - `id` must match the `id` in the served zip's `manifest.json`, or the
-  installer refuses the download. Keep a fork's id identical to upstream's —
+  installer refuses the download. Keep a fork's id identical to upstream's --
   the engine keys enable state, per-version options and mod-sync entries by id.
-- `downloadURL` must serve a **flat** zip, with `manifest.json` at the root.
-  A GitHub source archive (`/archive/refs/tags/...`) will not work: it nests
-  everything under a top-level directory.
+- The zip must be **flat**, with `manifest.json` at the root. A GitHub source
+  archive (`/archive/refs/tags/...`) will not work: it nests everything under a
+  top-level directory. `modkit.py add-release-workflow` produces the right
+  shape.
 - Ids must be unique within this feed.
 
-`python3 build_index.py --check` fails if `index.json` is out of date, which
-makes it usable as a pre-commit or CI check.
+**Versions look after themselves.** With `github` set, the nightly rebuild
+reads that repo's Releases, takes the newest one with a `.zip` asset, and puts
+it on the card — so tag a release in the mod's own repo and this index catches
+up without being touched. The `version` in `meta.json` is only the fallback
+shown when no release can be resolved.
 
-## Mod entries
+Opt out with `"automatic_version_check": false` and give the entry its own
+`"downloadURL"` pointing at an installable `.zip`.
 
-| Mod | Version | Notes |
-| --- | --- | --- |
-| PokéPC Followers (W/Voxel Support) | 0.8.6 | Fork build carrying three follower HP-handling fixes on top of upstream 0.8.3. Drop this entry if the fixes land upstream, rather than leaving a stale duplicate id in circulation. |
+## Rebuilding the feed
+
+```sh
+python3 tools/build_index.py                    # rebuild
+GITHUB_TOKEN=... python3 tools/build_index.py   # ... without the 60/hour limit
+```
+
+CI does it on every push that touches `mods/` or `tools/`, nightly at 05:17
+UTC, and on demand from the Actions tab. A rebuild that changes nothing keeps
+the previous `generated_at` and commits nothing, so a quiet night stays quiet.
+
+## GitHub Pages is optional
+
+The launcher tries the Pages URL first and falls back to the raw file on
+`main`, so the index works with Pages switched off. Turning it on for `/site`
+on `main` makes the first URL answer, and serves the small page in
+`site/index.html` that lists what is in here.
+
+## Licence
+
+The index metadata is CC0 — take it. Each mod is licensed by its own author.
