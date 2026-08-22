@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T23:09:50Z",
+  "generated_at": "2026-08-22T23:19:06Z",
   "count": 5,
   "categories": [
     "GAMEPLAY",
@@ -64,7 +64,7 @@
       },
       "downloads": {
         "total": 1,
-        "as_of": "2026-08-22T23:09:48Z"
+        "as_of": "2026-08-22T23:19:05Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-22T22:39:20Z"
@@ -116,7 +116,7 @@
       },
       "downloads": {
         "total": 0,
-        "as_of": "2026-08-22T23:09:49Z"
+        "as_of": "2026-08-22T23:19:06Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-22T22:26:51Z"
@@ -165,7 +165,7 @@
       },
       "downloads": {
         "total": 3,
-        "as_of": "2026-08-22T23:09:49Z"
+        "as_of": "2026-08-22T23:19:05Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -216,7 +216,7 @@
       },
       "downloads": {
         "total": 16,
-        "as_of": "2026-08-22T23:09:50Z"
+        "as_of": "2026-08-22T23:19:06Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
@@ -224,8 +224,8 @@
     {
       "id": "PokePCFollowers",
       "title": "PokéPC Followers",
-      "author": "Gamecorner_033",
-      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support.",
+      "author": "Wild",
+      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Fork of the mod by Antigravity & gamecorner33.",
       "version": "0.8.6",
       "categories": [
         "GAMEPLAY",
@@ -253,9 +253,9 @@
         "gen1",
         "gen2"
       ],
-      "folder": "Gamecorner_033@PokePCFollowers",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Gamecorner_033@PokePCFollowers/description.md",
+      "folder": "Wild@PokePCFollowers",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@PokePCFollowers/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@PokePCFollowers/description.md",
       "update_check": "ok",
       "latest": {
         "version": "0.8.6",
@@ -271,7 +271,7 @@
       },
       "downloads": {
         "total": 0,
-        "as_of": "2026-08-22T23:09:48Z"
+        "as_of": "2026-08-22T23:19:05Z"
       },
       "first_release": "2026-08-22T22:47:40Z",
       "last_release": "2026-08-22T22:47:40Z"

@@ -103,8 +103,9 @@ Each one is pixel art on a 32x32 grid scaled 16x with no resampling, so a
 drawn pixel stays a hard-edged block, and nothing is read off disk -- no font,
 no source image -- so any machine redraws the same bytes. A new mod gets an
 icon by adding a draw function to that file and listing it in `ICONS` against
-the mod's folder name; run without arguments, the script names any folder it
-has no icon for.
+the mod's `id` -- an entry's folder carries its author and an author can
+change, an id cannot. Run without arguments the script names any folder it has
+no icon for and exits non-zero, so an entry cannot quietly go without one.
 
 ## Rebuilding the feed
 

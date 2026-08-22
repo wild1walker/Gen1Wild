@@ -11,9 +11,11 @@ on any machine produces byte-identical files.
     python3 tools/make_icons.py gen1arena  # ... or just the ones named
 
 Add a mod by writing one more draw function and listing it in ICONS against
-that mod's folder name.
+that mod's id.  A folder with no icon is named on the way out, and makes the
+run exit non-zero, so an entry cannot quietly go without one.
 """
 
+import json
 import math
 import pathlib
 import struct
@@ -243,12 +245,16 @@ def poke_pc():
     return a, GREEN
 
 
+# Keyed by the mod's id rather than its folder, because an entry's folder
+# carries its author and an author can change -- this one's has twice -- while
+# the id is the thing the installer, mod-sync and the feed all key on and so
+# cannot move without the mod itself moving.
 ICONS = {
-    "Wild@gen1autosave": autosave,
-    "Wild@gen1_auto_continue": auto_continue,
-    "Wild@gen1arena": arena,
-    "Wild@Gen1MenuManager": menu_manager,
-    "Gamecorner_033@PokePCFollowers": poke_pc,
+    "gen1autosave": autosave,
+    "gen1_auto_continue": auto_continue,
+    "gen1arena": arena,
+    "Gen1MenuManager": menu_manager,
+    "PokePCFollowers": poke_pc,
 }
 
 
@@ -288,27 +294,38 @@ def render(art, accent, path):
     png(path, rows)
 
 
+def entries():
+    """Every mod folder, with the id its meta.json claims."""
+    for folder in sorted(p for p in MODS.iterdir() if p.is_dir()):
+        meta = folder / "meta.json"
+        if not meta.exists():
+            continue
+        try:
+            yield folder, json.loads(meta.read_text(encoding="utf-8")).get("id")
+        except json.JSONDecodeError as e:
+            print(f"::error::{folder.name}/meta.json: {e}", file=sys.stderr)
+            yield folder, None
+
+
 def main(argv):
     wanted = [a.lower() for a in argv]
-    drawn = 0
-    for folder, draw in sorted(ICONS.items()):
-        if wanted and not any(w in folder.lower() for w in wanted):
+    drawn, missing = 0, []
+    for folder, mod_id in entries():
+        draw = ICONS.get(mod_id)
+        if draw is None:
+            missing.append(f"{folder.name} ({mod_id or 'no id'})")
             continue
-        out = MODS / folder / "thumbnail.png"
-        if not out.parent.is_dir():
-            print(f"::error::{folder}: no such mod folder", file=sys.stderr)
-            return 1
+        if wanted and not any(w in folder.name.lower() or w in mod_id.lower()
+                              for w in wanted):
+            continue
         art, accent = draw()
-        render(art, accent, out)
-        print(f"  {folder:<44} {SIZE}x{SIZE}")
+        render(art, accent, folder / "thumbnail.png")
+        print(f"  {folder.name:<38} {SIZE}x{SIZE}")
         drawn += 1
-    missing = sorted(p.name for p in MODS.iterdir()
-                     if p.is_dir() and p.name not in ICONS)
-    if missing and not wanted:
-        for m in missing:
-            print(f"  {m:<44} no icon: add a draw function", file=sys.stderr)
+    for m in missing:
+        print(f"  {m:<38} no icon: add a draw function", file=sys.stderr)
     print(f"drew {drawn} icon(s)")
-    return 0
+    return 1 if missing else 0
 
 
 if __name__ == "__main__":
