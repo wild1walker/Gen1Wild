@@ -1,0 +1,31 @@
+{
+  "id": "gen1arena",
+  "title": "Gen1Arena",
+  "author": "Wild",
+  "summary": "2D backdrops behind battles, picked by map, tileset and how the encounter started.",
+  "version": "0.18.0",
+  "categories": [
+    "ART",
+    "CONTENT"
+  ],
+  "tags": [
+    "backdrops",
+    "battle",
+    "backgrounds",
+    "art",
+    "visual"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1Arena",
+  "github": "wild1walker/Gen1Arena",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.37 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "gen1"
+  ]
+}
