@@ -1,8 +1,9 @@
 name: Build index
 
 # The feed is metadata about releases that live in other repos, so it goes
-# stale on its own schedule rather than on this repo's: nightly picks up a mod
-# that tagged a release, a push picks up an entry that was edited here.
+# stale on its own schedule rather than on this repo's: a mod that tags a
+# release says so and the feed rebuilds within the minute, nightly catches
+# anything that did not say, and a push picks up an entry edited here.
 #
 # site/** is deliberately not a trigger -- this job commits into it, and a
 # rebuild that changes nothing keeps the old generated_at, so the nightly run
@@ -15,6 +16,16 @@ on:
       - 'mods/**'
       - 'tools/**'
       - '.github/workflows/index.yml'
+
+  # Each mod's release workflow fires this at us once its release is
+  # published, so a card carries the new version straight away rather than
+  # waiting up to a day for the nightly run to notice.  The payload is a
+  # courtesy for the log -- the build reads every entry's releases from the
+  # GitHub API regardless of who woke it, so a dispatch naming one mod still
+  # produces exactly the feed the nightly run would have.
+  repository_dispatch:
+    types: [mod-released]
+
   schedule:
     - cron: '17 5 * * *'
   workflow_dispatch:
@@ -31,6 +42,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Say who woke this
+        if: github.event_name == 'repository_dispatch'
+        env:
+          MOD: ${{ github.event.client_payload.mod }}
+          VERSION: ${{ github.event.client_payload.version }}
+          SENDER: ${{ github.event.client_payload.repository }}
+        run: echo "Rebuilding because ${SENDER:-a mod repo} published ${MOD:-a mod} ${VERSION:-}"
 
       - name: Build the feed
         env:
