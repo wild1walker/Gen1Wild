@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T01:12:55Z",
+  "generated_at": "2026-08-23T01:13:28Z",
   "count": 6,
   "categories": [
     "GAMEPLAY",
@@ -64,7 +64,7 @@
       },
       "downloads": {
         "total": 5,
-        "as_of": "2026-08-23T01:12:55Z"
+        "as_of": "2026-08-23T01:13:28Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-23T00:05:23Z"
@@ -113,7 +113,7 @@
       },
       "downloads": {
         "total": 8,
-        "as_of": "2026-08-23T01:12:54Z"
+        "as_of": "2026-08-23T01:13:27Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -164,7 +164,7 @@
       },
       "downloads": {
         "total": 18,
-        "as_of": "2026-08-23T01:12:55Z"
+        "as_of": "2026-08-23T01:13:28Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
@@ -203,23 +203,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.2.0",
-        "tag": "v0.2.0",
-        "name": "v0.2.0",
+        "version": "0.2.1",
+        "tag": "v0.2.1",
+        "name": "0.2.1",
         "prerelease": false,
-        "published_at": "2026-08-22T22:39:20Z",
+        "published_at": "2026-08-23T01:13:24Z",
         "zip": {
-          "name": "Gen1MenuManager0.2.0.zip",
-          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.0/Gen1MenuManager0.2.0.zip",
-          "size": 16169
+          "name": "Gen1MenuManager-0.2.1.zip",
+          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.1/Gen1MenuManager-0.2.1.zip",
+          "size": 16285
         }
       },
       "downloads": {
         "total": 5,
-        "as_of": "2026-08-23T01:12:54Z"
+        "as_of": "2026-08-23T01:13:26Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
-      "last_release": "2026-08-22T22:39:20Z"
+      "last_release": "2026-08-23T01:13:24Z"
     },
     {
       "id": "gen1_modern_bag",
@@ -271,7 +271,7 @@
       },
       "downloads": {
         "total": 2,
-        "as_of": "2026-08-23T01:12:55Z"
+        "as_of": "2026-08-23T01:13:27Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-23T00:21:04Z"
@@ -326,7 +326,7 @@
       },
       "downloads": {
         "total": 2,
-        "as_of": "2026-08-23T01:12:54Z"
+        "as_of": "2026-08-23T01:13:26Z"
       },
       "first_release": "2026-08-22T22:47:40Z",
       "last_release": "2026-08-22T22:47:40Z"
