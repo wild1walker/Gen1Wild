@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T01:04:06Z",
+  "generated_at": "2026-08-23T01:12:55Z",
   "count": 6,
   "categories": [
     "GAMEPLAY",
@@ -17,58 +17,6 @@
     "OTHER"
   ],
   "mods": [
-    {
-      "id": "Gen1MenuManager",
-      "title": "Gen1 Menu Manager",
-      "author": "Wild",
-      "summary": "Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own.",
-      "version": "0.2.0",
-      "categories": [
-        "TOOL",
-        "UI",
-        "QOL"
-      ],
-      "tags": [
-        "menu",
-        "start menu",
-        "pc",
-        "quality of life",
-        "pins",
-        "reorder"
-      ],
-      "repo": "https://github.com/wild1walker/Gen1MenuManager",
-      "github": "wild1walker/Gen1MenuManager",
-      "api": 2,
-      "game_version": ">=0.0.0-dev <2.0.0",
-      "profile": "content",
-      "affects_link": false,
-      "permissions": [],
-      "games": [
-        "all"
-      ],
-      "folder": "Wild@Gen1MenuManager",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/description.md",
-      "update_check": "ok",
-      "latest": {
-        "version": "0.2.0",
-        "tag": "v0.2.0",
-        "name": "v0.2.0",
-        "prerelease": false,
-        "published_at": "2026-08-22T22:39:20Z",
-        "zip": {
-          "name": "Gen1MenuManager0.2.0.zip",
-          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.0/Gen1MenuManager0.2.0.zip",
-          "size": 16169
-        }
-      },
-      "downloads": {
-        "total": 5,
-        "as_of": "2026-08-23T01:04:04Z"
-      },
-      "first_release": "2026-08-22T22:39:20Z",
-      "last_release": "2026-08-22T22:39:20Z"
-    },
     {
       "id": "gen1arena",
       "title": "Gen1Arena",
@@ -116,7 +64,7 @@
       },
       "downloads": {
         "total": 5,
-        "as_of": "2026-08-23T01:04:05Z"
+        "as_of": "2026-08-23T01:12:55Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-23T00:05:23Z"
@@ -165,7 +113,7 @@
       },
       "downloads": {
         "total": 8,
-        "as_of": "2026-08-23T01:04:05Z"
+        "as_of": "2026-08-23T01:12:54Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -216,10 +164,62 @@
       },
       "downloads": {
         "total": 18,
-        "as_of": "2026-08-23T01:04:06Z"
+        "as_of": "2026-08-23T01:12:55Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
+    },
+    {
+      "id": "Gen1MenuManager",
+      "title": "Gen1MenuManager",
+      "author": "Wild",
+      "summary": "Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own.",
+      "version": "0.2.0",
+      "categories": [
+        "TOOL",
+        "UI",
+        "QOL"
+      ],
+      "tags": [
+        "menu",
+        "start menu",
+        "pc",
+        "quality of life",
+        "pins",
+        "reorder"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1MenuManager",
+      "github": "wild1walker/Gen1MenuManager",
+      "api": 2,
+      "game_version": ">=0.0.0-dev <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [],
+      "games": [
+        "all"
+      ],
+      "folder": "Wild@Gen1MenuManager",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "0.2.0",
+        "tag": "v0.2.0",
+        "name": "v0.2.0",
+        "prerelease": false,
+        "published_at": "2026-08-22T22:39:20Z",
+        "zip": {
+          "name": "Gen1MenuManager0.2.0.zip",
+          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.0/Gen1MenuManager0.2.0.zip",
+          "size": 16169
+        }
+      },
+      "downloads": {
+        "total": 5,
+        "as_of": "2026-08-23T01:12:54Z"
+      },
+      "first_release": "2026-08-22T22:39:20Z",
+      "last_release": "2026-08-22T22:39:20Z"
     },
     {
       "id": "gen1_modern_bag",
@@ -270,8 +270,8 @@
         }
       },
       "downloads": {
-        "total": 1,
-        "as_of": "2026-08-23T01:04:05Z"
+        "total": 2,
+        "as_of": "2026-08-23T01:12:55Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-23T00:21:04Z"
@@ -326,7 +326,7 @@
       },
       "downloads": {
         "total": 2,
-        "as_of": "2026-08-23T01:04:04Z"
+        "as_of": "2026-08-23T01:12:54Z"
       },
       "first_release": "2026-08-22T22:47:40Z",
       "last_release": "2026-08-22T22:47:40Z"
