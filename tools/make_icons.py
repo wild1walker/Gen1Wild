@@ -249,12 +249,38 @@ def poke_pc():
 # carries its author and an author can change -- this one's has twice -- while
 # the id is the thing the installer, mod-sync and the feed all key on and so
 # cannot move without the mod itself moving.
+def modern_bag():
+    """The bag itself: flap, clasp, and a pocket down the side."""
+    a = Art()
+    hide = (0x8a, 0x5c, 0x33)
+    hide_d = (0x55, 0x36, 0x1c)
+    hide_l = (0xa8, 0x74, 0x44)
+    a.arc(16, 13, 4.6, 6.2, 25, 155, hide_d)               # the handle
+    a.rect(5, 13, 26, 28, hide)                            # body
+    a.rect(5, 26, 26, 28, hide_d)
+    for x, y in ((5, 13), (26, 13), (5, 28), (26, 28)):    # softened corners
+        a.px(x, y, BG)
+    a.rect(4, 12, 27, 19, hide_d)                          # flap over it
+    a.rect(4, 12, 27, 13, hide_l)
+    for x in (4, 27):
+        a.px(x, 12, BG)
+        a.px(x, 19, BG)
+    a.rect(5, 18, 26, 18, GREEN)                           # piping
+    a.rect(14, 17, 17, 22, AMBER)                          # the clasp
+    a.rect(15, 19, 16, 20, hide_d)
+    for x in (9, 20):                                      # straps, each
+        a.rect(x, 21, x + 2, 27, hide_d)                   # through a keeper
+        a.rect(x, 23, x + 2, 24, AMBER)
+    return a, AMBER
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
     "gen1arena": arena,
     "Gen1MenuManager": menu_manager,
     "PokePCFollowers": poke_pc,
+    "gen1_modern_bag": modern_bag,
 }
 
 
