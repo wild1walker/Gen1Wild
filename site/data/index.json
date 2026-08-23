@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-22T23:42:16Z",
+  "generated_at": "2026-08-23T00:07:09Z",
   "count": 5,
   "categories": [
     "GAMEPLAY",
@@ -64,7 +64,7 @@
       },
       "downloads": {
         "total": 5,
-        "as_of": "2026-08-22T23:42:15Z"
+        "as_of": "2026-08-23T00:07:07Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-22T22:39:20Z"
@@ -103,23 +103,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.18.0",
-        "tag": "v0.18.0",
-        "name": "v0.18.0",
+        "version": "0.18.1",
+        "tag": "v0.18.1",
+        "name": "v0.18.1",
         "prerelease": false,
-        "published_at": "2026-08-22T22:26:51Z",
+        "published_at": "2026-08-23T00:05:23Z",
         "zip": {
-          "name": "gen1arena0.18.0.zip",
-          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.18.0/gen1arena0.18.0.zip",
-          "size": 664719
+          "name": "gen1arena0.18.1.zip",
+          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.18.1/gen1arena0.18.1.zip",
+          "size": 664885
         }
       },
       "downloads": {
         "total": 3,
-        "as_of": "2026-08-22T23:42:16Z"
+        "as_of": "2026-08-23T00:07:08Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
-      "last_release": "2026-08-22T22:26:51Z"
+      "last_release": "2026-08-23T00:05:23Z"
     },
     {
       "id": "gen1_auto_continue",
@@ -165,7 +165,7 @@
       },
       "downloads": {
         "total": 8,
-        "as_of": "2026-08-22T23:42:15Z"
+        "as_of": "2026-08-23T00:07:08Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-22T22:02:54Z"
@@ -216,7 +216,7 @@
       },
       "downloads": {
         "total": 18,
-        "as_of": "2026-08-22T23:42:16Z"
+        "as_of": "2026-08-23T00:07:09Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-22T19:49:52Z"
@@ -270,8 +270,8 @@
         }
       },
       "downloads": {
-        "total": 1,
-        "as_of": "2026-08-22T23:42:15Z"
+        "total": 2,
+        "as_of": "2026-08-23T00:07:08Z"
       },
       "first_release": "2026-08-22T22:47:40Z",
       "last_release": "2026-08-22T22:47:40Z"
