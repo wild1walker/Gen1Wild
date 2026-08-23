@@ -136,22 +136,25 @@ shown when no release can be resolved.
 Opt out with `"automatic_version_check": false` and give the entry its own
 `"downloadURL"` pointing at an installable `.zip`.
 
-## The artwork
+## The wordmark
 
-The wordmark at the top of this file is hand-made and lives at
-`docs/banner.png`. The rest of the family's wordmarks are drawn to sit beside
-it in Titan One, and the strip under it is built from the mods' own icons:
+The wordmark at the top of this file is hand-made, and it is the whole
+family's -- every mod repo carries the same file at `docs/banner.png` and
+leads with it, under its own name. One mark, seven repos: a reader who has
+seen one of these mods recognises the next one on sight, which is the entire
+job a mark has.
+
+It is committed as artwork, so there is no tool that redraws it. Replacing it
+means replacing that one PNG in each repo.
+
+The strip of icons under it is generated, from the mods' own thumbnails:
 
 ```sh
-python3 tools/make_banner.py            # redraw every mod's wordmark
-python3 tools/make_banner.py Gen1Arena  # ... or just the ones named
-python3 tools/make_lineup.py            # redraw the strip of icons
+python3 tools/make_lineup.py
 ```
 
-Both write into `site/banners/`, and each mod repo carries a copy of its own
-wordmark at `docs/banner.png`. They need `Pillow`, `numpy` and `scipy`, and
-they fetch their letterforms from Google Fonts once into `tools/.cache/`,
-which is not committed.
+It writes `site/banners/lineup.png`, needs `Pillow`, and fetches its label
+font from Google Fonts once into `tools/.cache/`, which is not committed.
 
 ## The icons
 
