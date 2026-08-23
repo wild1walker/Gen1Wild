@@ -1,7 +1,30 @@
-# Gen1Wild
+<p align="center">
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="docs/banner.png" alt="Gen1Wild" width="560"></a>
+</p>
 
-A personal mod index for [gen1recomp](https://github.com/bryanthaboi/gen1recomp):
-the mods I maintain, one link, updates picked up on their own.
+<p align="center">
+  <b>A personal mod index for <a href="https://github.com/bryanthaboi/gen1recomp">gen1recomp</a></b><br>
+  The mods I maintain, one link, updates picked up on their own.
+</p>
+
+<p align="center">
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1Follower, Gen1MenuManager and Gen1ModernBag" width="920"></a>
+</p>
+
+## What is in the index
+
+| | Mod | What it does |
+|---|---|---|
+| <img src="mods/Wild@gen1arena/thumbnail.png" width="54" alt=""> | **[Gen1Arena](https://github.com/wild1walker/Gen1Arena)** | 2D backdrops behind battles, picked by map, tileset and how the encounter started. |
+| <img src="mods/Wild@gen1_auto_continue/thumbnail.png" width="54" alt=""> | **[Gen1AutoContinue](https://github.com/wild1walker/Gen1AutoContinue)** | Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window. |
+| <img src="mods/Wild@gen1autosave/thumbnail.png" width="54" alt=""> | **[Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave)** | Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups. |
+| <img src="mods/Wild@Gen1Follower/thumbnail.png" width="54" alt=""> | **[Gen1Follower](https://github.com/wild1walker/Gen1Follower)** | All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33. |
+| <img src="mods/Wild@Gen1MenuManager/thumbnail.png" width="54" alt=""> | **[Gen1MenuManager](https://github.com/wild1walker/Gen1MenuManager)** | Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own. |
+| <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
+
+Every icon above is the one the card carries in **FIND MODS**, drawn by
+[`tools/make_icons.py`](tools/make_icons.py). No mod is vendored here: each
+entry points at a release in that mod's own repo.
 
 ## Adding it in the game
 
@@ -112,6 +135,37 @@ shown when no release can be resolved.
 
 Opt out with `"automatic_version_check": false` and give the entry its own
 `"downloadURL"` pointing at an installable `.zip`.
+
+## The wordmark
+
+The wordmark at the top of this file is hand-made, and it is the whole
+family's -- every mod repo carries the same file at `docs/banner.png` and
+leads with it, under its own name. One mark, seven repos: a reader who has
+seen one of these mods recognises the next one on sight, which is the entire
+job a mark has.
+
+It is committed as artwork, so there is no tool that redraws it. Replacing it
+means replacing that one PNG in each repo.
+
+The strip of icons under it is generated, from the mods' own thumbnails:
+
+```sh
+python3 tools/make_lineup.py
+```
+
+It writes `site/banners/lineup.png` -- the plain one, above -- and one
+`lineup-<Mod>.png` per mod, which is the same strip with that mod ringed
+under a **Check out my other mods!** line. Each mod repo carries its own as
+`docs/lineup.png` and links it, and its wordmark, back to the live index, so
+a reader who lands on any one mod can see the rest of the family and where
+the page they are on sits in it.
+
+Both need `Pillow`, and fetch the label font from Google Fonts once into
+`tools/.cache/`, which is not committed.
+
+A new mod is picked up automatically: it needs a `meta.json` and a
+`thumbnail.png` like any other entry, and the next run draws it into every
+strip.
 
 ## The icons
 
