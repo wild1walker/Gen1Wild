@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T01:52:25Z",
+  "generated_at": "2026-08-23T04:15:05Z",
   "count": 6,
   "categories": [
     "GAMEPLAY",
@@ -63,8 +63,8 @@
         }
       },
       "downloads": {
-        "total": 5,
-        "as_of": "2026-08-23T01:52:25Z"
+        "total": 6,
+        "as_of": "2026-08-23T04:15:05Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-23T00:05:23Z"
@@ -100,23 +100,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_auto_continue/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.2.0",
-        "tag": "v1.2.0",
-        "name": "1.2.0",
+        "version": "1.2.1",
+        "tag": "v1.2.1",
+        "name": "1.2.1",
         "prerelease": false,
-        "published_at": "2026-08-22T22:02:54Z",
+        "published_at": "2026-08-23T02:58:25Z",
         "zip": {
-          "name": "gen1_auto_continue-1.2.0.zip",
-          "url": "https://github.com/wild1walker/Gen1AutoContinue/releases/download/v1.2.0/gen1_auto_continue-1.2.0.zip",
-          "size": 6509
+          "name": "gen1_auto_continue-1.2.1.zip",
+          "url": "https://github.com/wild1walker/Gen1AutoContinue/releases/download/v1.2.1/gen1_auto_continue-1.2.1.zip",
+          "size": 444980
         }
       },
       "downloads": {
-        "total": 8,
-        "as_of": "2026-08-23T01:52:24Z"
+        "total": 9,
+        "as_of": "2026-08-23T04:15:04Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
-      "last_release": "2026-08-22T22:02:54Z"
+      "last_release": "2026-08-23T02:58:25Z"
     },
     {
       "id": "gen1autosave",
@@ -151,23 +151,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1autosave/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.2.1",
-        "tag": "v1.2.1",
-        "name": "1.2.1",
+        "version": "1.2.3",
+        "tag": "v1.2.3",
+        "name": "1.2.3",
         "prerelease": false,
-        "published_at": "2026-08-22T19:49:52Z",
+        "published_at": "2026-08-23T04:03:26Z",
         "zip": {
-          "name": "gen1autosave-1.2.1.zip",
-          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.2.1/gen1autosave-1.2.1.zip",
-          "size": 10926
+          "name": "gen1autosave-1.2.3.zip",
+          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.2.3/gen1autosave-1.2.3.zip",
+          "size": 10936
         }
       },
       "downloads": {
-        "total": 18,
-        "as_of": "2026-08-23T01:52:25Z"
+        "total": 20,
+        "as_of": "2026-08-23T04:15:05Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
-      "last_release": "2026-08-22T19:49:52Z"
+      "last_release": "2026-08-23T04:03:26Z"
     },
     {
       "id": "Gen1Follower",
@@ -218,8 +218,8 @@
         }
       },
       "downloads": {
-        "total": 0,
-        "as_of": "2026-08-23T01:52:23Z"
+        "total": 2,
+        "as_of": "2026-08-23T04:15:03Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-23T01:37:36Z"
@@ -258,23 +258,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1MenuManager/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.2.2",
-        "tag": "v0.2.2",
-        "name": "0.2.2",
+        "version": "0.2.3",
+        "tag": "v0.2.3",
+        "name": "0.2.3",
         "prerelease": false,
-        "published_at": "2026-08-23T01:18:46Z",
+        "published_at": "2026-08-23T02:58:29Z",
         "zip": {
-          "name": "Gen1MenuManager-0.2.2.zip",
-          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.2/Gen1MenuManager-0.2.2.zip",
-          "size": 16285
+          "name": "Gen1MenuManager-0.2.3.zip",
+          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.3/Gen1MenuManager-0.2.3.zip",
+          "size": 455048
         }
       },
       "downloads": {
-        "total": 7,
-        "as_of": "2026-08-23T01:52:24Z"
+        "total": 8,
+        "as_of": "2026-08-23T04:15:04Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
-      "last_release": "2026-08-23T01:18:46Z"
+      "last_release": "2026-08-23T02:58:29Z"
     },
     {
       "id": "gen1_modern_bag",
@@ -325,8 +325,8 @@
         }
       },
       "downloads": {
-        "total": 3,
-        "as_of": "2026-08-23T01:52:25Z"
+        "total": 4,
+        "as_of": "2026-08-23T04:15:04Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-23T00:21:04Z"
