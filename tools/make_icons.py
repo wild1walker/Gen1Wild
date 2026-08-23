@@ -168,6 +168,37 @@ FOLLOWER = [
     ".#...#.",
 ]
 
+# You, from behind, mid-stride: cap, hair under it, and the boots below.
+TRAINER = [
+    "...#####...",
+    "..#RRRRR#..",
+    ".#RRRRRRR#.",
+    "#RRRRRRRRR#",
+    "#RRRRRRRRR#",
+    "#HHHHHHHHH#",
+    ".#HHHHHHH#.",
+    "..#SSSSS#..",
+    ".#DSSSSSD#.",
+    ".#DSSSSSD#.",
+    "..#SSSSS#..",
+    "..#PPPPP#..",
+    "..#P#.#P#..",
+]
+
+# The one following you: ears up, cheeks lit, a step behind.
+PARTY_MON = [
+    "..##...##..",
+    "..#Y...Y#..",
+    ".#YY...YY#.",
+    ".#YY###YY#.",
+    "#YYYYYYYYY#",
+    "#Y#YYYYY#Y#",
+    "#oYYYYYYYo#",
+    ".#YY###YY#.",
+    "..#YYYYY#..",
+    "...#...#...",
+]
+
 
 # --------------------------------------------------------------------------
 # the icons
@@ -229,19 +260,38 @@ def menu_manager():
     return a, GREEN
 
 
-def poke_pc():
-    """The PC the party comes out of, and the party that follows it."""
+def gen1_follower():
+    """The thing the mod is: a party member walking the route behind you."""
     a = Art()
-    a.rect(4, 1, 27, 17, PANEL)
-    a.frame(4, 1, 27, 17, STEEL)
-    a.rect(7, 3, 24, 15, (0x1b, 0x2c, 0x12))               # screen
-    a.rect(7, 3, 24, 3, (0x24, 0x3a, 0x18))
-    stamp(a, 10, 4, SMALL_BALL, {"#": (0x0d, 0x15, 0x0a), "R": RED,
-                                 "W": WHITE, "O": WHITE})
-    a.rect(13, 18, 18, 20, STEEL)                          # stand
-    a.rect(9, 21, 22, 22, MUTED)
-    for x in (2, 12, 22):                                  # the party, out
-        stamp(a, x, 24, FOLLOWER, {"#": GREEN_D, "o": WHITE})
+    grass = (0x24, 0x33, 0x18)
+    grass_l = (0x33, 0x46, 0x1e)
+    grass_d = (0x18, 0x24, 0x14)
+    dirt = (0x6a, 0x52, 0x30)
+    dirt_d = (0x46, 0x36, 0x1f)
+
+    a.rect(0, 0, 31, 31, grass)                     # the route, seen from
+    a.rect(4, 0, 27, 31, dirt_d)                    # above: a path, with
+    a.rect(5, 0, 26, 31, dirt)                      # grass either side of it
+    for cx, cy in ((1.5, 4), (30, 11), (2, 20), (29.5, 27), (1, 30)):
+        a.disc(cx, cy, 2.4, grass_d)                # hedges off the path
+    for x, y in ((2, 12), (29, 3), (1, 26), (30, 19)):
+        a.px(x, y, grass_l)
+    for x, y in ((6, 7), (25, 14), (7, 23), (24, 29), (6, 30), (25, 2)):
+        a.px(x, y, dirt_d)                          # trodden dirt
+
+    a.ellipse(15.5, 16, 4.6, 1.3, dirt_d)           # both cast a shadow onto
+    a.ellipse(15.5, 29.5, 4.4, 1.3, dirt_d)         # the path they stand on
+    stamp(a, 10, 2, TRAINER, {"#": INK, "R": RED, "H": (0x6b, 0x47, 0x2a),
+                              "S": (0xe6, 0xe9, 0xe4), "D": (0xa8, 0xb0, 0xa5),
+                              "P": (0x2f, 0x3a, 0x4d)})
+    a.rect(8, 26, 10, 27, AMBER)                    # the follower's tail,
+    a.rect(6, 24, 9, 25, AMBER)                     # trailing behind it
+    a.px(7, 27, INK)
+    a.px(8, 28, INK)
+    a.px(5, 24, INK)
+    a.px(5, 25, INK)
+    a.px(6, 23, INK)
+    stamp(a, 10, 19, PARTY_MON, {"#": INK, "Y": AMBER, "o": RED})
     return a, GREEN
 
 
@@ -279,7 +329,7 @@ ICONS = {
     "gen1_auto_continue": auto_continue,
     "gen1arena": arena,
     "Gen1MenuManager": menu_manager,
-    "PokePCFollowers": poke_pc,
+    "Gen1Follower": gen1_follower,
     "gen1_modern_bag": modern_bag,
 }
 

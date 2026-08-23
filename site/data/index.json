@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T01:31:44Z",
+  "generated_at": "2026-08-23T01:48:31Z",
   "count": 6,
   "categories": [
     "GAMEPLAY",
@@ -170,6 +170,61 @@
       "last_release": "2026-08-22T19:49:52Z"
     },
     {
+      "id": "Gen1Follower",
+      "title": "Gen1Follower",
+      "author": "Wild",
+      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33.",
+      "version": "1.0.0",
+      "categories": [
+        "GAMEPLAY",
+        "CONTENT",
+        "ART",
+        "LIBRARY"
+      ],
+      "tags": [
+        "followers",
+        "overworld",
+        "sprites",
+        "graphics",
+        "voxel"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1Follower",
+      "github": "wild1walker/Gen1Follower",
+      "api": 2,
+      "game_version": "0.0.0-dev || >=0.1.86 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "games": [
+        "gen1",
+        "gen2"
+      ],
+      "folder": "Wild@Gen1Follower",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Follower/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Follower/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "1.0.0",
+        "tag": "v1.0.0",
+        "name": "Gen1Follower 1.0.0",
+        "prerelease": false,
+        "published_at": "2026-08-23T01:37:36Z",
+        "zip": {
+          "name": "Gen1Follower-1.0.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Follower/releases/download/v1.0.0/Gen1Follower-1.0.0.zip",
+          "size": 512613
+        }
+      },
+      "downloads": {
+        "total": 0,
+        "as_of": "2026-08-23T01:48:29Z"
+      },
+      "first_release": "2026-08-23T01:37:36Z",
+      "last_release": "2026-08-23T01:37:36Z"
+    },
+    {
       "id": "Gen1MenuManager",
       "title": "Gen1MenuManager",
       "author": "Wild",
@@ -275,61 +330,6 @@
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-23T00:21:04Z"
-    },
-    {
-      "id": "PokePCFollowers",
-      "title": "PokéPC Followers",
-      "author": "Wild",
-      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Fork of the mod by Antigravity & gamecorner33.",
-      "version": "0.8.6",
-      "categories": [
-        "GAMEPLAY",
-        "CONTENT",
-        "ART",
-        "LIBRARY"
-      ],
-      "tags": [
-        "followers",
-        "overworld",
-        "sprites",
-        "graphics",
-        "voxel"
-      ],
-      "repo": "https://github.com/wild1walker/PokePCFollowers",
-      "github": "wild1walker/PokePCFollowers",
-      "api": 2,
-      "game_version": "0.0.0-dev || >=0.1.86 <2.0.0",
-      "profile": "content",
-      "affects_link": false,
-      "permissions": [
-        "engine_internals"
-      ],
-      "games": [
-        "gen1",
-        "gen2"
-      ],
-      "folder": "Wild@PokePCFollowers",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@PokePCFollowers/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@PokePCFollowers/description.md",
-      "update_check": "ok",
-      "latest": {
-        "version": "0.8.6",
-        "tag": "v0.8.6",
-        "name": "PokePCFollowers 0.8.6",
-        "prerelease": false,
-        "published_at": "2026-08-22T22:47:40Z",
-        "zip": {
-          "name": "PokePCFollowers-0.8.6.zip",
-          "url": "https://github.com/wild1walker/PokePCFollowers/releases/download/v0.8.6/PokePCFollowers-0.8.6.zip",
-          "size": 515435
-        }
-      },
-      "downloads": {
-        "total": 2,
-        "as_of": "2026-08-23T01:31:43Z"
-      },
-      "first_release": "2026-08-22T22:47:40Z",
-      "last_release": "2026-08-22T22:47:40Z"
     }
   ]
 }

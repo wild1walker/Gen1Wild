@@ -1,9 +1,9 @@
 {
-  "id": "PokePCFollowers",
-  "title": "PokéPC Followers",
+  "id": "Gen1Follower",
+  "title": "Gen1Follower",
   "author": "Wild",
-  "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Fork of the mod by Antigravity & gamecorner33.",
-  "version": "0.8.6",
+  "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33.",
+  "version": "1.0.0",
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -17,8 +17,8 @@
     "graphics",
     "voxel"
   ],
-  "repo": "https://github.com/wild1walker/PokePCFollowers",
-  "github": "wild1walker/PokePCFollowers",
+  "repo": "https://github.com/wild1walker/Gen1Follower",
+  "github": "wild1walker/Gen1Follower",
   "automatic_version_check": true,
   "api": 2,
   "game_version": "0.0.0-dev || >=0.1.86 <2.0.0",

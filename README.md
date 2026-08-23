@@ -33,12 +33,12 @@ refuses an archive whose manifest id is not the one being installed.
 ## Whose mods are in here
 
 Ones I maintain -- which is not the same as ones I wrote. Some started here.
-Others are someone else's mod that I forked and tweaked until it did what I
+Others are someone else's mod that I took and tweaked until it did what I
 wanted, and those keep the original authors' credit and their own licence:
-PokéPC Followers is a fork of Antigravity and gamecorner33's work, and
-Gen1Arena's backdrops come from the Battle Backgrounds Patch FR. Where a mod
-is a fork, or leans on someone else's art, its description says so and names
-who it belongs to.
+Gen1Follower is built from Antigravity and gamecorner33's PokéPC Followers,
+and Gen1Arena's backdrops come from the Battle Backgrounds Patch FR. Where a
+mod started as someone else's, or leans on their art, its description says so
+and names who it belongs to.
 
 What this index does not take is listings for mods I have nothing to do with.
 Adding an index is an act of trust, and this one is only worth trusting
