@@ -245,6 +245,23 @@ def poke_pc():
     return a, GREEN
 
 
+def modern_bag():
+    """The bag, a pocket tab picked out, and the row that used to run off it."""
+    a = Art()
+    for i, x in enumerate((5, 12, 19)):                     # pocket tabs, one
+        a.rect(x, 3, x + 6, 6, GREEN if i == 1 else STEEL)  # of them selected
+    a.rect(3, 6, 28, 28, PANEL)                             # the bag body
+    a.frame(3, 6, 28, 28, EDGE)
+    a.rect(3, 6, 28, 7, GREEN_D)                            # lid under the tabs
+    a.rect(13, 8, 18, 10, GREEN_D)                          # clasp
+    a.rect(9, 13, 26, 15, STEEL)                            # item rows
+    a.rect(9, 23, 26, 25, STEEL)
+    a.rect(9, 18, 26, 20, GREEN)                            # the long one,
+    a.rect(27, 18, 30, 20, RED)                             # cut at the border
+    arrow(a, 5, 19, 3, "right", WHITE)                      # the list cursor
+    return a, GREEN
+
+
 # Keyed by the mod's id rather than its folder, because an entry's folder
 # carries its author and an author can change -- this one's has twice -- while
 # the id is the thing the installer, mod-sync and the feed all key on and so
@@ -255,6 +272,7 @@ ICONS = {
     "gen1arena": arena,
     "Gen1MenuManager": menu_manager,
     "PokePCFollowers": poke_pc,
+    "gen1_modern_bag": modern_bag,
 }
 
 
