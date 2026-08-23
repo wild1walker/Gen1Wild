@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-23T05:44:42Z",
-  "count": 6,
+  "generated_at": "2026-08-23T23:16:35Z",
+  "count": 7,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -63,8 +63,8 @@
         }
       },
       "downloads": {
-        "total": 8,
-        "as_of": "2026-08-23T05:44:42Z"
+        "total": 43,
+        "as_of": "2026-08-23T23:16:34Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-23T00:05:23Z"
@@ -112,8 +112,8 @@
         }
       },
       "downloads": {
-        "total": 12,
-        "as_of": "2026-08-23T05:44:41Z"
+        "total": 15,
+        "as_of": "2026-08-23T23:16:32Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -163,11 +163,67 @@
         }
       },
       "downloads": {
-        "total": 22,
-        "as_of": "2026-08-23T05:44:42Z"
+        "total": 29,
+        "as_of": "2026-08-23T23:16:35Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-23T04:27:10Z"
+    },
+    {
+      "id": "Gen1BillsBox",
+      "title": "Gen1BillsBox",
+      "author": "Wild",
+      "summary": "Bill's PC replaced by the box it was always standing in for: the party down the left, twenty visible slots on the right, and a cursor that picks a POKeMON up and puts it down.",
+      "version": "1.0.6",
+      "categories": [
+        "UI",
+        "QOL"
+      ],
+      "tags": [
+        "pc",
+        "box",
+        "storage",
+        "party",
+        "cursor",
+        "palettes"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1BillsBox",
+      "github": "wild1walker/Gen1BillsBox",
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "conflicts": [
+        "modern_pc_ui"
+      ],
+      "games": [
+        "gen1"
+      ],
+      "folder": "Wild@Gen1BillsBox",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BillsBox/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BillsBox/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "1.0.6",
+        "tag": "v1.0.6",
+        "name": "1.0.6",
+        "prerelease": false,
+        "published_at": "2026-08-23T22:57:22Z",
+        "zip": {
+          "name": "Gen1BillsBox-1.0.6.zip",
+          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.0.6/Gen1BillsBox-1.0.6.zip",
+          "size": 45876
+        }
+      },
+      "downloads": {
+        "total": 5,
+        "as_of": "2026-08-23T23:16:29Z"
+      },
+      "first_release": "2026-08-23T21:59:56Z",
+      "last_release": "2026-08-23T22:57:22Z"
     },
     {
       "id": "Gen1Follower",
@@ -218,8 +274,8 @@
         }
       },
       "downloads": {
-        "total": 4,
-        "as_of": "2026-08-23T05:44:40Z"
+        "total": 12,
+        "as_of": "2026-08-23T23:16:30Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-23T01:37:36Z"
@@ -270,8 +326,8 @@
         }
       },
       "downloads": {
-        "total": 10,
-        "as_of": "2026-08-23T05:44:40Z"
+        "total": 15,
+        "as_of": "2026-08-23T23:16:31Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-23T02:58:29Z"
@@ -313,23 +369,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_modern_bag/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.0.0",
-        "tag": "v1.0.0",
-        "name": "Gen1ModernBag 1.0.0",
+        "version": "1.1.0",
+        "tag": "v1.1.0",
+        "name": "Gen1ModernBag 1.1.0",
         "prerelease": false,
-        "published_at": "2026-08-23T00:21:04Z",
+        "published_at": "2026-08-23T22:32:02Z",
         "zip": {
-          "name": "gen1_modern_bag_v1.0.0.zip",
-          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.0.0/gen1_modern_bag_v1.0.0.zip",
-          "size": 26621
+          "name": "gen1_modern_bag_v1.1.0.zip",
+          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.1.0/gen1_modern_bag_v1.1.0.zip",
+          "size": 27364
         }
       },
       "downloads": {
-        "total": 6,
-        "as_of": "2026-08-23T05:44:41Z"
+        "total": 17,
+        "as_of": "2026-08-23T23:16:33Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
-      "last_release": "2026-08-23T00:21:04Z"
+      "last_release": "2026-08-23T22:32:02Z"
     }
   ]
 }
