@@ -2,7 +2,7 @@ name: Pages
 
 # Publishes site/ so the launcher's first choice of URL answers:
 #
-#   https://wild1walker.github.io/gen1wild-mod-index/data/index.json
+#   https://wild1walker.github.io/Gen1Wild/data/index.json
 #
 # ModIndex tries that before the raw file on main, so with Pages up the feed
 # is served from a CDN instead of arriving on the fallback.  site/index.html

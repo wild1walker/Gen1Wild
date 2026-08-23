@@ -1,4 +1,4 @@
-# gen1wild mod index
+# Gen1Wild
 
 A personal mod index for [gen1recomp](https://github.com/bryanthaboi/gen1recomp):
 the mods I maintain, one link, updates picked up on their own.
@@ -8,7 +8,7 @@ the mods I maintain, one link, updates picked up on their own.
 **MODS > FIND MODS**, add the index
 
 ```
-wild1walker/gen1wild-mod-index
+wild1walker/Gen1Wild
 ```
 
 The repo page URL, the Pages root and the feed URL itself all resolve to the
@@ -147,8 +147,8 @@ The launcher tries the Pages URL first and falls back to the raw file on
 `main`:
 
 ```
-https://wild1walker.github.io/gen1wild-mod-index/data/index.json   (Pages)
-https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/site/data/index.json
+https://wild1walker.github.io/Gen1Wild/data/index.json   (Pages)
+https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/site/data/index.json
 ```
 
 `.github/workflows/pages.yml` publishes `site/` to Pages, and Pages is on, so
@@ -167,6 +167,14 @@ It deploys after **Build index** as well as on a push, because that job
 commits a regenerated feed and the deploy has to follow it rather than race
 it. The fallback stays a fallback: if Pages is ever off or mid-deploy, the raw
 file on `main` still answers.
+
+This repo was `wild1walker/gen1wild-mod-index` before it was renamed, and an
+index anyone already added is stored as whatever they typed. The old slug keeps
+working: GitHub redirects the repo, and `raw.githubusercontent.com` serves the
+old path unchanged, so the fallback URL still answers. The Pages URL is the one
+that moves with a rename — the old one stops answering, so a launcher holding
+the old slug quietly lands on the mirror every time instead of the CDN.
+Re-adding the index as `wild1walker/Gen1Wild` puts it back on Pages.
 
 ## How this is written
 
