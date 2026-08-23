@@ -95,8 +95,9 @@
   /* The ring belongs to the whole tile, so the anchor does not draw its own. */
   .stretch:focus-visible { outline: none; }
 
-  .src { display: inline-block; margin-top: .5rem; font-size: .9rem; color: var(--brand); }
-  li.mod:hover .src, li.mod:focus-within .src { text-decoration: underline; }
+  /* No "source" line: the tile itself is the link, so the cues are the
+     pointer cursor, the lit border, and the title underlining on hover. */
+  li.mod:hover .stretch, li.mod:focus-within .stretch { text-decoration: underline; }
 
   .note { color: var(--dim); font-size: .9rem; margin: 2.5rem 0 0;
           border-top: 1px solid var(--line); padding-top: 1rem; }
@@ -211,17 +212,6 @@
           cats.append(tag);
         }
         box.append(cats);
-      }
-
-      if (m.repo) {
-        // Not an anchor any more -- a second link inside the stretched one
-        // would be unreachable by mouse and duplicated for a screen reader.
-        // It stays as the visible cue for where the tile goes.
-        const cue = document.createElement('span');
-        cue.className = 'src';
-        cue.setAttribute('aria-hidden', 'true');
-        cue.textContent = 'source';
-        box.append(cue);
       }
 
       li.append(box);
