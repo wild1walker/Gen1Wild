@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/banner.png" alt="Gen1Wild" width="560">
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="docs/banner.png" alt="Gen1Wild" width="560"></a>
 </p>
 
 <p align="center">
@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1Follower, Gen1MenuManager and Gen1ModernBag" width="920">
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1Follower, Gen1MenuManager and Gen1ModernBag" width="920"></a>
 </p>
 
 ## What is in the index
@@ -153,8 +153,19 @@ The strip of icons under it is generated, from the mods' own thumbnails:
 python3 tools/make_lineup.py
 ```
 
-It writes `site/banners/lineup.png`, needs `Pillow`, and fetches its label
-font from Google Fonts once into `tools/.cache/`, which is not committed.
+It writes `site/banners/lineup.png` -- the plain one, above -- and one
+`lineup-<Mod>.png` per mod, which is the same strip with that mod ringed
+under a **Check out my other mods!** line. Each mod repo carries its own as
+`docs/lineup.png` and links it, and its wordmark, back to the live index, so
+a reader who lands on any one mod can see the rest of the family and where
+the page they are on sits in it.
+
+Both need `Pillow`, and fetch the label font from Google Fonts once into
+`tools/.cache/`, which is not committed.
+
+A new mod is picked up automatically: it needs a `meta.json` and a
+`thumbnail.png` like any other entry, and the next run draws it into every
+strip.
 
 ## The icons
 
