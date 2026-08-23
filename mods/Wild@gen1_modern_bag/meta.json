@@ -1,0 +1,34 @@
+{
+  "id": "gen1_modern_bag",
+  "title": "Gen1ModernBag",
+  "author": "Wild",
+  "summary": "Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag.",
+  "version": "1.0.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "bag",
+    "inventory",
+    "pockets",
+    "favorites",
+    "search",
+    "tm",
+    "hm"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1ModernBag",
+  "github": "wild1walker/Gen1ModernBag",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "conflicts": [
+    "modern_bag"
+  ],
+  "license": "MIT"
+}
