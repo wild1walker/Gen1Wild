@@ -3,3 +3,7 @@ __pycache__/
 
 # fonts fetched by the tools in tools/, not vendored
 tools/.cache/
+
+# staged into the Pages artifact from docs/banner.png at deploy time, and
+# handy to copy across for a local preview -- not a second committed copy
+site/banner.png

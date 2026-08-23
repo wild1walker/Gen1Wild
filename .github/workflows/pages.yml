@@ -28,6 +28,7 @@ on:
     branches: [main]
     paths:
       - 'site/**'
+      - 'docs/banner.png'
       - '.github/workflows/pages.yml'
   workflow_run:
     workflows: ["Build index"]
@@ -56,6 +57,14 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
+      # The wordmark lives at docs/banner.png, one copy per repo, and the page
+      # leads with it -- but only site/ is uploaded, so it is staged into the
+      # artifact here rather than committed a second time under site/.  One
+      # file to replace when the mark changes, as the README says.  Locally the
+      # page falls back to its alt text, or copy the file across to preview it.
+      - name: Stage the wordmark into site/
+        run: cp docs/banner.png site/banner.png
 
       - name: Upload site/
         uses: actions/upload-pages-artifact@v3
