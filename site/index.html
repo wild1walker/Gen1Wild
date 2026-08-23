@@ -2,36 +2,122 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gen1Wild</title>
+<meta name="description" content="The gen1recomp mods I maintain, in one index. In the game: MODS > FIND MODS, add wild1walker/Gen1Wild.">
+<meta name="theme-color" content="#0b0d0c">
+
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="favicon.png" sizes="180x180">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<!-- The strip is the unfurl rather than the wordmark: it is opaque, and it
+     shows the six mods and their names, which is what someone dropping the
+     link in a chat wants the preview to say. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gen1Wild">
+<meta property="og:title" content="Gen1Wild — the gen1recomp mods I maintain, in one index">
+<meta property="og:description" content="MODS > FIND MODS, add wild1walker/Gen1Wild. Updates land on the cards on their own.">
+<meta property="og:url" content="https://wild1walker.github.io/Gen1Wild/">
+<meta property="og:image" content="https://wild1walker.github.io/Gen1Wild/banners/lineup.png">
+<meta property="og:image:width" content="1072">
+<meta property="og:image:height" content="231">
+<meta property="og:image:alt" content="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1Follower, Gen1MenuManager and Gen1ModernBag">
+<meta name="twitter:card" content="summary_large_image">
+
 <style>
-  :root { color-scheme: dark; }
-  body { margin: 0; padding: 2.5rem 1.25rem 4rem; background: #0b0d0c; color: #e7ece8;
+  /* Palette off the wordmark: its yellow is the accent, its shadow blue is
+     the edge.  The ground stays near-black because the mod icons are drawn on
+     near-black, so anything lighter puts a box round every one of them. */
+  :root {
+    color-scheme: dark;
+    --bg: #0b0d0c;
+    --panel: #101314;
+    --line: #1e2427;
+    --line-lit: #3466a6;
+    --ink: #e7ece8;
+    --dim: #8b978f;
+    --brand: #fac613;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2.5rem 1.25rem 4rem; background: var(--bg); color: var(--ink);
          font: 16px/1.6 ui-sans-serif, system-ui, sans-serif; }
   .wrap { max-width: 52rem; margin: 0 auto; }
-  h1 { font-size: 1.6rem; margin: 0 0 .35rem; letter-spacing: .01em; }
-  .lede { color: #8b978f; margin: 0 0 1.5rem; }
+
+  /* The wordmark is the heading.  If the image does not arrive the alt text
+     is the heading instead, which is why it is marked up this way and not as
+     a background image. */
+  h1 { margin: 0 0 1.25rem; text-align: center; font-size: 1.9rem; letter-spacing: .02em; }
+  h1 img { display: block; width: 100%; max-width: 30rem; height: auto; margin: 0 auto; }
+
+  .lede { color: var(--dim); margin: 0 auto 1.75rem; max-width: 40rem; text-align: center; }
+  .lede strong { color: var(--ink); font-weight: 600; }
+
+  .add { display: block; width: fit-content; max-width: 100%; margin: 0 auto;
+         background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--brand);
+         border-radius: 8px; padding: .7rem 1rem; text-align: center; }
+  .add .cap { display: block; color: var(--dim); font-size: .78rem; letter-spacing: .08em;
+              text-transform: uppercase; margin-bottom: .2rem; }
+  .add code { color: var(--brand); font-size: 1.05rem; background: none; padding: 0; }
+
   code { background: #161c17; padding: .15em .45em; border-radius: 4px;
          font: .92em ui-monospace, monospace; color: #cfe0d2; }
-  ul { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 1rem; }
-  li { display: flex; gap: 1rem; align-items: flex-start;
-       background: #11150f; border: 1px solid #1e241d; border-radius: 10px; padding: 1rem; }
-  img { width: 112px; aspect-ratio: 1; object-fit: cover; border-radius: 6px;
-        background: #0b0d0c; flex: none; }
+
+  ul { list-style: none; margin: 2.25rem 0 0; padding: 0; display: grid; gap: 1rem; }
+  li { display: flex; gap: 1rem; align-items: flex-start; background: var(--panel);
+       border: 1px solid var(--line); border-radius: 10px; padding: 1rem; }
+  li.msg { display: block; color: var(--dim); }
+  img.icon { width: 112px; aspect-ratio: 1; object-fit: cover; border-radius: 6px;
+             background: var(--bg); flex: none; }
+
   .name { font-weight: 600; }
-  .meta { color: #8b978f; font-size: .9rem; }
-  .sum { margin: .3rem 0 0; }
-  a { color: #9bbc0f; }
-  .note { color: #8b978f; font-size: .9rem; margin: 2rem 0 0;
-          border-top: 1px solid #1e241d; padding-top: 1rem; }
-  @media (max-width: 34rem) { li { flex-direction: column; } img { width: 128px; } }
+  .ver { color: var(--brand); font-weight: 600; }
+  .meta { color: var(--dim); font-size: .9rem; }
+  .sum { margin: .35rem 0 .5rem; }
+
+  .cats { display: flex; flex-wrap: wrap; gap: .3rem; margin: .45rem 0 0; padding: 0; list-style: none; }
+  .cats li { display: inline; background: none; border: 1px solid var(--line);
+             border-radius: 999px; padding: .1rem .5rem; font-size: .72rem; letter-spacing: .06em;
+             color: var(--dim); }
+
+  a { color: var(--brand); }
+  a:focus-visible, .src:focus-visible { outline: 2px solid var(--line-lit); outline-offset: 2px; }
+  .src { display: inline-block; margin-top: .5rem; font-size: .9rem; }
+
+  .note { color: var(--dim); font-size: .9rem; margin: 2.5rem 0 0;
+          border-top: 1px solid var(--line); padding-top: 1rem; }
+
+  @media (max-width: 34rem) {
+    li { flex-direction: column; }
+    img.icon { width: 128px; }
+    h1 img { max-width: 20rem; }
+  }
 </style>
+
 <div class="wrap">
-  <h1>Gen1Wild</h1>
-  <p class="lede">The
-    <a href="https://github.com/bryanthaboi/gen1recomp">gen1recomp</a> mods I
-    maintain, in one index. In the game:
-    <strong>MODS &gt; FIND MODS</strong>, add
-    <code>wild1walker/Gen1Wild</code>.</p>
-  <ul id="list"><li class="meta">Loading the feed…</li></ul>
+  <!-- onerror rather than the alt text: a block image that 404s renders no
+       alt in Chrome, which would leave the page with no heading at all.
+       It is inline so it is registered before the load can fail. -->
+  <h1><img src="banner.png" alt="Gen1Wild"
+           onerror="this.replaceWith('Gen1Wild')"></h1>
+
+  <p class="lede">The <a href="https://github.com/bryanthaboi/gen1recomp">gen1recomp</a>
+    mods I maintain, in one index. Add it once and new versions land on the
+    cards on their own.</p>
+
+  <p class="add">
+    <span class="cap">In the game — MODS &gt; FIND MODS</span>
+    <code>wild1walker/Gen1Wild</code>
+  </p>
+
+  <noscript><style>#list { display: none; }</style></noscript>
+  <ul id="list"><li class="msg">Loading the feed…</li></ul>
+  <noscript>
+    <ul><li class="msg">The list is drawn from
+      <a href="data/index.json">the feed</a>, which needs JavaScript. The mods
+      are also listed in
+      <a href="https://github.com/wild1walker/Gen1Wild#what-is-in-the-index">the
+      README</a>, and the string above works in the game either way.</li></ul>
+  </noscript>
+
   <p class="note">Everything listed is a mod I maintain — some written here,
     some forked from someone else's and tweaked, credited in the entry either
     way. Contributions are welcome in each mod's own repo. The code — these
@@ -40,36 +126,76 @@
     <a href="https://github.com/wild1walker/Gen1Wild#how-this-is-written">the
     long version</a> is in the README.</p>
 </div>
+
 <script>
   const list = document.getElementById('list');
-  fetch('data/index.json').then(r => r.json()).then(feed => {
+  const say = t => { list.innerHTML = ''; const li = document.createElement('li');
+                     li.className = 'msg'; li.textContent = t; list.append(li); };
+
+  fetch('data/index.json').then(r => {
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  }).then(feed => {
+    const mods = feed.mods || [];
+    if (!mods.length) return say('The feed is empty.');
     list.innerHTML = '';
-    for (const m of feed.mods) {
+    for (const m of mods) {
       const li = document.createElement('li');
       const version = m.update_check === 'ok' && m.latest ? m.latest.version : m.version;
+
       if (m.thumbnail) {
         const img = document.createElement('img');
-        img.src = m.thumbnail; img.alt = ''; li.append(img);
+        img.className = 'icon';
+        img.src = m.thumbnail;
+        img.alt = '';
+        img.loading = 'lazy';
+        li.append(img);
       }
+
       const box = document.createElement('div');
+
       const name = document.createElement('div');
       name.className = 'name';
-      name.textContent = `${m.title} ${version || ''}`.trim();
+      name.textContent = m.title;
+      if (version) {
+        const v = document.createElement('span');
+        v.className = 'ver';
+        v.textContent = ' ' + version;
+        name.append(v);
+      }
+
       const meta = document.createElement('div');
       meta.className = 'meta';
-      meta.textContent = [m.author, (m.categories || []).join(' · ')]
-        .filter(Boolean).join(' — ');
+      meta.textContent = m.author || '';
+
       const sum = document.createElement('p');
       sum.className = 'sum';
       sum.textContent = m.summary || '';
+
       box.append(name, meta, sum);
+
+      if ((m.categories || []).length) {
+        const cats = document.createElement('ul');
+        cats.className = 'cats';
+        for (const c of m.categories) {
+          const tag = document.createElement('li');
+          tag.textContent = c;
+          cats.append(tag);
+        }
+        box.append(cats);
+      }
+
       if (m.repo) {
         const a = document.createElement('a');
-        a.href = m.repo; a.textContent = 'source';
+        a.className = 'src';
+        a.href = m.repo;
+        a.textContent = 'source';
+        a.setAttribute('aria-label', `${m.title} source`);
         box.append(a);
       }
+
       li.append(box);
       list.append(li);
     }
-  }).catch(() => { list.innerHTML = '<li class="meta">Could not load data/index.json.</li>'; });
+  }).catch(() => say('Could not load data/index.json.'));
 </script>

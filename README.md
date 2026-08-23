@@ -147,6 +147,23 @@ job a mark has.
 It is committed as artwork, so there is no tool that redraws it. Replacing it
 means replacing that one PNG in each repo.
 
+The Pages site leads with it as well, and is served the same bytes rather than
+a copy: only `site/` is uploaded, so `.github/workflows/pages.yml` stages
+`docs/banner.png` into the artifact at deploy time. That keeps one PNG per
+repo true here too. `site/banner.png` is gitignored, so copying it across to
+preview the page locally is safe; without it the page falls back to a plain
+text heading rather than losing its title.
+
+The tab icon is cut from the same file, so it cannot drift from the mark:
+
+```sh
+python3 tools/make_favicon.py
+```
+
+It lifts the wordmark's leading G onto the mark's own blue and writes
+`site/favicon.png` and `site/favicon-32.png`. Re-run it after replacing the
+wordmark.
+
 The strip of icons under it is generated, from the mods' own thumbnails:
 
 ```sh
@@ -155,7 +172,9 @@ python3 tools/make_lineup.py
 
 It writes `site/banners/lineup.png` -- the plain one, above -- and one
 `lineup-<Mod>.png` per mod, which is the same strip with that mod ringed
-under a **Check out my other mods!** line. Each mod repo carries its own as
+under a **Check out my other mods!** line. The plain strip is also the link
+preview: `site/index.html` points `og:image` at it, so pasting the index URL
+into a chat unfurls as the six mods and their names rather than a bare link. Each mod repo carries its own as
 `docs/lineup.png` and links it, and its wordmark, back to the live index, so
 a reader who lands on any one mod can see the rest of the family and where
 the page they are on sits in it.
