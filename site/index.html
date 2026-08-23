@@ -79,8 +79,24 @@
              color: var(--dim); }
 
   a { color: var(--brand); }
-  a:focus-visible, .src:focus-visible { outline: 2px solid var(--line-lit); outline-offset: 2px; }
-  .src { display: inline-block; margin-top: .5rem; font-size: .9rem; }
+  a:focus-visible { outline: 2px solid var(--line-lit); outline-offset: 2px; }
+
+  /* The whole tile is the link. It is done with a pseudo-element stretched
+     over the card rather than a click handler on the card, so the thing being
+     clicked stays a real anchor: keyboard focus, middle-click, ctrl-click and
+     "copy link address" all keep working, and a screen reader still announces
+     a link. The trade is that a drag no longer selects the card's text. */
+  li.mod { position: relative; cursor: pointer; }
+  li.mod:hover { border-color: var(--line-lit); }
+  li.mod:focus-within { outline: 2px solid var(--line-lit); outline-offset: 2px; }
+
+  .stretch { text-decoration: none; color: inherit; }
+  .stretch::after { content: ''; position: absolute; inset: 0; }
+  /* The ring belongs to the whole tile, so the anchor does not draw its own. */
+  .stretch:focus-visible { outline: none; }
+
+  .src { display: inline-block; margin-top: .5rem; font-size: .9rem; color: var(--brand); }
+  li.mod:hover .src, li.mod:focus-within .src { text-decoration: underline; }
 
   .note { color: var(--dim); font-size: .9rem; margin: 2.5rem 0 0;
           border-top: 1px solid var(--line); padding-top: 1rem; }
@@ -141,6 +157,7 @@
     list.innerHTML = '';
     for (const m of mods) {
       const li = document.createElement('li');
+      li.className = 'mod';
       const version = m.update_check === 'ok' && m.latest ? m.latest.version : m.version;
 
       if (m.thumbnail) {
@@ -156,7 +173,18 @@
 
       const name = document.createElement('div');
       name.className = 'name';
-      name.textContent = m.title;
+      // The title carries the link; the version sits outside it so the link is
+      // announced as the mod's name rather than the name and a number.
+      if (m.repo) {
+        const link = document.createElement('a');
+        link.className = 'stretch';
+        link.href = m.repo;
+        link.textContent = m.title;
+        link.setAttribute('aria-label', `${m.title} source`);
+        name.append(link);
+      } else {
+        name.textContent = m.title;
+      }
       if (version) {
         const v = document.createElement('span');
         v.className = 'ver';
@@ -186,12 +214,14 @@
       }
 
       if (m.repo) {
-        const a = document.createElement('a');
-        a.className = 'src';
-        a.href = m.repo;
-        a.textContent = 'source';
-        a.setAttribute('aria-label', `${m.title} source`);
-        box.append(a);
+        // Not an anchor any more -- a second link inside the stretched one
+        // would be unreachable by mouse and duplicated for a screen reader.
+        // It stays as the visible cue for where the tile goes.
+        const cue = document.createElement('span');
+        cue.className = 'src';
+        cue.setAttribute('aria-hidden', 'true');
+        cue.textContent = 'source';
+        box.append(cue);
       }
 
       li.append(box);
