@@ -1,13 +1,20 @@
 name: Build index
 
 # The feed is metadata about releases that live in other repos, so it goes
-# stale on its own schedule rather than on this repo's: a mod that tags a
-# release says so and the feed rebuilds within the minute, nightly catches
-# anything that did not say, and a push picks up an entry edited here.
+# stale on its own schedule rather than on this repo's: the hourly run catches
+# a mod that tagged a release, a push picks up an entry edited here, and a mod
+# repo that can say so gets the rebuild sooner still.
+#
+# Hourly rather than nightly because nightly is the wrong trade for a feed
+# whose whole job is to be current: Gen1ModernBag tagged 1.1.0 at 22:32 and the
+# feed still described 1.0.0, with nothing due to run until 05:17.  A worst
+# case of an hour is cheap -- a run is about fifteen seconds and commits
+# nothing unless something moved -- and it needs no credential anywhere, which
+# the repository_dispatch path below does.
 #
 # site/** is deliberately not a trigger -- this job commits into it, and a
-# rebuild that changes nothing keeps the old generated_at, so the nightly run
-# is silent unless something actually moved.
+# rebuild that changes nothing keeps the old generated_at, so a quiet hour is
+# silent unless something actually moved.
 
 on:
   push:
@@ -17,17 +24,19 @@ on:
       - 'tools/**'
       - '.github/workflows/index.yml'
 
-  # Each mod's release workflow fires this at us once its release is
-  # published, so a card carries the new version straight away rather than
-  # waiting up to a day for the nightly run to notice.  The payload is a
-  # courtesy for the log -- the build reads every entry's releases from the
-  # GitHub API regardless of who woke it, so a dispatch naming one mod still
-  # produces exactly the feed the nightly run would have.
+  # A mod repo's notify-index.yml fires this once its release is published, to
+  # turn the hourly worst case into a within-the-minute one.  It needs a token
+  # that can reach this repo, so it is off until one is set, and the hourly run
+  # above is what the feed actually relies on.  The payload is a courtesy for
+  # the log -- the build reads every entry's releases from the GitHub API
+  # regardless of who woke it, so a dispatch naming one mod still produces
+  # exactly the feed the hourly run would have.
   repository_dispatch:
     types: [mod-released]
 
+  # :17 rather than :00, where every other hourly job on GitHub is queued.
   schedule:
-    - cron: '17 5 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
 
 permissions:

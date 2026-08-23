@@ -211,30 +211,35 @@ python3 tools/build_index.py                    # rebuild
 GITHUB_TOKEN=... python3 tools/build_index.py   # ... without the 60/hour limit
 ```
 
-CI does it on every push that touches `mods/` or `tools/`, whenever a mod
-repo says it has published a release, nightly at 05:17 UTC, and on demand from
-the Actions tab. A rebuild that changes nothing keeps the previous
-`generated_at` and commits nothing, so a quiet night stays quiet.
+CI does it on every push that touches `mods/` or `tools/`, hourly at :17, and
+on demand from the Actions tab. A rebuild that changes nothing keeps the
+previous `generated_at` and commits nothing, so a quiet hour stays quiet.
 
-### When a mod publishes a release
+Hourly, not nightly, because nightly is the wrong trade for a feed whose whole
+job is to be current: Gen1ModernBag tagged 1.1.0 at 22:32 and the feed still
+described 1.0.0, with nothing due to run until 05:17. An hour's worst case
+costs about fifteen seconds of CI and needs no credential anywhere.
+
+### Getting it sooner than the hour (optional, off)
 
 Every mod repo carries `.github/workflows/notify-index.yml` — the same file in
 all of them, since which mod it is comes from the repository it runs in. On a
 published release it fires a `mod-released` `repository_dispatch` at this repo,
-which rebuilds the feed within the minute. It keys on the release rather than
-on the release workflow, so it fires for one cut by hand exactly as it does for
-a built one.
+which rebuilds the feed within the minute rather than within the hour. It keys
+on the release rather than on the release workflow, so it fires for one cut by
+hand exactly as it does for a built one.
 
-That call is cross-repository, so `github.token` cannot make it — that token
-only ever reaches the repo it was issued for. It needs **`INDEX_DISPATCH_TOKEN`**
-as an Actions secret in each mod repo: a fine-grained personal access token
-scoped to `wild1walker/Gen1Wild` alone, with **Contents: read and write**, which
-is what the dispatches endpoint checks.
+**It is off, and the feed does not depend on it.** That call is
+cross-repository, which is the one thing `github.token` cannot do — that token
+only ever reaches the repo it was issued for. Turning it on means
+**`INDEX_DISPATCH_TOKEN`** as an Actions secret in each mod repo: a
+fine-grained personal access token scoped to `wild1walker/Gen1Wild` alone, with
+**Contents: read and write**, which is what the dispatches endpoint checks.
 
-Until that secret is set the workflow is inert by design — it says so in the
-run log and exits green, and the nightly rebuild picks the release up as it
-always did. So the worst case is the behaviour this repo had before, never a
-failed release.
+Without the secret the workflow says so in its run log and exits green, and the
+hourly rebuild picks the release up regardless. Trading an hour for not having
+a token in seven repos is a reasonable trade, and it is the one this repo
+makes.
 
 ## Where it is served from
 
