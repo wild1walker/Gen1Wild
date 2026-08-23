@@ -47,8 +47,8 @@
         "gen1"
       ],
       "folder": "Wild@gen1arena",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1arena/description.md",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1arena/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1arena/description.md",
       "update_check": "ok",
       "latest": {
         "version": "0.18.1",
@@ -96,8 +96,8 @@
       ],
       "license": "MIT",
       "folder": "Wild@gen1_auto_continue",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_auto_continue/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_auto_continue/description.md",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_auto_continue/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_auto_continue/description.md",
       "update_check": "ok",
       "latest": {
         "version": "1.2.0",
@@ -147,8 +147,8 @@
       ],
       "license": "MIT",
       "folder": "Wild@gen1autosave",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1autosave/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1autosave/description.md",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1autosave/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1autosave/description.md",
       "update_check": "ok",
       "latest": {
         "version": "1.2.1",
@@ -199,8 +199,8 @@
         "all"
       ],
       "folder": "Wild@Gen1MenuManager",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@Gen1MenuManager/description.md",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1MenuManager/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1MenuManager/description.md",
       "update_check": "ok",
       "latest": {
         "version": "0.2.2",
@@ -254,8 +254,8 @@
       ],
       "license": "MIT",
       "folder": "Wild@gen1_modern_bag",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_modern_bag/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@gen1_modern_bag/description.md",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_modern_bag/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_modern_bag/description.md",
       "update_check": "ok",
       "latest": {
         "version": "1.0.0",
@@ -309,8 +309,8 @@
         "gen2"
       ],
       "folder": "Wild@PokePCFollowers",
-      "thumbnail": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@PokePCFollowers/thumbnail.png",
-      "description_url": "https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/mods/Wild@PokePCFollowers/description.md",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@PokePCFollowers/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@PokePCFollowers/description.md",
       "update_check": "ok",
       "latest": {
         "version": "0.8.6",

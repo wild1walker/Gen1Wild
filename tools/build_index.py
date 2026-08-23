@@ -3,12 +3,12 @@
 
 Add the index in the game as
 
-    wild1walker/gen1wild-mod-index
+    wild1walker/Gen1Wild
 
 which src/mods/ModIndex.lua resolves to
 
-    https://wild1walker.github.io/gen1wild-mod-index/data/index.json   (Pages)
-    https://raw.githubusercontent.com/wild1walker/gen1wild-mod-index/main/site/data/index.json
+    https://wild1walker.github.io/Gen1Wild/data/index.json   (Pages)
+    https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/site/data/index.json
 
 the second being the mirror it falls back to when the first fails -- which is
 also what makes this feed work with Pages switched off entirely.
@@ -45,7 +45,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MODS = ROOT / "mods"
 FEED = ROOT / "site" / "data" / "index.json"
 
-OWNER, REPO = "wild1walker", "gen1wild-mod-index"
+OWNER, REPO = "wild1walker", "Gen1Wild"
 RAW = f"https://raw.githubusercontent.com/{OWNER}/{REPO}/main"
 
 SCHEMA_VERSION = 1
