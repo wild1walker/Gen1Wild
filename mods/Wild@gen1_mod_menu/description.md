@@ -28,10 +28,14 @@ beside it; the rows under it; and an info box at the bottom naming what the
 cursor is on. Left and right move between `MODS`, `PROFILES` and `ERRORS`,
 and wrap at both ends.
 
-A list row is one thing — a name — so it is a single-line box, and four fit
-between the two bands. An option row is two things, a label and its value,
-which is why a mod's options page keeps the four-tile cards the game's own
-OPTION screen uses and the list does not.
+A mod's options page wears the same three bands: the header names the mod
+being edited, and the info box under the cards carries the help line for
+whichever row the cursor is on.
+
+A list row is one thing — a name — so it is a single-line box and four fit
+between the bands. An option row is two things, a label and its value, so it
+keeps the four-tile card the game's own OPTION screen uses, and three of
+those fit. The info box always names what the cursor is on.
 
 On the mod list the second line carries the **category** on the left and the
 **status** on the right. A mod that is enabled and running shows no status at
