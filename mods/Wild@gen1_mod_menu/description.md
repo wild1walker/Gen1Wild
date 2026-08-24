@@ -36,9 +36,13 @@ wrote.
 
 ## The mod list
 
+A mod that is enabled and running carries **no mark at all** — a column
+reading `ON` down the whole screen is not information, and leaving it blank
+hands three more glyphs to every name. The marks are the exceptions:
+
 | Column | Reads |
 | --- | --- |
-| `ON` | enabled and running |
+| *(blank)* | enabled and running |
 | `OFF` | disabled |
 | `STGD` | changed, waiting on a restart |
 | `ERR` | failed to load |
@@ -53,10 +57,10 @@ mod's own detail screen.
 
 | Option | Default | Notes |
 | --- | --- | --- |
-| `PRESENTATION` | `MODERN` | `VANILLA` hands every screen back to the engine's own renderer. Read every frame, so it lands without leaving the screen. |
+| `STYLE` | `MODERN` | `VANILLA` hands every screen back to the engine's own renderer. Read every frame, so it lands without leaving the screen. |
 | `SORT BY` | `CATEGORY` | Or `NAME`, `ENABLED`, or `PROBLEMS` — which floats errored and blocked mods to the top. |
 | `HIDE OFF` | off | Drop disabled mods from the list. |
-| `ONLY W/OPTIONS` | off | Show only the mods that have something to configure. |
+| `WITH OPTIONS` | off | Show only the mods that have something to configure. |
 | `HELP LINE` | on | Off gives its row back to the list, making it twelve. |
 | `RESET ROW` | on | Show `RESET DEFAULTS` on each mod's options page. |
 | `KEEP CURSOR` | on | Reopen the manager on the row you left it on. |
@@ -79,7 +83,7 @@ options page, and that page is reached through the list they filter.
 
 This is the one screen a player uses to switch off a mod that is
 misbehaving, so there are three independent ways back to the vanilla one:
-`PRESENTATION: VANILLA`; a renderer that throws, which is logged once and
+`STYLE: VANILLA`; a renderer that throws, which is logged once and
 demoted to the engine's own draw for the rest of the visit; and the engine's
 own screen builder, which falls back to its builtin manager if this mod's
 screen cannot be constructed at all.
