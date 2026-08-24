@@ -1,0 +1,35 @@
+{
+  "id": "Gen1BillsBox",
+  "title": "Gen1BillsBox",
+  "author": "Wild",
+  "summary": "Bill's PC replaced by the box it was always standing in for: the party down the left, twenty visible slots on the right, and a cursor that picks a POKeMON up and puts it down.",
+  "version": "1.0.6",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "pc",
+    "box",
+    "storage",
+    "party",
+    "cursor",
+    "palettes"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1BillsBox",
+  "github": "wild1walker/Gen1BillsBox",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "conflicts": [
+    "modern_pc_ui"
+  ],
+  "games": [
+    "gen1"
+  ]
+}

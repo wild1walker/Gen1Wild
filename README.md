@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1Follower, Gen1MenuManager and Gen1ModernBag" width="920"></a>
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Follower, Gen1MenuManager and Gen1ModernBag" width="920"></a>
 </p>
 
 ## What is in the index
@@ -18,6 +18,7 @@
 | <img src="mods/Wild@gen1arena/thumbnail.png" width="54" alt=""> | **[Gen1Arena](https://github.com/wild1walker/Gen1Arena)** | 2D backdrops behind battles, picked by map, tileset and how the encounter started. |
 | <img src="mods/Wild@gen1_auto_continue/thumbnail.png" width="54" alt=""> | **[Gen1AutoContinue](https://github.com/wild1walker/Gen1AutoContinue)** | Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window. |
 | <img src="mods/Wild@gen1autosave/thumbnail.png" width="54" alt=""> | **[Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave)** | Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups. |
+| <img src="mods/Wild@Gen1BillsBox/thumbnail.png" width="54" alt=""> | **[Gen1BillsBox](https://github.com/wild1walker/Gen1BillsBox)** | Replaces Bill's PC with the box it was standing in for: the party down the left, twenty visible slots on the right, and a cursor that carries a Pokémon. |
 | <img src="mods/Wild@Gen1Follower/thumbnail.png" width="54" alt=""> | **[Gen1Follower](https://github.com/wild1walker/Gen1Follower)** | All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33. |
 | <img src="mods/Wild@Gen1MenuManager/thumbnail.png" width="54" alt=""> | **[Gen1MenuManager](https://github.com/wild1walker/Gen1MenuManager)** | Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own. |
 | <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
@@ -127,11 +128,11 @@ before it goes in:
   shape.
 - Ids must be unique within this feed.
 
-**Versions look after themselves.** With `github` set, the nightly rebuild
-reads that repo's Releases, takes the newest one with a `.zip` asset, and puts
-it on the card — so tag a release in the mod's own repo and this index catches
-up without being touched. The `version` in `meta.json` is only the fallback
-shown when no release can be resolved.
+**Versions look after themselves.** With `github` set, a rebuild reads that
+repo's Releases, takes the newest one with a `.zip` asset, and puts it on the
+card — so tag a release in the mod's own repo and this index catches up without
+being touched. The `version` in `meta.json` is only the fallback shown when no
+release can be resolved.
 
 Opt out with `"automatic_version_check": false` and give the entry its own
 `"downloadURL"` pointing at an installable `.zip`.
@@ -140,7 +141,7 @@ Opt out with `"automatic_version_check": false` and give the entry its own
 
 The wordmark at the top of this file is hand-made, and it is the whole
 family's -- every mod repo carries the same file at `docs/banner.png` and
-leads with it, under its own name. One mark, seven repos: a reader who has
+leads with it, under its own name. One mark, eight repos: a reader who has
 seen one of these mods recognises the next one on sight, which is the entire
 job a mark has.
 
@@ -174,7 +175,7 @@ It writes `site/banners/lineup.png` -- the plain one, above -- and one
 `lineup-<Mod>.png` per mod, which is the same strip with that mod ringed
 under a **Check out my other mods!** line. The plain strip is also the link
 preview: `site/index.html` points `og:image` at it, so pasting the index URL
-into a chat unfurls as the six mods and their names rather than a bare link. Each mod repo carries its own as
+into a chat unfurls as the seven mods and their names rather than a bare link. Each mod repo carries its own as
 `docs/lineup.png` and links it, and its wordmark, back to the live index, so
 a reader who lands on any one mod can see the rest of the family and where
 the page they are on sits in it.
@@ -210,9 +211,38 @@ python3 tools/build_index.py                    # rebuild
 GITHUB_TOKEN=... python3 tools/build_index.py   # ... without the 60/hour limit
 ```
 
-CI does it on every push that touches `mods/` or `tools/`, nightly at 05:17
-UTC, and on demand from the Actions tab. A rebuild that changes nothing keeps
-the previous `generated_at` and commits nothing, so a quiet night stays quiet.
+CI does it on every push that touches `mods/` or `tools/`, hourly at :17, and
+on demand from the Actions tab. A rebuild that changes nothing keeps the
+previous `generated_at` and commits nothing, so a quiet hour stays quiet.
+
+Hourly, not nightly, because nightly is the wrong trade for a feed whose whole
+job is to be current: Gen1ModernBag tagged 1.1.0 at 22:32 and the feed still
+described 1.0.0, with nothing due to run until 05:17. An hour's worst case
+costs about fifteen seconds of CI and needs no credential anywhere.
+
+And not faster than hourly, because nothing downstream can use it — see below.
+
+## What this feed is not
+
+It is worth being clear about, because it is easy to assume otherwise: **this
+feed is not how an installed mod learns it is out of date.**
+
+The feed is what **MODS > FIND MODS** lists — browsing, and the version shown
+before you install something. Once a mod *is* installed, the game checks that
+mod's own repository directly, on its own six-hour cache, and never reads this
+file (`src/mods/ModUpdate.lua`, `CACHE_TTL`). What decides whether an installed
+mod gets checked at all is the `github` field in **its own `manifest.json`** —
+a mod without one is skipped outright, however current this index is.
+
+So the two halves are independent:
+
+| | Driven by | Freshness |
+|---|---|---|
+| A card in FIND MODS | this feed | up to an hour |
+| An installed mod's update badge | that mod's `manifest.json` `github` | up to six hours |
+
+Which is also why rebuilding this feed every few minutes would buy nothing: it
+would be answering a question nothing is asking.
 
 ## Where it is served from
 

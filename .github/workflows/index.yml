@@ -1,12 +1,26 @@
 name: Build index
 
 # The feed is metadata about releases that live in other repos, so it goes
-# stale on its own schedule rather than on this repo's: nightly picks up a mod
-# that tagged a release, a push picks up an entry that was edited here.
+# stale on its own schedule rather than on this repo's: the hourly run catches
+# a mod that tagged a release, and a push picks up an entry edited here.
+#
+# Hourly rather than nightly because nightly is the wrong trade for a feed
+# whose whole job is to be current: Gen1ModernBag tagged 1.1.0 at 22:32 and the
+# feed still described 1.0.0, with nothing due to run until 05:17.  An hour's
+# worst case is cheap -- a run is about fifteen seconds and commits nothing
+# unless something moved.
+#
+# Not faster than hourly, because nothing downstream can use it.  This feed is
+# what MODS > FIND MODS lists; it is not how an installed mod learns it is out
+# of date.  That check is the game asking the mod's own repo directly, on its
+# own six-hour cache (src/mods/ModUpdate.lua, CACHE_TTL), and it never reads
+# this file.  So an index fresher than an hour would be answering a question
+# no one is asking, and a schedule under about fifteen minutes is unreliable
+# on GitHub's runners anyway.
 #
 # site/** is deliberately not a trigger -- this job commits into it, and a
-# rebuild that changes nothing keeps the old generated_at, so the nightly run
-# is silent unless something actually moved.
+# rebuild that changes nothing keeps the old generated_at, so a quiet hour is
+# silent unless something actually moved.
 
 on:
   push:
@@ -15,8 +29,10 @@ on:
       - 'mods/**'
       - 'tools/**'
       - '.github/workflows/index.yml'
+
+  # :17 rather than :00, where every other hourly job on GitHub is queued.
   schedule:
-    - cron: '17 5 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
 
 permissions:

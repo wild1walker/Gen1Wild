@@ -323,6 +323,72 @@ def modern_bag():
         a.rect(x, 23, x + 2, 24, AMBER)
     return a, AMBER
 
+def bills_box():
+    """Pikachu coming up out of the box.
+
+    The mod replaces a PC that only ever showed you a list of twenty names,
+    so the icon shows the one thing that list never did: what is actually in
+    the box.  He is drawn over the far flaps and under the near wall, which
+    is what puts him inside the box rather than behind it.
+    """
+    a = Art()
+    card = (0xb5, 0x86, 0x4e)                      # cardboard, lit from above
+    card_d = (0x8a, 0x63, 0x36)
+    card_l = (0xcf, 0xa2, 0x66)
+    pika = AMBER
+    pika_d = (0xc2, 0x8e, 0x22)
+
+    # The two far flaps, folded back and away.  These are behind him.
+    a.poly([(5, 18), (1, 12), (5, 9), (12, 16)], card_d)
+    a.poly([(26, 18), (30, 12), (26, 9), (19, 16)], card_d)
+
+    # An ear is three shapes over each other: the whole ear a shade darker,
+    # the ear inside that, and the black tip inside that again.  The darker
+    # one is doing the work -- a black tip against the dark behind it loses
+    # its outline entirely without a rim to sit in.
+    for outer, inner, tip in (
+        ([(12.8, 11.6), (15.6, 9.6), (11.2, 0.0), (8.0, 1.5)],
+         [(12.5, 10.7), (14.8, 9.2), (10.9, 1.0), (8.6, 2.1)],
+         [(11.2, 0.0), (8.0, 1.5), (10.1, 6.0), (13.3, 4.5)]),
+        ([(19.2, 11.6), (16.4, 9.6), (20.8, 0.0), (24.0, 1.5)],
+         [(19.5, 10.7), (17.2, 9.2), (21.1, 1.0), (23.4, 2.1)],
+         [(20.8, 0.0), (24.0, 1.5), (21.9, 6.0), (18.7, 4.5)]),
+    ):
+        a.poly(outer, pika_d)
+        a.poly(inner, pika)
+        a.poly(tip, INK)
+
+    a.ellipse(16, 14.2, 6.8, 5.6, pika_d)          # the head, on its own rim
+    a.ellipse(16, 13.6, 6.6, 5.4, pika)
+    a.disc(10.8, 16.0, 2.0, RED)                   # cheeks
+    a.disc(21.2, 16.0, 2.0, RED)
+    for ex, gx in ((12.8, 12), (19.2, 19)):        # eyes, with a glint each
+        a.disc(ex, 12.2, 1.7, INK)
+        a.px(gx, 11, WHITE)
+    a.px(16, 14, INK)                              # nose, over the two lips
+    a.rect(14, 16, 15, 16, INK)                    # and the mouth they open
+    a.rect(17, 16, 18, 16, INK)
+    a.rect(15, 17, 17, 17, INK)
+
+    # The near wall, drawn over him: below this line he is in the box.
+    a.rect(3, 18, 28, 29, card)
+    a.rect(3, 18, 28, 19, card_l)                  # the rim, catching light
+    a.rect(3, 27, 28, 29, card_d)                  # and the shadowed foot
+    a.rect(15, 20, 16, 26, card_d)                 # the seam down the front
+    a.frame(3, 18, 28, 29, card_d)
+
+    # Both paws over the rim, holding himself up on it.
+    for x in (6, 22):
+        a.rect(x, 16, x + 3, 19, pika)
+        a.rect(x, 19, x + 3, 19, pika_d)
+        a.px(x + 1, 16, pika_d)
+        a.px(x + 2, 16, pika_d)
+
+    # The two near flaps, folded down over the front corners.
+    a.poly([(3, 18), (3, 25), (7, 22), (7, 18)], card_l)
+    a.poly([(28, 18), (28, 25), (24, 22), (24, 18)], card_l)
+    return a, AMBER
+
 
 ICONS = {
     "gen1autosave": autosave,
@@ -331,6 +397,7 @@ ICONS = {
     "Gen1MenuManager": menu_manager,
     "Gen1Follower": gen1_follower,
     "gen1_modern_bag": modern_bag,
+    "Gen1BillsBox": bills_box,
 }
 
 
