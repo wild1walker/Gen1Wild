@@ -24,18 +24,23 @@ rather than drawing an empty box.
 
 The list is banded the way **Gen1BillsBox** bands its storage screen: a
 header box across the top naming the page you are on, with the position count
-beside it; the rows under it; and an info box at the bottom naming what the
-cursor is on. Left and right move between `MODS`, `PROFILES` and `ERRORS`,
-and wrap at both ends.
+beside it, and the rows under it. Left and right move between `MODS`,
+`PROFILES` and `ERRORS`, and wrap at both ends.
 
-A mod's options page wears the same three bands: the header names the mod
-being edited, and the info box under the cards carries the help line for
-whichever row the cursor is on.
+A mod's options page wears the same bands: the header names the mod being
+edited, and an info box under the cards carries the help line for whichever
+row the cursor is on.
 
-A list row is one thing — a name — so it is a single-line box and four fit
-between the bands. An option row is two things, a label and its value, so it
-keeps the four-tile card the game's own OPTION screen uses, and three of
-those fit. The info box always names what the cursor is on.
+A list row is one thing — a name — so it is a single-line box. An option row
+is two things, a label and its value, so it keeps the four-tile card the
+game's own OPTION screen uses, and three of those fit between the bands.
+
+**Only `MODS` wears the info box.** It earns its place there by saying what
+the row has no room to say: the mod's category, and its state in the word the
+detail screen uses rather than the four-glyph mark on the row. A profile name
+or an error line already *is* its whole text, so a box under those rows could
+only read it back — `PROFILES` and `ERRORS` spend the three rows on a fifth
+row instead.
 
 On the mod list the second line carries the **category** on the left and the
 **status** on the right. A mod that is enabled and running shows no status at
@@ -122,7 +127,7 @@ everything else.
 | `SORT BY` | `CATEGORY` | Or `NAME`, `ENABLED`, or `PROBLEMS` — which floats errored and blocked mods to the top. |
 | `HIDE OFF` | off | Drop disabled mods from the list. |
 | `WITH OPTIONS` | off | Show only the mods that have something to configure. |
-| `HELP LINE` | on | Off gives its row back to the list, making it twelve. |
+| `HELP LINE` | on | Off leaves the info box naming the focused row instead. |
 | `START ROW` | on | Label the START menu's row `MOD MENU` instead of `MODS`. |
 | `HIDE CANCEL` | on | Drop `CANCEL` from the game's own OPTION screen (Gen 1). |
 | `KEEP CURSOR` | on | Reopen the manager on the row you left it on. |
