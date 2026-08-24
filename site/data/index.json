@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T08:31:02Z",
+  "generated_at": "2026-08-24T09:06:55Z",
   "count": 9,
   "categories": [
     "GAMEPLAY",
@@ -63,8 +63,8 @@
         }
       },
       "downloads": {
-        "total": 53,
-        "as_of": "2026-08-24T08:31:02Z"
+        "total": 54,
+        "as_of": "2026-08-24T09:06:55Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-24T02:32:31Z"
@@ -112,8 +112,8 @@
         }
       },
       "downloads": {
-        "total": 18,
-        "as_of": "2026-08-24T08:31:01Z"
+        "total": 19,
+        "as_of": "2026-08-24T09:06:54Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -151,23 +151,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1autosave/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.3.1",
-        "tag": "v1.3.1",
-        "name": "1.3.1",
+        "version": "1.3.2",
+        "tag": "v1.3.2",
+        "name": "1.3.2",
         "prerelease": false,
-        "published_at": "2026-08-24T05:44:56Z",
+        "published_at": "2026-08-24T08:41:48Z",
         "zip": {
-          "name": "gen1autosave-1.3.1.zip",
-          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.3.1/gen1autosave-1.3.1.zip",
+          "name": "gen1autosave-1.3.2.zip",
+          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.3.2/gen1autosave-1.3.2.zip",
           "size": 13311
         }
       },
       "downloads": {
-        "total": 33,
-        "as_of": "2026-08-24T08:31:02Z"
+        "total": 34,
+        "as_of": "2026-08-24T09:06:55Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
-      "last_release": "2026-08-24T05:44:56Z"
+      "last_release": "2026-08-24T08:41:48Z"
     },
     {
       "id": "Gen1BillsBox",
@@ -207,23 +207,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BillsBox/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.0.15",
-        "tag": "v1.0.15",
-        "name": "1.0.15",
+        "version": "1.0.16",
+        "tag": "v1.0.16",
+        "name": "1.0.16",
         "prerelease": false,
-        "published_at": "2026-08-24T07:22:06Z",
+        "published_at": "2026-08-24T08:41:50Z",
         "zip": {
-          "name": "Gen1BillsBox-1.0.15.zip",
-          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.0.15/Gen1BillsBox-1.0.15.zip",
-          "size": 66628
+          "name": "Gen1BillsBox-1.0.16.zip",
+          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.0.16/Gen1BillsBox-1.0.16.zip",
+          "size": 66768
         }
       },
       "downloads": {
-        "total": 14,
-        "as_of": "2026-08-24T08:31:00Z"
+        "total": 15,
+        "as_of": "2026-08-24T09:06:53Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
-      "last_release": "2026-08-24T07:22:06Z"
+      "last_release": "2026-08-24T08:41:50Z"
     },
     {
       "id": "Gen1Dex",
@@ -266,23 +266,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Dex/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.0.0",
-        "tag": "v1.0.0",
-        "name": "1.0.0",
+        "version": "1.1.0",
+        "tag": "v1.1.0",
+        "name": "1.1.0",
         "prerelease": false,
-        "published_at": "2026-08-24T08:08:20Z",
+        "published_at": "2026-08-24T08:55:56Z",
         "zip": {
-          "name": "Gen1Dex-1.0.0.zip",
-          "url": "https://github.com/wild1walker/Gen1Dex/releases/download/v1.0.0/Gen1Dex-1.0.0.zip",
-          "size": 36103
+          "name": "Gen1Dex-1.1.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Dex/releases/download/v1.1.0/Gen1Dex-1.1.0.zip",
+          "size": 45072
         }
       },
       "downloads": {
-        "total": 2,
-        "as_of": "2026-08-24T08:31:00Z"
+        "total": 7,
+        "as_of": "2026-08-24T09:06:53Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
-      "last_release": "2026-08-24T08:08:20Z"
+      "last_release": "2026-08-24T08:55:56Z"
     },
     {
       "id": "Gen1Follower",
@@ -333,8 +333,8 @@
         }
       },
       "downloads": {
-        "total": 16,
-        "as_of": "2026-08-24T08:31:01Z"
+        "total": 17,
+        "as_of": "2026-08-24T09:06:53Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-23T01:37:36Z"
@@ -373,23 +373,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1MenuManager/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.2.3",
-        "tag": "v0.2.3",
-        "name": "0.2.3",
+        "version": "0.2.4",
+        "tag": "v0.2.4",
+        "name": "0.2.4",
         "prerelease": false,
-        "published_at": "2026-08-23T02:58:29Z",
+        "published_at": "2026-08-24T08:41:53Z",
         "zip": {
-          "name": "Gen1MenuManager-0.2.3.zip",
-          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.3/Gen1MenuManager-0.2.3.zip",
-          "size": 455048
+          "name": "Gen1MenuManager-0.2.4.zip",
+          "url": "https://github.com/wild1walker/Gen1MenuManager/releases/download/v0.2.4/Gen1MenuManager-0.2.4.zip",
+          "size": 16458
         }
       },
       "downloads": {
-        "total": 19,
-        "as_of": "2026-08-24T08:31:01Z"
+        "total": 23,
+        "as_of": "2026-08-24T09:06:54Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
-      "last_release": "2026-08-23T02:58:29Z"
+      "last_release": "2026-08-24T08:41:53Z"
     },
     {
       "id": "gen1_modern_bag",
@@ -428,23 +428,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_modern_bag/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.6.0",
-        "tag": "v1.6.0",
-        "name": "Gen1ModernBag 1.6.0",
+        "version": "1.8.0",
+        "tag": "v1.8.0",
+        "name": "Gen1ModernBag 1.8.0",
         "prerelease": false,
-        "published_at": "2026-08-24T07:53:38Z",
+        "published_at": "2026-08-24T08:45:49Z",
         "zip": {
-          "name": "gen1_modern_bag_v1.6.0.zip",
-          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.6.0/gen1_modern_bag_v1.6.0.zip",
-          "size": 50394
+          "name": "gen1_modern_bag_v1.8.0.zip",
+          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.8.0/gen1_modern_bag_v1.8.0.zip",
+          "size": 53431
         }
       },
       "downloads": {
-        "total": 29,
-        "as_of": "2026-08-24T08:31:02Z"
+        "total": 31,
+        "as_of": "2026-08-24T09:06:54Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
-      "last_release": "2026-08-24T07:53:38Z"
+      "last_release": "2026-08-24T08:45:49Z"
     },
     {
       "id": "gen1_sound_qol",
@@ -483,23 +483,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_sound_qol/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.1.0",
-        "tag": "v0.1.0",
-        "name": "0.1.0",
+        "version": "0.1.1",
+        "tag": "v0.1.1",
+        "name": "0.1.1",
         "prerelease": false,
-        "published_at": "2026-08-24T08:12:29Z",
+        "published_at": "2026-08-24T08:42:19Z",
         "zip": {
-          "name": "gen1_sound_qol-0.1.0.zip",
-          "url": "https://github.com/wild1walker/Gen1SoundQOL/releases/download/v0.1.0/gen1_sound_qol-0.1.0.zip",
-          "size": 19863
+          "name": "gen1_sound_qol-0.1.1.zip",
+          "url": "https://github.com/wild1walker/Gen1SoundQOL/releases/download/v0.1.1/gen1_sound_qol-0.1.1.zip",
+          "size": 19992
         }
       },
       "downloads": {
-        "total": 2,
-        "as_of": "2026-08-24T08:31:02Z"
+        "total": 5,
+        "as_of": "2026-08-24T09:06:54Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
-      "last_release": "2026-08-24T08:12:29Z"
+      "last_release": "2026-08-24T08:42:19Z"
     }
   ]
 }
