@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T05:55:31Z",
+  "generated_at": "2026-08-24T07:30:46Z",
   "count": 7,
   "categories": [
     "GAMEPLAY",
@@ -64,7 +64,7 @@
       },
       "downloads": {
         "total": 52,
-        "as_of": "2026-08-24T05:55:31Z"
+        "as_of": "2026-08-24T07:30:45Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-24T02:32:31Z"
@@ -113,7 +113,7 @@
       },
       "downloads": {
         "total": 17,
-        "as_of": "2026-08-24T05:55:31Z"
+        "as_of": "2026-08-24T07:30:45Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -164,7 +164,7 @@
       },
       "downloads": {
         "total": 31,
-        "as_of": "2026-08-24T05:55:31Z"
+        "as_of": "2026-08-24T07:30:46Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-24T05:44:56Z"
@@ -207,23 +207,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BillsBox/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.0.14",
-        "tag": "v1.0.14",
-        "name": "1.0.14",
+        "version": "1.0.15",
+        "tag": "v1.0.15",
+        "name": "1.0.15",
         "prerelease": false,
-        "published_at": "2026-08-24T04:25:21Z",
+        "published_at": "2026-08-24T07:22:06Z",
         "zip": {
-          "name": "Gen1BillsBox-1.0.14.zip",
-          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.0.14/Gen1BillsBox-1.0.14.zip",
-          "size": 65637
+          "name": "Gen1BillsBox-1.0.15.zip",
+          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.0.15/Gen1BillsBox-1.0.15.zip",
+          "size": 66628
         }
       },
       "downloads": {
         "total": 12,
-        "as_of": "2026-08-24T05:55:30Z"
+        "as_of": "2026-08-24T07:30:43Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
-      "last_release": "2026-08-24T04:25:21Z"
+      "last_release": "2026-08-24T07:22:06Z"
     },
     {
       "id": "Gen1Follower",
@@ -275,7 +275,7 @@
       },
       "downloads": {
         "total": 15,
-        "as_of": "2026-08-24T05:55:30Z"
+        "as_of": "2026-08-24T07:30:44Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-23T01:37:36Z"
@@ -327,7 +327,7 @@
       },
       "downloads": {
         "total": 17,
-        "as_of": "2026-08-24T05:55:30Z"
+        "as_of": "2026-08-24T07:30:44Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-23T02:58:29Z"
@@ -382,7 +382,7 @@
       },
       "downloads": {
         "total": 28,
-        "as_of": "2026-08-24T05:55:31Z"
+        "as_of": "2026-08-24T07:30:45Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-24T05:26:00Z"
