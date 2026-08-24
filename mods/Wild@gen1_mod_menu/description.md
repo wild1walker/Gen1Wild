@@ -54,8 +54,9 @@ line for whichever row the cursor is on, read off the schema:
 | number | the range, `1-8`, and the step when it is not 1 |
 | text | `UP TO 12 CHARS` |
 
-**`RESET DEFAULTS`** is the last card, and puts every row back to what its
-author shipped.
+The last card is **`RESET DEFAULTS`**, which puts every row back to what its
+author shipped. That row is the engine's own — it appends one to every
+options page — and all this mod adds to it is the help line.
 
 There is no description field in the engine's option schema, so the help line
 says what the row *accepts* rather than inventing prose the author never
@@ -88,7 +89,6 @@ everything else.
 | `HIDE OFF` | off | Drop disabled mods from the list. |
 | `WITH OPTIONS` | off | Show only the mods that have something to configure. |
 | `HELP LINE` | on | Off gives its row back to the list, making it twelve. |
-| `RESET ROW` | on | Show `RESET DEFAULTS` on each mod's options page. |
 | `START ROW` | on | Label the START menu's row `MOD MENU` instead of `MODS`. |
 | `HIDE CANCEL` | on | Drop `CANCEL` from the game's own OPTION screen (Gen 1). |
 | `KEEP CURSOR` | on | Reopen the manager on the row you left it on. |

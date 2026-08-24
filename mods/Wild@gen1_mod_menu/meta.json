@@ -2,8 +2,8 @@
   "id": "gen1_mod_menu",
   "title": "Gen1ModMenu",
   "author": "Wild",
-  "summary": "The mod manager, redrawn in the game's own OPTION-screen idiom: framed cards with the name on its own line and its value below, plus sorting, filters and a RESET DEFAULTS row on every mod's options page.",
-  "version": "0.3.0",
+  "summary": "The mod manager, redrawn in the game's own OPTION-screen idiom: framed cards with the name on its own line and its value below, plus sorting, filters and a help line on every mod's options page.",
+  "version": "0.3.1",
   "categories": [
     "UI",
     "TOOL",
