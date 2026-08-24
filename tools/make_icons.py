@@ -390,6 +390,78 @@ def bills_box():
     return a, AMBER
 
 
+def sound_qol():
+    """Two notes under one beam.
+
+    One beam and not two: a sixteenth's second beam closes the gap between
+    the stems and the pair stops reading as notes at all, which at 32 pixels
+    is the whole difference between a tune and a green rectangle.
+    """
+    a = Art()
+    # Each head sits on a darker rim: a green ellipse straight onto the
+    # near-black ground has no edge, and the rim is what gives it one.
+    for cx, cy in ((8.0, 25.0), (20.0, 22.0)):
+        a.ellipse(cx, cy, 4.7, 3.8, GREEN_D)
+        a.ellipse(cx, cy, 3.8, 2.9, GREEN)
+
+    a.rect(11, 8, 12, 25, GREEN)                                 # the stems,
+    a.rect(23, 5, 24, 22, GREEN)                                 # and the
+    a.poly([(11, 7), (25, 4), (25, 7), (11, 10)], GREEN)         # beam over
+    a.poly([(11, 10), (25, 7), (25, 8), (11, 11)], GREEN_D)      # them, edged
+    return a, GREEN
+
+
+def dex():
+    """The Pokedex itself, open on the list this mod puts the icons in.
+
+    The screen is the mod in one picture: three rows, each with a POKeMON
+    beside it, the one you have seen in its own colours and the two you have
+    not blacked back to silhouettes.  Every recess -- the lens, the lamps,
+    the screen -- is rimmed in the shell's own shadow rather than in ink,
+    because a black ring on red does not read as a seated part, it reads as
+    a hole cut through the case.
+    """
+    a = Art()
+    shell = RED
+    shell_d = (0x8e, 0x2b, 0x27)
+    shell_l = (0xe8, 0x5f, 0x53)
+    screen = (0x0d, 0x14, 0x0e)
+    seen_not = (0x2b, 0x38, 0x2c)      # a silhouette, still a shape
+    lens = (0x34, 0x66, 0xa6)
+    lens_l = (0x6f, 0x9d, 0xd6)
+    plastic = (0x3b, 0x41, 0x3c)
+
+    a.rect(3, 1, 28, 30, shell)                    # the case, lit from above
+    a.rect(3, 1, 28, 2, shell_l)
+    a.rect(3, 30, 28, 30, shell_d)
+    for x in (3, 28):                              # softened corners
+        a.px(x, 1, BG)
+        a.px(x, 30, BG)
+    a.frame(3, 1, 28, 30, INK)
+
+    a.disc(8.5, 5.5, 4.0, shell_d)                 # the big lens, and the
+    a.disc(8.5, 5.5, 3.2, lens)                    # light in the top of it
+    a.disc(7.4, 4.4, 1.1, lens_l)
+    for cx, c in ((15.0, AMBER), (19.0, GREEN), (23.0, WHITE)):
+        a.disc(cx, 5, 1.9, shell_d)                # the three little lamps
+        a.disc(cx, 5, 1.3, c)
+
+    a.rect(4, 10, 27, 24, shell_d)                 # the screen, in its recess
+    a.rect(5, 11, 26, 23, screen)
+    for i, top in enumerate((12, 16, 20)):
+        seen = i == 0
+        a.rect(9, top, 12, top + 2, AMBER if seen else seen_not)
+        a.rect(14, top, 24, top + 1, GREEN if seen else GREEN_D)
+    arrow(a, 6, 13, 2, "right", WHITE)             # the list cursor
+
+    a.rect(8, 25, 10, 29, plastic)                 # the pad,
+    a.rect(6, 26, 12, 28, plastic)
+    for cx, c in ((19.0, WHITE), (24.0, AMBER)):   # and the two buttons
+        a.disc(cx, 27, 2.1, shell_d)
+        a.disc(cx, 27, 1.4, c)
+    return a, RED
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
@@ -398,6 +470,8 @@ ICONS = {
     "Gen1Follower": gen1_follower,
     "gen1_modern_bag": modern_bag,
     "Gen1BillsBox": bills_box,
+    "gen1_sound_qol": sound_qol,
+    "Gen1Dex": dex,
 }
 
 
