@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModMenu, Gen1ModernBag and Gen1SoundQOL" width="920"></a>
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModMenu, Gen1ModernBag, Gen1Party and Gen1SoundQOL" width="920"></a>
 </p>
 
 ## What is in the index
@@ -24,6 +24,7 @@
 | <img src="mods/Wild@Gen1MenuManager/thumbnail.png" width="54" alt=""> | **[Gen1MenuManager](https://github.com/wild1walker/Gen1MenuManager)** | Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own. |
 | <img src="mods/Wild@gen1_mod_menu/thumbnail.png" width="54" alt=""> | **[Gen1ModMenu](https://github.com/wild1walker/Gen1ModMenu)** | The mod manager, redrawn in the game's own OPTION-screen idiom: framed cards with the name on its own line and its value below, plus sorting, filters and a RESET DEFAULTS row on every mod's options page. |
 | <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
+| <img src="mods/Wild@Gen1Party/thumbnail.png" width="54" alt=""> | **[Gen1Party](https://github.com/wild1walker/Gen1Party)** | The party menu with every POKéMON in its own species colours instead of all six sharing one, and the status and HP numbers pulled in off the screen edge. |
 | <img src="mods/Wild@gen1_sound_qol/thumbnail.png" width="54" alt=""> | **[Gen1SoundQOL](https://github.com/wild1walker/Gen1SoundQOL)** | The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio. |
 
 Every icon above is the one the card carries in **FIND MODS**, drawn by

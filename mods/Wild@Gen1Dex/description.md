@@ -9,7 +9,7 @@ row, resolved down the same path the party menu uses, so a menu-icon mod
 
 A species you have not discovered is a **black silhouette**: its shape is
 there, its colours are not, and it fills back in the moment you see one. Every
-discovered POKéMON on screen wears its own species colours — seven palettes at
+discovered POKéMON on screen wears its own species colours — six palettes at
 once, where the Game Boy could show four.
 
 The silhouette is a draw-time tint rather than a palette zone, which is the
@@ -30,7 +30,9 @@ UP on the first row and DOWN on the last wrap to the other end.
 
 ## An entry is three pages
 
-**A** moves between them, **B** closes.
+**LEFT** and **RIGHT** walk between them, wrapping both ways, with an arrow at
+each end of the header saying so. **B** closes. **A** still advances too,
+because that is the key the vanilla page used.
 
 1. **DEX** — the sprite, the kind, height and weight, and the description.
    This is the vanilla page, kept: A turns the description's own pages first,
@@ -57,9 +59,10 @@ it, and none at all about what pressing A on one does. Every entry point is
 guarded rather than trusted — a Pokédex that fails to open is worse than a
 vanilla one, so a factory that throws degrades to the builtin.
 
-The icons sit on the vanilla list's own 16-pixel row pitch, which is why the
-list still draws seven rows: the icons were sized to fit the list rather than
-the list moved to fit the icons.
+The icons sit on the vanilla list's own 16-pixel row pitch — sized to fit the
+list rather than the list moved to fit them. The list draws six rows rather
+than the vanilla seven, because the header and footer boxes cost a tile row at
+each end.
 
 ## Settings
 

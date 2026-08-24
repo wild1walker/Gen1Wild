@@ -1,0 +1,36 @@
+{
+  "id": "Gen1Party",
+  "title": "Gen1Party",
+  "author": "Wild",
+  "summary": "The party menu with every POKéMON in its own species colours instead of all six sharing one, and nothing left running off the right edge of the screen.",
+  "version": "1.0.1",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "party",
+    "ui",
+    "icons",
+    "colours",
+    "quality of life"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1Party",
+  "github": "wild1walker/Gen1Party",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "conflicts": [
+    "modern_party_ui",
+    "gen1recomp-modern-party-ui"
+  ],
+  "games": [
+    "gen1"
+  ],
+  "license": "MIT"
+}

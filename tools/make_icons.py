@@ -491,6 +491,64 @@ def mod_menu():
     return a, GREEN
 
 
+def party():
+    """The party screen, with every POKeMON in a colour of its own.
+
+    The mod's whole argument in one picture.  Vanilla lays a single palette
+    zone over the icon column -- all six members at once -- so a party comes
+    out in one colour; here each row wears its own, and the HP bars are the
+    three the game actually draws, green through yellow to red.
+
+    Three rows rather than six because six at this size are six stripes: the
+    point being made is that the rows DIFFER from each other, and three big
+    enough to read carries that where six too small to read does not.
+
+    The rows are seven pixels apart and each POKeMON is drawn no more than
+    five tall, which is what keeps them three creatures rather than one
+    column -- at six they touch, and touching reads as a single blob with
+    colour bands across it.  The cursor sits in a lane of its own at the far
+    left for the same reason: over the first POKeMON it looked like part of
+    it rather than like something pointing at it.
+    """
+    a = Art()
+    shell = (0x3b, 0x41, 0x3c)                     # the console around it
+    shell_l = (0x50, 0x58, 0x51)
+    shell_d = (0x2a, 0x2f, 0x2b)
+    screen = (0x0d, 0x14, 0x0e)
+    bar_bg = (0x2b, 0x38, 0x2c)
+
+    a.rect(2, 2, 29, 29, shell)                    # the case, lit from above
+    a.rect(2, 2, 29, 3, shell_l)
+    a.rect(2, 28, 29, 29, shell_d)
+    for x in (2, 29):                              # softened corners
+        a.px(x, 2, BG)
+        a.px(x, 29, BG)
+    a.frame(2, 2, 29, 29, INK)
+
+    a.rect(3, 5, 28, 27, shell_d)                  # the screen, in its recess
+    a.rect(4, 6, 27, 26, screen)
+
+    # Each row: the POKeMON in its own colour, its name, and its HP.  The
+    # three bar colours are the game's own thresholds rather than a gradient
+    # chosen here -- green, yellow, red is what the party menu shows.
+    rows = (
+        (7,  (0x8c, 0xc0, 0x4a), (0x5e, 0x86, 0x2c), GREEN, 11),  # full
+        (14, (0xe0, 0xa8, 0x3c), (0x9c, 0x71, 0x22), AMBER, 7),   # about half
+        (21, (0x5a, 0x8f, 0xd0), (0x38, 0x5f, 0x93), RED, 3),     # nearly out
+    )
+    for top, body, body_d, bar, fill in rows:
+        a.ellipse(10, top + 2.5, 2.9, 2.6, body_d)     # the POKeMON, on a rim
+        a.ellipse(10, top + 2.2, 2.6, 2.3, body)
+        a.px(9, top + 2, INK)                          # two eyes, so it reads
+        a.px(11, top + 2, INK)                         # as a creature, not a dot
+        a.rect(15, top, 25, top + 1, MUTED)            # the name
+        a.rect(15, top + 3, 25, top + 4, bar_bg)       # the HP bar, and its fill
+        a.rect(15, top + 3, 14 + fill, top + 4, bar)
+
+    arrow(a, 5, 9, 2, "right", WHITE)              # the cursor, in its own lane
+    return a, GREEN
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
@@ -502,6 +560,7 @@ ICONS = {
     "gen1_sound_qol": sound_qol,
     "Gen1Dex": dex,
     "gen1_mod_menu": mod_menu,
+    "Gen1Party": party,
 }
 
 

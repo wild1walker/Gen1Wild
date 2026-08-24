@@ -3,7 +3,7 @@
   "title": "Gen1Dex",
   "author": "Wild",
   "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and three pages behind every entry.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "categories": [
     "UI",
     "QOL"
