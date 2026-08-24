@@ -65,6 +65,22 @@ There is no description field in the engine's option schema, so the help line
 says what the row *accepts* rather than inventing prose the author never
 wrote.
 
+## The list menu
+
+**START** on the `MODS` tab opens a menu: the focused mod's `ENABLE` /
+`DISABLE`, the four sort orders with the active one bracketed, and the two
+filters showing their own state.
+
+**SELECT** applies staged changes — what `START` used to do. The two keys
+traded jobs because the manager has no spare ones, and nothing was lost in
+the trade: vanilla's `SELECT` quick-toggle is the menu's first row with the
+cursor already on it, and `SELECT` reaches `APPLY & RESTART` through the
+engine's own handler, so safe mode and the `NO CHANGES` notice are unchanged.
+
+Only on the `MODS` tab — `PROFILES` spends both keys itself, the `ERRORS` tab
+keeps `START` as a second way to `APPLY`, and the detail screen keeps
+`SELECT` for toggling the mod it is showing.
+
 ## Outside the manager
 
 Two smaller edits, both switched off by `STYLE: VANILLA` along with
