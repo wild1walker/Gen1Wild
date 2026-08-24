@@ -2,8 +2,8 @@
   "id": "gen1_mod_menu",
   "title": "Gen1ModMenu",
   "author": "Wild",
-  "summary": "The mod manager, redrawn: a sortable, filterable mod list, and a per-mod OPTIONS page that fits eleven rows with their values and a help line instead of four bare boxes.",
-  "version": "0.1.0",
+  "summary": "The mod manager, redrawn in the game's own OPTION-screen idiom: framed cards with the name on its own line and its value below, plus sorting, filters and a RESET DEFAULTS row on every mod's options page.",
+  "version": "0.2.0",
   "categories": [
     "UI",
     "TOOL",

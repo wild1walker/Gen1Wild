@@ -1,46 +1,29 @@
 # Gen1ModMenu
 
 The in-game **MODS** screen, redrawn. The mod list gets a status column,
-sorting and filters; the per-mod **OPTIONS** page gets eleven rows on screen
-instead of four, each with its value beside it and a line underneath saying
-what it accepts.
+sorting and filters; the per-mod **OPTIONS** page gets a help line, a
+`CHANGED` marker and a `RESET DEFAULTS` row — all drawn in the same
+framed-card idiom the game's own OPTION screen uses.
 
 Nothing about how the manager *behaves* changes. Enabling and disabling,
 dependency closures, staged changes, apply-and-restart, profiles and safe
 mode are all still the engine's — this mod draws them.
 
-## The options page
+## The look
 
-Vanilla renders it through the engine's shared option widget: four bordered
-20×4 boxes, the label on one line and the value on the next, four options
-visible at a time. A mod with seven rows is two pages, and there is no room
-to say what any of them do.
+Both list screens use the game's own **OPTION-screen idiom** — the same shape
+`TEXT SPEED` and `BATTLE ANIMATION` are drawn in: full-width framed cards down
+the screen, the label on the first line inside each and its value indented on
+the second.
 
-Here every option is one line — label left, value right — so eleven fit,
-under the mod's name and version. Below them, a help line for whichever row
-the cursor is on, read straight off the schema.
+A card holds two whole lines, of 17 and 16 glyphs, so every mod name and every
+option value is shown in full — neither has to share a row with the other.
 
-| Row type | Help line |
-| --- | --- |
-| toggle | `ON / OFF` |
-| choice | every choice label, `ONCE / N BEEPS / VANILLA` |
-| number | the range, `1-8`, and the step when it is not 1 |
-| text | `UP TO 12 CHARS` |
+On the mod list the second line carries the **category** on the left and the
+**status** on the right. A mod that is enabled and running shows no status at
+all; the column is for the exceptions.
 
-A `.` beside a value marks a row that differs from the default its author
-shipped, and **RESET DEFAULTS** at the bottom puts every one of them back.
-
-There is no description field in the engine's option schema, so the help line
-says what the row *accepts* rather than inventing prose the author never
-wrote.
-
-## The mod list
-
-A mod that is enabled and running carries **no mark at all** — a column
-reading `ON` down the whole screen is not information, and leaving it blank
-hands three more glyphs to every name. The marks are the exceptions:
-
-| Column | Reads |
+| Status | Reads |
 | --- | --- |
 | *(blank)* | enabled and running |
 | `OFF` | disabled |
@@ -49,9 +32,34 @@ hands three more glyphs to every name. The marks are the exceptions:
 | `BLKD` | a dependency is not satisfied |
 | `SKIP` | enabled and fine, but not for this game |
 
-The same six appear as a legend on the `ERRORS` tab whenever there is nothing
-wrong to show there, and the full word is always one A-press away on the
-mod's own detail screen.
+All six are spelled out on the `ERRORS` tab whenever there is nothing wrong to
+show there.
+
+There are **no control hints** on any screen: A chooses, B goes back and the
+d-pad moves, the same as every other menu in the game.
+
+Four mods fit on a screen, which is the price of the layout — and why the
+position counter, the sorts and the filters are all there.
+
+## The options page
+
+The second line of each card is the value, with `CHANGED` right-aligned
+against it on any row moved off the author's default. Below the cards, a help
+line for whichever row the cursor is on, read off the schema:
+
+| Row type | Help line |
+| --- | --- |
+| toggle | `ON / OFF` |
+| choice | every choice label, `ONCE / N BEEPS / VANILLA` |
+| number | the range, `1-8`, and the step when it is not 1 |
+| text | `UP TO 12 CHARS` |
+
+**`RESET DEFAULTS`** is the last card, and puts every row back to what its
+author shipped.
+
+There is no description field in the engine's option schema, so the help line
+says what the row *accepts* rather than inventing prose the author never
+wrote.
 
 ## Options
 
