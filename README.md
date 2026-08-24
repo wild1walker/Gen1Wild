@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModernBag and Gen1SoundQOL" width="920"></a>
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModMenu, Gen1ModernBag and Gen1SoundQOL" width="920"></a>
 </p>
 
 ## What is in the index
@@ -22,6 +22,7 @@
 | <img src="mods/Wild@Gen1Dex/thumbnail.png" width="54" alt=""> | **[Gen1Dex](https://github.com/wild1walker/Gen1Dex)** | The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and base stats, evolutions and the full movelist behind it. |
 | <img src="mods/Wild@Gen1Follower/thumbnail.png" width="54" alt=""> | **[Gen1Follower](https://github.com/wild1walker/Gen1Follower)** | All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33. |
 | <img src="mods/Wild@Gen1MenuManager/thumbnail.png" width="54" alt=""> | **[Gen1MenuManager](https://github.com/wild1walker/Gen1MenuManager)** | Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own. |
+| <img src="mods/Wild@gen1_mod_menu/thumbnail.png" width="54" alt=""> | **[Gen1ModMenu](https://github.com/wild1walker/Gen1ModMenu)** | The mod manager, redrawn: a sortable, filterable mod list, and a per-mod OPTIONS page that fits eleven rows with their values and a help line instead of four bare boxes. |
 | <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
 | <img src="mods/Wild@gen1_sound_qol/thumbnail.png" width="54" alt=""> | **[Gen1SoundQOL](https://github.com/wild1walker/Gen1SoundQOL)** | The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio. |
 

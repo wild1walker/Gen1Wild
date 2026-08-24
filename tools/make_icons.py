@@ -462,6 +462,35 @@ def dex():
     return a, RED
 
 
+def mod_menu():
+    """A cog: the settings screen this mod redraws."""
+    a = Art()
+    cx = cy = 16.0
+
+    # Eight trapezoid teeth rather than eight discs -- a rounded tooth reads
+    # as a flower at 54px, which is the size the index card actually shows.
+    # Drawn twice, INK a shade proud of GREEN, so the cog keeps the same
+    # outline every other icon here has.
+    def teeth(root, tip, half_root, half_tip, colour):
+        for i in range(8):
+            a0 = i * 45
+            a.poly([polar(cx, cy, a0 - half_root, root),
+                    polar(cx, cy, a0 - half_tip, tip),
+                    polar(cx, cy, a0 + half_tip, tip),
+                    polar(cx, cy, a0 + half_root, root)], colour)
+
+    teeth(10.0, 14.8, 14, 9.5, INK)
+    a.disc(cx, cy, 12.7, INK)
+    teeth(9.5, 13.4, 11.5, 7.0, GREEN)
+    a.disc(cx, cy, 11.4, GREEN)
+
+    # the bore, dark rather than empty, so the cog stays legible on the dark
+    # card as well as on the lighter strip
+    a.disc(cx, cy, 5.6, INK)
+    a.disc(cx, cy, 4.2, PANEL)
+    return a, GREEN
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
@@ -472,6 +501,7 @@ ICONS = {
     "Gen1BillsBox": bills_box,
     "gen1_sound_qol": sound_qol,
     "Gen1Dex": dex,
+    "gen1_mod_menu": mod_menu,
 }
 
 

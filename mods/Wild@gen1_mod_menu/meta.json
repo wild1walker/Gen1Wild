@@ -1,0 +1,34 @@
+{
+  "id": "gen1_mod_menu",
+  "title": "Gen1ModMenu",
+  "author": "Wild",
+  "summary": "The mod manager, redrawn: a sortable, filterable mod list, and a per-mod OPTIONS page that fits eleven rows with their values and a help line instead of four bare boxes.",
+  "version": "0.1.0",
+  "categories": [
+    "UI",
+    "TOOL",
+    "QOL"
+  ],
+  "tags": [
+    "ui",
+    "mod manager",
+    "options",
+    "settings",
+    "sort",
+    "quality of life"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1ModMenu",
+  "github": "wild1walker/Gen1ModMenu",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "all"
+  ],
+  "license": "MIT"
+}
