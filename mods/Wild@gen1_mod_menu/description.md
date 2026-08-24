@@ -18,6 +18,9 @@ the second.
 
 A card holds two whole lines, of 17 and 16 glyphs, so every mod name and every
 option value is shown in full — neither has to share a row with the other.
+All three tabs — `MODS`, `PROF` and `ERRS` — are drawn this way, and a row
+with no readable label (a profile saved without a name) reads `(NO NAME)`
+rather than drawing an empty box.
 
 On the mod list the second line carries the **category** on the left and the
 **status** on the right. A mod that is enabled and running shows no status at
@@ -32,8 +35,8 @@ all; the column is for the exceptions.
 | `BLKD` | a dependency is not satisfied |
 | `SKIP` | enabled and fine, but not for this game |
 
-All six are spelled out on the `ERRORS` tab whenever there is nothing wrong to
-show there.
+The full word is always one A-press away, on the mod's own detail screen —
+`ENABLED`, `DISABLED`, `FAILED`, `BLOCKED`, `NOT THIS GAME`.
 
 There are **no control hints** on any screen: A chooses, B goes back and the
 d-pad moves, the same as every other menu in the game.
