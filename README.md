@@ -220,26 +220,29 @@ job is to be current: Gen1ModernBag tagged 1.1.0 at 22:32 and the feed still
 described 1.0.0, with nothing due to run until 05:17. An hour's worst case
 costs about fifteen seconds of CI and needs no credential anywhere.
 
-### Getting it sooner than the hour (optional, off)
+And not faster than hourly, because nothing downstream can use it — see below.
 
-Every mod repo carries `.github/workflows/notify-index.yml` — the same file in
-all of them, since which mod it is comes from the repository it runs in. On a
-published release it fires a `mod-released` `repository_dispatch` at this repo,
-which rebuilds the feed within the minute rather than within the hour. It keys
-on the release rather than on the release workflow, so it fires for one cut by
-hand exactly as it does for a built one.
+## What this feed is not
 
-**It is off, and the feed does not depend on it.** That call is
-cross-repository, which is the one thing `github.token` cannot do — that token
-only ever reaches the repo it was issued for. Turning it on means
-**`INDEX_DISPATCH_TOKEN`** as an Actions secret in each mod repo: a
-fine-grained personal access token scoped to `wild1walker/Gen1Wild` alone, with
-**Contents: read and write**, which is what the dispatches endpoint checks.
+It is worth being clear about, because it is easy to assume otherwise: **this
+feed is not how an installed mod learns it is out of date.**
 
-Without the secret the workflow says so in its run log and exits green, and the
-hourly rebuild picks the release up regardless. Trading an hour for not having
-a token in seven repos is a reasonable trade, and it is the one this repo
-makes.
+The feed is what **MODS > FIND MODS** lists — browsing, and the version shown
+before you install something. Once a mod *is* installed, the game checks that
+mod's own repository directly, on its own six-hour cache, and never reads this
+file (`src/mods/ModUpdate.lua`, `CACHE_TTL`). What decides whether an installed
+mod gets checked at all is the `github` field in **its own `manifest.json`** —
+a mod without one is skipped outright, however current this index is.
+
+So the two halves are independent:
+
+| | Driven by | Freshness |
+|---|---|---|
+| A card in FIND MODS | this feed | up to an hour |
+| An installed mod's update badge | that mod's `manifest.json` `github` | up to six hours |
+
+Which is also why rebuilding this feed every few minutes would buy nothing: it
+would be answering a question nothing is asking.
 
 ## Where it is served from
 

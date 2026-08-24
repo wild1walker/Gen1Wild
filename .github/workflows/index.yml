@@ -2,15 +2,21 @@ name: Build index
 
 # The feed is metadata about releases that live in other repos, so it goes
 # stale on its own schedule rather than on this repo's: the hourly run catches
-# a mod that tagged a release, a push picks up an entry edited here, and a mod
-# repo that can say so gets the rebuild sooner still.
+# a mod that tagged a release, and a push picks up an entry edited here.
 #
 # Hourly rather than nightly because nightly is the wrong trade for a feed
 # whose whole job is to be current: Gen1ModernBag tagged 1.1.0 at 22:32 and the
-# feed still described 1.0.0, with nothing due to run until 05:17.  A worst
-# case of an hour is cheap -- a run is about fifteen seconds and commits
-# nothing unless something moved -- and it needs no credential anywhere, which
-# the repository_dispatch path below does.
+# feed still described 1.0.0, with nothing due to run until 05:17.  An hour's
+# worst case is cheap -- a run is about fifteen seconds and commits nothing
+# unless something moved.
+#
+# Not faster than hourly, because nothing downstream can use it.  This feed is
+# what MODS > FIND MODS lists; it is not how an installed mod learns it is out
+# of date.  That check is the game asking the mod's own repo directly, on its
+# own six-hour cache (src/mods/ModUpdate.lua, CACHE_TTL), and it never reads
+# this file.  So an index fresher than an hour would be answering a question
+# no one is asking, and a schedule under about fifteen minutes is unreliable
+# on GitHub's runners anyway.
 #
 # site/** is deliberately not a trigger -- this job commits into it, and a
 # rebuild that changes nothing keeps the old generated_at, so a quiet hour is
@@ -23,16 +29,6 @@ on:
       - 'mods/**'
       - 'tools/**'
       - '.github/workflows/index.yml'
-
-  # A mod repo's notify-index.yml fires this once its release is published, to
-  # turn the hourly worst case into a within-the-minute one.  It needs a token
-  # that can reach this repo, so it is off until one is set, and the hourly run
-  # above is what the feed actually relies on.  The payload is a courtesy for
-  # the log -- the build reads every entry's releases from the GitHub API
-  # regardless of who woke it, so a dispatch naming one mod still produces
-  # exactly the feed the hourly run would have.
-  repository_dispatch:
-    types: [mod-released]
 
   # :17 rather than :00, where every other hourly job on GitHub is queued.
   schedule:
@@ -51,14 +47,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Say who woke this
-        if: github.event_name == 'repository_dispatch'
-        env:
-          MOD: ${{ github.event.client_payload.mod }}
-          VERSION: ${{ github.event.client_payload.version }}
-          SENDER: ${{ github.event.client_payload.repository }}
-        run: echo "Rebuilding because ${SENDER:-a mod repo} published ${MOD:-a mod} ${VERSION:-}"
 
       - name: Build the feed
         env:
