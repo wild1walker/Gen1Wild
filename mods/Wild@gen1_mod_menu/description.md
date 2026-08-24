@@ -61,6 +61,24 @@ There is no description field in the engine's option schema, so the help line
 says what the row *accepts* rather than inventing prose the author never
 wrote.
 
+## Outside the manager
+
+Two smaller edits, both switched off by `STYLE: VANILLA` along with
+everything else.
+
+- **The START menu's row reads `MOD MENU`.** The engine already puts one
+  there and labels it `MODS`; this renames that row rather than adding a
+  second beside it, matched on the label the engine would have produced so a
+  translation is still recognised, and at the default hook priority so
+  Gen1MenuManager can still move, hide or pin it.
+- **`CANCEL` is gone from the game's own OPTION screen.** It was never one of
+  the rows — the engine appends it after the rows hook and draws it as the
+  fixed bottom line — and it is not the only exit: B and START both leave
+  that menu, with the same sound and the same pop. The wrapper that removes
+  it never touches input, so it can misplace the cursor but cannot take away
+  the way out. **Gen 1 only**; Gold's options screen is a different screen
+  with a different layout and is left alone.
+
 ## Options
 
 | Option | Default | Notes |
@@ -71,6 +89,8 @@ wrote.
 | `WITH OPTIONS` | off | Show only the mods that have something to configure. |
 | `HELP LINE` | on | Off gives its row back to the list, making it twelve. |
 | `RESET ROW` | on | Show `RESET DEFAULTS` on each mod's options page. |
+| `START ROW` | on | Label the START menu's row `MOD MENU` instead of `MODS`. |
+| `HIDE CANCEL` | on | Drop `CANCEL` from the game's own OPTION screen (Gen 1). |
 | `KEEP CURSOR` | on | Reopen the manager on the row you left it on. |
 
 Neither filter can hide Gen1ModMenu itself — both are set from its own
