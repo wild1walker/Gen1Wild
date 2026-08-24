@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T22:49:38Z",
+  "generated_at": "2026-08-24T22:53:48Z",
   "count": 10,
   "categories": [
     "GAMEPLAY",
@@ -64,7 +64,7 @@
       },
       "downloads": {
         "total": 74,
-        "as_of": "2026-08-24T22:49:38Z"
+        "as_of": "2026-08-24T22:53:48Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-24T02:32:31Z"
@@ -113,7 +113,7 @@
       },
       "downloads": {
         "total": 24,
-        "as_of": "2026-08-24T22:49:36Z"
+        "as_of": "2026-08-24T22:53:46Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -164,7 +164,7 @@
       },
       "downloads": {
         "total": 42,
-        "as_of": "2026-08-24T22:49:38Z"
+        "as_of": "2026-08-24T22:53:48Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-24T08:41:48Z"
@@ -207,23 +207,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BillsBox/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.0.16",
-        "tag": "v1.0.16",
-        "name": "1.0.16",
+        "version": "1.1.0",
+        "tag": "v1.1.0",
+        "name": "1.1.0",
         "prerelease": false,
-        "published_at": "2026-08-24T08:41:50Z",
+        "published_at": "2026-08-24T22:50:52Z",
         "zip": {
-          "name": "Gen1BillsBox-1.0.16.zip",
-          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.0.16/Gen1BillsBox-1.0.16.zip",
-          "size": 66768
+          "name": "Gen1BillsBox-1.1.0.zip",
+          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.1.0/Gen1BillsBox-1.1.0.zip",
+          "size": 74643
         }
       },
       "downloads": {
         "total": 19,
-        "as_of": "2026-08-24T22:49:34Z"
+        "as_of": "2026-08-24T22:53:45Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
-      "last_release": "2026-08-24T08:41:50Z"
+      "last_release": "2026-08-24T22:50:52Z"
     },
     {
       "id": "Gen1Dex",
@@ -279,7 +279,7 @@
       },
       "downloads": {
         "total": 11,
-        "as_of": "2026-08-24T22:49:35Z"
+        "as_of": "2026-08-24T22:53:45Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-08-24T08:55:56Z"
@@ -334,7 +334,7 @@
       },
       "downloads": {
         "total": 20,
-        "as_of": "2026-08-24T22:49:35Z"
+        "as_of": "2026-08-24T22:53:46Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-23T01:37:36Z"
@@ -386,7 +386,7 @@
       },
       "downloads": {
         "total": 30,
-        "as_of": "2026-08-24T22:49:36Z"
+        "as_of": "2026-08-24T22:53:46Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-24T08:41:53Z"
@@ -441,7 +441,7 @@
       },
       "downloads": {
         "total": 39,
-        "as_of": "2026-08-24T22:49:37Z"
+        "as_of": "2026-08-24T22:53:47Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-24T17:00:32Z"
@@ -451,7 +451,7 @@
       "title": "Gen1ModMenu",
       "author": "Wild",
       "summary": "The mod manager, redrawn in the game's own OPTION-screen idiom: framed cards with the name on its own line and its value below, plus sorting, filters and a help line on every mod's options page.",
-      "version": "0.7.0",
+      "version": "0.7.1",
       "categories": [
         "UI",
         "TOOL",
@@ -483,23 +483,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_mod_menu/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.6.0",
-        "tag": "v0.6.0",
-        "name": "0.6.0",
+        "version": "0.7.0",
+        "tag": "v0.7.0",
+        "name": "0.7.0",
         "prerelease": false,
-        "published_at": "2026-08-24T21:53:13Z",
+        "published_at": "2026-08-24T22:49:43Z",
         "zip": {
-          "name": "gen1_mod_menu-0.6.0.zip",
-          "url": "https://github.com/wild1walker/Gen1ModMenu/releases/download/v0.6.0/gen1_mod_menu-0.6.0.zip",
-          "size": 51397
+          "name": "gen1_mod_menu-0.7.0.zip",
+          "url": "https://github.com/wild1walker/Gen1ModMenu/releases/download/v0.7.0/gen1_mod_menu-0.7.0.zip",
+          "size": 53142
         }
       },
       "downloads": {
-        "total": 4,
-        "as_of": "2026-08-24T22:49:37Z"
+        "total": 5,
+        "as_of": "2026-08-24T22:53:47Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
-      "last_release": "2026-08-24T21:53:13Z"
+      "last_release": "2026-08-24T22:49:43Z"
     },
     {
       "id": "gen1_sound_qol",
@@ -551,7 +551,7 @@
       },
       "downloads": {
         "total": 15,
-        "as_of": "2026-08-24T22:49:38Z"
+        "as_of": "2026-08-24T22:53:47Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
