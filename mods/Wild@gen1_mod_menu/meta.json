@@ -3,7 +3,7 @@
   "title": "Gen1ModMenu",
   "author": "Wild",
   "summary": "The mod manager, redrawn in the game's own OPTION-screen idiom: framed cards with the name on its own line and its value below, plus sorting, filters and a help line on every mod's options page.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "categories": [
     "UI",
     "TOOL",

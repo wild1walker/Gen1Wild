@@ -22,12 +22,16 @@ All three tabs — `MODS`, `PROF` and `ERRS` — are drawn this way, and a row
 with no readable label (a profile saved without a name) reads `(NO NAME)`
 rather than drawing an empty box.
 
-The list wears its tabs as a **title bar**: the names on the top row with the
-active one bracketed, a rule under them and the position count at the end of
-it. Left and right move between the tabs and wrap at both ends. A mod's
-options page keeps its caption at the bottom instead — that line names the
-mod being edited rather than being something you navigate — which leaves the
-row above it for the help line.
+The list is banded the way **Gen1BillsBox** bands its storage screen: a
+header box across the top naming the page you are on, with the position count
+beside it; the rows under it; and an info box at the bottom naming what the
+cursor is on. Left and right move between `MODS`, `PROFILES` and `ERRORS`,
+and wrap at both ends.
+
+A list row is one thing — a name — so it is a single-line box, and four fit
+between the two bands. An option row is two things, a label and its value,
+which is why a mod's options page keeps the four-tile cards the game's own
+OPTION screen uses and the list does not.
 
 On the mod list the second line carries the **category** on the left and the
 **status** on the right. A mod that is enabled and running shows no status at
