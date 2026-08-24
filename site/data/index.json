@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T05:04:11Z",
+  "generated_at": "2026-08-24T05:55:31Z",
   "count": 7,
   "categories": [
     "GAMEPLAY",
@@ -64,7 +64,7 @@
       },
       "downloads": {
         "total": 52,
-        "as_of": "2026-08-24T05:04:11Z"
+        "as_of": "2026-08-24T05:55:31Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-24T02:32:31Z"
@@ -113,7 +113,7 @@
       },
       "downloads": {
         "total": 17,
-        "as_of": "2026-08-24T05:04:10Z"
+        "as_of": "2026-08-24T05:55:31Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -151,23 +151,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1autosave/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.2.4",
-        "tag": "v1.2.4",
-        "name": "1.2.4",
+        "version": "1.3.1",
+        "tag": "v1.3.1",
+        "name": "1.3.1",
         "prerelease": false,
-        "published_at": "2026-08-23T04:27:10Z",
+        "published_at": "2026-08-24T05:44:56Z",
         "zip": {
-          "name": "gen1autosave-1.2.4.zip",
-          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.2.4/gen1autosave-1.2.4.zip",
-          "size": 11627
+          "name": "gen1autosave-1.3.1.zip",
+          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.3.1/gen1autosave-1.3.1.zip",
+          "size": 13311
         }
       },
       "downloads": {
-        "total": 30,
-        "as_of": "2026-08-24T05:04:11Z"
+        "total": 31,
+        "as_of": "2026-08-24T05:55:31Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
-      "last_release": "2026-08-23T04:27:10Z"
+      "last_release": "2026-08-24T05:44:56Z"
     },
     {
       "id": "Gen1BillsBox",
@@ -220,7 +220,7 @@
       },
       "downloads": {
         "total": 12,
-        "as_of": "2026-08-24T05:04:09Z"
+        "as_of": "2026-08-24T05:55:30Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-24T04:25:21Z"
@@ -275,7 +275,7 @@
       },
       "downloads": {
         "total": 15,
-        "as_of": "2026-08-24T05:04:10Z"
+        "as_of": "2026-08-24T05:55:30Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-23T01:37:36Z"
@@ -327,7 +327,7 @@
       },
       "downloads": {
         "total": 17,
-        "as_of": "2026-08-24T05:04:10Z"
+        "as_of": "2026-08-24T05:55:30Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-23T02:58:29Z"
@@ -369,23 +369,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_modern_bag/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.4.0",
-        "tag": "v1.4.0",
-        "name": "Gen1ModernBag 1.4.0",
+        "version": "1.5.0",
+        "tag": "v1.5.0",
+        "name": "Gen1ModernBag 1.5.0",
         "prerelease": false,
-        "published_at": "2026-08-24T04:56:55Z",
+        "published_at": "2026-08-24T05:26:00Z",
         "zip": {
-          "name": "gen1_modern_bag_v1.4.0.zip",
-          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.4.0/gen1_modern_bag_v1.4.0.zip",
-          "size": 46002
+          "name": "gen1_modern_bag_v1.5.0.zip",
+          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.5.0/gen1_modern_bag_v1.5.0.zip",
+          "size": 47110
         }
       },
       "downloads": {
-        "total": 26,
-        "as_of": "2026-08-24T05:04:11Z"
+        "total": 28,
+        "as_of": "2026-08-24T05:55:31Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
-      "last_release": "2026-08-24T04:56:55Z"
+      "last_release": "2026-08-24T05:26:00Z"
     }
   ]
 }
