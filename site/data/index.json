@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T23:25:59Z",
-  "count": 10,
+  "generated_at": "2026-08-24T23:53:58Z",
+  "count": 11,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -64,7 +64,7 @@
       },
       "downloads": {
         "total": 74,
-        "as_of": "2026-08-24T23:25:58Z"
+        "as_of": "2026-08-24T23:53:57Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-24T02:32:31Z"
@@ -113,7 +113,7 @@
       },
       "downloads": {
         "total": 24,
-        "as_of": "2026-08-24T23:25:57Z"
+        "as_of": "2026-08-24T23:53:55Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -163,8 +163,8 @@
         }
       },
       "downloads": {
-        "total": 42,
-        "as_of": "2026-08-24T23:25:59Z"
+        "total": 43,
+        "as_of": "2026-08-24T23:53:58Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-24T08:41:48Z"
@@ -220,7 +220,7 @@
       },
       "downloads": {
         "total": 20,
-        "as_of": "2026-08-24T23:25:56Z"
+        "as_of": "2026-08-24T23:53:53Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-24T23:17:54Z"
@@ -230,7 +230,7 @@
       "title": "Gen1Dex",
       "author": "Wild",
       "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and three pages behind every entry.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "categories": [
         "UI",
         "QOL"
@@ -279,7 +279,7 @@
       },
       "downloads": {
         "total": 11,
-        "as_of": "2026-08-24T23:25:56Z"
+        "as_of": "2026-08-24T23:53:53Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-08-24T08:55:56Z"
@@ -334,7 +334,7 @@
       },
       "downloads": {
         "total": 20,
-        "as_of": "2026-08-24T23:25:57Z"
+        "as_of": "2026-08-24T23:53:54Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-23T01:37:36Z"
@@ -386,7 +386,7 @@
       },
       "downloads": {
         "total": 30,
-        "as_of": "2026-08-24T23:25:57Z"
+        "as_of": "2026-08-24T23:53:54Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-24T08:41:53Z"
@@ -441,7 +441,7 @@
       },
       "downloads": {
         "total": 39,
-        "as_of": "2026-08-24T23:25:58Z"
+        "as_of": "2026-08-24T23:53:56Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-24T17:00:32Z"
@@ -496,10 +496,67 @@
       },
       "downloads": {
         "total": 6,
-        "as_of": "2026-08-24T23:25:58Z"
+        "as_of": "2026-08-24T23:53:56Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-24T23:25:52Z"
+    },
+    {
+      "id": "Gen1Party",
+      "title": "Gen1Party",
+      "author": "Wild",
+      "summary": "The party menu with every POKéMON in its own species colours instead of all six sharing one, and nothing left running off the right edge of the screen.",
+      "version": "1.0.1",
+      "categories": [
+        "UI",
+        "QOL"
+      ],
+      "tags": [
+        "party",
+        "ui",
+        "icons",
+        "colours",
+        "quality of life"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1Party",
+      "github": "wild1walker/Gen1Party",
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "conflicts": [
+        "modern_party_ui",
+        "gen1recomp-modern-party-ui"
+      ],
+      "games": [
+        "gen1"
+      ],
+      "license": "MIT",
+      "folder": "Wild@Gen1Party",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Party/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Party/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "1.0.1",
+        "tag": "v1.0.1",
+        "name": "1.0.1",
+        "prerelease": false,
+        "published_at": "2026-08-24T23:27:42Z",
+        "zip": {
+          "name": "Gen1Party-1.0.1.zip",
+          "url": "https://github.com/wild1walker/Gen1Party/releases/download/v1.0.1/Gen1Party-1.0.1.zip",
+          "size": 23216
+        }
+      },
+      "downloads": {
+        "total": 2,
+        "as_of": "2026-08-24T23:53:55Z"
+      },
+      "first_release": "2026-08-24T23:24:25Z",
+      "last_release": "2026-08-24T23:27:42Z"
     },
     {
       "id": "gen1_sound_qol",
@@ -551,7 +608,7 @@
       },
       "downloads": {
         "total": 15,
-        "as_of": "2026-08-24T23:25:58Z"
+        "as_of": "2026-08-24T23:53:57Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
