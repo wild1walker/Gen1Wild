@@ -1,0 +1,38 @@
+{
+  "id": "Gen1Dex",
+  "title": "Gen1Dex",
+  "author": "Wild",
+  "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and three pages behind every entry.",
+  "version": "1.0.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "pokedex",
+    "dex",
+    "ui",
+    "icons",
+    "stats",
+    "movelist",
+    "quality of life"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1Dex",
+  "github": "wild1walker/Gen1Dex",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "conflicts": [
+    "useful_dex",
+    "pokedex_plus"
+  ],
+  "games": [
+    "gen1"
+  ],
+  "license": "MIT"
+}

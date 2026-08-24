@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-24T07:30:46Z",
-  "count": 7,
+  "generated_at": "2026-08-24T08:24:17Z",
+  "count": 9,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -226,6 +226,65 @@
       "last_release": "2026-08-24T07:22:06Z"
     },
     {
+      "id": "Gen1Dex",
+      "title": "Gen1Dex",
+      "author": "Wild",
+      "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and three pages behind every entry.",
+      "version": "1.0.0",
+      "categories": [
+        "UI",
+        "QOL"
+      ],
+      "tags": [
+        "pokedex",
+        "dex",
+        "ui",
+        "icons",
+        "stats",
+        "movelist",
+        "quality of life"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1Dex",
+      "github": "wild1walker/Gen1Dex",
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "conflicts": [
+        "useful_dex",
+        "pokedex_plus"
+      ],
+      "games": [
+        "gen1"
+      ],
+      "license": "MIT",
+      "folder": "Wild@Gen1Dex",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Dex/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Dex/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "1.0.0",
+        "tag": "v1.0.0",
+        "name": "1.0.0",
+        "prerelease": false,
+        "published_at": "2026-08-24T08:08:20Z",
+        "zip": {
+          "name": "Gen1Dex-1.0.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Dex/releases/download/v1.0.0/Gen1Dex-1.0.0.zip",
+          "size": 36103
+        }
+      },
+      "downloads": {
+        "total": 2,
+        "as_of": "2026-08-24T08:24:17Z"
+      },
+      "first_release": "2026-08-24T08:08:20Z",
+      "last_release": "2026-08-24T08:08:20Z"
+    },
+    {
       "id": "Gen1Follower",
       "title": "Gen1Follower",
       "author": "Wild",
@@ -386,6 +445,61 @@
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-24T05:26:00Z"
+    },
+    {
+      "id": "gen1_sound_qol",
+      "title": "Gen1SoundQOL",
+      "author": "Wild",
+      "summary": "The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio.",
+      "version": "0.1.0",
+      "categories": [
+        "AUDIO",
+        "QOL"
+      ],
+      "tags": [
+        "audio",
+        "sound",
+        "low hp",
+        "alarm",
+        "mute",
+        "mobile",
+        "quality of life"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1SoundQOL",
+      "github": "wild1walker/Gen1SoundQOL",
+      "api": 2,
+      "game_version": ">=0.0.0-0 <2.0.0",
+      "profile": "content",
+      "affects_link": false,
+      "permissions": [
+        "engine_internals"
+      ],
+      "games": [
+        "all"
+      ],
+      "license": "MIT",
+      "folder": "Wild@gen1_sound_qol",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_sound_qol/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_sound_qol/description.md",
+      "update_check": "ok",
+      "latest": {
+        "version": "0.1.0",
+        "tag": "v0.1.0",
+        "name": "0.1.0",
+        "prerelease": false,
+        "published_at": "2026-08-24T08:12:29Z",
+        "zip": {
+          "name": "gen1_sound_qol-0.1.0.zip",
+          "url": "https://github.com/wild1walker/Gen1SoundQOL/releases/download/v0.1.0/gen1_sound_qol-0.1.0.zip",
+          "size": 19863
+        }
+      },
+      "downloads": {
+        "total": 2,
+        "as_of": "2026-08-24T08:24:16Z"
+      },
+      "first_release": "2026-08-24T08:12:29Z",
+      "last_release": "2026-08-24T08:12:29Z"
     }
   ]
 }

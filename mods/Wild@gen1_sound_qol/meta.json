@@ -1,0 +1,34 @@
+{
+  "id": "gen1_sound_qol",
+  "title": "Gen1SoundQOL",
+  "author": "Wild",
+  "summary": "The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio.",
+  "version": "0.1.0",
+  "categories": [
+    "AUDIO",
+    "QOL"
+  ],
+  "tags": [
+    "audio",
+    "sound",
+    "low hp",
+    "alarm",
+    "mute",
+    "mobile",
+    "quality of life"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1SoundQOL",
+  "github": "wild1walker/Gen1SoundQOL",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "all"
+  ],
+  "license": "MIT"
+}

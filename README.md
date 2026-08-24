@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Follower, Gen1MenuManager and Gen1ModernBag" width="920"></a>
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModernBag and Gen1SoundQOL" width="920"></a>
 </p>
 
 ## What is in the index
@@ -19,9 +19,11 @@
 | <img src="mods/Wild@gen1_auto_continue/thumbnail.png" width="54" alt=""> | **[Gen1AutoContinue](https://github.com/wild1walker/Gen1AutoContinue)** | Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window. |
 | <img src="mods/Wild@gen1autosave/thumbnail.png" width="54" alt=""> | **[Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave)** | Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups. |
 | <img src="mods/Wild@Gen1BillsBox/thumbnail.png" width="54" alt=""> | **[Gen1BillsBox](https://github.com/wild1walker/Gen1BillsBox)** | Replaces Bill's PC with the box it was standing in for: the party down the left, twenty visible slots on the right, and a cursor that carries a Pokémon. |
+| <img src="mods/Wild@Gen1Dex/thumbnail.png" width="54" alt=""> | **[Gen1Dex](https://github.com/wild1walker/Gen1Dex)** | The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and base stats, evolutions and the full movelist behind it. |
 | <img src="mods/Wild@Gen1Follower/thumbnail.png" width="54" alt=""> | **[Gen1Follower](https://github.com/wild1walker/Gen1Follower)** | All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33. |
 | <img src="mods/Wild@Gen1MenuManager/thumbnail.png" width="54" alt=""> | **[Gen1MenuManager](https://github.com/wild1walker/Gen1MenuManager)** | Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own. |
 | <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
+| <img src="mods/Wild@gen1_sound_qol/thumbnail.png" width="54" alt=""> | **[Gen1SoundQOL](https://github.com/wild1walker/Gen1SoundQOL)** | The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio. |
 
 Every icon above is the one the card carries in **FIND MODS**, drawn by
 [`tools/make_icons.py`](tools/make_icons.py). No mod is vendored here: each
@@ -141,7 +143,7 @@ Opt out with `"automatic_version_check": false` and give the entry its own
 
 The wordmark at the top of this file is hand-made, and it is the whole
 family's -- every mod repo carries the same file at `docs/banner.png` and
-leads with it, under its own name. One mark, eight repos: a reader who has
+leads with it, under its own name. One mark, ten repos: a reader who has
 seen one of these mods recognises the next one on sight, which is the entire
 job a mark has.
 
@@ -175,7 +177,7 @@ It writes `site/banners/lineup.png` -- the plain one, above -- and one
 `lineup-<Mod>.png` per mod, which is the same strip with that mod ringed
 under a **Check out my other mods!** line. The plain strip is also the link
 preview: `site/index.html` points `og:image` at it, so pasting the index URL
-into a chat unfurls as the seven mods and their names rather than a bare link. Each mod repo carries its own as
+into a chat unfurls as the nine mods and their names rather than a bare link. Each mod repo carries its own as
 `docs/lineup.png` and links it, and its wordmark, back to the live index, so
 a reader who lands on any one mod can see the rest of the family and where
 the page they are on sits in it.
