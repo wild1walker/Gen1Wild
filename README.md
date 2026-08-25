@@ -18,7 +18,7 @@
 | <img src="mods/Wild@gen151/thumbnail.png" width="54" alt=""> | **[Gen151](https://github.com/wild1walker/Gen151)** | All 151 obtainable renewably in one save, on one version, without trading — version exclusives, gift and fossil mons, a LINK CABLE for the trade evolutions, and every vanilla encounter left exactly as it was. |
 | <img src="mods/Wild@gen1arena/thumbnail.png" width="54" alt=""> | **[Gen1Arena](https://github.com/wild1walker/Gen1Arena)** | 2D backdrops behind battles, picked by map, tileset and how the encounter started. |
 | <img src="mods/Wild@gen1_auto_continue/thumbnail.png" width="54" alt=""> | **[Gen1AutoContinue](https://github.com/wild1walker/Gen1AutoContinue)** | Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window. |
-| <img src="mods/Wild@gen1autosave/thumbnail.png" width="54" alt=""> | **[Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave)** | Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups. |
+| <img src="mods/Wild@gen1autosave/thumbnail.png" width="54" alt=""> | **[Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave)** | Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups. Inspired by Czajo's gen1recomp-autosave. |
 | <img src="mods/Wild@Gen1BillsBox/thumbnail.png" width="54" alt=""> | **[Gen1BillsBox](https://github.com/wild1walker/Gen1BillsBox)** | Replaces Bill's PC with the box it was standing in for: the party down the left, twenty visible slots on the right, and a cursor that carries a Pokémon. |
 | <img src="mods/Wild@Gen1Dex/thumbnail.png" width="54" alt=""> | **[Gen1Dex](https://github.com/wild1walker/Gen1Dex)** | The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, base stats, evolutions and the full movelist behind it, and an AREA screen that opens on the ones you have never met and says how to get there. |
 | <img src="mods/Wild@Gen1Follower/thumbnail.png" width="54" alt=""> | **[Gen1Follower](https://github.com/wild1walker/Gen1Follower)** | All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33. |
@@ -64,10 +64,29 @@ refuses an archive whose manifest id is not the one being installed.
 Ones I maintain -- which is not the same as ones I wrote. Some started here.
 Others are someone else's mod that I took and tweaked until it did what I
 wanted, and those keep the original authors' credit and their own licence:
-Gen1Follower is built from Antigravity and gamecorner33's PokéPC Followers,
-and Gen1Arena's backdrops come from the Battle Backgrounds Patch FR. Where a
-mod started as someone else's, or leans on their art, its description says so
-and names who it belongs to.
+
+- **Gen1Follower** is built from Antigravity and gamecorner33's
+  [PokéPC Followers](https://github.com/mfrtechconsult/PokePCFollowers), and its
+  Gen II sprite sheets descend from ShockSlayer and the Pokémon Crystal Clear
+  team's work by way of the PokéPC / Followers EX lineage.
+- **Gen1ModernBag** is a derivative of **FAFF0x**'s Modern Bag, taken at
+  upstream 1.6.0. Nearly all of what it does is FAFF0x's work; its MIT notice
+  is carried verbatim.
+- **Gen1Arena**'s backdrops are the **Battle Backgrounds Patch FR** — LibertyTwins,
+  princess-phoenix, carchagui, aveontrainer, WesleyFG, kWharever, worldslayer608
+  and knizz. None of that art was drawn for this mod, and its authors ask that
+  the names travel with it.
+- **Gen1AutoSave** was inspired by
+  [Czajo/gen1recomp-autosave](https://github.com/Czajo/gen1recomp-autosave).
+
+Where a mod started as someone else's, or leans on their art, its own README
+says so and names who it belongs to. Every mod here also stands on
+[pret](https://github.com/pret)'s disassemblies and on
+[Gen1Recomp](https://github.com/bryanthaboi/gen1recomp), which are likewise
+other people's work.
+
+If you are one of the people named above and want your work credited
+differently, or not carried here at all, that request is honoured.
 
 What this index does not take is listings for mods I have nothing to do with.
 Adding an index is an act of trust, and this one is only worth trusting
