@@ -49,13 +49,59 @@ colour, so the SGB shade remap cannot turn them into arbitrary greys. On the
 first two pages UP/DOWN opens the previous or next species you have seen,
 wrapping at both ends; on MOVES they page the list.
 
+## The AREA screen, and a line under the map
+
+Vanilla's dex side menu returns early unless an entry is seen or owned — which
+is exactly backwards on the screen a player opens to find out where something
+lives. **A on a blank row opens `AREA` / `QUIT`**, and nothing that would hand
+over the dex paragraph you have not earned. It opens on the species the *row*
+names, which is what makes it survive this mod's own filtered and re-sorted
+views.
+
+**The map gets a line under it saying how to get there, for all 151.** The
+blinking nests say *where*; they cannot say *in the grass, around level ten,
+and rare*, which is the half you actually need. It is read straight out of the
+live encounter tables — the map where the species has the biggest share of the
+encounters, that map's own level band, and a rarity worked out from Gen 1's ten
+slot buckets — so it is right by construction and costs no data of its own. A
+species that is wild nowhere is answered from the evolution table instead:
+`EVOLVE ODDISH / AT LV21`, `LINK CABLE / ON KADABRA`, `MOON STONE / ON
+NIDORINO`.
+
+**A press takes it away, START brings it back.** The box covers two tile rows of
+Kanto and one of them has nests in it, so the first A dismisses the hint and the
+second closes the screen, the way A always did. With the hint down it is the
+plain town map again — the d-pad moves the cursor and the top strip names the
+place it is on, where vanilla's AREA branch ignored the d-pad and stopped drawing
+before either. B still leaves immediately.
+
+**Other mods can write that line for their own species.**
+`mod.find("Gen1Dex").exports.area.provide` takes a function of `(game, species)`
+and answers first: two lines to draw them, `false` to withhold an answer the
+built-in readings must not fill in for — a spawn behind an event that has not
+fired yet — or `nil` for no opinion. Providers are asked in registration order,
+first opinion wins, and the table readings are last.
+[Gen151](https://github.com/wild1walker/Gen151) 1.5.0 is the first through it:
+all of this shipped inside that mod first, where reaching a dex list it did not
+own meant wrapping the vanilla constructor and re-deriving each row's species,
+which broke the moment a dex mod replaced the rows — and this mod replaces them
+wholesale. The screen belongs to whoever draws it.
+
+## The START menu says DEX
+
+The overworld menu's first row is renamed through the engine's
+`ui.start_menu.items` hook: same position, same key, same screen behind it, and
+every other row untouched. Nothing else that says POKéDEX moves — the SAVE
+panel's dex count and the list's own header are separate text. `START SAYS DEX`
+turns it off.
+
 ## How it sits on the vanilla dex
 
-Two registered screen replacements and nothing else. `PokedexMenu` is built by
-the vanilla constructor and then re-dressed, so the `DATA` / `CRY` / `AREA` /
-`QUIT` side menu, the cursor memory and the `QUIT` path are exactly as they
-were: the mod has an opinion about how the list looks and which entries are in
-it, and none at all about what pressing A on one does. Every entry point is
+`PokedexMenu` is built by the vanilla constructor and then re-dressed, so the
+`DATA` / `CRY` / `AREA` / `QUIT` side menu, the cursor memory and the `QUIT`
+path are exactly as they were. The mod has an opinion about how the list looks
+and which entries are in it; what pressing A does is the engine's, apart from
+the blank row it used to answer with nothing at all. Every entry point is
 guarded rather than trusted — a Pokédex that fails to open is worse than a
 vanilla one, so a factory that throws degrades to the builtin.
 
@@ -68,7 +114,10 @@ each end.
 
 In the mod manager: **SPECIES COLOURS** (off restores the vanilla dex brown and
 asks for no palette zones at all), **SELECT VIEWS**, **UP/DOWN SPECIES**,
-**LIST WRAPS** and **HOLD TO SCROLL**.
+**LIST WRAPS**, **HOLD TO SCROLL**, **START SAYS DEX**, **AREA ON UNSEEN** and
+**AREA HINTS**. The last two are read when the screen opens rather than once at
+load, so flipping either shows up the next time you open it — and turning AREA
+HINTS off also takes the caption away from any mod that registered one.
 
 ## Compatibility
 

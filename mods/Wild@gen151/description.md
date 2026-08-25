@@ -87,27 +87,45 @@ The dex **AREA** screen already works: it scans the live encounter tables and
 blinks a nest on every matching map, so anything Gen151 adds to a slot table
 shows up there on its own.
 
-Two things are added on top. Vanilla refuses to open the dex side menu at all on
-an entry you have never seen, which is exactly backwards for a mod whose job is
-helping you find the ones you have never met — so an undiscovered entry opens,
-with AREA and QUIT on it and nothing that would hand over the dex paragraph you
-have not earned. And the map gets a line under it saying how to get there, for
-**all 151** rather than only the ones this mod placed: the nests say *where*,
-and they cannot say *in the grass, around level ten, and rare*, which is the
-half you actually need.
+A nest says *where*. It cannot say *in the grass, around level ten, and rare*,
+which is the half you actually need — so the map gets a line under it. **That
+screen belongs to [Gen1Dex](https://github.com/wild1walker/Gen1Dex)**, 1.3.0
+and later: opening AREA on an entry you have never met, the box under the map,
+the press that takes it down and the START that brings it back are all its. All
+of it shipped here first, and reaching a list this mod does not own meant
+wrapping two engine screens from the outside and stamping every row with its
+species so a dex mod replacing them wholesale did not strand the lookup — which
+is exactly the bug that shipped, because Gen1Dex replaces them wholesale. A
+content mod has no business owning a UI surface it has to reach two screens deep
+to install.
 
-A placed POKéMON is described from the same rows the roll layer uses, so its
-hint cannot drift from its spawn. Everything else is read straight out of the
-live encounter tables, and anything in no table at all falls back to the
-evolution table — `EVOLVE ODDISH / AT LV21`, `LINK CABLE / ON KADABRA`. Nothing
-there is invented. Turn **AREA HINTS** off and the dex is exactly what the
-cartridge shipped.
+What Gen151 keeps is the half that was always its: the **sentence**. The
+encounter tables cannot carry which tier this mod rolled a placement at, or that
+a map needs SURF to reach — those are facts about the placement, and the
+placement is here. So it registers one caption provider with that screen and
+answers for the species it placed, from the same resolved rows the roll layer is
+using, so a hint cannot drift from its spawn. It also covers the two Super Rod
+placements, which have no slot for AREA to find and so blink no nest at all.
 
-Both screens are wrapped rather than replaced, so a dex-replacing mod that calls
-through — [Gen1Dex](https://github.com/wild1walker/Gen1Dex) does — keeps
-working, and one that does not simply never grows the extra AREA rather than
-growing a broken one. This is the one part of the mod that needs
-`engine_internals`, which is why it wears a **PATCHES ENGINE CODE** badge.
+Everything else on that screen is Gen1Dex reading the live encounter tables by
+itself — right by construction, and costing no placement data at all.
+
+**Mew is the exception, on purpose.** While its gate is shut it is not in the
+encounter table, so there is no nest, and Gen151 answers for it with a refusal
+rather than a silence — otherwise the generic reading would fill the gap. A
+caption would give the basement away more precisely than a nest ever could. The
+moment the journals are read, Mew is captioned like anything else.
+
+**Without Gen1Dex there is no screen to write on.** AREA is the cartridge's own,
+the mod says so once in the log, and nothing else about Gen151 changes. Turn
+**AREA HINTS** off and Gen1Dex's screen goes back to saying whatever it reads out
+of the encounter tables by itself.
+
+Gen151 still declares `engine_internals`, so it still wears the **PATCHES ENGINE
+CODE** badge — but there is one call behind it now: the LINK CABLE's own sound
+effect reaches `src.core.Sound`, which the mod surface has no facade for. The two
+screen wraps that used to be the reason for it are Gen1Dex's, and it is Gen1Dex
+that wears the badge for them.
 
 ## Every decision is its own row
 
@@ -127,7 +145,7 @@ should not have to fork it.
 | MEW EVENT | on | the Mansion journals and what they unlock |
 | LEGENDARIES | stay til caught | one shot each, but a fled or fainted one comes back |
 | RARITY % | 100 | scales every tier at once; 0 disables every substitution |
-| AREA HINTS | on | AREA on undiscovered entries, and the line under the map |
+| AREA HINTS | on | this mod's own words under Gen1Dex's AREA map (needs Gen1Dex) |
 
 ## Decisions worth knowing about
 
@@ -149,9 +167,8 @@ each sleeper — so KOing or fleeing both is not a lockout.
 switch of its own. Reading all four Pokémon Mansion journals flips an event
 flag, and only then does Mew become a very rare renewable encounter in the
 basement the journals describe. Before that it is not in the encounter table at
-all, so the AREA screen cannot spoil the location, and there is no caption
-either — a caption would give the basement away more precisely than a nest ever
-could.
+all, which is what keeps the dex from spoiling the location — see above for the
+refusal that holds the rest of the way shut.
 
 ## The honest limits
 
@@ -170,7 +187,10 @@ could.
 ## Compatibility
 
 Red, Blue and Yellow, mod api 2. Requires `engine_internals`, which is the first
-thing to switch off if a game update breaks it. Derived from the pret
-disassemblies of Red, Blue and Yellow, and built on the encounter, merge and
-hook seams of [Pokemon Gen1Recomp](https://github.com/bryanthaboi/gen1recomp).
-Tested against a vanilla install and against Gen1Dex.
+thing to switch off if a game update breaks it.
+[Gen1Dex](https://github.com/wild1walker/Gen1Dex) 1.3.0 is an optional
+dependency and the only thing AREA HINTS needs; everything else here — the
+spawns, the LINK CABLE, the journals, the legendaries — never touches the dex
+and runs without it. Derived from the pret disassemblies of Red, Blue and
+Yellow, and built on the encounter, merge and hook seams of
+[Pokemon Gen1Recomp](https://github.com/bryanthaboi/gen1recomp).

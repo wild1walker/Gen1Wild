@@ -2,8 +2,8 @@
   "id": "Gen1Dex",
   "title": "Gen1Dex",
   "author": "Wild",
-  "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and three pages behind every entry.",
-  "version": "1.1.0",
+  "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, three pages behind every entry, and an AREA screen that opens on the ones you have never met and says how to get there.",
+  "version": "1.3.0",
   "categories": [
     "UI",
     "QOL"
@@ -15,7 +15,10 @@
     "icons",
     "stats",
     "movelist",
-    "quality of life"
+    "quality of life",
+    "area",
+    "town map",
+    "start menu"
   ],
   "repo": "https://github.com/wild1walker/Gen1Dex",
   "github": "wild1walker/Gen1Dex",
