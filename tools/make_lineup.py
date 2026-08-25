@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Draw the family strip: every mod in the index, side by side.
+"""Draw the family strip: the mods in the index, side by side.
 
 Every tile is that mod's own thumbnail.png -- the same 512x512 icon its card
 carries in FIND MODS, drawn by tools/make_icons.py -- laid on the index's dark
@@ -8,13 +8,15 @@ the art the feed actually serves, at a size a reader can take in at once.
 
 Two shapes come out of this:
 
-    site/banners/lineup.png           plain, for this repo's own README
-    site/banners/lineup-<Mod>.png     one per mod, that mod ringed, under a
+    site/banners/lineup.png           every mod, for this repo's own README
+    site/banners/lineup-<Mod>.png     one per mod: that mod ringed and
+                                      COMPANIONS others, under a
                                       "Check out my other mods!" line
 
 The per-mod ones are what each mod repo carries at docs/lineup.png, so a
-reader landing on any one of them can see the rest of the family and where
-the page they are on sits in it.
+reader landing on any one of them can see where the page they are on sits in
+the family.  They are a sample rather than the whole index because the whole
+index is what a reader skips: see sample() below.
 
     python3 tools/make_lineup.py
 
@@ -24,6 +26,7 @@ once into tools/.cache/.
 Needs Pillow:  pip install Pillow
 """
 
+import hashlib
 import json
 import pathlib
 import re
@@ -53,6 +56,8 @@ LABEL_GAP = 14      # between a tile and its label
 HEAD = 19           # the "check out" line
 HEAD_GAP = 20       # between it and the tiles
 
+COMPANIONS = 5      # how many other mods share a mod's own strip
+
 CALL_TO_ACTION = "Check out my other mods!"
 
 
@@ -81,6 +86,37 @@ def entries():
         if meta.is_file() and thumb.is_file():
             found.append((json.loads(meta.read_text())["title"], thumb))
     return sorted(found)
+
+
+def sample(mods, title):
+    """That mod, and COMPANIONS others: a strip a reader takes in at once.
+
+    Every mod on every mod's page grew with the index and was read by nobody.
+    A dozen icons over a dozen names is a wall, and the one you are already
+    looking at is lost in the middle of it; six is a glance, and the ring
+    still has something to point at.
+
+    The pick is arbitrary but not fresh: each candidate is ordered by a hash
+    of its name paired with the name of the mod whose strip this is, so every
+    mod gets its own five, the same five on every machine, and a rebuild that
+    changed nothing redraws the same file and commits nothing.  Adding a mod
+    reshuffles all of them, which is the point -- a new one turns up on other
+    mods' pages without anything being chosen by hand.
+
+    Whoever comes out of it, they are drawn in title order with the mod being
+    viewed in its own place among them, so the strip still reads as a shelf
+    rather than as a row with something bolted to one end.
+    """
+    others = [m for m in mods if m[0] != title]
+    if len(others) <= COMPANIONS:
+        return mods
+
+    def draw(other):
+        pair = f"{title}\x00{other[0]}".encode("utf-8")
+        return hashlib.sha256(pair).hexdigest()
+
+    picked = sorted(others, key=draw)[:COMPANIONS]
+    return sorted(picked + [m for m in mods if m[0] == title])
 
 
 def rounded(img, radius):
@@ -139,7 +175,7 @@ def main():
 
     strip(mods, OUT / "lineup.png")
     for title, _ in mods:
-        strip(mods, OUT / f"lineup-{title}.png",
+        strip(sample(mods, title), OUT / f"lineup-{title}.png",
               highlight=title, heading=CALL_TO_ACTION)
     return 0
 

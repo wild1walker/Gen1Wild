@@ -1,0 +1,33 @@
+{
+  "id": "gen151",
+  "title": "Gen151",
+  "author": "Wild",
+  "summary": "Every one of the 151 obtainable renewably in one save, on one version, without trading — while every vanilla encounter keeps its exact vanilla behaviour.",
+  "version": "1.4.0",
+  "categories": [
+    "CONTENT",
+    "GAMEPLAY"
+  ],
+  "tags": [
+    "encounters",
+    "completion",
+    "living dex",
+    "version exclusives",
+    "trade evolutions",
+    "mew",
+    "legendaries"
+  ],
+  "repo": "https://github.com/wild1walker/Gen151",
+  "github": "wild1walker/Gen151",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "gen1"
+  ]
+}
