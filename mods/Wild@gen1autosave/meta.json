@@ -26,5 +26,8 @@
   "conflicts": [
     "recomp-autosave"
   ],
+  "games": [
+    "all"
+  ],
   "license": "MIT"
 }

@@ -30,5 +30,8 @@
   "conflicts": [
     "modern_bag"
   ],
+  "games": [
+    "gen1"
+  ],
   "license": "MIT"
 }
