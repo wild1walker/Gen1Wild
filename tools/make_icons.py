@@ -163,6 +163,22 @@ def numerals(art, x, y, text, colour, shadow):
 # set of ten would be nine glyphs of dead weight and one more thing to keep
 # in step with nothing.
 DIGIT_GAP = 2
+
+# The one letter any icon draws, on the same seven-by-nine metric DIGITS uses
+# so the two stay in proportion if they ever share a picture.  A full alphabet
+# would be twenty-five glyphs of dead weight.
+LETTER_B = [
+    "######.",
+    "##...##",
+    "##...##",
+    "##...##",
+    "######.",
+    "##...##",
+    "##...##",
+    "##...##",
+    "######.",
+]
+
 DIGITS = {
     "1": [
         "..####.",
@@ -617,6 +633,39 @@ def gen151():
     return a, PINK
 
 
+def sprint():
+    """The B button, and the ground going past it.
+
+    A running figure is the obvious drawing and the wrong one: at 32 pixels a
+    person is six pixels of leg, and six pixels of leg reads as a smudge no
+    matter how they are posed.  The button does not have that problem -- it is
+    a circle with a letter in it, which is legible at any size -- and it says
+    the thing the mod actually asks of you, which is to hold B.  The streaks
+    behind it carry the speed instead, and they are what a Game Boy would have
+    used too.
+    """
+    a = Art()
+
+    # Three streaks, longest through the middle, each on a darker under-edge
+    # so it has a leading edge against the near-black ground rather than
+    # floating on it.  They stop short of the button: a streak that touches
+    # the rim ties the two shapes into one blob.
+    for x0, y in ((3, 9), (1, 15), (4, 21)):
+        a.rect(x0, y, 10, y + 1, GREEN_D)
+        a.rect(x0 + 1, y, 10, y, GREEN)
+
+    # The button: an ink rim, a red face, and the glyph knocked into it.  The
+    # rim is a whole pixel wider than the face on purpose -- a red disc laid
+    # straight onto the ground has no edge, and the rim is what gives it one.
+    a.disc(20.5, 16, 9.6, INK)
+    a.disc(20.5, 16, 8.6, (0x8f, 0x2a, 0x26))
+    a.disc(20.5, 16, 7.8, RED)
+    a.arc(20.5, 16, 6.4, 7.8, 55, 155, (0xe8, 0x6d, 0x62))   # a lit top-left
+
+    stamp(a, 17, 12, LETTER_B, {"#": WHITE})
+    return a, RED
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
@@ -630,6 +679,7 @@ ICONS = {
     "gen1_mod_menu": mod_menu,
     "Gen1Party": party,
     "gen151": gen151,
+    "gen1_sprint": sprint,
 }
 
 
