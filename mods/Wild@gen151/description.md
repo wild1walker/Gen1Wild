@@ -132,9 +132,15 @@ that wears the badge for them.
 
 ## Every decision is its own row
 
-The single biggest complaint about the existing all-151 mod is that it is
-all-or-nothing; someone who wants the version exclusives but not a wild Mew
-should not have to fork it.
+This mod exists downstream of
+[All Pokémon Catchable 151](https://github.com/wowabox/All_Pokemon_Catchable_151_Mod)
+by **Wowabox (Darklinkduck)**, which got to "complete the Kanto dex in one save
+without trading" first and is where the idea comes from. The thing asked of it
+repeatedly was that it be splittable: someone who wants the version exclusives
+but not a wild Mew should not have to fork a mod to get them. That request is
+what this table is an answer to, and it is the only reason there is a second
+mod in this space at all. None of their code is used here — the two are
+alternatives, not a fork and its upstream.
 
 | Option | Default | What it does |
 |---|---|---|

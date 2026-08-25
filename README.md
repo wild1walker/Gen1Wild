@@ -76,6 +76,11 @@ wanted, and those keep the original authors' credit and their own licence:
   princess-phoenix, carchagui, aveontrainer, WesleyFG, kWharever, worldslayer608
   and knizz. None of that art was drawn for this mod, and its authors ask that
   the names travel with it.
+- **Gen151** is a second take on
+  [All Pokémon Catchable 151](https://github.com/wowabox/All_Pokemon_Catchable_151_Mod)
+  by **Wowabox (Darklinkduck)**, which got to completing the Kanto dex in one
+  save without trading first. None of its code is here and the two are
+  alternatives rather than a fork, but the idea is Wowabox's.
 - **Gen1AutoSave** was inspired by
   [Czajo/gen1recomp-autosave](https://github.com/Czajo/gen1recomp-autosave).
 
