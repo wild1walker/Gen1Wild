@@ -75,6 +75,24 @@ plain town map again — the d-pad moves the cursor and the top strip names the
 place it is on, where vanilla's AREA branch ignored the d-pad and stopped drawing
 before either. B still leaves immediately.
 
+**And a line for a species nobody can answer for.** The four legendary statics
+live in no wild table and evolve from nothing, so AREA on MOLTRES drew a map
+with nothing on it — which cannot be told apart from a hint that failed to
+draw. The box comes up either way now and says `NO RECORD REMAINS` /
+`GO ADVENTURING!`. A species a mod is deliberately withholding gets the same two
+lines, which is load-bearing rather than lazy: Gen151 seals Mew until the
+Mansion journals are read, and a seal that read differently from an ordinary
+blank would tell the player there is something there. Mew's screen and
+Moltres's are the same screen to the glyph, and the words are published as
+`exports.area.unknown` for anyone who wants to match them.
+
+Vanilla wrote `<NAME> AREA UNKNOWN` into a 19-column strip without measuring
+it — `MOLTRES AREA UNKNOWN` is 20 glyphs, so every name of eight or more, half
+the dex, lost its last word mid-letter. That line is this mod's now and drops
+the word AREA rather than truncating the name: the screen you are standing on
+is already called AREA, so the word was carrying nothing, and `MOLTRES UNKNOWN`
+fits every name in the dex.
+
 **Other mods can write that line for their own species.**
 `mod.find("Gen1Dex").exports.area.provide` takes a function of `(game, species)`
 and answers first: two lines to draw them, `false` to withhold an answer the

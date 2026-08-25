@@ -112,9 +112,12 @@ itself — right by construction, and costing no placement data at all.
 
 **Mew is the exception, on purpose.** While its gate is shut it is not in the
 encounter table, so there is no nest, and Gen151 answers for it with a refusal
-rather than a silence — otherwise the generic reading would fill the gap. A
-caption would give the basement away more precisely than a nest ever could. The
-moment the journals are read, Mew is captioned like anything else.
+rather than a silence — otherwise the generic reading would fill the gap. With
+Gen1Dex 1.4.0 that refusal draws the same `NO RECORD REMAINS` / `GO
+ADVENTURING!` screen the four legendary statics get, to the glyph: a seal that
+read differently from an ordinary blank would tell you there is something in
+there, which is the one thing it exists not to say. The moment the journals are
+read, Mew is captioned like anything else.
 
 **Without Gen1Dex there is no screen to write on.** AREA is the cartridge's own,
 the mod says so once in the log, and nothing else about Gen151 changes. Turn
@@ -189,7 +192,8 @@ refusal that holds the rest of the way shut.
 Red, Blue and Yellow, mod api 2. Requires `engine_internals`, which is the first
 thing to switch off if a game update breaks it.
 [Gen1Dex](https://github.com/wild1walker/Gen1Dex) 1.3.0 is an optional
-dependency and the only thing AREA HINTS needs; everything else here — the
+dependency and the only thing AREA HINTS needs — 1.4.0 for Mew's sealed screen
+to say anything at all; everything else here — the
 spawns, the LINK CABLE, the journals, the legendaries — never touches the dex
 and runs without it. Derived from the pret disassemblies of Red, Blue and
 Yellow, and built on the encounter, merge and hook seams of
