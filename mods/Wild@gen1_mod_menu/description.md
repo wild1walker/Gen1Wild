@@ -103,14 +103,10 @@ keeps `START` as a second way to `APPLY`, and the detail screen keeps
 
 ## Outside the manager
 
-Two smaller edits, both switched off by `STYLE: VANILLA` along with
-everything else.
+One smaller edit, switched off by `STYLE: VANILLA` along with everything
+else. The **START menu is left alone** — its row is the engine's own, reads
+`MODS`, and already opens this screen.
 
-- **The START menu's row reads `MOD MENU`.** The engine already puts one
-  there and labels it `MODS`; this renames that row rather than adding a
-  second beside it, matched on the label the engine would have produced so a
-  translation is still recognised, and at the default hook priority so
-  Gen1MenuManager can still move, hide or pin it.
 - **`CANCEL` is gone from the game's own OPTION screen.** It was never one of
   the rows — the engine appends it after the rows hook and draws it as the
   fixed bottom line — and it is not the only exit: B and START both leave
@@ -128,7 +124,6 @@ everything else.
 | `HIDE OFF` | off | Drop disabled mods from the list. |
 | `WITH OPTIONS` | off | Show only the mods that have something to configure. |
 | `HELP LINE` | on | Off leaves the info box naming the focused row instead. |
-| `START ROW` | on | Label the START menu's row `MOD MENU` instead of `MODS`. |
 | `HIDE CANCEL` | on | Drop `CANCEL` from the game's own OPTION screen (Gen 1). |
 | `KEEP CURSOR` | on | Reopen the manager on the row you left it on. |
 
