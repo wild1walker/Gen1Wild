@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-25T20:54:22Z",
+  "generated_at": "2026-08-25T21:44:57Z",
   "count": 12,
   "categories": [
     "GAMEPLAY",
@@ -22,7 +22,7 @@
       "title": "Gen151",
       "author": "Wild",
       "summary": "Every one of the 151 obtainable renewably in one save, on one version, without trading — while every vanilla encounter keeps its exact vanilla behaviour.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "categories": [
         "CONTENT",
         "GAMEPLAY"
@@ -53,23 +53,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen151/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.4.0",
-        "tag": "v1.4.0",
-        "name": "1.4.0",
+        "version": "1.5.0",
+        "tag": "v1.5.0",
+        "name": "1.5.0",
         "prerelease": false,
-        "published_at": "2026-08-25T19:02:15Z",
+        "published_at": "2026-08-25T21:35:04Z",
         "zip": {
-          "name": "gen151-1.4.0.zip",
-          "url": "https://github.com/wild1walker/Gen151/releases/download/v1.4.0/gen151-1.4.0.zip",
-          "size": 71168
+          "name": "gen151-1.5.0.zip",
+          "url": "https://github.com/wild1walker/Gen151/releases/download/v1.5.0/gen151-1.5.0.zip",
+          "size": 67244
         }
       },
       "downloads": {
         "total": 19,
-        "as_of": "2026-08-25T20:54:21Z"
+        "as_of": "2026-08-25T21:44:55Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
-      "last_release": "2026-08-25T19:02:15Z"
+      "last_release": "2026-08-25T21:35:04Z"
     },
     {
       "id": "gen1arena",
@@ -117,8 +117,8 @@
         }
       },
       "downloads": {
-        "total": 116,
-        "as_of": "2026-08-25T20:54:22Z"
+        "total": 120,
+        "as_of": "2026-08-25T21:44:57Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-25T17:34:59Z"
@@ -167,7 +167,7 @@
       },
       "downloads": {
         "total": 27,
-        "as_of": "2026-08-25T20:54:21Z"
+        "as_of": "2026-08-25T21:44:55Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -221,7 +221,7 @@
       },
       "downloads": {
         "total": 50,
-        "as_of": "2026-08-25T20:54:22Z"
+        "as_of": "2026-08-25T21:44:57Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-25T17:34:42Z"
@@ -276,8 +276,8 @@
         }
       },
       "downloads": {
-        "total": 22,
-        "as_of": "2026-08-25T20:54:19Z"
+        "total": 23,
+        "as_of": "2026-08-25T21:44:53Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-24T23:17:54Z"
@@ -286,8 +286,8 @@
       "id": "Gen1Dex",
       "title": "Gen1Dex",
       "author": "Wild",
-      "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, and three pages behind every entry.",
-      "version": "1.1.0",
+      "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, three pages behind every entry, and an AREA screen that opens on the ones you have never met and says how to get there.",
+      "version": "1.3.0",
       "categories": [
         "UI",
         "QOL"
@@ -299,7 +299,10 @@
         "icons",
         "stats",
         "movelist",
-        "quality of life"
+        "quality of life",
+        "area",
+        "town map",
+        "start menu"
       ],
       "repo": "https://github.com/wild1walker/Gen1Dex",
       "github": "wild1walker/Gen1Dex",
@@ -323,23 +326,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Dex/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.2.0",
-        "tag": "v1.2.0",
-        "name": "1.2.0",
+        "version": "1.3.0",
+        "tag": "v1.3.0",
+        "name": "1.3.0",
         "prerelease": false,
-        "published_at": "2026-08-25T01:48:38Z",
+        "published_at": "2026-08-25T21:34:10Z",
         "zip": {
-          "name": "Gen1Dex-1.2.0.zip",
-          "url": "https://github.com/wild1walker/Gen1Dex/releases/download/v1.2.0/Gen1Dex-1.2.0.zip",
-          "size": 47210
+          "name": "Gen1Dex-1.3.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Dex/releases/download/v1.3.0/Gen1Dex-1.3.0.zip",
+          "size": 67475
         }
       },
       "downloads": {
-        "total": 17,
-        "as_of": "2026-08-25T20:54:19Z"
+        "total": 18,
+        "as_of": "2026-08-25T21:44:54Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
-      "last_release": "2026-08-25T01:48:38Z"
+      "last_release": "2026-08-25T21:34:10Z"
     },
     {
       "id": "Gen1Follower",
@@ -391,7 +394,7 @@
       },
       "downloads": {
         "total": 28,
-        "as_of": "2026-08-25T20:54:20Z"
+        "as_of": "2026-08-25T21:44:54Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-25T18:29:24Z"
@@ -443,7 +446,7 @@
       },
       "downloads": {
         "total": 41,
-        "as_of": "2026-08-25T20:54:20Z"
+        "as_of": "2026-08-25T21:44:54Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-25T01:53:03Z"
@@ -500,8 +503,8 @@
         }
       },
       "downloads": {
-        "total": 48,
-        "as_of": "2026-08-25T20:54:22Z"
+        "total": 49,
+        "as_of": "2026-08-25T21:44:56Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-25T17:34:59Z"
@@ -556,7 +559,7 @@
       },
       "downloads": {
         "total": 9,
-        "as_of": "2026-08-25T20:54:21Z"
+        "as_of": "2026-08-25T21:44:56Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-25T07:41:37Z"
@@ -612,8 +615,8 @@
         }
       },
       "downloads": {
-        "total": 9,
-        "as_of": "2026-08-25T20:54:20Z"
+        "total": 10,
+        "as_of": "2026-08-25T21:44:55Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-08-25T01:40:59Z"
@@ -668,7 +671,7 @@
       },
       "downloads": {
         "total": 16,
-        "as_of": "2026-08-25T20:54:22Z"
+        "as_of": "2026-08-25T21:44:56Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
