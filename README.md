@@ -8,13 +8,14 @@
 </p>
 
 <p align="center">
-  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModMenu, Gen1ModernBag, Gen1Party and Gen1SoundQOL" width="920"></a>
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen151, Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModMenu, Gen1ModernBag, Gen1Party and Gen1SoundQOL" width="920"></a>
 </p>
 
 ## What is in the index
 
 | | Mod | What it does |
 |---|---|---|
+| <img src="mods/Wild@gen151/thumbnail.png" width="54" alt=""> | **[Gen151](https://github.com/wild1walker/Gen151)** | All 151 obtainable renewably in one save, on one version, without trading — version exclusives, gift and fossil mons, a LINK CABLE for the trade evolutions, and every vanilla encounter left exactly as it was. |
 | <img src="mods/Wild@gen1arena/thumbnail.png" width="54" alt=""> | **[Gen1Arena](https://github.com/wild1walker/Gen1Arena)** | 2D backdrops behind battles, picked by map, tileset and how the encounter started. |
 | <img src="mods/Wild@gen1_auto_continue/thumbnail.png" width="54" alt=""> | **[Gen1AutoContinue](https://github.com/wild1walker/Gen1AutoContinue)** | Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window. |
 | <img src="mods/Wild@gen1autosave/thumbnail.png" width="54" alt=""> | **[Gen1AutoSave](https://github.com/wild1walker/Gen1AutoSave)** | Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups. |
@@ -145,7 +146,7 @@ Opt out with `"automatic_version_check": false` and give the entry its own
 
 The wordmark at the top of this file is hand-made, and it is the whole
 family's -- every mod repo carries the same file at `docs/banner.png` and
-leads with it, under its own name. One mark, ten repos: a reader who has
+leads with it, under its own name. One mark, twelve repos: a reader who has
 seen one of these mods recognises the next one on sight, which is the entire
 job a mark has.
 
@@ -175,21 +176,33 @@ The strip of icons under it is generated, from the mods' own thumbnails:
 python3 tools/make_lineup.py
 ```
 
-It writes `site/banners/lineup.png` -- the plain one, above -- and one
-`lineup-<Mod>.png` per mod, which is the same strip with that mod ringed
-under a **Check out my other mods!** line. The plain strip is also the link
-preview: `site/index.html` points `og:image` at it, so pasting the index URL
-into a chat unfurls as the nine mods and their names rather than a bare link. Each mod repo carries its own as
+It writes `site/banners/lineup.png` -- every mod, the strip above -- and one
+`lineup-<Mod>.png` per mod, which is that mod ringed alongside five others,
+under a **Check out my other mods!** line. Each mod repo carries its own as
 `docs/lineup.png` and links it, and its wordmark, back to the live index, so
-a reader who lands on any one mod can see the rest of the family and where
-the page they are on sits in it.
+a reader who lands on any one mod can see where the page they are on sits in
+the family.
+
+**Five others, not all of them.** Every mod on every mod's page grew with the
+index and stopped being read: a dozen icons over a dozen names is a wall, and
+the mod you are already looking at is lost in the middle of it. Six tiles is a
+glance. Which five a mod gets is arbitrary but fixed -- each candidate is
+ordered by a hash of its name paired with the name of the mod whose strip it
+is -- so every mod gets its own five, the same five on every machine, and a
+rebuild that changed nothing rewrites nothing. Adding a mod reshuffles all of
+them, which is how a new one turns up on the others' pages without being put
+there by hand.
+
+The full strip is still the link preview: `site/index.html` points `og:image`
+at `lineup.png`, so pasting the index URL into a chat unfurls as every mod and
+its name rather than a bare link.
 
 Both need `Pillow`, and fetch the label font from Google Fonts once into
 `tools/.cache/`, which is not committed.
 
 A new mod is picked up automatically: it needs a `meta.json` and a
-`thumbnail.png` like any other entry, and the next run draws it into every
-strip.
+`thumbnail.png` like any other entry, and the next run draws it into the full
+strip and reshuffles which mods share the per-mod ones.
 
 ## The icons
 

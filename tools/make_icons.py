@@ -42,6 +42,8 @@ WHITE   = (0xf2, 0xf5, 0xf0)
 MUTED   = (0x8b, 0x97, 0x8f)
 STEEL   = (0x5a, 0x66, 0x5c)
 AMBER   = (0xe8, 0xb7, 0x3a)
+PINK    = (0xf2, 0x8c, 0xbc)
+PINK_D  = (0xa8, 0x46, 0x78)
 
 
 class Art:
@@ -140,6 +142,51 @@ def stamp(art, x, y, rows, key):
             if ch in key:
                 art.px(x + i, y + j, key[ch])
 
+
+def numerals(art, x, y, text, colour, shadow):
+    """Write a row of digits, each sitting on a shadow a pixel down and right.
+
+    Seven by nine is the biggest a three-digit row goes on a 32-pixel grid
+    and still leaves two of them room to sit either side of a rule.  The
+    shadow is what gives the strokes an edge: a flat colour on the near-black
+    ground reads as a stencil rather than as something drawn.
+    """
+    for ch in text:
+        rows = DIGITS[ch]
+        stamp(art, x + 1, y + 1, rows, {"#": shadow})
+        stamp(art, x, y, rows, {"#": colour})
+        x += len(rows[0]) + DIGIT_GAP
+
+
+# The two digits 151 needs, seven wide and nine tall, with a gap between
+# them.  Only 1 and 5 are here because only 1 and 5 are ever drawn -- a full
+# set of ten would be nine glyphs of dead weight and one more thing to keep
+# in step with nothing.
+DIGIT_GAP = 2
+DIGITS = {
+    "1": [
+        "..####.",
+        ".#####.",
+        "....##.",
+        "....##.",
+        "....##.",
+        "....##.",
+        "....##.",
+        ".######",
+        ".######",
+    ],
+    "5": [
+        "#######",
+        "#######",
+        "##.....",
+        "######.",
+        "#######",
+        ".....##",
+        "##...##",
+        "#######",
+        ".#####.",
+    ],
+}
 
 # A Poke Ball small enough that drawing it as circles would only smear: at
 # eleven pixels across it is worth spelling out.
@@ -549,6 +596,27 @@ def party():
     return a, GREEN
 
 
+def gen151():
+    """151 over 151: the dex finished, which is the whole mod in one number.
+
+    Stacked as a fraction rather than written across in one line, because
+    seven characters side by side on a 32-pixel grid leaves each of them
+    three pixels wide -- at which point a 5 is a smudge and the number stops
+    being a number.  Two rows of three over a rule reads at the 54 pixels the
+    README table shows it at, which is the size that has to work.
+
+    Pink is Mew's, and Mew is the last of the 151 in every sense: the one the
+    cartridge never gave you, and the one this mod puts behind four journals
+    in a basement.
+    """
+    a = Art()
+    numerals(a, 3, 3, "151", PINK, PINK_D)
+    a.rect(3, 16, 29, 17, PINK_D)                  # the rule, on its own
+    a.rect(2, 15, 28, 16, PINK)                    # shadow like the digits
+    numerals(a, 3, 20, "151", PINK, PINK_D)
+    return a, PINK
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
@@ -561,6 +629,7 @@ ICONS = {
     "Gen1Dex": dex,
     "gen1_mod_menu": mod_menu,
     "Gen1Party": party,
+    "gen151": gen151,
 }
 
 
