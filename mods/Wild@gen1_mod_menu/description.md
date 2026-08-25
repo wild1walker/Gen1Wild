@@ -35,6 +35,11 @@ A list row is one thing — a name — so it is a single-line box. An option row
 is two things, a label and its value, so it keeps the four-tile card the
 game's own OPTION screen uses, and three of those fit between the bands.
 
+A **more-arrow** sits in the bottom-right interior cell whenever there is
+more list below the screen — same place on all three tabs and on a mod's
+options page. The count in the header says where you are; the arrow says
+there is further to go.
+
 **Only `MODS` wears the info box.** It earns its place there by saying what
 the row has no room to say: the mod's category, and its state in the word the
 detail screen uses rather than the four-glyph mark on the row. A profile name
