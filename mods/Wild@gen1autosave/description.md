@@ -67,5 +67,11 @@ To roll back: **START > BACKUPS**, pick a time, confirm.
 
 ## Credits
 
-Inspired by [Czajo/gen1recomp-autosave](https://github.com/Czajo/gen1recomp-autosave).
-MIT licensed.
+By **Wild**. Written for this mod rather than derived from anyone else's — it
+is built on the save, battle and map-transition hooks of
+[Pokemon Gen1Recomp](https://github.com/bryanthaboi/gen1recomp), which is what
+it listens to and all it takes from anywhere. MIT licensed.
+
+**Pokémon** Red, Blue and Yellow are Nintendo / Creatures / GAME FREAK. This is
+an unofficial fan mod, distributed free, with no affiliation with or
+endorsement by any of them.
