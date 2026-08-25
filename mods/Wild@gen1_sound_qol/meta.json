@@ -3,7 +3,7 @@
   "title": "Gen1SoundQOL",
   "author": "Wild",
   "summary": "The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio.",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "categories": [
     "AUDIO",
     "QOL"
