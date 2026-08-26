@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen151, Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModMenu, Gen1ModernBag, Gen1Party, Gen1SoundQOL and Gen1Sprint" width="920"></a>
+  <a href="https://wild1walker.github.io/Gen1Wild/"><img src="site/banners/lineup.png" alt="Gen151, Gen1Arena, Gen1AutoContinue, Gen1AutoSave, Gen1BattleUI, Gen1BillsBox, Gen1Dex, Gen1Follower, Gen1MenuManager, Gen1ModMenu, Gen1ModernBag, Gen1Party, Gen1Remember, Gen1SoundQOL and Gen1Sprint" width="920"></a>
 </p>
 
 ## What is in the index
@@ -43,6 +43,15 @@ not twice, and a mod in one can still find a mod in the other.
 | <img src="mods/Wild@Gen1Party/thumbnail.png" width="54" alt=""> | **[Gen1Party](https://github.com/wild1walker/Gen1Party)** | The party menu with every POKéMON in its own species colours instead of all six sharing one, and the status and HP numbers pulled in off the screen edge. |
 | <img src="mods/Wild@gen1_sound_qol/thumbnail.png" width="54" alt=""> | **[Gen1SoundQOL](https://github.com/wild1walker/Gen1SoundQOL)** | The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio. |
 | <img src="mods/Wild@gen1_sprint/thumbnail.png" width="54" alt=""> | **[Gen1Sprint](https://github.com/wild1walker/Gen1Sprint)** | Hold B to run at FireRed's running-shoes speed, and a BICYCLE that stays worth riding at twice the speed Gen 1 gives it. |
+
+### On its own
+
+Not in either bundle — a mod the suite does not carry, listed here because the
+index is where I put the mods I maintain.
+
+| | Mod | What it does |
+|---|---|---|
+| <img src="mods/Wild@Gen1Remember/thumbnail.png" width="54" alt=""> | **[Gen1Remember](https://github.com/wild1walker/Gen1Remember)** | A POKéMON can be taught a move it has forgotten. A REMEMBER row in the popup you already open on it — the party menu's, and Gen1BillsBox's box — listing every level-up move it should have had by the level it has reached, its pre-evolutions' included. |
 
 Every icon above is the one the card carries in **FIND MODS**, drawn by
 [`tools/make_icons.py`](tools/make_icons.py). No mod is vendored here: each

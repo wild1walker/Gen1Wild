@@ -1039,6 +1039,107 @@ def wild_ui():
     return bundle_icon("UI", CASE_RED, gap=4)
 
 
+def return_ink(art):
+    """Grow a pixel of INK around everything drawn, and hand the art back.
+
+    For the icons whose subject has no straight edges to hang a frame on: the
+    outline follows whatever the shapes happened to add up to, so a softened
+    corner or a notched ribbon tail is outlined correctly without being
+    restated here.  Read off a snapshot taken before any ink is written, or the
+    outline would grow a second ring into itself as the loop advanced.
+    """
+    edge = [[art.g[y][x] != BG for x in range(GRID)] for y in range(GRID)]
+    for y in range(GRID):
+        for x in range(GRID):
+            if edge[y][x]:
+                continue
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < GRID and 0 <= ny < GRID and edge[ny][nx]:
+                    art.px(x, y, INK)
+                    break
+    return art
+
+
+def remember():
+    """A book with a bookmark in it: the move this POKeMON is being handed back
+    was never gone, only closed on -- which is what a bookmark is for.
+
+    Drawn straight on rather than at the three-quarter angle a book usually
+    gets in an icon set.  An angled book needs a visible spine, a cover face
+    and a page block in perspective, and at 54 pixels -- the size the card
+    actually shows -- those three shapes are four pixels each and read as
+    stripes.  Face on, the shape is unambiguous at any size: a tall block, a
+    darker spine down one side, page edges down the other.
+
+    Two things the ribbon has to do, and both of them are why it is placed
+    where it is rather than down the middle:
+
+      * it sits near the FORE EDGE, away from the spine, because that is where
+        a bookmark falls and because a stripe down the centre of a cover reads
+        as part of the binding rather than as something laid on top of it.
+      * it BREAKS the silhouette top and bottom.  A bookmark drawn inside the
+        covers is a stripe on a book; one that leaves them is a book somebody
+        stopped reading and meant to come back to, which is the mod.
+
+    The cover carries two short gold bars rather than the inset rule a tome
+    usually gets: a full frame and a ribbon crossing it is two competing
+    rectangles at card size, and the frame is the one that loses nothing by
+    going.
+    """
+    a = Art()
+    cover   = GREEN_D
+    cover_l = GREEN
+    cover_d = (0x3f, 0x4e, 0x08)
+    spine   = (0x33, 0x40, 0x07)
+    gold    = AMBER
+    gold_d  = (0x9a, 0x77, 0x1e)
+    page    = (0xef, 0xea, 0xd2)       # bone, not white: paper next to gold
+    page_d  = (0xbc, 0xb5, 0x9b)
+    ribbon  = RED
+    ribbon_l = (0xe8, 0x6b, 0x60)
+    ribbon_d = (0x8e, 0x28, 0x24)
+
+    # ---- the page block, offset right and down so it shows past the cover
+    a.rect(9, 4, 27, 26, page)
+    a.rect(25, 4, 25, 26, page_d)                  # where the leaves start
+    for y in range(6, 26, 3):                      # and the leaf edges
+        a.rect(26, y, 27, y, page_d)
+
+    # ---- the cover over it, and the spine down the left
+    #
+    # Stopped at row 24 rather than run to the bottom of the grid, which is
+    # what buys the ribbon its six rows of daylight below: a tail that ends
+    # level with the covers is a stripe that stops, and the notch in it lands
+    # on the outline where nothing can be read.
+    a.rect(4, 2, 24, 24, cover)
+    a.rect(4, 2, 24, 3, cover_l)                   # lit from above
+    a.rect(4, 23, 24, 24, cover_d)
+    a.rect(4, 2, 7, 24, spine)                     # the spine
+    a.rect(8, 2, 8, 24, cover_d)                   # its hinge shadow
+    for x in (4, 24):                              # softened corners
+        a.px(x, 2, BG)
+        a.px(x, 24, BG)
+
+    # ---- gold: two bands across the spine, two short bars on the cover
+    for y in (7, 18):
+        a.rect(4, y, 7, y, gold)
+        a.rect(4, y + 1, 7, y + 1, gold_d)
+    for x0, y0, x1 in ((11, 9, 15), (11, 13, 14)):
+        a.rect(x0, y0, x1, y0, gold)
+        a.rect(x0, y0 + 1, x1, y0 + 1, gold_d)
+
+    # ---- the ribbon, over everything, out of the top and past the bottom
+    a.rect(18, 0, 22, 30, ribbon)
+    a.rect(18, 0, 18, 30, ribbon_l)                # a lit edge down one side
+    a.rect(22, 0, 22, 30, ribbon_d)
+    a.rect(19, 25, 21, 30, ribbon_d)               # the hanging tail, in shade
+    a.px(20, 29, BG)                               # notched two rows deep, so
+    a.rect(19, 30, 21, 30, BG)                     # the fork reads at 54px
+    return_ink(a)
+    return a, GREEN
+
+
 ICONS = {
     "gen1autosave": autosave,
     "Gen1BattleUI": battle_ui,
@@ -1052,6 +1153,7 @@ ICONS = {
     "Gen1Dex": dex,
     "gen1_mod_menu": mod_menu,
     "Gen1Party": party,
+    "Gen1Remember": remember,
     "gen151": gen151,
     "gen1_sprint": sprint,
     "gen1_wild_qol": wild_qol,

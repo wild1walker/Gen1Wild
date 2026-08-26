@@ -1,0 +1,37 @@
+{
+  "id": "Gen1Remember",
+  "title": "Gen1Remember",
+  "author": "Wild",
+  "summary": "A POKéMON can be taught a move it has forgotten, from the popup you already open on it — every level-up move it should have had by now, its pre-evolutions' included.",
+  "version": "1.0.0",
+  "categories": [
+    "UI",
+    "QOL"
+  ],
+  "tags": [
+    "moves",
+    "move reminder",
+    "relearn",
+    "ui",
+    "party",
+    "box",
+    "quality of life",
+    "learnset",
+    "pre-evolution"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1Remember",
+  "github": "wild1walker/Gen1Remember",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "conflicts": [],
+  "games": [
+    "gen1"
+  ],
+  "license": "MIT"
+}
