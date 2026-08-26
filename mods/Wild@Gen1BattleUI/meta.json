@@ -3,7 +3,7 @@
   "title": "Gen1BattleUI",
   "author": "Wild",
   "summary": "The battle command and move menus as four buttons in a 2x2 grid instead of a list, in the Game Boy's own screen and the Game Boy's own chrome.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "categories": [
     "UI"
   ],
