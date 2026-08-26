@@ -1,0 +1,32 @@
+{
+  "id": "Gen1BattleUI",
+  "title": "Gen1BattleUI",
+  "author": "Wild",
+  "summary": "The battle command and move menus as four buttons in a 2x2 grid instead of a list, in the Game Boy's own screen and the Game Boy's own chrome.",
+  "version": "1.0.0",
+  "categories": [
+    "UI"
+  ],
+  "tags": [
+    "battle",
+    "ui",
+    "menu",
+    "buttons",
+    "moves",
+    "widescreen"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1BattleUI",
+  "github": "wild1walker/Gen1BattleUI",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "gen1"
+  ],
+  "license": "MIT"
+}
