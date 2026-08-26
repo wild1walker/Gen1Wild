@@ -163,22 +163,6 @@ def numerals(art, x, y, text, colour, shadow):
 # set of ten would be nine glyphs of dead weight and one more thing to keep
 # in step with nothing.
 DIGIT_GAP = 2
-
-# The one letter any icon draws, on the same seven-by-nine metric DIGITS uses
-# so the two stay in proportion if they ever share a picture.  A full alphabet
-# would be twenty-five glyphs of dead weight.
-LETTER_B = [
-    "######.",
-    "##...##",
-    "##...##",
-    "##...##",
-    "######.",
-    "##...##",
-    "##...##",
-    "##...##",
-    "######.",
-]
-
 DIGITS = {
     "1": [
         "..####.",
@@ -634,35 +618,80 @@ def gen151():
 
 
 def sprint():
-    """The B button, and the ground going past it.
+    """A winged shoe: Hermes' talaria, in the running shoes' own red.
 
-    A running figure is the obvious drawing and the wrong one: at 32 pixels a
-    person is six pixels of leg, and six pixels of leg reads as a smudge no
-    matter how they are posed.  The button does not have that problem -- it is
-    a circle with a letter in it, which is legible at any size -- and it says
-    the thing the mod actually asks of you, which is to hold B.  The streaks
-    behind it carry the speed instead, and they are what a Game Boy would have
-    used too.
+    Blocked out of a body, a collar and a round toe rather than traced as
+    one outline.  A shoe in profile is mostly a silhouette problem, and an
+    outline drawn at 32 pixels loses its toe to the scanline fill -- the
+    front tapers to a sliver a pixel or two tall and stops reading as a
+    shoe at all.  Blocking keeps the toe box the height it needs, and the
+    sole is left to say which way is down.
+
+    The feathers are quads with blunt, rounded tips, not triangles.  A
+    triangle ends in a single pixel, and three of them fanned out read as
+    scratches on the picture rather than as a wing.  They are laid down
+    before the shoe and rooted behind the heel, so the wing emerges from
+    something instead of being parked next to it, and they sweep back
+    rather than over the toe -- which is how a wing is drawn on something
+    already moving.
     """
     a = Art()
 
-    # Three streaks, longest through the middle, each on a darker under-edge
-    # so it has a leading edge against the near-black ground rather than
-    # floating on it.  They stop short of the button: a streak that touches
-    # the rim ties the two shapes into one blob.
-    for x0, y in ((3, 9), (1, 15), (4, 21)):
-        a.rect(x0, y, 10, y + 1, GREEN_D)
-        a.rect(x0 + 1, y, 10, y, GREEN)
+    BONE  = (0xe9, 0xec, 0xe4)
+    QUILL = (0x8d, 0x97, 0x8f)
+    SOLE  = (0xf2, 0xf5, 0xf0)
+    DARK  = (0x8f, 0x2a, 0x26)
+    LIT   = (0xe8, 0x6d, 0x62)
 
-    # The button: an ink rim, a red face, and the glyph knocked into it.  The
-    # rim is a whole pixel wider than the face on purpose -- a red disc laid
-    # straight onto the ground has no edge, and the rim is what gives it one.
-    a.disc(20.5, 16, 9.6, INK)
-    a.disc(20.5, 16, 8.6, (0x8f, 0x2a, 0x26))
-    a.disc(20.5, 16, 7.8, RED)
-    a.arc(20.5, 16, 6.4, 7.8, 55, 155, (0xe8, 0x6d, 0x62))   # a lit top-left
+    # ------- the wing, laid down first so the shoe owns the overlap
 
-    stamp(a, 17, 12, LETTER_B, {"#": WHITE})
+    def feather(bx, by, tx, ty, wb, wt, c):
+        dx, dy = tx - bx, ty - by
+        n = math.hypot(dx, dy)
+        nx, ny = -dy / n, dx / n
+        a.poly([(bx + nx * wb, by + ny * wb), (tx + nx * wt, ty + ny * wt),
+                (tx - nx * wt, ty - ny * wt), (bx - nx * wb, by - ny * wb)], c)
+        a.disc(tx, ty, wt, c)                      # the blunt tip
+
+    # Each feather gets its own root rather than all three sharing one: a
+    # common root makes them one white mass for the first third of their
+    # length, and a wing that has lost its feathers is a splash.  Drawn
+    # back to front, each laying its own darker edge over the one behind,
+    # which is what keeps them apart where they do overlap.
+    for (bx, by), (tx, ty) in (((14.5, 17.0), (5.0, 3.5)),
+                               ((13.5, 19.5), (1.5, 10.0)),
+                               ((12.5, 21.5), (3.0, 17.0))):
+        feather(bx, by, tx - .8, ty + .8, 3.2, 2.0, QUILL)
+        feather(bx, by, tx, ty, 2.3, 1.2, BONE)
+
+    # ------- the shoe, blocked out
+
+    a.rect(9, 17, 24, 22, RED)                    # the body
+    a.disc(23.5, 19.5, 3.2, RED)                  # a round toe box
+    a.disc(11.0, 19.5, 3.0, RED)                  # and a round heel
+    a.rect(9, 13, 16, 18, RED)                    # the ankle collar over both
+
+    a.rect(9, 21, 23, 22, DARK)                   # the upper darkens into
+    a.disc(23.5, 19.5, 3.2, DARK, rows=(21, 22))  # the sole, toe kept round
+
+    a.rect(10, 14, 15, 16, LIT)                   # light off the collar
+    a.ellipse(12.5, 13.6, 3.0, 1.7, BG)           # the opening, cut into it
+    a.ellipse(12.5, 14.2, 2.2, 1.1, INK)
+
+    # Three laces across the instep.  Two read as a mistake and four turn the
+    # vamp into a grille, so three it is.
+    for x in (17.4, 19.6, 21.8):
+        a.poly([(x, 17.5), (x + 1.0, 17.5), (x + .3, 20.3), (x - .7, 20.3)],
+               BONE)
+
+    # ------- the sole, the one horizontal that says which way is down
+
+    a.rect(7, 23, 27, 25, SOLE)
+    a.disc(7.4, 24.0, 1.5, SOLE)
+    a.disc(26.6, 24.0, 1.5, SOLE)
+    a.rect(7, 26, 27, 26, QUILL)
+    a.px(6, 25, QUILL); a.px(28, 25, QUILL)
+
     return a, RED
 
 

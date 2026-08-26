@@ -169,7 +169,7 @@ Opt out with `"automatic_version_check": false` and give the entry its own
 
 The wordmark at the top of this file is hand-made, and it is the whole
 family's -- every mod repo carries the same file at `docs/banner.png` and
-leads with it, under its own name. One mark, twelve repos: a reader who has
+leads with it, under its own name. One mark, thirteen repos: a reader who has
 seen one of these mods recognises the next one on sight, which is the entire
 job a mark has.
 
