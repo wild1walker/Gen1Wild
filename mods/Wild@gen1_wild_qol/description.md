@@ -13,9 +13,9 @@ from ten sources, each switched on and off by itself from
 | **FOLLOWERS** — all 251 overworld followers, sized by Pokédex height | on |
 | **ALL 151** — every one obtainable in one save, without trading | on |
 | **EXP SHARE** — party-wide experience, Gen 5+ style | on |
+| **REMEMBER MOVES** — teach a Pokémon a move it has forgotten | on |
 | **MENU LAYOUT** — reorder the START and PC menus | on |
 | **MOD MANAGER** — the manager redrawn in the game's own idiom | on |
-| **BATTLE XP BAR** — a Gen 2 style experience bar | on |
 | **CAUGHT MARKER** — whether you have caught what you are fighting | on |
 | **AREA BANNER** — names the area you have just walked into | on, 3s |
 | **EASY HM USE** — Cut, Strength, Surf and the rods without the menu | on |

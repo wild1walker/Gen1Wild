@@ -2,7 +2,7 @@
   "id": "gen1_wild_qol",
   "title": "Gen1WildQOL",
   "author": "Wild",
-  "summary": "The quality-of-life half of the suite in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share and later-generation conveniences. Every feature switches on and off by itself.",
+  "summary": "The quality-of-life half of the suite in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, move reminder, menu layout, the mod manager and later-generation conveniences. Every feature switches on and off by itself.",
   "version": "1.3.0",
   "featured": true,
   "categories": [
@@ -17,7 +17,9 @@
     "sprint",
     "autosave",
     "followers",
-    "exp share"
+    "exp share",
+    "move reminder",
+    "relearn"
   ],
   "repo": "https://github.com/wild1walker/Gen1WildQOL",
   "github": "wild1walker/Gen1WildQOL",

@@ -6,7 +6,7 @@ on and off by itself from `OPTION > GEN1WILD UI`. All of them ship on.
 | Feature | |
 |---|---|
 | **BACKDROPS** | 2D backdrops behind battles, picked by map, tileset and how the encounter started |
-| **BATTLE MENUS** | The battle command and move menus as four buttons in a 2x2 grid instead of a list |
+| **BATTLE MENUS** | The battle command and move menus as four buttons in a 2x2 grid instead of a list, plus the XP bar |
 | **BATTLE INTRO** | The intro flash across the whole window instead of a centred 4:3 square, plus flashless intros and a fade to black |
 | **POKEDEX** | A Pokémon beside every entry, base stats, evolutions, the full movelist, and an AREA screen |
 | **POKEMON BOX** | Bill's PC as the box it stood in for: party left, twenty slots right |
