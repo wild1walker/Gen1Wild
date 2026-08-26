@@ -15,10 +15,10 @@ from ten sources, each switched on and off by itself from
 | **EXP SHARE** — party-wide experience, Gen 5+ style | on |
 | **MENU LAYOUT** — reorder the START and PC menus | on |
 | **MOD MANAGER** — the manager redrawn in the game's own idiom | on |
-| **BATTLE XP BAR** — a Gen 2 style experience bar | off |
-| **CAUGHT MARKER** — whether you have caught what you are fighting | off |
-| **AREA BANNER** — names the area you have just walked into | off |
-| **EASY HM USE** — Cut, Strength, Surf and the rods without the menu | off |
+| **BATTLE XP BAR** — a Gen 2 style experience bar | on |
+| **CAUGHT MARKER** — whether you have caught what you are fighting | on |
+| **AREA BANNER** — names the area you have just walked into | on, 3s |
+| **EASY HM USE** — Cut, Strength, Surf and the rods without the menu | on |
 
 ## Nothing is all-or-nothing
 
