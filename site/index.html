@@ -88,6 +88,22 @@
      a link. The trade is that a drag no longer selects the card's text. */
   li.mod { position: relative; cursor: pointer; }
   li.mod:hover { border-color: var(--line-lit); }
+
+  /* The two bundles. Either one installs most of the list below in a single
+     card, so they are marked rather than merely sorted first -- a reader who
+     lands halfway down the page should still be able to tell which two these
+     were. The brand rule down the left is the same one the "add the index"
+     box uses, which is the other thing on the page that is an instruction
+     rather than a listing. */
+  li.mod.feat { border-color: #2a2f26; border-left: 3px solid var(--brand);
+                background: linear-gradient(180deg, #14150f 0%, var(--panel) 60%); }
+  li.mod.feat img.icon { width: 128px; }
+  .tag { display: inline-block; margin-left: .5rem; padding: .05rem .4rem;
+         border: 1px solid var(--brand); border-radius: 999px; color: var(--brand);
+         font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+         vertical-align: .18em; font-weight: 600; }
+  .split { margin: 1.6rem 0 .6rem; color: var(--dim); font-size: .74rem;
+           letter-spacing: .14em; text-transform: uppercase; }
   li.mod:focus-within { outline: 2px solid var(--line-lit); outline-offset: 2px; }
 
   .stretch { text-decoration: none; color: inherit; }
@@ -156,9 +172,19 @@
     const mods = feed.mods || [];
     if (!mods.length) return say('The feed is empty.');
     list.innerHTML = '';
+    // The feed arrives with the featured entries already first; this only has
+    // to notice where the run ends and say so once.
+    let ruled = false;
     for (const m of mods) {
+      if (!m.featured && !ruled && mods.some(x => x.featured)) {
+        ruled = true;
+        const rule = document.createElement('li');
+        rule.className = 'msg split';
+        rule.textContent = 'Everything in them, separately';
+        list.append(rule);
+      }
       const li = document.createElement('li');
-      li.className = 'mod';
+      li.className = m.featured ? 'mod feat' : 'mod';
       const version = m.update_check === 'ok' && m.latest ? m.latest.version : m.version;
 
       if (m.thumbnail) {
@@ -191,6 +217,12 @@
         v.className = 'ver';
         v.textContent = ' ' + version;
         name.append(v);
+      }
+      if (m.featured) {
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = 'Bundle';
+        name.append(tag);
       }
 
       const meta = document.createElement('div');

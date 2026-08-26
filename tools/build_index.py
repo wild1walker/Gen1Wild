@@ -23,6 +23,10 @@ Each mods/<Author>@<id>/ folder holds:
     description.md   optional -- the long form the card links to
     thumbnail.png    optional -- a square icon, drawn by make_icons.py
 
+Set "featured": true on an entry to pin it above the alphabetical run. It is
+for the two bundles, which are the suite rather than mods in it; a feed where
+everything is featured is a feed where nothing is.
+
 Releases are resolved from GitHub so a listing does not go stale: tag a
 release in the mod's own repo and the nightly rebuild picks it up.  Set
 "automatic_version_check": false on an entry to opt out and rely on its own
@@ -197,7 +201,14 @@ def build():
         print(f"  {folder.name:<32} {state}")
         mods.append(row)
 
-    mods.sort(key=lambda m: str(m.get("title", "")).lower())
+    # Featured first, then alphabetical inside each group.
+    #
+    # The two bundles are the suite rather than mods in it -- either one
+    # installs most of this list in a single card -- so they go at the top
+    # instead of falling wherever G sorts. Everything downstream reads the
+    # feed in order: site/index.html draws it as given, and FIND MODS lists
+    # it as given, so ordering here is the only place this has to be said.
+    mods.sort(key=lambda m: (not m.get("featured"), str(m.get("title", "")).lower()))
     return {
         "schema_version": SCHEMA_VERSION,
         "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),

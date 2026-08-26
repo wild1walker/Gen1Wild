@@ -1,0 +1,36 @@
+{
+  "id": "gen1_wild_qol",
+  "title": "Gen1WildQOL",
+  "author": "Wild",
+  "summary": "The quality-of-life half of the suite in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share and later-generation conveniences. Every feature switches on and off by itself.",
+  "version": "1.0.0",
+  "featured": true,
+  "categories": [
+    "QOL",
+    "GAMEPLAY",
+    "CONTENT"
+  ],
+  "tags": [
+    "bundle",
+    "collection",
+    "quality of life",
+    "sprint",
+    "autosave",
+    "followers",
+    "exp share"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1WildQOL",
+  "github": "wild1walker/Gen1WildQOL",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.1.37 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [
+    "engine_internals"
+  ],
+  "games": [
+    "all"
+  ],
+  "license": "MIT"
+}
