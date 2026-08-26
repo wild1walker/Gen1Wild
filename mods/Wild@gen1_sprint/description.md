@@ -1,4 +1,5 @@
-Hold **B** to run. The same speed FireRed's running shoes give you.
+Hold **B** to run — the same speed FireRed's running shoes give you — and
+ride the **BICYCLE** at twice the speed Gen 1 gives it.
 
 ## Twice walking, on a button you were not using
 
@@ -24,13 +25,34 @@ overworld reads nowhere at all.
 | --- | --- | --- |
 | `SPRINT` | on / off | on |
 | `HOLD` | `B` / `SELECT` | `B` |
-| `SPRINT SPEED` | `2x` / `1.5x` / `3x` | `2x` |
+| `SPRINT SPEED` | `1.5x` / `2x` / `3x` | `2x` |
+| `BIKE SPEED` | `VANILLA` / `1.5x` / `2x` / `3x` | `2x` |
 | `SPRINT SURFING` | on / off | off |
 | `SPRINT ON BIKE` | on / off | off |
 
 The two `off` rows are the FireRed answer: running shoes are a thing you do on
-foot, so surfing and cycling stay at exactly the speeds they have always been
-until you say otherwise.
+foot, so surfing stays at exactly the speed it has always been until you say
+otherwise.
+
+## The bicycle, so it stays worth riding
+
+`BIKE SPEED` puts the **BICYCLE at 4 frames per tile** instead of 8, out of the
+box and with nothing held. It is the one default here that departs from vanilla
+rather than preserving it, and it exists because the sprint would otherwise
+make the bike pointless: Gen 1's bicycle is 8 frames per tile, which is exactly
+what a `2x` sprint already gives you on foot.
+
+`2x` restores the ladder — **16 walking, 8 sprinting, 4 riding**, each rung
+twice the one before it. `BIKE SPEED: VANILLA` puts Gen 1's 8 back exactly.
+
+This one is game feel rather than FireRed parity, and it is worth being straight
+about which. FireRed's bicycle is `MOVE_SPEED_FAST_1` — 8 frames per tile, the
+*same constant* its running shoes use — so in FireRed the two really are the
+same speed, and the bike is the worse deal: across 425 maps, 85 allow running
+but not cycling and **none** allow cycling but not running. So 4 is not
+FireRed's ordinary bike speed; it is FireRed's Cycling Road roll
+(`MOVE_SPEED_FASTER`), borrowed because it is the speed that game does reach on
+a bicycle.
 
 ## It does not cost you frames
 
@@ -47,10 +69,12 @@ all while you stand still, sit in a menu or fight a battle. The link allocates
 nothing, and the option rows are read from a snapshot rebuilt only when you
 change one.
 
-`SPRINT: OFF` goes further and unsubscribes the hook outright rather than
-returning early inside it. The engine only builds a context table when some mod
-is listening, so switched off this mod costs precisely what it costs
-uninstalled.
+Turned all the way off — `SPRINT: OFF` *and* `BIKE SPEED: VANILLA` — it goes
+further and unsubscribes the hook outright rather than returning early inside
+it. The engine only builds a context table when some mod is listening, so with
+nothing to say this mod costs precisely what it costs uninstalled. Either row
+on its own keeps the link, because dropping it would quietly take the other
+one's setting with it.
 
 Runs on Red, Blue, Yellow, Gold, Silver and Crystal, and requests no
 permissions.
