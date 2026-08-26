@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-26T19:22:10Z",
+  "generated_at": "2026-08-26T21:24:45Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -70,8 +70,8 @@
         }
       },
       "downloads": {
-        "total": 9,
-        "as_of": "2026-08-26T19:22:09Z"
+        "total": 10,
+        "as_of": "2026-08-26T21:24:45Z"
       },
       "first_release": "2026-08-26T03:55:53Z",
       "last_release": "2026-08-26T18:20:17Z"
@@ -81,7 +81,7 @@
       "title": "Gen1WildUI",
       "author": "Wild",
       "summary": "The visual half of the suite in one mod: battle backdrops, the battle intro, the battle menus, the Pokedex, the box, the party menu, the bag, menu layout and the mod manager. Every feature switches on and off by itself.",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "featured": true,
       "categories": [
         "UI",
@@ -116,23 +116,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_wild_ui/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.5.0",
-        "tag": "v1.5.0",
-        "name": "1.5.0",
+        "version": "1.6.0",
+        "tag": "v1.6.0",
+        "name": "1.6.0",
         "prerelease": false,
-        "published_at": "2026-08-26T18:57:18Z",
+        "published_at": "2026-08-26T21:24:20Z",
         "zip": {
-          "name": "gen1_wild_ui-1.5.0.zip",
-          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.5.0/gen1_wild_ui-1.5.0.zip",
-          "size": 905486
+          "name": "gen1_wild_ui-1.6.0.zip",
+          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.6.0/gen1_wild_ui-1.6.0.zip",
+          "size": 919998
         }
       },
       "downloads": {
-        "total": 10,
-        "as_of": "2026-08-26T19:22:10Z"
+        "total": 12,
+        "as_of": "2026-08-26T21:24:45Z"
       },
       "first_release": "2026-08-26T03:55:54Z",
-      "last_release": "2026-08-26T18:57:18Z"
+      "last_release": "2026-08-26T21:24:20Z"
     },
     {
       "id": "gen151",
@@ -183,7 +183,7 @@
       },
       "downloads": {
         "total": 21,
-        "as_of": "2026-08-26T19:22:07Z"
+        "as_of": "2026-08-26T21:24:43Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-08-25T22:06:20Z"
@@ -234,8 +234,8 @@
         }
       },
       "downloads": {
-        "total": 162,
-        "as_of": "2026-08-26T19:22:10Z"
+        "total": 167,
+        "as_of": "2026-08-26T21:24:45Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-25T17:34:59Z"
@@ -284,7 +284,7 @@
       },
       "downloads": {
         "total": 31,
-        "as_of": "2026-08-26T19:22:07Z"
+        "as_of": "2026-08-26T21:24:43Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -338,7 +338,7 @@
       },
       "downloads": {
         "total": 74,
-        "as_of": "2026-08-26T19:22:10Z"
+        "as_of": "2026-08-26T21:24:45Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-26T06:47:09Z"
@@ -348,7 +348,7 @@
       "title": "Gen1BattleUI",
       "author": "Wild",
       "summary": "The battle command and move menus as four buttons in a 2x2 grid instead of a list, in the Game Boy's own screen and the Game Boy's own chrome.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "categories": [
         "UI"
       ],
@@ -378,23 +378,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BattleUI/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.4.0",
-        "tag": "v1.4.0",
-        "name": "1.4.0",
+        "version": "1.5.0",
+        "tag": "v1.5.0",
+        "name": "1.5.0",
         "prerelease": false,
-        "published_at": "2026-08-26T18:00:52Z",
+        "published_at": "2026-08-26T20:53:35Z",
         "zip": {
-          "name": "Gen1BattleUI-1.4.0.zip",
-          "url": "https://github.com/wild1walker/Gen1BattleUI/releases/download/v1.4.0/Gen1BattleUI-1.4.0.zip",
-          "size": 64314
+          "name": "Gen1BattleUI-1.5.0.zip",
+          "url": "https://github.com/wild1walker/Gen1BattleUI/releases/download/v1.5.0/Gen1BattleUI-1.5.0.zip",
+          "size": 88646
         }
       },
       "downloads": {
-        "total": 7,
-        "as_of": "2026-08-26T19:22:05Z"
+        "total": 8,
+        "as_of": "2026-08-26T21:24:41Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
-      "last_release": "2026-08-26T18:00:52Z"
+      "last_release": "2026-08-26T20:53:35Z"
     },
     {
       "id": "Gen1BillsBox",
@@ -447,7 +447,7 @@
       },
       "downloads": {
         "total": 25,
-        "as_of": "2026-08-26T19:22:05Z"
+        "as_of": "2026-08-26T21:24:41Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-26T09:15:49Z"
@@ -509,7 +509,7 @@
       },
       "downloads": {
         "total": 24,
-        "as_of": "2026-08-26T19:22:05Z"
+        "as_of": "2026-08-26T21:24:41Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-08-26T18:12:27Z"
@@ -564,7 +564,7 @@
       },
       "downloads": {
         "total": 31,
-        "as_of": "2026-08-26T19:22:06Z"
+        "as_of": "2026-08-26T21:24:42Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-26T17:49:04Z"
@@ -615,8 +615,8 @@
         }
       },
       "downloads": {
-        "total": 42,
-        "as_of": "2026-08-26T19:22:06Z"
+        "total": 43,
+        "as_of": "2026-08-26T21:24:42Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-25T01:53:03Z"
@@ -674,7 +674,7 @@
       },
       "downloads": {
         "total": 53,
-        "as_of": "2026-08-26T19:22:08Z"
+        "as_of": "2026-08-26T21:24:44Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-26T07:53:29Z"
@@ -728,8 +728,8 @@
         }
       },
       "downloads": {
-        "total": 10,
-        "as_of": "2026-08-26T19:22:08Z"
+        "total": 11,
+        "as_of": "2026-08-26T21:24:44Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-25T07:41:37Z"
@@ -786,7 +786,7 @@
       },
       "downloads": {
         "total": 12,
-        "as_of": "2026-08-26T19:22:07Z"
+        "as_of": "2026-08-26T21:24:42Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-08-26T18:47:45Z"
@@ -844,7 +844,7 @@
       },
       "downloads": {
         "total": 2,
-        "as_of": "2026-08-26T19:22:07Z"
+        "as_of": "2026-08-26T21:24:43Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-08-26T17:49:56Z"
@@ -899,7 +899,7 @@
       },
       "downloads": {
         "total": 17,
-        "as_of": "2026-08-26T19:22:09Z"
+        "as_of": "2026-08-26T21:24:44Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -952,7 +952,7 @@
       },
       "downloads": {
         "total": 3,
-        "as_of": "2026-08-26T19:22:09Z"
+        "as_of": "2026-08-26T21:24:44Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-26T00:29:59Z"
