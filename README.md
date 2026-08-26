@@ -20,7 +20,7 @@ thirteen.
 | | Bundle | What it is |
 |---|---|---|
 | <img src="mods/Wild@gen1_wild_qol/thumbnail.png" width="54" alt=""> | **[Gen1WildQOL](https://github.com/wild1walker/Gen1WildQOL)** | The quality-of-life half in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, menu layout, the mod manager and four later-generation conveniences. Every feature switches on and off by itself. |
-| <img src="mods/Wild@gen1_wild_ui/thumbnail.png" width="54" alt=""> | **[Gen1WildUI](https://github.com/wild1walker/Gen1WildUI)** | The visual half in one mod: battle backdrops, the Pokédex, the box, the party menu, the bag, menu layout and the mod manager. Every feature switches on and off by itself. |
+| <img src="mods/Wild@gen1_wild_ui/thumbnail.png" width="54" alt=""> | **[Gen1WildUI](https://github.com/wild1walker/Gen1WildUI)** | The visual half in one mod: battle backdrops, the battle intro, the Pokédex, the box, the party menu, the bag, menu layout and the mod manager. Every feature switches on and off by itself. |
 
 Install both and they cooperate: the two features they share are set up once,
 not twice, and a mod in one can still find a mod in the other.

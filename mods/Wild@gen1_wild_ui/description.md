@@ -1,11 +1,12 @@
 # Gen1WildUI
 
-The visual half of the Gen1Wild suite in one mod. Seven features, each switched
+The visual half of the Gen1Wild suite in one mod. Eight features, each switched
 on and off by itself from `OPTION > GEN1WILD UI`. All of them ship on.
 
 | Feature | |
 |---|---|
 | **BACKDROPS** | 2D backdrops behind battles, picked by map, tileset and how the encounter started |
+| **BATTLE INTRO** | The intro flash across the whole window instead of a centred 4:3 square, plus flashless intros and a fade to black |
 | **POKEDEX** | A Pokémon beside every entry, base stats, evolutions, the full movelist, and an AREA screen |
 | **POKEMON BOX** | Bill's PC as the box it stood in for: party left, twenty slots right |
 | **PARTY MENU** | Every Pokémon in its own species colours instead of six sharing one |
@@ -34,7 +35,8 @@ as conflicts because they install the same hooks. Settings do not carry over.
 
 ## Credit
 
-`BAG` is a derivative of **FAFF0x**'s Modern Bag; `BACKDROPS` draws the *Battle
+`BATTLE INTRO` is **ShaneMcGovernIE**'s *Widescreen Battle Intro*, maintained
+here now; `BAG` is a derivative of **FAFF0x**'s Modern Bag; `BACKDROPS` draws the *Battle
 Backgrounds Patch FR* by **LibertyTwins**, **princess-phoenix**, **carchagui**,
 **aveontrainer**, **WesleyFG**, **kWharever**, **worldslayer608** and **knizz**.
 The full list is in
