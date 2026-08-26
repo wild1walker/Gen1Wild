@@ -3,7 +3,7 @@
   "title": "Gen1AutoSave",
   "author": "Wild",
   "summary": "Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups.",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "categories": [
     "QOL",
     "GAMEPLAY"

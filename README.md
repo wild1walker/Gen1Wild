@@ -179,7 +179,11 @@ before it goes in:
 repo's Releases, takes the newest one with a `.zip` asset, and puts it on the
 card — so tag a release in the mod's own repo and this index catches up without
 being touched. The `version` in `meta.json` is only the fallback shown when no
-release can be resolved.
+release can be resolved — and the rebuild keeps that in step too, writing the
+resolved version back into the entry rather than leaving a number there that
+is right only until the next release. Which is the point: a fallback nobody
+looks at is a fallback that has quietly gone stale by the time it is needed.
+An entry that resolves no release keeps whatever version it was given by hand.
 
 Opt out with `"automatic_version_check": false` and give the entry its own
 `"downloadURL"` pointing at an installable `.zip`.

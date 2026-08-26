@@ -72,13 +72,17 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          if git diff --quiet -- site/data/index.json; then
+          # mods/*/meta.json is in here because the build syncs each entry's
+          # fallback version to the release it resolved.  Without it CI would
+          # rewrite those files every hour and commit none of them, so the
+          # drift would come back the moment anyone looked.
+          if git diff --quiet -- site/data/index.json 'mods/*/meta.json'; then
             echo "feed unchanged; nothing to commit"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data/index.json
+          git add site/data/index.json 'mods/*/meta.json'
           git commit -m "Rebuild the mod index feed"
 
           # main moves under this job: an entry landing while the nightly run is
@@ -102,11 +106,11 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python3 tools/build_index.py
-            if git diff --quiet -- site/data/index.json; then
+            if git diff --quiet -- site/data/index.json 'mods/*/meta.json'; then
               echo "the feed that landed is already current; nothing to push"
               exit 0
             fi
-            git add site/data/index.json
+            git add site/data/index.json 'mods/*/meta.json'
             git commit -m "Rebuild the mod index feed"
           done
           echo "::error::could not push the rebuilt feed after 3 attempts"

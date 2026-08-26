@@ -171,10 +171,25 @@ def build():
             print(f"::error::{p}", file=sys.stderr)
         raise SystemExit(1)
 
-    mods = []
+    mods, synced = [], []
     for folder, meta in entries:
         latest, update_check, downloads, first_release, last_release = \
             resolve_releases(meta)
+
+        # meta.json's "version" is only the fallback a card shows when no
+        # release resolves -- which is exactly why it rots unwatched.  It goes
+        # stale on its own every time a mod ships, and nothing notices until
+        # the day a lookup fails and the fallback is what a reader is handed.
+        # So a rebuild writes the resolved version back here rather than
+        # leaving a number that is right only until someone needs it.  An
+        # entry that resolves nothing keeps whatever it was given by hand.
+        if latest and latest.get("version") \
+                and meta.get("version") != latest["version"]:
+            synced.append((folder.name, meta["version"], latest["version"]))
+            meta["version"] = latest["version"]
+            (folder / "meta.json").write_text(
+                json.dumps(meta, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8")
 
         row = dict(meta)
         row["folder"] = folder.name
@@ -200,6 +215,9 @@ def build():
         state = update_check if update_check != "ok" else f"ok, {latest['version']}"
         print(f"  {folder.name:<32} {state}")
         mods.append(row)
+
+    for name, was, now in synced:
+        print(f"  synced {name}'s fallback version: {was} -> {now}")
 
     # Featured first, then alphabetical inside each group.
     #
