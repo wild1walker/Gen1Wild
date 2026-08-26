@@ -44,6 +44,9 @@ STEEL   = (0x5a, 0x66, 0x5c)
 AMBER   = (0xe8, 0xb7, 0x3a)
 PINK    = (0xf2, 0x8c, 0xbc)
 PINK_D  = (0xa8, 0x46, 0x78)
+PURPLE  = (0x9a, 0x6c, 0xf0)   # Gen1BattleUI's glove
+PURPLE_L = (0xc4, 0xa6, 0xff)
+PURPLE_D = (0x5c, 0x36, 0xa4)
 
 
 class Art:
@@ -972,6 +975,60 @@ def bundle_icon(text, case=CASE_GOLD, gap=2):
     return a, lit
 
 
+# The glove, one character per pixel.  Written out rather than built from
+# discs and ellipses like the rest of the icons here, because this shape is
+# three round masses that have to meet along shared outlines: composed from
+# primitives it kept coming out with a stray pixel where two curves grazed
+# each other and a gap where the thumb met the cuff, and every fix for one
+# moved the other.  A map has no such argument with itself.
+#
+#   o  the outline      L  lit              M  the body
+#   D  shade            W  the laces        .  through to the ground
+GLOVE = [
+    "................................",
+    ".............oooooo.............",
+    "..........oooLLLLLLooo..........",
+    "........ooLLLLLLLLLLLLoo........",
+    ".......oLLLLLLLLLLLLLLLLo.......",
+    "......ooLLLLLLLLLLLLLLLLMo......",
+    "......oLLLLLLLLLLLLLLLLLMo......",
+    ".....ooLLDLLLDLLLDLLLLLLMMo.....",
+    ".....oLLLDLLLDLLLDLLLLLLMMo.....",
+    ".....oLLLDLLLDLLLDLLLLLLMMo.....",
+    ".....oLLLDLLLDLLLDLLLLLLMMo.....",
+    ".....oLLLLLLLLLLLLLLLLLLMMo.....",
+    "....ooLLLLLLLLLLLLLLLLLMMMo.....",
+    "..oooMMMMMMMMMMMMMMMMMMMMMo.....",
+    ".ooLLoMMMMMMMMMMMMMMMMMMMMo.....",
+    ".oLLLLoMMMMMMMMMMMMMMMMMMMo.....",
+    ".oLLLLoMMMMMMMMMMMMMMMMMMMo.....",
+    ".oMMMMooMMMMMMMMMMMMMMMMMMo.....",
+    ".oMMMMMoMMMMMMMMMMMMMMMMMMo.....",
+    ".oMMMMMoDDDDDDDDDDDDDDDDDDo.....",
+    "..oMMMMoDDDDDDDDDDDDDDDDDo......",
+    "..oMMMMoDDDDDDDDDDDDDDDDo.......",
+    "...ooooooDDDDDDDDDDDDDDo........",
+    ".........oooooooooooooo.........",
+    "..........oMMMMMMMMMMo..........",
+    "..........oDDDDWWDDDDo..........",
+    "..........oWWWWWWWWWWo..........",
+    "..........oDDDDWWDDDDo..........",
+    "..........oWWWWWWWWWWo..........",
+    "..........oDDDDWWDDDDo..........",
+    "..........oooooooooooo..........",
+    "................................",
+]
+
+
+def battle_ui():
+    """A purple boxing glove: the battle menu, hitting differently."""
+    a = Art()
+    stamp(a, 0, 0, GLOVE, {
+        "o": INK, "L": PURPLE_L, "M": PURPLE, "D": PURPLE_D, "W": WHITE,
+    })
+    return a, PURPLE
+
+
 def wild_qol():
     """A gold Game Boy reading QOL."""
     return bundle_icon("QOL", CASE_GOLD)
@@ -984,6 +1041,7 @@ def wild_ui():
 
 ICONS = {
     "gen1autosave": autosave,
+    "Gen1BattleUI": battle_ui,
     "gen1_auto_continue": auto_continue,
     "gen1arena": arena,
     "Gen1MenuManager": menu_manager,
