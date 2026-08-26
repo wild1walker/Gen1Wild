@@ -858,10 +858,27 @@ def sprint():
 # Pokemon stands in it.  Everything else in the index is an object -- a shoe,
 # a bag, a ball -- and that is the point of the difference.
 
-GOLD    = (0xf5, 0xc9, 0x42)   # the case, lit
-GOLD_M  = (0xc9, 0x9c, 0x28)   # its mid tone, and the bezel
-GOLD_D  = (0x8a, 0x66, 0x12)   # its shadowed edges
-GOLD_K  = (0x4a, 0x35, 0x08)   # the darkest gold, for cut lines
+# Two cases, one drawing. Each is four tones of the same hue -- lit, mid,
+# shadow, and a near-black for the cut lines -- so the same code draws either
+# by being handed a different four.
+#
+# The halves are told apart by colour and by nothing else, which is the point:
+# they are the same console, and a reader scanning the index should be able to
+# tell which is which without reading the screen.
+GOLD    = (0xf5, 0xc9, 0x42)
+GOLD_M  = (0xc9, 0x9c, 0x28)
+GOLD_D  = (0x8a, 0x66, 0x12)
+GOLD_K  = (0x4a, 0x35, 0x08)
+CASE_GOLD = (GOLD, GOLD_M, GOLD_D, GOLD_K)
+
+# Built out from the index's own RED rather than picked fresh, so the UI card
+# sits in the same family as the Poke Ball on the icons that use one.
+RED_L   = (0xef, 0x5a, 0x4c)
+RED_M   = (0xd0, 0x41, 0x3a)
+RED_D   = (0x8e, 0x24, 0x20)
+RED_K   = (0x46, 0x10, 0x0d)
+CASE_RED = (RED_L, RED_M, RED_D, RED_K)
+
 LCD     = (0x14, 0x1a, 0x11)   # the screen, off
 
 
@@ -875,8 +892,8 @@ BUTTON_ROWS = [
 ]
 
 
-def bundle_icon(text, gap=2):
-    """A gold Game Boy with the word on its screen.
+def bundle_icon(text, case=CASE_GOLD, gap=2):
+    """A Game Boy with the word on its screen, in the case colour given.
 
     The console is the suite and the screen says which half of it, which is
     why the word is on the screen rather than under the console: an icon with
@@ -893,18 +910,19 @@ def bundle_icon(text, gap=2):
     slanted pills for START and SELECT.
     """
     a = Art()
+    lit, mid, dark, cut = case
 
     X0, X1 = 3, 28
     Y0, Y1 = 1, 30
 
     # ------- the case
-    a.rect(X0, Y0, X1, Y1, GOLD)
+    a.rect(X0, Y0, X1, Y1, lit)
     # A bevel rather than a flat fill: light off the top-left, shadow into
     # the bottom-right, which is what stops a rounded rectangle of one colour
     # reading as a sticker.
-    a.rect(X0, Y1 - 1, X1, Y1, GOLD_D)
-    a.rect(X1 - 1, Y0, X1, Y1, GOLD_D)
-    a.rect(X0, Y0, X1, Y0, GOLD_M)
+    a.rect(X0, Y1 - 1, X1, Y1, dark)
+    a.rect(X1 - 1, Y0, X1, Y1, dark)
+    a.rect(X0, Y0, X1, Y0, mid)
     a.frame(X0, Y0, X1, Y1, INK)
 
     # The DMG's one asymmetric corner, bottom right, is the detail that says
@@ -921,13 +939,13 @@ def bundle_icon(text, gap=2):
     # Set down from the top edge rather than against it. Butted up, the strip
     # of case left above it reads as a seam and the whole thing looks like a
     # lid.
-    a.rect(5, 4, 26, 17, GOLD_D)
+    a.rect(5, 4, 26, 17, dark)
     a.frame(5, 4, 26, 17, INK)
     a.rect(6, 6, 25, 15, LCD)
-    a.frame(6, 5, 25, 16, GOLD_K)
+    a.frame(6, 5, 25, 16, cut)
 
     width = word_width(text, glyphs=LETTERS_SMALL, gap=gap)
-    word(a, 6 + (20 - width) // 2, 7, text, GOLD, GOLD_D,
+    word(a, 6 + (20 - width) // 2, 7, text, lit, dark,
          glyphs=LETTERS_SMALL, gap=gap)
 
     # ------- the controls
@@ -936,32 +954,32 @@ def bundle_icon(text, gap=2):
     # slanted between them: the arrangement is doing more work here than any
     # single piece of it, so each is placed where the eye expects it rather
     # than where it fits best.
-    a.rect(6, 22, 11, 23, GOLD_K)      # cross, horizontal arm
-    a.rect(8, 20, 9, 25, GOLD_K)       # cross, vertical arm
+    a.rect(6, 22, 11, 23, cut)      # cross, horizontal arm
+    a.rect(8, 20, 9, 25, cut)       # cross, vertical arm
 
     # A above and right of B, with air between them and between both and the
     # stubs below: at four pixels across, anything closer than two pixels
     # merges into one shape once the icon is looked at small.
-    stamp(a, 22, 19, BUTTON_ROWS, {"#": GOLD_K})   # A
-    stamp(a, 16, 22, BUTTON_ROWS, {"#": GOLD_K})   # B
+    stamp(a, 22, 19, BUTTON_ROWS, {"#": cut})   # A
+    stamp(a, 16, 22, BUTTON_ROWS, {"#": cut})   # B
 
     # START and SELECT: two stubs on the slant the real pair sits at.
-    a.rect(9, 28, 11, 28, GOLD_K)
-    a.rect(10, 27, 12, 27, GOLD_K)
-    a.rect(15, 28, 17, 28, GOLD_K)
-    a.rect(16, 27, 18, 27, GOLD_K)
+    a.rect(9, 28, 11, 28, cut)
+    a.rect(10, 27, 12, 27, cut)
+    a.rect(15, 28, 17, 28, cut)
+    a.rect(16, 27, 18, 27, cut)
 
-    return a, GOLD
+    return a, lit
 
 
 def wild_qol():
-    """QOL in the grass."""
-    return bundle_icon("QOL")
+    """A gold Game Boy reading QOL."""
+    return bundle_icon("QOL", CASE_GOLD)
 
 
 def wild_ui():
-    """UI in the grass."""
-    return bundle_icon("UI", gap=4)
+    """A red Game Boy reading UI."""
+    return bundle_icon("UI", CASE_RED, gap=4)
 
 
 ICONS = {
