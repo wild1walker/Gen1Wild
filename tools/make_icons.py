@@ -617,6 +617,84 @@ def gen151():
     return a, PINK
 
 
+def sprint():
+    """A winged shoe: Hermes' talaria, in the running shoes' own red.
+
+    Blocked out of a body, a collar and a round toe rather than traced as
+    one outline.  A shoe in profile is mostly a silhouette problem, and an
+    outline drawn at 32 pixels loses its toe to the scanline fill -- the
+    front tapers to a sliver a pixel or two tall and stops reading as a
+    shoe at all.  Blocking keeps the toe box the height it needs, and the
+    sole is left to say which way is down.
+
+    The feathers are quads with blunt, rounded tips, not triangles.  A
+    triangle ends in a single pixel, and three of them fanned out read as
+    scratches on the picture rather than as a wing.  They are laid down
+    before the shoe and rooted behind the heel, so the wing emerges from
+    something instead of being parked next to it, and they sweep back
+    rather than over the toe -- which is how a wing is drawn on something
+    already moving.
+    """
+    a = Art()
+
+    BONE  = (0xe9, 0xec, 0xe4)
+    QUILL = (0x8d, 0x97, 0x8f)
+    SOLE  = (0xf2, 0xf5, 0xf0)
+    DARK  = (0x8f, 0x2a, 0x26)
+    LIT   = (0xe8, 0x6d, 0x62)
+
+    # ------- the wing, laid down first so the shoe owns the overlap
+
+    def feather(bx, by, tx, ty, wb, wt, c):
+        dx, dy = tx - bx, ty - by
+        n = math.hypot(dx, dy)
+        nx, ny = -dy / n, dx / n
+        a.poly([(bx + nx * wb, by + ny * wb), (tx + nx * wt, ty + ny * wt),
+                (tx - nx * wt, ty - ny * wt), (bx - nx * wb, by - ny * wb)], c)
+        a.disc(tx, ty, wt, c)                      # the blunt tip
+
+    # Each feather gets its own root rather than all three sharing one: a
+    # common root makes them one white mass for the first third of their
+    # length, and a wing that has lost its feathers is a splash.  Drawn
+    # back to front, each laying its own darker edge over the one behind,
+    # which is what keeps them apart where they do overlap.
+    for (bx, by), (tx, ty) in (((14.5, 17.0), (5.0, 3.5)),
+                               ((13.5, 19.5), (1.5, 10.0)),
+                               ((12.5, 21.5), (3.0, 17.0))):
+        feather(bx, by, tx - .8, ty + .8, 3.2, 2.0, QUILL)
+        feather(bx, by, tx, ty, 2.3, 1.2, BONE)
+
+    # ------- the shoe, blocked out
+
+    a.rect(9, 17, 24, 22, RED)                    # the body
+    a.disc(23.5, 19.5, 3.2, RED)                  # a round toe box
+    a.disc(11.0, 19.5, 3.0, RED)                  # and a round heel
+    a.rect(9, 13, 16, 18, RED)                    # the ankle collar over both
+
+    a.rect(9, 21, 23, 22, DARK)                   # the upper darkens into
+    a.disc(23.5, 19.5, 3.2, DARK, rows=(21, 22))  # the sole, toe kept round
+
+    a.rect(10, 14, 15, 16, LIT)                   # light off the collar
+    a.ellipse(12.5, 13.6, 3.0, 1.7, BG)           # the opening, cut into it
+    a.ellipse(12.5, 14.2, 2.2, 1.1, INK)
+
+    # Three laces across the instep.  Two read as a mistake and four turn the
+    # vamp into a grille, so three it is.
+    for x in (17.4, 19.6, 21.8):
+        a.poly([(x, 17.5), (x + 1.0, 17.5), (x + .3, 20.3), (x - .7, 20.3)],
+               BONE)
+
+    # ------- the sole, the one horizontal that says which way is down
+
+    a.rect(7, 23, 27, 25, SOLE)
+    a.disc(7.4, 24.0, 1.5, SOLE)
+    a.disc(26.6, 24.0, 1.5, SOLE)
+    a.rect(7, 26, 27, 26, QUILL)
+    a.px(6, 25, QUILL); a.px(28, 25, QUILL)
+
+    return a, RED
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
@@ -630,6 +708,7 @@ ICONS = {
     "gen1_mod_menu": mod_menu,
     "Gen1Party": party,
     "gen151": gen151,
+    "gen1_sprint": sprint,
 }
 
 

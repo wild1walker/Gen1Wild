@@ -1,0 +1,31 @@
+{
+  "id": "gen1_sprint",
+  "title": "Gen1Sprint",
+  "author": "Wild",
+  "summary": "Hold B to run at FireRed's running-shoes speed: twice walking, the pace the BICYCLE already rides at.",
+  "version": "0.1.0",
+  "categories": [
+    "GAMEPLAY",
+    "QOL"
+  ],
+  "tags": [
+    "overworld",
+    "movement",
+    "running shoes",
+    "sprint",
+    "speed",
+    "quality of life"
+  ],
+  "repo": "https://github.com/wild1walker/Gen1Sprint",
+  "github": "wild1walker/Gen1Sprint",
+  "automatic_version_check": true,
+  "api": 2,
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "profile": "content",
+  "affects_link": false,
+  "permissions": [],
+  "games": [
+    "all"
+  ],
+  "license": "MIT"
+}
