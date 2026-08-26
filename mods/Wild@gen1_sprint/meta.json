@@ -2,8 +2,8 @@
   "id": "gen1_sprint",
   "title": "Gen1Sprint",
   "author": "Wild",
-  "summary": "Hold B to run at FireRed's running-shoes speed: twice walking, the pace the BICYCLE already rides at.",
-  "version": "0.1.0",
+  "summary": "Hold B to run at FireRed's running-shoes speed, and ride the BICYCLE at twice the speed Gen 1 gives it.",
+  "version": "0.2.0",
   "categories": [
     "GAMEPLAY",
     "QOL"
@@ -13,6 +13,7 @@
     "movement",
     "running shoes",
     "sprint",
+    "bicycle",
     "speed",
     "quality of life"
   ],

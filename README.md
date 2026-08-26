@@ -27,7 +27,7 @@
 | <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
 | <img src="mods/Wild@Gen1Party/thumbnail.png" width="54" alt=""> | **[Gen1Party](https://github.com/wild1walker/Gen1Party)** | The party menu with every POKéMON in its own species colours instead of all six sharing one, and the status and HP numbers pulled in off the screen edge. |
 | <img src="mods/Wild@gen1_sound_qol/thumbnail.png" width="54" alt=""> | **[Gen1SoundQOL](https://github.com/wild1walker/Gen1SoundQOL)** | The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio. |
-| <img src="mods/Wild@gen1_sprint/thumbnail.png" width="54" alt=""> | **[Gen1Sprint](https://github.com/wild1walker/Gen1Sprint)** | Hold B to run at FireRed's running-shoes speed: twice walking pace, which is what this engine's own BICYCLE already rides at. |
+| <img src="mods/Wild@gen1_sprint/thumbnail.png" width="54" alt=""> | **[Gen1Sprint](https://github.com/wild1walker/Gen1Sprint)** | Hold B to run at FireRed's running-shoes speed, and a BICYCLE that stays worth riding at twice the speed Gen 1 gives it. |
 
 Every icon above is the one the card carries in **FIND MODS**, drawn by
 [`tools/make_icons.py`](tools/make_icons.py). No mod is vendored here: each
