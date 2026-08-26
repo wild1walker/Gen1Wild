@@ -188,6 +188,161 @@ DIGITS = {
     ],
 }
 
+
+# The five letters QOL and UI need, on the same seven-by-nine body the
+# digits use so a word and a number sit at the same weight.  Only these five
+# are here, for the same reason only 1 and 5 are: a full alphabet would be
+# twenty-one glyphs of dead weight and one more thing to keep in step with
+# nothing.
+LETTERS = {
+    "Q": [
+        ".#####.",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##.#.##",
+        "##..###",
+        ".######",
+        ".....##",
+    ],
+    "O": [
+        ".#####.",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        ".#####.",
+        ".......",
+    ],
+    "L": [
+        "##.....",
+        "##.....",
+        "##.....",
+        "##.....",
+        "##.....",
+        "##.....",
+        "##.....",
+        "#######",
+        ".......",
+    ],
+    "U": [
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        "##...##",
+        ".#####.",
+        ".......",
+    ],
+    "I": [
+        "#######",
+        "..###..",
+        "..###..",
+        "..###..",
+        "..###..",
+        "..###..",
+        "..###..",
+        "#######",
+        ".......",
+    ],
+}
+
+
+# The same five letters again, five by seven, for when they have to fit on a
+# screen rather than fill a frame.  QOL at the full seven-by-nine body is
+# twenty-five pixels wide, which on a 32-pixel grid leaves nothing for the
+# Game Boy around it -- the console would have to be wider than the icon.
+LETTERS_SMALL = {
+    "Q": [
+        ".###.",
+        "#...#",
+        "#...#",
+        "#...#",
+        "#.#.#",
+        ".###.",
+        "....#",
+    ],
+    "O": [
+        ".###.",
+        "#...#",
+        "#...#",
+        "#...#",
+        "#...#",
+        ".###.",
+        ".....",
+    ],
+    "L": [
+        "#....",
+        "#....",
+        "#....",
+        "#....",
+        "#....",
+        "#####",
+        ".....",
+    ],
+    "U": [
+        "#...#",
+        "#...#",
+        "#...#",
+        "#...#",
+        "#...#",
+        ".###.",
+        ".....",
+    ],
+    "I": [
+        "#####",
+        "..#..",
+        "..#..",
+        "..#..",
+        "..#..",
+        "#####",
+        ".....",
+    ],
+}
+
+
+def word(art, x, y, text, colour, shadow, outline=None,
+         glyphs=LETTERS, gap=DIGIT_GAP):
+    """Write a word, each glyph sitting on a shadow a pixel down and right.
+
+    The same stencil trick numerals() uses: a flat colour reads as something
+    printed rather than something drawn, and the offset shadow is what gives
+    the strokes an edge.  Returns the width laid down, so a caller can centre
+    the word without counting glyphs itself.
+
+    `outline` traces each glyph a pixel out in all eight directions first.
+    On the near-black ground the rest of the index uses it is unnecessary --
+    the shadow alone separates the strokes.  Over grass it is not: gold on
+    green is two mid tones, and without a dark edge between them the word
+    dissolves into the tufts at any size below the full 512.
+
+    Glyphs are outlined one at a time, which is only safe because the gap is
+    wider than the trace: at gap 2 a glyph's outline reaches one pixel past
+    its body and the next begins two past, so no outline lands on a
+    neighbour's fill.
+    """
+    start = x
+    for ch in text:
+        rows = glyphs[ch]
+        if outline:
+            for dx in (-1, 0, 1):
+                for dy in (-1, 0, 1):
+                    if dx or dy:
+                        stamp(art, x + dx, y + dy, rows, {"#": outline})
+        stamp(art, x + 1, y + 1, rows, {"#": shadow})
+        stamp(art, x, y, rows, {"#": colour})
+        x += len(rows[0]) + gap
+    return x - gap - start
+
+
+def word_width(text, glyphs=LETTERS, gap=DIGIT_GAP):
+    return sum(len(glyphs[c][0]) for c in text) + gap * (len(text) - 1)
+
 # A Poke Ball small enough that drawing it as circles would only smear: at
 # eleven pixels across it is worth spelling out.
 SMALL_BALL = [
@@ -695,6 +850,138 @@ def sprint():
     return a, RED
 
 
+# --------------------------------------------------------------------------
+# the two bundles
+#
+# These two are the suite rather than a mod in it, so they are drawn as the
+# thing the suite is about: a word standing in tall grass, the way a wild
+# Pokemon stands in it.  Everything else in the index is an object -- a shoe,
+# a bag, a ball -- and that is the point of the difference.
+
+# Two cases, one drawing. Each is four tones of the same hue -- lit, mid,
+# shadow, and a near-black for the cut lines -- so the same code draws either
+# by being handed a different four.
+#
+# The halves are told apart by colour and by nothing else, which is the point:
+# they are the same console, and a reader scanning the index should be able to
+# tell which is which without reading the screen.
+GOLD    = (0xf5, 0xc9, 0x42)
+GOLD_M  = (0xc9, 0x9c, 0x28)
+GOLD_D  = (0x8a, 0x66, 0x12)
+GOLD_K  = (0x4a, 0x35, 0x08)
+CASE_GOLD = (GOLD, GOLD_M, GOLD_D, GOLD_K)
+
+# Built out from the index's own RED rather than picked fresh, so the UI card
+# sits in the same family as the Poke Ball on the icons that use one.
+RED_L   = (0xef, 0x5a, 0x4c)
+RED_M   = (0xd0, 0x41, 0x3a)
+RED_D   = (0x8e, 0x24, 0x20)
+RED_K   = (0x46, 0x10, 0x0d)
+CASE_RED = (RED_L, RED_M, RED_D, RED_K)
+
+LCD     = (0x14, 0x1a, 0x11)   # the screen, off
+
+
+# A round button, four across.  a.disc at this radius rasterises to a
+# diamond, and two diamonds beside a cross read as three d-pads.
+BUTTON_ROWS = [
+    ".##.",
+    "####",
+    "####",
+    ".##.",
+]
+
+
+def bundle_icon(text, case=CASE_GOLD, gap=2):
+    """A Game Boy with the word on its screen, in the case colour given.
+
+    The console is the suite and the screen says which half of it, which is
+    why the word is on the screen rather than under the console: an icon with
+    a caption is two things to read, and one of them is always the one that
+    got small.
+
+    Proportion is the compromise here. A DMG is about three units wide to
+    five tall; at that ratio on a 32-pixel grid the screen is fourteen pixels
+    across, and QOL does not fit on it in any letterform that is still
+    letters. The case is drawn wider than life so the screen can hold three
+    glyphs. What makes it read as a Game Boy at this size is not the outline
+    ratio anyway -- it is the furniture: a bezel deeper below the screen than
+    above, a cross, two round buttons set on a diagonal, and two little
+    slanted pills for START and SELECT.
+    """
+    a = Art()
+    lit, mid, dark, cut = case
+
+    X0, X1 = 3, 28
+    Y0, Y1 = 1, 30
+
+    # ------- the case
+    a.rect(X0, Y0, X1, Y1, lit)
+    # A bevel rather than a flat fill: light off the top-left, shadow into
+    # the bottom-right, which is what stops a rounded rectangle of one colour
+    # reading as a sticker.
+    a.rect(X0, Y1 - 1, X1, Y1, dark)
+    a.rect(X1 - 1, Y0, X1, Y1, dark)
+    a.rect(X0, Y0, X1, Y0, mid)
+    a.frame(X0, Y0, X1, Y1, INK)
+
+    # The DMG's one asymmetric corner, bottom right, is the detail that says
+    # Game Boy before any of the buttons do.
+    for i, run in enumerate((4, 2, 1)):
+        a.rect(X1 - run + 1, Y1 - i, X1, Y1 - i, BG)
+    a.px(X1 - 4, Y1, INK)
+    a.px(X1 - 2, Y1 - 1, INK)
+    a.px(X1 - 1, Y1 - 2, INK)
+    a.px(X1, Y1 - 3, INK)
+
+    # ------- the screen
+    #
+    # Set down from the top edge rather than against it. Butted up, the strip
+    # of case left above it reads as a seam and the whole thing looks like a
+    # lid.
+    a.rect(5, 4, 26, 17, dark)
+    a.frame(5, 4, 26, 17, INK)
+    a.rect(6, 6, 25, 15, LCD)
+    a.frame(6, 5, 25, 16, cut)
+
+    width = word_width(text, glyphs=LETTERS_SMALL, gap=gap)
+    word(a, 6 + (20 - width) // 2, 7, text, lit, dark,
+         glyphs=LETTERS_SMALL, gap=gap)
+
+    # ------- the controls
+    #
+    # The cross left, the buttons right and diagonal, START and SELECT
+    # slanted between them: the arrangement is doing more work here than any
+    # single piece of it, so each is placed where the eye expects it rather
+    # than where it fits best.
+    a.rect(6, 22, 11, 23, cut)      # cross, horizontal arm
+    a.rect(8, 20, 9, 25, cut)       # cross, vertical arm
+
+    # A above and right of B, with air between them and between both and the
+    # stubs below: at four pixels across, anything closer than two pixels
+    # merges into one shape once the icon is looked at small.
+    stamp(a, 22, 19, BUTTON_ROWS, {"#": cut})   # A
+    stamp(a, 16, 22, BUTTON_ROWS, {"#": cut})   # B
+
+    # START and SELECT: two stubs on the slant the real pair sits at.
+    a.rect(9, 28, 11, 28, cut)
+    a.rect(10, 27, 12, 27, cut)
+    a.rect(15, 28, 17, 28, cut)
+    a.rect(16, 27, 18, 27, cut)
+
+    return a, lit
+
+
+def wild_qol():
+    """A gold Game Boy reading QOL."""
+    return bundle_icon("QOL", CASE_GOLD)
+
+
+def wild_ui():
+    """A red Game Boy reading UI."""
+    return bundle_icon("UI", CASE_RED, gap=4)
+
+
 ICONS = {
     "gen1autosave": autosave,
     "gen1_auto_continue": auto_continue,
@@ -709,6 +996,8 @@ ICONS = {
     "Gen1Party": party,
     "gen151": gen151,
     "gen1_sprint": sprint,
+    "gen1_wild_qol": wild_qol,
+    "gen1_wild_ui": wild_ui,
 }
 
 

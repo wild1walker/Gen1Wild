@@ -13,6 +13,20 @@
 
 ## What is in the index
 
+Two ways in. The bundles are the whole suite in one card each; everything in
+them is also listed separately, for anyone who wants three of these and not
+thirteen.
+
+| | Bundle | What it is |
+|---|---|---|
+| <img src="mods/Wild@gen1_wild_qol/thumbnail.png" width="54" alt=""> | **[Gen1WildQOL](https://github.com/wild1walker/Gen1WildQOL)** | The quality-of-life half in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, menu layout, the mod manager and four later-generation conveniences. Every feature switches on and off by itself. |
+| <img src="mods/Wild@gen1_wild_ui/thumbnail.png" width="54" alt=""> | **[Gen1WildUI](https://github.com/wild1walker/Gen1WildUI)** | The visual half in one mod: battle backdrops, the Pokédex, the box, the party menu, the bag, menu layout and the mod manager. Every feature switches on and off by itself. |
+
+Install both and they cooperate: the two features they share are set up once,
+not twice, and a mod in one can still find a mod in the other.
+
+### Everything in them, separately
+
 | | Mod | What it does |
 |---|---|---|
 | <img src="mods/Wild@gen151/thumbnail.png" width="54" alt=""> | **[Gen151](https://github.com/wild1walker/Gen151)** | All 151 obtainable renewably in one save, on one version, without trading — version exclusives, gift and fossil mons, a LINK CABLE for the trade evolutions, and every vanilla encounter left exactly as it was. |
@@ -32,6 +46,11 @@
 Every icon above is the one the card carries in **FIND MODS**, drawn by
 [`tools/make_icons.py`](tools/make_icons.py). No mod is vendored here: each
 entry points at a release in that mod's own repo.
+
+The two bundles are pinned above the alphabetical run, in the feed and on the
+page both, by `"featured": true` in their `meta.json`. It is for the bundles
+and not a general-purpose highlight: a feed where everything is featured is a
+feed where nothing is.
 
 ## Adding it in the game
 
