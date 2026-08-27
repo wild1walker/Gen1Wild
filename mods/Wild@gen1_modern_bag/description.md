@@ -5,6 +5,14 @@ TM/HM, Berries, Key Items, Medicine and Battle Items, and the Bag opens on the
 pocket you tell it to. Nothing about what an item *does* changes — using one
 still runs the vanilla Bag menu underneath.
 
+- **A picture on every row.** Items are drawn with their own icon in the column
+  left of the name, and a TM or HM is a disc in the colour of the type of the
+  move it teaches — which is the whole of what tells TM24 from TM25 in a pocket
+  of fifty-five four-letter rows. The item window grows one tile to the left to
+  hold one, so no name is shortened to make room; `ITEM ICONS` switches it, and
+  off is the window exactly as it was. The art is **Pokémon Polished
+  Crystal's**, not this project's — the mod's `CREDITS.md` is the attribution
+  and the terms.
 - **Favorites and pins.** Mark what you reach for; pinned items stay at the top
   of their pocket across sessions.
 - **Search.** Type to filter, which is the fastest way through a full TM pocket.

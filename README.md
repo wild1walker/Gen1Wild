@@ -20,7 +20,7 @@ thirteen.
 | | Bundle | What it is |
 |---|---|---|
 | <img src="mods/Wild@gen1_wild_qol/thumbnail.png" width="54" alt=""> | **[Gen1WildQOL](https://github.com/wild1walker/Gen1WildQOL)** | The quality-of-life half in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, menu layout, the mod manager and four later-generation conveniences. Every feature switches on and off by itself. |
-| <img src="mods/Wild@gen1_wild_ui/thumbnail.png" width="54" alt=""> | **[Gen1WildUI](https://github.com/wild1walker/Gen1WildUI)** | The visual half in one mod: battle backdrops, the battle intro, the Pokédex, the box, the party menu, the bag, item descriptions on every mart, PC and bag screen, the lift panel, menu layout and the mod manager. Every feature switches on and off by itself. |
+| <img src="mods/Wild@gen1_wild_ui/thumbnail.png" width="54" alt=""> | **[Gen1WildUI](https://github.com/wild1walker/Gen1WildUI)** | The visual half in one mod: battle backdrops, the battle intro, the Pokédex, the box, the party menu, the bag, an icon and a description for every item on every mart, PC and bag screen, the lift panel, menu layout and the mod manager. Every feature switches on and off by itself. |
 
 Install both and they cooperate: the two features they share are set up once,
 not twice, and a mod in one can still find a mod in the other.
@@ -39,7 +39,7 @@ not twice, and a mod in one can still find a mod in the other.
 | <img src="mods/Wild@Gen1Follower/thumbnail.png" width="54" alt=""> | **[Gen1Follower](https://github.com/wild1walker/Gen1Follower)** | All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support, and the Pokémon standing on the maps drawn from the same sheets. Built from the PokéPC Followers work by Antigravity & gamecorner33. |
 | <img src="mods/Wild@Gen1MenuManager/thumbnail.png" width="54" alt=""> | **[Gen1MenuManager](https://github.com/wild1walker/Gen1MenuManager)** | Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own. |
 | <img src="mods/Wild@gen1_mod_menu/thumbnail.png" width="54" alt=""> | **[Gen1ModMenu](https://github.com/wild1walker/Gen1ModMenu)** | The mod manager, redrawn in the game's own OPTION-screen idiom: framed cards with the name on its own line and its value below, plus sorting, filters and a RESET DEFAULTS row on every mod's options page. |
-| <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
+| <img src="mods/Wild@gen1_modern_bag/thumbnail.png" width="54" alt=""> | **[Gen1ModernBag](https://github.com/wild1walker/Gen1ModernBag)** | Seven inventory pockets with an icon on every row, auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag. |
 | <img src="mods/Wild@Gen1Party/thumbnail.png" width="54" alt=""> | **[Gen1Party](https://github.com/wild1walker/Gen1Party)** | The party menu with every POKéMON in its own species colours instead of all six sharing one, and the status and HP numbers pulled in off the screen edge. |
 | <img src="mods/Wild@gen1_sound_qol/thumbnail.png" width="54" alt=""> | **[Gen1SoundQOL](https://github.com/wild1walker/Gen1SoundQOL)** | The low-HP battle siren beeps once instead of looping forever, and on mobile the game mutes itself when another app takes the audio. |
 | <img src="mods/Wild@gen1_sprint/thumbnail.png" width="54" alt=""> | **[Gen1Sprint](https://github.com/wild1walker/Gen1Sprint)** | Hold B to run at FireRed's running-shoes speed, and a BICYCLE that stays worth riding at twice the speed Gen 1 gives it. |
@@ -102,6 +102,14 @@ wanted, and those keep the original authors' credit and their own licence:
 - **Gen1ModernBag** is a derivative of **FAFF0x**'s Modern Bag, taken at
   upstream 1.6.0. Nearly all of what it does is FAFF0x's work; its MIT notice
   is carried verbatim.
+- **Gen1ModernBag**'s and **Gen1WildUI**'s item icons are
+  [Pokémon Polished Crystal](https://github.com/Rangi42/polishedcrystal)'s, by
+  **Rangi** (Rangi42) and that project's graphics contributors, recolored from
+  its own palette data and scaled to sixteen pixels. None of that art was drawn
+  for these mods. Polished Crystal ships no licence file; what its credits ask
+  for is credit by name, a word upstream before a wide release, and that a
+  request to drop an asset is honoured. Each mod's own `CREDITS.md` carries the
+  full attribution and travels with the assets.
 - **Gen1Arena**'s backdrops are the **Battle Backgrounds Patch FR** — LibertyTwins,
   princess-phoenix, carchagui, aveontrainer, WesleyFG, kWharever, worldslayer608
   and knizz. None of that art was drawn for this mod, and its authors ask that
