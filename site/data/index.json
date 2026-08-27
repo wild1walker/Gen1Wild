@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-27T05:12:46Z",
+  "generated_at": "2026-08-27T05:50:29Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -22,7 +22,7 @@
       "title": "Gen1WildQOL",
       "author": "Wild",
       "summary": "The quality-of-life half of the suite in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, move reminder, menu layout, the mod manager and later-generation conveniences. Every feature switches on and off by itself.",
-      "version": "1.8.1",
+      "version": "1.8.2",
       "featured": true,
       "categories": [
         "QOL",
@@ -58,23 +58,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_wild_qol/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.8.1",
-        "tag": "v1.8.1",
-        "name": "1.8.1",
+        "version": "1.8.2",
+        "tag": "v1.8.2",
+        "name": "1.8.2",
         "prerelease": false,
-        "published_at": "2026-08-27T05:12:20Z",
+        "published_at": "2026-08-27T05:50:08Z",
         "zip": {
-          "name": "gen1_wild_qol-1.8.1.zip",
-          "url": "https://github.com/wild1walker/Gen1WildQOL/releases/download/v1.8.1/gen1_wild_qol-1.8.1.zip",
-          "size": 742398
+          "name": "gen1_wild_qol-1.8.2.zip",
+          "url": "https://github.com/wild1walker/Gen1WildQOL/releases/download/v1.8.2/gen1_wild_qol-1.8.2.zip",
+          "size": 743374
         }
       },
       "downloads": {
-        "total": 20,
-        "as_of": "2026-08-27T05:12:45Z"
+        "total": 21,
+        "as_of": "2026-08-27T05:50:28Z"
       },
       "first_release": "2026-08-26T03:55:53Z",
-      "last_release": "2026-08-27T05:12:20Z"
+      "last_release": "2026-08-27T05:50:08Z"
     },
     {
       "id": "gen1_wild_ui",
@@ -128,8 +128,8 @@
         }
       },
       "downloads": {
-        "total": 24,
-        "as_of": "2026-08-27T05:12:45Z"
+        "total": 25,
+        "as_of": "2026-08-27T05:50:29Z"
       },
       "first_release": "2026-08-26T03:55:54Z",
       "last_release": "2026-08-27T04:51:23Z"
@@ -183,7 +183,7 @@
       },
       "downloads": {
         "total": 23,
-        "as_of": "2026-08-27T05:12:42Z"
+        "as_of": "2026-08-27T05:50:26Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-08-25T22:06:20Z"
@@ -235,7 +235,7 @@
       },
       "downloads": {
         "total": 182,
-        "as_of": "2026-08-27T05:12:46Z"
+        "as_of": "2026-08-27T05:50:29Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-25T17:34:59Z"
@@ -284,7 +284,7 @@
       },
       "downloads": {
         "total": 33,
-        "as_of": "2026-08-27T05:12:42Z"
+        "as_of": "2026-08-27T05:50:27Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -338,7 +338,7 @@
       },
       "downloads": {
         "total": 85,
-        "as_of": "2026-08-27T05:12:46Z"
+        "as_of": "2026-08-27T05:50:29Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-26T06:47:09Z"
@@ -391,7 +391,7 @@
       },
       "downloads": {
         "total": 10,
-        "as_of": "2026-08-27T05:12:39Z"
+        "as_of": "2026-08-27T05:50:24Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-08-26T22:57:05Z"
@@ -447,7 +447,7 @@
       },
       "downloads": {
         "total": 27,
-        "as_of": "2026-08-27T05:12:39Z"
+        "as_of": "2026-08-27T05:50:24Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-27T04:49:14Z"
@@ -509,7 +509,7 @@
       },
       "downloads": {
         "total": 26,
-        "as_of": "2026-08-27T05:12:40Z"
+        "as_of": "2026-08-27T05:50:25Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-08-26T18:12:27Z"
@@ -564,7 +564,7 @@
       },
       "downloads": {
         "total": 36,
-        "as_of": "2026-08-27T05:12:40Z"
+        "as_of": "2026-08-27T05:50:25Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-26T17:49:04Z"
@@ -616,7 +616,7 @@
       },
       "downloads": {
         "total": 47,
-        "as_of": "2026-08-27T05:12:41Z"
+        "as_of": "2026-08-27T05:50:25Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-27T00:20:17Z"
@@ -674,7 +674,7 @@
       },
       "downloads": {
         "total": 55,
-        "as_of": "2026-08-27T05:12:43Z"
+        "as_of": "2026-08-27T05:50:27Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-26T07:53:29Z"
@@ -729,7 +729,7 @@
       },
       "downloads": {
         "total": 13,
-        "as_of": "2026-08-27T05:12:43Z"
+        "as_of": "2026-08-27T05:50:27Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -786,7 +786,7 @@
       },
       "downloads": {
         "total": 14,
-        "as_of": "2026-08-27T05:12:41Z"
+        "as_of": "2026-08-27T05:50:26Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-08-27T04:49:13Z"
@@ -844,7 +844,7 @@
       },
       "downloads": {
         "total": 4,
-        "as_of": "2026-08-27T05:12:42Z"
+        "as_of": "2026-08-27T05:50:26Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-08-26T17:49:56Z"
@@ -899,7 +899,7 @@
       },
       "downloads": {
         "total": 20,
-        "as_of": "2026-08-27T05:12:44Z"
+        "as_of": "2026-08-27T05:50:28Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -952,7 +952,7 @@
       },
       "downloads": {
         "total": 5,
-        "as_of": "2026-08-27T05:12:44Z"
+        "as_of": "2026-08-27T05:50:28Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-26T00:29:59Z"
