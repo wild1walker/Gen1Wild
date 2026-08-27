@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-27T20:33:21Z",
+  "generated_at": "2026-08-27T20:43:58Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -71,7 +71,7 @@
       },
       "downloads": {
         "total": 28,
-        "as_of": "2026-08-27T20:33:19Z"
+        "as_of": "2026-08-27T20:43:57Z"
       },
       "first_release": "2026-08-26T03:55:53Z",
       "last_release": "2026-08-27T18:09:00Z"
@@ -132,7 +132,7 @@
       },
       "downloads": {
         "total": 31,
-        "as_of": "2026-08-27T20:33:20Z"
+        "as_of": "2026-08-27T20:43:57Z"
       },
       "first_release": "2026-08-26T03:55:54Z",
       "last_release": "2026-08-27T18:55:43Z"
@@ -186,7 +186,7 @@
       },
       "downloads": {
         "total": 24,
-        "as_of": "2026-08-27T20:33:16Z"
+        "as_of": "2026-08-27T20:43:53Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-08-25T22:06:20Z"
@@ -238,7 +238,7 @@
       },
       "downloads": {
         "total": 190,
-        "as_of": "2026-08-27T20:33:21Z"
+        "as_of": "2026-08-27T20:43:58Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-25T17:34:59Z"
@@ -287,7 +287,7 @@
       },
       "downloads": {
         "total": 35,
-        "as_of": "2026-08-27T20:33:17Z"
+        "as_of": "2026-08-27T20:43:54Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -341,7 +341,7 @@
       },
       "downloads": {
         "total": 91,
-        "as_of": "2026-08-27T20:33:21Z"
+        "as_of": "2026-08-27T20:43:58Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-26T06:47:09Z"
@@ -394,7 +394,7 @@
       },
       "downloads": {
         "total": 11,
-        "as_of": "2026-08-27T20:33:13Z"
+        "as_of": "2026-08-27T20:43:50Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-08-26T22:57:05Z"
@@ -450,7 +450,7 @@
       },
       "downloads": {
         "total": 30,
-        "as_of": "2026-08-27T20:33:13Z"
+        "as_of": "2026-08-27T20:43:50Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-27T06:07:20Z"
@@ -512,7 +512,7 @@
       },
       "downloads": {
         "total": 27,
-        "as_of": "2026-08-27T20:33:14Z"
+        "as_of": "2026-08-27T20:43:51Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-08-26T18:12:27Z"
@@ -521,8 +521,8 @@
       "id": "Gen1Follower",
       "title": "Gen1Follower",
       "author": "Wild",
-      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support. Built from the PokéPC Followers work by Antigravity & gamecorner33.",
-      "version": "1.2.1",
+      "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support, and the Pokémon standing on the maps drawn from the same sheets. Built from the PokéPC Followers work by Antigravity & gamecorner33.",
+      "version": "1.3.0",
       "categories": [
         "GAMEPLAY",
         "CONTENT",
@@ -554,23 +554,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Follower/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.2.1",
-        "tag": "v1.2.1",
-        "name": "Gen1Follower 1.2.1",
+        "version": "1.3.0",
+        "tag": "v1.3.0",
+        "name": "Gen1Follower 1.3.0",
         "prerelease": false,
-        "published_at": "2026-08-26T17:49:04Z",
+        "published_at": "2026-08-27T20:43:05Z",
         "zip": {
-          "name": "Gen1Follower-1.2.1.zip",
-          "url": "https://github.com/wild1walker/Gen1Follower/releases/download/v1.2.1/Gen1Follower-1.2.1.zip",
-          "size": 523240
+          "name": "Gen1Follower-1.3.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Follower/releases/download/v1.3.0/Gen1Follower-1.3.0.zip",
+          "size": 539594
         }
       },
       "downloads": {
         "total": 39,
-        "as_of": "2026-08-27T20:33:14Z"
+        "as_of": "2026-08-27T20:43:51Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
-      "last_release": "2026-08-26T17:49:04Z"
+      "last_release": "2026-08-27T20:43:05Z"
     },
     {
       "id": "Gen1MenuManager",
@@ -619,7 +619,7 @@
       },
       "downloads": {
         "total": 51,
-        "as_of": "2026-08-27T20:33:15Z"
+        "as_of": "2026-08-27T20:43:52Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-27T00:20:17Z"
@@ -677,7 +677,7 @@
       },
       "downloads": {
         "total": 58,
-        "as_of": "2026-08-27T20:33:18Z"
+        "as_of": "2026-08-27T20:43:55Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-26T07:53:29Z"
@@ -732,7 +732,7 @@
       },
       "downloads": {
         "total": 14,
-        "as_of": "2026-08-27T20:33:17Z"
+        "as_of": "2026-08-27T20:43:54Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -789,7 +789,7 @@
       },
       "downloads": {
         "total": 16,
-        "as_of": "2026-08-27T20:33:15Z"
+        "as_of": "2026-08-27T20:43:52Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-08-27T06:07:19Z"
@@ -847,7 +847,7 @@
       },
       "downloads": {
         "total": 5,
-        "as_of": "2026-08-27T20:33:16Z"
+        "as_of": "2026-08-27T20:43:53Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-08-26T17:49:56Z"
@@ -902,7 +902,7 @@
       },
       "downloads": {
         "total": 20,
-        "as_of": "2026-08-27T20:33:18Z"
+        "as_of": "2026-08-27T20:43:55Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -955,7 +955,7 @@
       },
       "downloads": {
         "total": 5,
-        "as_of": "2026-08-27T20:33:19Z"
+        "as_of": "2026-08-27T20:43:56Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-26T00:29:59Z"
