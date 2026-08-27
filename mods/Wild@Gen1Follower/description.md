@@ -1,6 +1,15 @@
 All 251 Gen 1 and Gen 2 overworld followers with Pokédex-proportional sizing
 and full 3D Voxel compatibility for Red, Blue, Yellow, and Gold.
 
+The Pokémon that are part of the maps are drawn from those same sheets. Gen 1
+gives every one of them one of five shared sprites — a "monster", a "bird", a
+"fairy", a "seel" and the one Snorlax — so the Pokémon Fan Club's Pikachu, both
+sleeping Snorlax, Mewtwo and the three legendary birds all wore art that was
+never theirs. Forty-nine map objects now match the follower, at the same
+Pokédex-proportional size. Bill's fused form (the game never says which Pokémon
+he merged with), the Copycat's three dolls and the Power Plant's disguised
+Voltorb keep the sprites the cart gives them; `MAP POKEMON` turns the rest off.
+
 Built from **Antigravity & gamecorner33's** PokéPC Followers. Gen1Follower is
 its own mod rather than a fork listing: it has its own repository, its own
 release numbering starting at 1.0.0, and its own id. The follower code is
