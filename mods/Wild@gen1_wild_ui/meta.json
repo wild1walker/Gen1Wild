@@ -2,7 +2,7 @@
   "id": "gen1_wild_ui",
   "title": "Gen1WildUI",
   "author": "Wild",
-  "summary": "The visual half of the suite in one mod: battle backdrops, the battle intro, the battle menus, the Pokedex, the box, the party menu, the bag, menu layout and the mod manager. Every feature switches on and off by itself.",
+  "summary": "The visual half of the suite in one mod: battle backdrops, the battle intro, the battle menus, the Pokedex, the box, the party menu, the bag, item descriptions on every mart, PC and bag screen, the lift panel, menu layout and the mod manager. Every feature switches on and off by itself.",
   "version": "1.9.0",
   "featured": true,
   "categories": [
@@ -18,7 +18,10 @@
     "bag",
     "backdrops",
     "battle intro",
-    "widescreen"
+    "widescreen",
+    "item descriptions",
+    "shop",
+    "elevator"
   ],
   "repo": "https://github.com/wild1walker/Gen1WildUI",
   "github": "wild1walker/Gen1WildUI",

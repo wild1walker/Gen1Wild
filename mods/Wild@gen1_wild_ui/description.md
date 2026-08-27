@@ -1,7 +1,7 @@
 # Gen1WildUI
 
-The visual half of the Gen1Wild suite in one mod. Nine features, each switched
-on and off by itself from `OPTION > GEN1WILD UI`. All of them ship on.
+The visual half of the Gen1Wild suite in one mod. Eleven features, each
+switched on and off by itself from `OPTION > GEN1WILD UI`. All of them ship on.
 
 | Feature | |
 |---|---|
@@ -14,12 +14,15 @@ on and off by itself from `OPTION > GEN1WILD UI`. All of them ship on.
 | **BAG** | Seven pockets, auto-sorting, favorites, search, no capacity limit |
 | **MENU LAYOUT** | Reorder the START and PC menus, hide rows, pin field moves |
 | **MOD MANAGER** | The mod manager redrawn in the game's own OPTION-screen idiom |
+| **ITEM INFO** | What every item is — in the mart's BUY and SELL lists where the clerk used to say *Take your time.*, in the item PC's WITHDRAW, DEPOSIT and TOSS lists, and on an ABOUT row in the bag. Those four lists are redrawn to match the rest of the suite |
+| **ELEVATOR PANEL** | The lift's `WHICH FLOOR?` list as a small panel against the edge, with the car still on the screen behind it |
 
 ## Nothing is all-or-nothing
 
 Every feature is a row you can switch off, with its own settings one press of
-`A` behind it. Every feature here except `BACKDROPS` needs a relaunch to switch,
-and the menu marks those rows rather than pretending otherwise.
+`A` behind it. `BACKDROPS`, `ITEM INFO` and `ELEVATOR PANEL` switch as you
+change them; the rest need a relaunch, and the menu marks those rows rather
+than pretending otherwise.
 
 `PARTY MENU` reads `POKEDEX` and `POKEMON BOX` when they are on, the same way it
 does when the three are installed separately.
