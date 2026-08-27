@@ -11,10 +11,10 @@ switched on and off by itself from `OPTION > GEN1WILD UI`. All of them ship on.
 | **POKEDEX** | A Pokémon beside every entry, base stats, evolutions, the full movelist, and an AREA screen |
 | **POKEMON BOX** | Bill's PC as the box it stood in for: party left, twenty slots right |
 | **PARTY MENU** | Every Pokémon in its own species colours instead of six sharing one |
-| **BAG** | Seven pockets, auto-sorting, favorites, search, no capacity limit |
+| **BAG** | Seven pockets, an icon on every row, auto-sorting, favorites, search, no capacity limit |
 | **MENU LAYOUT** | Reorder the START and PC menus, hide rows, pin field moves |
 | **MOD MANAGER** | The mod manager redrawn in the game's own OPTION-screen idiom |
-| **ITEM INFO** | What every item is — in the mart's BUY and SELL lists where the clerk used to say *Take your time.*, in the item PC's WITHDRAW, DEPOSIT and TOSS lists, and on an ABOUT row in the bag. Those four lists are redrawn to match the rest of the suite |
+| **ITEM INFO** | What every item is, and a picture of it — in the mart's BUY and SELL lists where the clerk used to say *Take your time.*, in the item PC's WITHDRAW, DEPOSIT and TOSS lists, and on an ABOUT row in the bag. Those four lists are redrawn to match the rest of the suite |
 | **ELEVATOR PANEL** | The lift's `WHICH FLOOR?` list as a small panel against the edge, with the car still on the screen behind it |
 
 ## Nothing is all-or-nothing
@@ -40,7 +40,9 @@ as conflicts because they install the same hooks. Settings do not carry over.
 ## Credit
 
 `BATTLE INTRO` is **ShaneMcGovernIE**'s *Widescreen Battle Intro*, maintained
-here now; `BAG` is a derivative of **FAFF0x**'s Modern Bag; `BACKDROPS` draws the *Battle
+here now; `BAG` is a derivative of **FAFF0x**'s Modern Bag; the item icons are
+**Pokémon Polished Crystal**'s, by **Rangi** and that project's graphics
+contributors; `BACKDROPS` draws the *Battle
 Backgrounds Patch FR* by **LibertyTwins**, **princess-phoenix**, **carchagui**,
 **aveontrainer**, **WesleyFG**, **kWharever**, **worldslayer608** and **knizz**.
 The full list is in
