@@ -163,10 +163,10 @@ breaks, tell me.
 
 ---
 
-## Maintaining the index
+## Working on the index
 
-Everything below is for me, and for anyone working on one of these mods whose
-entry needs to change with it.
+How the feed is put together, for anyone changing an entry or working on one
+of these mods.
 
 ### What is in here
 
