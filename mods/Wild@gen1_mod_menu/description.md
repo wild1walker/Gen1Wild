@@ -12,7 +12,7 @@ full.
 - **A status column**, for the exceptions only. A mod that is enabled and
   running says nothing; one that is off, staged for a restart, errored,
   blocked or not-for-this-game says which.
-- **Sorting and filters** — by category, name, enabled, or problems-first, and
+- **Sorting and filters**, by category, name, enabled, or problems-first, and
   filters for hiding disabled mods or showing only the ones with something to
   configure.
 - **A help line** on every options page, saying what the row you are on
@@ -22,7 +22,7 @@ full.
 
 Nothing about how the manager *behaves* changes. Enabling, disabling,
 dependencies, staged changes, apply-and-restart, profiles and safe mode are
-all still the engine's — this mod just draws them.
+all still the engine's, and this mod just draws them.
 
 ## It also fixes two things
 

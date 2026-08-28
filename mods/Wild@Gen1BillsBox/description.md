@@ -22,7 +22,7 @@ without either mod knowing about the other.
 ## Picking things up
 
 **A** picks a Pokémon up, puts it down, or swaps it with whatever is already
-there. **B** is back, and only back — it puts a carried Pokémon down where it
+there. **B** is back, and only back. It puts a carried Pokémon down where it
 came from, and there is no way to leave the screen holding one.
 
 **LEFT** and **RIGHT** cross between the party and the box, **UP** off the top
@@ -40,7 +40,7 @@ BOX** after, following the same rule the vanilla names already follow.
 
 And when you catch something into a full box, the game finally tells you:
 *"BOX 1 was full! / Now using BOX 7."* It always did move you to the next box
-with room — it just never said so.
+with room. It just never said so.
 
 ## Switches
 
@@ -50,4 +50,4 @@ starts on, and the full-box note are all options.
 ## Worth knowing
 
 Red, Blue and Yellow. It replaces the PC's storage screen, so it conflicts
-with `modern_pc_ui` — run one or the other.
+with `modern_pc_ui`. Run one or the other.

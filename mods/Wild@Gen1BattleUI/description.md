@@ -1,7 +1,7 @@
 # Gen1BattleUI
 
 The battle menu is a list of four words in one box. This makes it four
-buttons, two by two — and does the same to the move menu.
+buttons, two by two, and does the same to the move menu.
 
 Nothing new was invented to draw them. A button here is the game's own text
 box: the same call, the same border glyphs, the same white interior. So a skin
@@ -14,7 +14,7 @@ ITEM  | RUN
 
 ## The grid was already in there
 
-The engine has always read the command menu as a 2×2 — which is why LEFT and
+The engine has always read the command menu as a 2x2, which is why LEFT and
 RIGHT already crossed between FIGHT and PKMN. It was only ever *drawn* as a
 list. So none of the menu's behaviour is replaced: the cursor is still the
 engine's, moved by the engine's own input handling.
@@ -30,8 +30,8 @@ ITEM working.
 ## What two columns costs
 
 A cell holds seven characters where the vanilla list had fourteen, so a long
-move name gets cut — `QUICK ATTACK` reads `QUICK.` That is paid back rather
-than hidden: a panel above the grid carries the highlighted move's full name,
+move name gets cut: `QUICK ATTACK` reads `QUICK.` That is paid back rather
+than hidden. A panel above the grid carries the highlighted move's full name,
 its type and its PP, which the vanilla list never showed at once. One switch
 turns it off.
 

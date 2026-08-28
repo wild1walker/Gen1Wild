@@ -141,7 +141,7 @@
       "id": "gen151",
       "title": "Gen151",
       "author": "Wild",
-      "summary": "Every one of the 151 obtainable renewably in one save, on one version, without trading — while every vanilla encounter keeps its exact vanilla behaviour.",
+      "summary": "Every one of the 151 obtainable renewably in one save, on one version, without trading, while every vanilla encounter keeps its exact vanilla behaviour.",
       "version": "1.5.1",
       "categories": [
         "CONTENT",
@@ -798,7 +798,7 @@
       "id": "Gen1Remember",
       "title": "Gen1Remember",
       "author": "Wild",
-      "summary": "A POKéMON can be taught a move it has forgotten, from the popup you already open on it — every level-up move it should have had by now, its pre-evolutions' included.",
+      "summary": "A POKéMON can be taught a move it has forgotten, from the popup you already open on it: every level-up move it should have had by now, its pre-evolutions' included.",
       "version": "1.0.1",
       "categories": [
         "UI",

@@ -1,7 +1,7 @@
 # Gen1AutoSave
 
 Manual saving, made optional. The game saves itself on a timer, after the
-things worth saving after, and on the way out — so a bad guess in a cave never
+things worth saving after, and on the way out, so a bad guess in a cave never
 costs you an hour again.
 
 ## What it saves after
@@ -12,8 +12,8 @@ so `5 MIN` means five minutes of actually playing, not five minutes of
 standing on a route with the game open. The write itself waits for a quiet
 moment in the overworld.
 
-It also saves when you pick QUIT, before the confirm box — the last moment the
-game is still around to finish sending it anywhere.
+It also saves when you pick QUIT, before the confirm box, which is the last
+moment the game is still around to finish sending it anywhere.
 
 ## It tells you, quietly
 
@@ -22,7 +22,7 @@ a text box taking over the bottom of it. If you would rather have a small
 `SAVED` panel, the classic text box, or nothing at all, that is one option.
 
 Manual saving is left completely alone. It writes and syncs exactly as it does
-without this mod — the only thing that happens is the timer resetting, so an
+without this mod. The only thing that happens is the timer resetting, so an
 autosave never lands on top of a save you just made yourself.
 
 ## Rollback
@@ -34,7 +34,7 @@ Optional backups of recent autosaves, kept beside your save rather than in it.
 
 The interval, the event saves, the quit save, the indicator and the backups
 are all separate switches. Link play is unaffected. It conflicts with
-`recomp-autosave` — run one autosave mod, not two.
+`recomp-autosave`, so run one autosave mod, not two.
 
 If saving ever goes quiet, look for `PAUSED` where the indicator usually is:
 that means the launcher is holding a save-sync conflict and wants an answer.
