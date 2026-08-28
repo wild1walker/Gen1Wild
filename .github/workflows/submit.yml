@@ -199,7 +199,21 @@ jobs:
           # it, so nothing for a public_repo token to be refused over. Placing
           # the branch by ref first was the idea before this; the fork is far
           # enough behind that the API would not create a ref at that object.
-          git push --force "https://github.com/$FORK.git" "HEAD:refs/heads/$BRANCH"
+          if ! git push --force "https://github.com/$FORK.git" \
+               "HEAD:refs/heads/$BRANCH" 2>push-error.txt; then
+            cat push-error.txt
+            if grep -q "workflow" push-error.txt; then
+              echo "::error::The fork is behind upstream, so this push carries" \
+                   "their workflow commits along with ours, and a public_repo" \
+                   "token may not write those. Open" \
+                   "https://github.com/$FORK and press Sync fork >" \
+                   "Update branch -- the web UI does it as you, not as the" \
+                   "token, so it goes through -- then run this again. Adding" \
+                   "the workflow scope to the token fixes it too, and gives" \
+                   "the token more reach than this job needs."
+            fi
+            exit 1
+          fi
 
           # REST rather than `gh pr list` and `gh pr create`: those go through
           # GraphQL, which a classic token cannot reach on public_repo alone --
