@@ -104,6 +104,22 @@
          vertical-align: .18em; font-weight: 600; }
   .split { margin: 1.6rem 0 .6rem; color: var(--dim); font-size: .74rem;
            letter-spacing: .14em; text-transform: uppercase; }
+
+  /* A cart is not a mod: it is a whole game the launcher lists beside Red,
+     so it goes above the mods and wears its own colour rather than the
+     brand yellow -- its own shell colour, set per card from the feed's
+     `shell`, which is the same green the cartridge is drawn in. The rule
+     down the left is the cart's, so two carts never look alike. */
+  li.cart { border-color: #24302a; border-left: 3px solid var(--shell, var(--brand));
+            background: linear-gradient(180deg, #0f1512 0%, var(--panel) 60%); }
+  li.cart img.icon { width: 128px; border-radius: 8px; }
+  li.cart .ver { color: var(--shell, var(--brand)); }
+  li.cart .tag { border-color: var(--shell, var(--brand)); color: var(--shell, var(--brand)); }
+  /* The pinned mods, as one line: a cart's contents are the thing a reader
+     is deciding about, and four names read faster than four cards. */
+  .pins { color: var(--dim); font-size: .82rem; margin: .35rem 0 0; }
+  .pins b { color: var(--ink); font-weight: 600; }
+  .soon { color: var(--dim); font-size: .82rem; margin: .35rem 0 0; font-style: italic; }
   li.mod:focus-within { outline: 2px solid var(--line-lit); outline-offset: 2px; }
 
   .stretch { text-decoration: none; color: inherit; }
@@ -170,18 +186,107 @@
     return r.json();
   }).then(feed => {
     const mods = feed.mods || [];
-    if (!mods.length) return say('The feed is empty.');
+    const carts = feed.carts || [];
+    if (!mods.length && !carts.length) return say('The feed is empty.');
     list.innerHTML = '';
+
+    const rule = text => {
+      const li = document.createElement('li');
+      li.className = 'msg split';
+      li.textContent = text;
+      list.append(li);
+    };
+
+    // Carts first. A cart is a whole game rather than something you add to
+    // one, so it is the top of the page and not a category inside it.
+    if (carts.length) {
+      rule(carts.length === 1 ? 'The cart' : 'The carts');
+      for (const c of carts) {
+        const li = document.createElement('li');
+        li.className = 'mod cart';
+        if (c.shell) li.style.setProperty('--shell', c.shell);
+
+        if (c.thumbnail) {
+          const img = document.createElement('img');
+          img.className = 'icon';
+          img.src = c.thumbnail;
+          img.alt = '';
+          img.loading = 'lazy';
+          li.append(img);
+        }
+
+        const box = document.createElement('div');
+
+        const name = document.createElement('div');
+        name.className = 'name';
+        if (c.repo) {
+          const link = document.createElement('a');
+          link.className = 'stretch';
+          link.href = c.repo;
+          link.textContent = c.title;
+          link.setAttribute('aria-label', `${c.title} source`);
+          name.append(link);
+        } else {
+          name.textContent = c.title;
+        }
+        const version = c.update_check === 'ok' && c.latest ? c.latest.version : c.version;
+        if (version) {
+          const v = document.createElement('span');
+          v.className = 'ver';
+          v.textContent = ' ' + version;
+          name.append(v);
+        }
+        const tag = document.createElement('span');
+        tag.className = 'tag';
+        tag.textContent = 'Cart';
+        name.append(tag);
+
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.textContent = [c.author, c.base && `plays as ${c.base}`, c.seal]
+          .filter(Boolean).join(' · ');
+
+        const sum = document.createElement('p');
+        sum.className = 'sum';
+        sum.textContent = c.summary || '';
+
+        box.append(name, meta, sum);
+
+        if ((c.mods || []).length) {
+          const pins = document.createElement('p');
+          pins.className = 'pins';
+          pins.append('Pins ');
+          const b = document.createElement('b');
+          b.textContent = c.mods.map(m => m.id).join(', ');
+          pins.append(b);
+          box.append(pins);
+        }
+
+        // An honest empty state. A card that looks installable and is not is
+        // worse than one that says it is not there yet.
+        if (c.update_check !== 'ok') {
+          const soon = document.createElement('p');
+          soon.className = 'soon';
+          soon.textContent = c.update_check === 'no installable release'
+            ? 'No release published yet — the card goes live the moment one is.'
+            : `Release lookup: ${c.update_check}`;
+          box.append(soon);
+        }
+
+        li.append(box);
+        list.append(li);
+      }
+      if (mods.length) rule('The mods');
+    }
+
+    if (!mods.length) return;
     // The feed arrives with the featured entries already first; this only has
     // to notice where the run ends and say so once.
     let ruled = false;
     for (const m of mods) {
       if (!m.featured && !ruled && mods.some(x => x.featured)) {
         ruled = true;
-        const rule = document.createElement('li');
-        rule.className = 'msg split';
-        rule.textContent = 'Everything in them, separately';
-        list.append(rule);
+        rule('Everything in them, separately');
       }
       const li = document.createElement('li');
       li.className = m.featured ? 'mod feat' : 'mod';

@@ -1,7 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-27T23:25:17Z",
+  "generated_at": "2026-08-28T01:07:37Z",
   "count": 17,
+  "cart_count": 1,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -15,6 +16,14 @@
     "LIBRARY",
     "TOOL",
     "OTHER"
+  ],
+  "base_games": [
+    "red",
+    "blue",
+    "yellow",
+    "gold",
+    "silver",
+    "crystal"
   ],
   "mods": [
     {
@@ -70,8 +79,8 @@
         }
       },
       "downloads": {
-        "total": 41,
-        "as_of": "2026-08-27T23:25:16Z"
+        "total": 48,
+        "as_of": "2026-08-28T01:10:19Z"
       },
       "first_release": "2026-08-26T03:55:53Z",
       "last_release": "2026-08-27T21:20:15Z"
@@ -81,7 +90,7 @@
       "title": "Gen1WildUI",
       "author": "Wild",
       "summary": "The visual half of the suite in one mod: battle backdrops, the battle intro, the battle menus, the Pokedex, the box, the party menu, the bag, an icon and a description for every item on every mart, PC and bag screen, the lift panel, menu layout and the mod manager. Every feature switches on and off by itself.",
-      "version": "1.10.4",
+      "version": "1.12.0",
       "featured": true,
       "categories": [
         "UI",
@@ -119,23 +128,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_wild_ui/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.10.4",
-        "tag": "v1.10.4",
-        "name": "1.10.4",
+        "version": "1.12.0",
+        "tag": "v1.12.0",
+        "name": "1.12.0",
         "prerelease": false,
-        "published_at": "2026-08-27T22:22:38Z",
+        "published_at": "2026-08-27T23:46:07Z",
         "zip": {
-          "name": "gen1_wild_ui-1.10.4.zip",
-          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.10.4/gen1_wild_ui-1.10.4.zip",
-          "size": 957666
+          "name": "gen1_wild_ui-1.12.0.zip",
+          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.12.0/gen1_wild_ui-1.12.0.zip",
+          "size": 1077190
         }
       },
       "downloads": {
-        "total": 37,
-        "as_of": "2026-08-27T23:25:16Z"
+        "total": 46,
+        "as_of": "2026-08-28T01:10:20Z"
       },
       "first_release": "2026-08-26T03:55:54Z",
-      "last_release": "2026-08-27T22:22:38Z"
+      "last_release": "2026-08-27T23:46:07Z"
     },
     {
       "id": "gen151",
@@ -959,6 +968,77 @@
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-26T00:29:59Z"
+    }
+  ],
+  "carts": [
+    {
+      "id": "wild_green",
+      "title": "Wild Green",
+      "author": "Wild",
+      "version": "1.0.0",
+      "featured": true,
+      "summary": "Red, played as its own version: the Gen1Wild suite pinned whole, a player who is green, and a title screen that says WILD GREEN VERSION. Four mods at exact builds, its own save slots, and its own cartridge in the launcher.",
+      "base": "red",
+      "seal": "sealed+",
+      "shell": "#1e7a2b",
+      "tags": [
+        "cart",
+        "bundle",
+        "collection",
+        "green",
+        "player",
+        "sprites",
+        "title",
+        "ui",
+        "quality of life"
+      ],
+      "repo": "https://github.com/wild1walker/Gen1WildGreen",
+      "github": "wild1walker/Gen1WildGreen",
+      "game_version": ">=0.1.37 <2.0.0",
+      "license": "MIT",
+      "mods": [
+        {
+          "id": "gen1_wild_qol",
+          "source": "github",
+          "repo": "wild1walker/Gen1WildQOL",
+          "version": "1.11.1",
+          "sha256": "18959ac0f2a6769d1dec7246471b2b9eae9517edd512a7a425bd9bd3615f9027"
+        },
+        {
+          "id": "crystal_animated_sprites_with_shiny_visuals",
+          "source": "github",
+          "repo": "distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals",
+          "version": "2.0.2",
+          "sha256": "59b6204e66dc14c32b3035fea115236080dfc33ec86f928f04ac6974a1aca86c"
+        },
+        {
+          "id": "gen1_wild_ui",
+          "source": "github",
+          "repo": "wild1walker/Gen1WildUI",
+          "version": "1.12.0",
+          "sha256": "c4015d0b7d9492aefe5830c75cfb85ed00b1525cbad0907462abefaaa2a4a536"
+        },
+        {
+          "id": "wild_green",
+          "source": "github",
+          "repo": "wild1walker/Gen1MakeItGreen",
+          "version": "1.0.0",
+          "sha256": "b20a23a55ae921addbc2f7bc6ba085f104ec822a16ff42706cc3047d4de8ff76",
+          "options": {
+            "ribbon": true
+          }
+        }
+      ],
+      "load_order": [
+        "gen1_wild_qol",
+        "crystal_animated_sprites_with_shiny_visuals",
+        "gen1_wild_ui",
+        "wild_green"
+      ],
+      "folder": "Wild@wild_green",
+      "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/carts/Wild@wild_green/thumbnail.png",
+      "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/carts/Wild@wild_green/description.md",
+      "update_check": "no installable release"
     }
   ]
 }

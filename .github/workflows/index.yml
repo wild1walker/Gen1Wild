@@ -27,6 +27,7 @@ on:
     branches: [main]
     paths:
       - 'mods/**'
+      - 'carts/**'
       - 'tools/**'
       - '.github/workflows/index.yml'
 

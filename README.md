@@ -13,9 +13,21 @@
 
 ## What is in the index
 
-Two ways in. The bundles are the whole suite in one card each; everything in
-them is also listed separately, for anyone who wants three of these and not
-thirteen.
+Three ways in. The cart is a whole game; the bundles are the whole suite in
+one card each; and everything in them is also listed separately, for anyone
+who wants three of these and not thirteen.
+
+### The cart
+
+| | Cart | What it is |
+|---|---|---|
+| <img src="carts/Wild@wild_green/thumbnail.png" width="54" alt=""> | **[Wild Green](https://github.com/wild1walker/Gen1WildGreen)** | Red, played as its own version. A [custom cart](https://github.com/bryanthaboi/gen1recomp/wiki/Guide-Custom-Carts) — a version-pinned mod set that plays as its own game, with its own entry in the launcher, its own cartridge and its own save slots. It pins Gen1WildQOL, Gen1WildUI and Crystal Animated Sprites, and adds [Wild Green](https://github.com/wild1walker/Gen1MakeItGreen): the player in green and `WILD GREEN VERSION` on the title screen. |
+
+A cart is not a mod pack you assemble — two people running Wild Green run the
+same mods at the same builds. Carts ride this feed additively, as a `carts`
+array beside `mods`, so a launcher that predates them simply lists none.
+
+### The bundles
 
 | | Bundle | What it is |
 |---|---|---|
@@ -53,9 +65,17 @@ index is where I put the mods I maintain.
 |---|---|---|
 | <img src="mods/Wild@Gen1Remember/thumbnail.png" width="54" alt=""> | **[Gen1Remember](https://github.com/wild1walker/Gen1Remember)** | A POKéMON can be taught a move it has forgotten. A REMEMBER row in the popup you already open on it — the party menu's, and Gen1BillsBox's box — listing every level-up move it should have had by the level it has reached, its pre-evolutions' included. |
 
-Every icon above is the one the card carries in **FIND MODS**, drawn by
-[`tools/make_icons.py`](tools/make_icons.py). No mod is vendored here: each
-entry points at a release in that mod's own repo.
+Every mod icon above is the one the card carries in **FIND MODS**, drawn by
+[`tools/make_icons.py`](tools/make_icons.py); the cart's is its own cartridge
+label. No mod is vendored here: each entry points at a release in that mod's
+own repo, and a cart entry points at a release in the cart's own repo — never
+at the repo of a mod it pins, which would record the mod's version as the
+cart's.
+
+A cart listing does not copy the cart's pins by hand either. It names the
+cart's repo in `cart_source`, and [`tools/build_index.py`](tools/build_index.py)
+reads the pins out of that repo's own `cart.json` on every rebuild, so the
+listing cannot drift from the cart it lists.
 
 The two bundles are pinned above the alphabetical run, in the feed and on the
 page both, by `"featured": true` in their `meta.json`. It is for the bundles
