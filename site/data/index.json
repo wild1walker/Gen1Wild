@@ -1,8 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-28T01:07:37Z",
+  "generated_at": "2026-08-28T01:15:55Z",
   "count": 17,
-  "cart_count": 1,
   "categories": [
     "GAMEPLAY",
     "CONTENT",
@@ -16,14 +15,6 @@
     "LIBRARY",
     "TOOL",
     "OTHER"
-  ],
-  "base_games": [
-    "red",
-    "blue",
-    "yellow",
-    "gold",
-    "silver",
-    "crystal"
   ],
   "mods": [
     {
@@ -80,7 +71,7 @@
       },
       "downloads": {
         "total": 48,
-        "as_of": "2026-08-28T01:10:19Z"
+        "as_of": "2026-08-28T01:15:53Z"
       },
       "first_release": "2026-08-26T03:55:53Z",
       "last_release": "2026-08-27T21:20:15Z"
@@ -141,7 +132,7 @@
       },
       "downloads": {
         "total": 46,
-        "as_of": "2026-08-28T01:10:20Z"
+        "as_of": "2026-08-28T01:15:53Z"
       },
       "first_release": "2026-08-26T03:55:54Z",
       "last_release": "2026-08-27T23:46:07Z"
@@ -194,8 +185,8 @@
         }
       },
       "downloads": {
-        "total": 24,
-        "as_of": "2026-08-27T23:25:13Z"
+        "total": 25,
+        "as_of": "2026-08-28T01:15:51Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-08-25T22:06:20Z"
@@ -247,7 +238,7 @@
       },
       "downloads": {
         "total": 192,
-        "as_of": "2026-08-27T23:25:17Z"
+        "as_of": "2026-08-28T01:15:54Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-25T17:34:59Z"
@@ -296,7 +287,7 @@
       },
       "downloads": {
         "total": 35,
-        "as_of": "2026-08-27T23:25:14Z"
+        "as_of": "2026-08-28T01:15:51Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -349,8 +340,8 @@
         }
       },
       "downloads": {
-        "total": 93,
-        "as_of": "2026-08-27T23:25:17Z"
+        "total": 97,
+        "as_of": "2026-08-28T01:15:54Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-26T06:47:09Z"
@@ -403,7 +394,7 @@
       },
       "downloads": {
         "total": 12,
-        "as_of": "2026-08-27T23:25:09Z"
+        "as_of": "2026-08-28T01:15:48Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-08-26T22:57:05Z"
@@ -459,7 +450,7 @@
       },
       "downloads": {
         "total": 31,
-        "as_of": "2026-08-27T23:25:10Z"
+        "as_of": "2026-08-28T01:15:48Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-27T06:07:20Z"
@@ -520,8 +511,8 @@
         }
       },
       "downloads": {
-        "total": 30,
-        "as_of": "2026-08-27T23:25:10Z"
+        "total": 33,
+        "as_of": "2026-08-28T01:15:49Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-08-27T21:54:19Z"
@@ -575,8 +566,8 @@
         }
       },
       "downloads": {
-        "total": 43,
-        "as_of": "2026-08-27T23:25:11Z"
+        "total": 44,
+        "as_of": "2026-08-28T01:15:49Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-27T21:17:25Z"
@@ -628,7 +619,7 @@
       },
       "downloads": {
         "total": 52,
-        "as_of": "2026-08-27T23:25:11Z"
+        "as_of": "2026-08-28T01:15:49Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-27T00:20:17Z"
@@ -638,7 +629,7 @@
       "title": "Gen1ModernBag",
       "author": "Wild",
       "summary": "Seven inventory pockets with an icon on every row, auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag.",
-      "version": "1.10.0",
+      "version": "1.11.0",
       "categories": [
         "UI",
         "QOL"
@@ -673,23 +664,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_modern_bag/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.10.0",
-        "tag": "v1.10.0",
-        "name": "Gen1ModernBag 1.10.0",
+        "version": "1.11.0",
+        "tag": "v1.11.0",
+        "name": "Gen1ModernBag 1.11.0",
         "prerelease": false,
-        "published_at": "2026-08-27T23:24:59Z",
+        "published_at": "2026-08-27T23:45:27Z",
         "zip": {
-          "name": "gen1_modern_bag_v1.10.0.zip",
-          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.10.0/gen1_modern_bag_v1.10.0.zip",
-          "size": 120460
+          "name": "gen1_modern_bag_v1.11.0.zip",
+          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.11.0/gen1_modern_bag_v1.11.0.zip",
+          "size": 122623
         }
       },
       "downloads": {
-        "total": 59,
-        "as_of": "2026-08-27T23:25:14Z"
+        "total": 60,
+        "as_of": "2026-08-28T01:15:52Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
-      "last_release": "2026-08-27T23:24:59Z"
+      "last_release": "2026-08-27T23:45:27Z"
     },
     {
       "id": "gen1_mod_menu",
@@ -741,7 +732,7 @@
       },
       "downloads": {
         "total": 16,
-        "as_of": "2026-08-27T23:25:14Z"
+        "as_of": "2026-08-28T01:15:51Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -798,7 +789,7 @@
       },
       "downloads": {
         "total": 17,
-        "as_of": "2026-08-27T23:25:12Z"
+        "as_of": "2026-08-28T01:15:50Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-08-27T06:07:19Z"
@@ -855,8 +846,8 @@
         }
       },
       "downloads": {
-        "total": 5,
-        "as_of": "2026-08-27T23:25:12Z"
+        "total": 6,
+        "as_of": "2026-08-28T01:15:50Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-08-26T17:49:56Z"
@@ -910,8 +901,8 @@
         }
       },
       "downloads": {
-        "total": 20,
-        "as_of": "2026-08-27T23:25:15Z"
+        "total": 21,
+        "as_of": "2026-08-28T01:15:52Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -963,12 +954,21 @@
         }
       },
       "downloads": {
-        "total": 6,
-        "as_of": "2026-08-27T23:25:15Z"
+        "total": 7,
+        "as_of": "2026-08-28T01:15:52Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-26T00:29:59Z"
     }
+  ],
+  "cart_count": 1,
+  "base_games": [
+    "red",
+    "blue",
+    "yellow",
+    "gold",
+    "silver",
+    "crystal"
   ],
   "carts": [
     {
