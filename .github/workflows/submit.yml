@@ -16,7 +16,9 @@ name: Submit to the community index
 #      which is the same narrow scope their own submission page asks for.
 #      Copy it; GitHub shows it once.
 #   2. This repo > Settings > Secrets and variables > Actions > New repository
-#      secret. Name it INDEX_PR_TOKEN, paste the token.
+#      secret. Name it INDEX_PR_TOKEN, paste the token. It has to be that
+#      page: the Codespaces and Dependabot tabs beside it hold their own
+#      secrets, which a workflow cannot read.
 #   3. Actions > Submit to the community index > Run workflow.
 #
 # After that it is step 3 on its own, any time there is something new to send:
@@ -54,20 +56,69 @@ jobs:
   submit:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.INDEX_PR_TOKEN }}
       UPSTREAM: bryanthaboi/gen1recomp-mod-index
       BRANCH: ${{ inputs.branch }}
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check the token is there
+      # A token pasted on a phone arrives with a trailing newline as often as
+      # not, and a secret is easy to file under a name nothing is reading. So
+      # take the first of the names anyone would plausibly have used, strip the
+      # whitespace off it, and say which one answered.
+      - name: Find the token
+        env:
+          INDEX_PR_TOKEN: ${{ secrets.INDEX_PR_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          PAT: ${{ secrets.PAT }}
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+          INDEX_TOKEN: ${{ secrets.INDEX_TOKEN }}
+          SUBMIT_TOKEN: ${{ secrets.SUBMIT_TOKEN }}
         run: |
           set -euo pipefail
-          if [ -z "${GH_TOKEN}" ]; then
-            echo "::error::No INDEX_PR_TOKEN secret. See the comment at the top" \
-                 "of .github/workflows/submit.yml for the three steps."
+          for name in INDEX_PR_TOKEN GH_PAT PAT GITHUB_PAT INDEX_TOKEN SUBMIT_TOKEN; do
+            value=$(printf '%s' "${!name-}" | tr -d '[:space:]')
+            if [ -n "$value" ]; then
+              # Masked before it is written anywhere, so a later command that
+              # echoes its environment cannot spill it into the log.
+              echo "::add-mask::$value"
+              echo "GH_TOKEN=$value" >> "$GITHUB_ENV"
+              echo "Using the $name secret."
+              exit 0
+            fi
+          done
+          echo "::error::No token secret found. Add one at" \
+               "https://github.com/${{ github.repository }}/settings/secrets/actions" \
+               "-- the Actions tab, under Repository secrets, named" \
+               "INDEX_PR_TOKEN. A secret on the Codespaces or Dependabot tab" \
+               "is a different secret and a workflow cannot read it."
+          exit 1
+
+      # Fail here, with the reason, rather than four steps later inside a git
+      # push that says only that authentication failed.
+      - name: Check the token works
+        run: |
+          set -euo pipefail
+          if ! LOGIN=$(gh api /user --jq .login 2>token-error.txt); then
+            echo "::error::That token did not authenticate: $(head -2 token-error.txt | tr '\n' ' ')." \
+                 "It may have expired, or been copied short."
             exit 1
           fi
+          SCOPES=$(gh api -i /user 2>/dev/null | tr -d '\r' \
+            | awk -F': ' 'tolower($1)=="x-oauth-scopes"{print $2}')
+          echo "Signed in as $LOGIN. Scopes: ${SCOPES:-none reported}"
+          case ",${SCOPES// /}," in
+            *,repo,*|*,public_repo,*) ;;
+            *)
+              if [ -n "$SCOPES" ]; then
+                echo "::error::This token has [$SCOPES]. Forking and opening a" \
+                     "pull request needs public_repo (or repo). Make a new one" \
+                     "at https://github.com/settings/tokens/new?scopes=public_repo"
+                exit 1
+              fi
+              # A fine-grained token reports no scopes at all; let it try.
+              echo "::notice::No scope header -- a fine-grained token. Carrying on."
+              ;;
+          esac
 
       # Fork if there is no fork yet, and bring an old one up to date with
       # their main first: a branch cut from a stale fork makes a diff full of
