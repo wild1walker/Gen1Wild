@@ -21,7 +21,8 @@ all-or-nothing, and nothing here is on that you cannot turn off.
 
 `MENU LAYOUT` and `MOD MANAGER` are also in
 [Gen1WildUI](https://github.com/wild1walker/Gen1WildUI). Install both bundles
-and they sort it out between themselves — no collisions, no duplicated work.
+and they sort it out between themselves, with no collisions and no duplicated
+work.
 
 ## Before you install
 

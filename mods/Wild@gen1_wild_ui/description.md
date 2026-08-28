@@ -20,8 +20,8 @@ Every feature is its own row in `OPTION > GEN1WILD UI`, on or off, with its
 own settings behind it. Some land the moment you change them, some want a
 relaunch, and the menu tells you which is which rather than pretending.
 
-The features know about each other — the party menu reads the Pokédex and the
-box when they are on — but none of them needs the others to work.
+The features know about each other, so the party menu reads the Pokédex and
+the box when they are on, but none of them needs the others to work.
 
 `MENU LAYOUT` and `MOD MANAGER` are also in
 [Gen1WildQOL](https://github.com/wild1walker/Gen1WildQOL). Install both

@@ -1,6 +1,6 @@
 # Gen1Follower
 
-All 251 Gen 1 and Gen 2 Pokémon, walking behind you — sized by how big they
+All 251 Gen 1 and Gen 2 Pokémon, walking behind you, sized by how big they
 actually are, with full voxel support, on Red, Blue, Yellow and Gold.
 
 ## And the ones standing on the maps
@@ -10,12 +10,12 @@ Gen 1 only ever drew five overworld Pokémon sprites: a "monster", a "bird", a
 sleeping Snorlax, Mewtwo and all three legendary birds were wearing art that
 was never theirs.
 
-Fifty of them now match the follower sprites, at the same proportional sizing —
-Bill's fused form among them, drawn as a Kabuto, which is a choice rather than
-a reading: the game only ever says he "got combined with a #MON" and never
-says which. The Copycat's dolls and the Power Plant's disguised Voltorb keep
-what the cartridge gave them, since both are jokes the game is telling. One
-switch turns the rest off if you would rather have the originals.
+Fifty of them now match the follower sprites, at the same proportional sizing,
+Bill's fused form among them. He is drawn as a Kabuto, which is a choice
+rather than a reading: the game only ever says he "got combined with a #MON"
+and never says which. The Copycat's dolls and the Power Plant's disguised
+Voltorb keep what the cartridge gave them, since both are jokes the game is
+telling. One switch turns the rest off if you would rather have the originals.
 
 ## Credit
 

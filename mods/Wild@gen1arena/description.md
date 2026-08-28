@@ -13,7 +13,7 @@ nothing resampled.
 The backdrop follows two things: where you are standing, and how the battle
 started. Grass on a route, the route itself for a trainer, caves, forests,
 towns in their own colours, open sea or a lake or underwater depending on what
-you are swimming in — and one scene each for Giovanni, the Elite Four and the
+you are swimming in, and one scene each for Giovanni, the Elite Four and the
 Champion.
 
 The towns are worth a word. The eleven Kanto cities differ in exactly one way
@@ -25,14 +25,14 @@ everywhere in the real game too.
 
 ## Worth knowing
 
-Built for the **ADVANCED** colour mode — the other modes put full-colour art
-behind four-shade sprites. And because Gen 1 back sprites use the white field
-for their light shades, your own Pokémon can read as a silhouette against the
-darker scenes.
+Built for the **ADVANCED** colour mode, since the other modes put full-colour
+art behind four-shade sprites. And because Gen 1 back sprites use the white
+field for their light shades, your own Pokémon can read as a silhouette
+against the darker scenes.
 
 Switch it off entirely with one option if you would rather have the white.
 
-## Art credit — required
+## Art credit (required)
 
 **None of the art was drawn for this mod.** Every backdrop comes from the
 **Battle Backgrounds Patch FR** for Pokémon FireRed, and its authors ask for
@@ -47,6 +47,6 @@ linework and colour in every scene are theirs. Carry those names anywhere the
 art goes.
 
 Parts of that pack are original fan art and parts are FireRed-derived, and the
-files do not distinguish between them — so unlike the rest of this index, this
+files do not distinguish between them, so unlike the rest of this index, this
 one is **not** MIT and ships no blanket licence. The code is Wild's; the art is
 credited, not relicensed.

@@ -21,7 +21,7 @@ byte, both are one option away.
 
 Start a podcast or some music on your phone while the game is running and the
 game gets out of the way instead of talking over it. When the other app is
-done, it comes back — or waits for you to say so, if you would rather.
+done, it comes back, or waits for you to say so, if you would rather.
 
 Your saved volume settings are never touched. The mod holds the live level at
 zero and hands your own numbers back when the mute clears.
@@ -35,7 +35,7 @@ happens.
 
 ## Worth knowing
 
-Nothing here is on that you did not ask for — every behaviour is a row in
+Nothing here is on that you did not ask for. Every behaviour is a row in
 **MODS > Gen1SoundQOL > OPTIONS**, and every row can be put back to vanilla.
 
 Red, Blue, Yellow and Gold/Silver. MIT.
