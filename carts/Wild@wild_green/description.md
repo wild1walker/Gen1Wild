@@ -1,16 +1,37 @@
 # Wild Green
 
-Red, played as its own version. A **custom cart**: a named, version-pinned set
-of mods that plays as its own game, with its own entry in the launcher, its own
-cartridge, and its own save slots. Two people running Wild Green run the same
-mods at the same builds.
+**This is, I think, the definitive way to play Red.**
+
+Every quality-of-life and visual upgrade in the Gen1Wild suite, in one cart —
+and only the ones that still feel like Red. That was the whole filter.
+Sprinting, autosave, a Pokédex worth opening, a bag with pockets, battle
+backdrops, animated Crystal sprites, followers behind you: none of it turns
+this into a different game. It is the game you remember, with the parts that
+made you put it down taken out.
+
+**And you can catch every single one of them.** All 151, in one save, on one
+version, without trading — the legendaries retryable until you land them, the
+trade evolutions handled by an item, Mew behind the Mansion journals where it
+always should have been. Every vanilla encounter still behaves exactly as
+vanilla does; the missing species are placed around them, not on top of them.
+
+So if you are going for a 100% Kanto dex, or you just want Red to feel like a
+game made this decade, Wild Green is the most enjoyable way to do it.
+
+It is a **custom cart**: a named, version-pinned set of mods that plays as its
+own game, with its own entry in the launcher, its own cartridge, and its own
+save slots. Two people running Wild Green run the same mods at the same builds.
 
 | Pinned | |
 |---|---|
-| **Gen1WildQOL** `1.11.1` | The quality-of-life half of the suite: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, move reminder, menu layout, the mod manager and four later-generation conveniences |
-| **Crystal Animated Sprites with Shiny Visuals** `2.0.2` | Crystal animated battle sprites, Gen 2-style shiny reveals with the cry held until the sparkle finishes, and swappable trainer portraits. Somebody else's mod, pinned unmodified |
-| **Gen1WildUI** `1.12.0` | The visual half: battle backdrops, the battle intro, the battle menus, the Pokédex, the box, the party menu, the bag, item icons and descriptions, the lift panel |
-| **Wild Green** `1.0.0` | The version itself: the player in green, and `WILD GREEN VERSION` on the title screen |
+| **Gen1WildQOL** | The quality-of-life half of the suite: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, move reminder, menu layout, the mod manager and four later-generation conveniences |
+| **Crystal Animated Sprites with Shiny Visuals** | Crystal animated battle sprites, Gen 2-style shiny reveals with the cry held until the sparkle finishes, and swappable trainer portraits. Somebody else's mod, pinned unmodified |
+| **Gen1WildUI** | The visual half: battle backdrops, the battle intro, the battle menus, the Pokédex, the box, the party menu, the bag, item icons and descriptions, the lift panel |
+| **Wild Green** | The version itself: the player in green, and `WILD GREEN VERSION` on the title screen |
+
+The exact build of each is on this card, above, and in the cart's own
+`cart.json` — not written out here, where it would go stale the first time the
+cart re-pins anything.
 
 ## What makes it a version
 
