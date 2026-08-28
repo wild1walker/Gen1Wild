@@ -19,9 +19,13 @@ who wants three of these and not thirteen.
 
 ### The cart
 
+<p align="center">
+  <a href="https://github.com/wild1walker/Gen1WildGreen"><img src="https://raw.githubusercontent.com/wild1walker/Gen1WildGreen/main/art/banner.png" alt="Wild Green Version" width="920"></a>
+</p>
+
 | | Cart | What it is |
 |---|---|---|
-| <img src="carts/Wild@wild_green/thumbnail.png" width="54" alt=""> | **[Wild Green](https://github.com/wild1walker/Gen1WildGreen)** | Red, played as its own version. A [custom cart](https://github.com/bryanthaboi/gen1recomp/wiki/Guide-Custom-Carts) — a version-pinned mod set that plays as its own game, with its own entry in the launcher, its own cartridge and its own save slots. It pins Gen1WildQOL, Gen1WildUI and Crystal Animated Sprites, and adds [Wild Green](https://github.com/wild1walker/Gen1MakeItGreen): the player in green and `WILD GREEN VERSION` on the title screen. |
+| <img src="carts/Wild@wild_green/thumbnail.png" width="54" alt=""> | **[Wild Green](https://github.com/wild1walker/Gen1WildGreen)** | Red, played as its own version, and the way I would tell anyone to play it: every quality-of-life and visual upgrade in this index that still feels like Red, and all 151 catchable in one save without trading. A [custom cart](https://github.com/bryanthaboi/gen1recomp/wiki/Guide-Custom-Carts) — a version-pinned mod set with its own entry in the launcher, its own cartridge and its own save slots. It pins Gen1WildQOL, Gen1WildUI and Crystal Animated Sprites, and adds [Wild Green](https://github.com/wild1walker/Gen1MakeItGreen): the player in green and `WILD GREEN VERSION` on the title screen. |
 
 A cart is not a mod pack you assemble — two people running Wild Green run the
 same mods at the same builds. Carts ride this feed additively, as a `carts`
