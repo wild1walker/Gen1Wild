@@ -122,18 +122,24 @@ jobs:
               ;;
           esac
 
-      # Fork if there is no fork yet, and bring an old one up to date with
-      # their main first: a branch cut from a stale fork makes a diff full of
-      # other people's entries.
-      - name: Fork the community index, and sync it
+      # The fork is somewhere to put a branch, and nothing else. What gets
+      # cloned is upstream itself.
+      #
+      # A fork that has sat for a while cannot be brought up to date with a
+      # public_repo token: syncing merges their commits, some of which touch
+      # .github/workflows, and GitHub wants the workflow scope for that. The
+      # first run here hit exactly that, carried on against a stale fork, and
+      # validated a cart with a copy of validate.mjs written before carts
+      # existed. Cloning upstream sidesteps all of it: current schema, current
+      # rules, and the entries as they actually stand, which is also what
+      # decides whether an entry of ours is new there or already listed.
+      - name: Fork if there is no fork, and clone upstream
         run: |
           set -euo pipefail
           gh auth setup-git
           gh repo fork "$UPSTREAM" --clone=false --default-branch-only
           LOGIN=$(gh api /user --jq .login)
-          gh repo sync "$LOGIN/${UPSTREAM#*/}" --source "$UPSTREAM" || \
-            echo "nothing to sync, or the fork has diverged -- carrying on"
-          gh repo clone "$LOGIN/${UPSTREAM#*/}" index -- --depth 1
+          git clone --depth 1 "https://github.com/$UPSTREAM" index
           {
             echo "LOGIN=$LOGIN"
             echo "USER_ID=$(gh api /user --jq .id)"
@@ -185,13 +191,21 @@ jobs:
         run: |
           set -euo pipefail
           cd index
-          # A re-run cuts this branch fresh from their main again, so the push
-          # has to replace what the last run left. --force rather than
-          # --force-with-lease on purpose: the clone above is shallow and
-          # single-branch, so there is no remote-tracking ref for this branch
-          # for a lease to compare against, and the flag would fail rather than
-          # protect anything. Nothing but this job writes here.
-          git push -u origin "$BRANCH" --force
+          FORK="$LOGIN/${UPSTREAM#*/}"
+          BASE=$(git rev-parse HEAD^)
+
+          # Point the fork's branch at the upstream commit this work sits on,
+          # then push one commit onto it. Done the other way round -- pushing a
+          # branch based on current upstream into a fork that is behind -- the
+          # push carries their workflow commits with it, and a public_repo
+          # token is refused. A ref moved to an object the fork's network
+          # already holds is not a file change, so nothing is refused, and the
+          # push that follows is a fast-forward carrying only our own commit.
+          gh api -X POST "/repos/$FORK/git/refs" -f ref="refs/heads/$BRANCH" \
+            -f sha="$BASE" >/dev/null 2>&1 || \
+            gh api -X PATCH "/repos/$FORK/git/refs/heads/$BRANCH" \
+              -f sha="$BASE" -F force=true >/dev/null
+          git push "https://github.com/$FORK.git" "HEAD:refs/heads/$BRANCH"
 
           # --head filters on the branch name alone (headRefName), so an
           # owner:branch value here matches nothing and the create below would
