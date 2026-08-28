@@ -16,9 +16,10 @@ name: Submit to the community index
 #      which is the same narrow scope their own submission page asks for.
 #      Copy it; GitHub shows it once.
 #   2. This repo > Settings > Secrets and variables > Actions > New repository
-#      secret. Name it INDEX_PR_TOKEN, paste the token. It has to be that
-#      page: the Codespaces and Dependabot tabs beside it hold their own
-#      secrets, which a workflow cannot read.
+#      secret. Paste the token there. GEN1INDEX is the name this repo uses;
+#      the job also answers to INDEX_PR_TOKEN and a few other likely names.
+#      It has to be that page: the Codespaces and Dependabot tabs beside it
+#      hold their own secrets, which a workflow cannot read.
 #   3. Actions > Submit to the community index > Run workflow.
 #
 # After that it is step 3 on its own, any time there is something new to send:
@@ -67,6 +68,7 @@ jobs:
       # whitespace off it, and say which one answered.
       - name: Find the token
         env:
+          GEN1INDEX: ${{ secrets.GEN1INDEX }}
           INDEX_PR_TOKEN: ${{ secrets.INDEX_PR_TOKEN }}
           GH_PAT: ${{ secrets.GH_PAT }}
           PAT: ${{ secrets.PAT }}
@@ -75,7 +77,7 @@ jobs:
           SUBMIT_TOKEN: ${{ secrets.SUBMIT_TOKEN }}
         run: |
           set -euo pipefail
-          for name in INDEX_PR_TOKEN GH_PAT PAT GITHUB_PAT INDEX_TOKEN SUBMIT_TOKEN; do
+          for name in GEN1INDEX INDEX_PR_TOKEN GH_PAT PAT GITHUB_PAT INDEX_TOKEN SUBMIT_TOKEN; do
             value=$(printf '%s' "${!name-}" | tr -d '[:space:]')
             if [ -n "$value" ]; then
               # Masked before it is written anywhere, so a later command that
