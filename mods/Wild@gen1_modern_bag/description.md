@@ -26,8 +26,7 @@ travels verbatim in the mod's `LICENSE`.
 Essentially all of the functionality above is upstream's work. This is an
 independent, parallel project: not endorsed by or affiliated with FAFF0x or
 the gen1recomp project, and not a replacement, successor or official
-continuation of Modern Bag. What is different here is one fix — a long TM/HM
-label no longer draws past the right edge of the window.
+continuation of Modern Bag.
 
 The item art is **Pokémon Polished Crystal's**, by **Rangi** and that
 project's graphics contributors, not this project's. The mod's `CREDITS.md`

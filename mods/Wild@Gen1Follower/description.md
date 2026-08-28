@@ -25,10 +25,8 @@ credit stays with them. Its Gen II sprite sheets descend from ShockSlayer and
 the Pokémon Crystal Clear team's work by way of the PokéPC / Followers EX
 lineage.
 
-## Worth knowing
+## Before you install
 
-This is its own mod rather than a re-listing of upstream — its own repo, its
-own release numbering, its own id. That means it installs *alongside* an
-existing PokéPC Followers install rather than upgrading it, so uninstall the
-old one first. Two copies of the same follower hooks running at once is not a
-supported configuration.
+This installs *alongside* an existing PokéPC Followers rather than upgrading
+it, so uninstall the old one first. Two copies of the same follower hooks
+running at once is not a supported configuration.
