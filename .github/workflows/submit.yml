@@ -192,37 +192,31 @@ jobs:
           set -euo pipefail
           cd index
           FORK="$LOGIN/${UPSTREAM#*/}"
-          BASE=$(git rev-parse HEAD^)
 
-          # Point the fork's branch at the upstream commit this work sits on,
-          # then push one commit onto it. Done the other way round -- pushing a
-          # branch based on current upstream into a fork that is behind -- the
-          # push carries their workflow commits with it, and a public_repo
-          # token is refused. A ref moved to an object the fork's network
-          # already holds is not a file change, so nothing is refused, and the
-          # push that follows is a fast-forward carrying only our own commit.
-          gh api -X POST "/repos/$FORK/git/refs" -f ref="refs/heads/$BRANCH" \
-            -f sha="$BASE" >/dev/null 2>&1 || \
-            gh api -X PATCH "/repos/$FORK/git/refs/heads/$BRANCH" \
-              -f sha="$BASE" -F force=true >/dev/null
-          git push "https://github.com/$FORK.git" "HEAD:refs/heads/$BRANCH"
+          # One commit, whose parent is the upstream commit this clone sits on.
+          # A fork shares upstream's object storage, so that parent is already
+          # there and the push carries our commit alone -- no workflow files in
+          # it, so nothing for a public_repo token to be refused over. Placing
+          # the branch by ref first was the idea before this; the fork is far
+          # enough behind that the API would not create a ref at that object.
+          git push --force "https://github.com/$FORK.git" "HEAD:refs/heads/$BRANCH"
 
-          # --head filters on the branch name alone (headRefName), so an
-          # owner:branch value here matches nothing and the create below would
-          # fail on a PR that is already open. The author filter is what keeps
-          # this to ours when somebody else's fork has a branch of the same
-          # name.
-          EXISTING=$(gh pr list --repo "$UPSTREAM" --head "$BRANCH" \
-            --author "$LOGIN" --state open --json url --jq '.[0].url // empty')
+          # REST rather than `gh pr list` and `gh pr create`: those go through
+          # GraphQL, which a classic token cannot reach on public_repo alone --
+          # it wants the full repo scope. Run 5 never got this far, so this is
+          # a fix for a wall we were walking into rather than one we hit.
+          EXISTING=$(gh api "/repos/$UPSTREAM/pulls?state=open&head=$LOGIN:$BRANCH" \
+            --jq '.[0].html_url // empty')
           if [ -n "$EXISTING" ]; then
             echo "::notice::Updated the open pull request: $EXISTING"
             echo "Updated $EXISTING" >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
 
-          URL=$(gh pr create --repo "$UPSTREAM" --base main \
-            --head "$LOGIN:$BRANCH" \
-            --title "Add the mods I maintain, and the Wild Green cart" \
-            --body-file "$GITHUB_WORKSPACE/.github/community-index-pr.md")
+          URL=$(gh api -X POST "/repos/$UPSTREAM/pulls" \
+            -f title="Add the mods I maintain, and the Wild Green cart" \
+            -f head="$LOGIN:$BRANCH" -f base=main \
+            -f body="$(cat "$GITHUB_WORKSPACE/.github/community-index-pr.md")" \
+            --jq .html_url)
           echo "::notice::$URL"
           echo "Opened $URL" >> "$GITHUB_STEP_SUMMARY"
