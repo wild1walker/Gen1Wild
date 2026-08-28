@@ -63,6 +63,7 @@ OWNER, REPO = "wild1walker", "Gen1Wild"
 RAW = f"https://raw.githubusercontent.com/{OWNER}/{REPO}/main"
 
 SCHEMA_VERSION = 1
+CART_FILE = "cart.json"
 REQUIRED = ("id", "title", "author", "version", "categories", "repo")
 
 # A cart listing's own gate.  src/mods/ModIndex.lua's parseCartEntry drops a
@@ -210,6 +211,25 @@ def read_cart_entries():
     return read_dir(CARTS, CART_REQUIRED)
 
 
+def fetch_raw(slug, path):
+    """One file out of another repo, off whichever default branch it uses."""
+    for branch in ("main", "master"):
+        url = f"https://raw.githubusercontent.com/{slug}/{branch}/{path}"
+        req = urllib.request.Request(url, headers={
+            "User-Agent": f"{OWNER}-mod-index",
+        })
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return resp.read(), None
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                continue
+            return None, f"GitHub {e.code} reading {branch}/{path}"
+        except Exception as e:                               # network, DNS, ...
+            return None, f"{type(e).__name__} reading {branch}/{path}"
+    return None, f"no {path} on main or master"
+
+
 def fetch_cart_json(slug):
     """A cart's own cart.json, off its default branch.
 
@@ -221,23 +241,37 @@ def fetch_cart_json(slug):
     from the source of truth on every rebuild, the same way a mod's version
     is read from its release rather than trusted from meta.json.
     """
-    for branch in ("main", "master"):
-        url = f"https://raw.githubusercontent.com/{slug}/{branch}/cart.json"
-        req = urllib.request.Request(url, headers={
-            "User-Agent": f"{OWNER}-mod-index",
-        })
-        try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                return json.loads(resp.read().decode("utf-8")), None
-        except urllib.error.HTTPError as e:
-            if e.code == 404:
-                continue
-            return None, f"GitHub {e.code} reading {branch}/cart.json"
-        except json.JSONDecodeError as e:
-            return None, f"{branch}/cart.json is not JSON: {e}"
-        except Exception as e:                               # network, DNS, ...
-            return None, f"{type(e).__name__} reading {branch}/cart.json"
-    return None, "no cart.json on main or master"
+    body, problem = fetch_raw(slug, CART_FILE)
+    if body is None:
+        return None, problem
+    try:
+        return json.loads(body.decode("utf-8")), None
+    except (ValueError, UnicodeDecodeError) as e:
+        return None, f"{CART_FILE} is not JSON: {e}"
+
+
+def sync_cart_label(slug, cart, folder):
+    """The cart's own label art, as this listing's thumbnail.
+
+    A mod's icon is drawn here by make_icons.py; a cart's is its cartridge,
+    and the cartridge is drawn in the cart's repo.  Copying it by hand is a
+    copy that rots -- it already did once, when the shell colour changed and
+    the card kept the old label -- so it is fetched like the pins are, and
+    written verbatim.  No scaling: the page sizes icons in CSS, and the
+    hourly job runs on the standard library alone.
+    """
+    name = cart.get("label")
+    if not isinstance(name, str) or not name.lower().endswith(".png"):
+        return None
+    body, problem = fetch_raw(slug, name)
+    if body is None:
+        return problem
+    thumbnail = folder / "thumbnail.png"
+    if thumbnail.exists() and thumbnail.read_bytes() == body:
+        return None
+    thumbnail.write_bytes(body)
+    print(f"  synced {folder.name}'s thumbnail from {slug}/{name}")
+    return None
 
 
 def build_carts():
@@ -267,6 +301,9 @@ def build_carts():
         row.pop("automatic_version_check", None)
 
         if cart:
+            problem = sync_cart_label(source, cart, folder)
+            if problem:
+                print(f"::warning::{folder.name}: {problem}", file=sys.stderr)
             # The cart decides what it is; the listing only says where to find
             # it.  Everything the cart's own manifest owns is taken from there
             # and written back into meta.json, so a reader of this repo sees
