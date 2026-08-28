@@ -24,9 +24,10 @@ name: Submit to the community index
 # release job picks up new *versions* by itself, so a version bump alone is
 # never a reason to run this.
 #
-# Run it with `dry run` left on first. That does the whole job -- fork, copy,
-# their validator -- and stops before it pushes anything, so you can read the
-# summary and see what would go.
+# Running it is the submission: the button is the whole thing. `dry run` is
+# there for a change you want to look at first -- it does the same work, fork
+# and copy and their validator, and stops before it pushes -- but it is off by
+# default, because the usual reason to open this page is to send what is here.
 
 on:
   workflow_dispatch:
@@ -34,7 +35,7 @@ on:
       dry_run:
         description: 'Check everything, push nothing'
         type: boolean
-        default: true
+        default: false
       branch:
         description: 'Branch to open the pull request from'
         type: string
