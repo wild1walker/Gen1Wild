@@ -116,7 +116,7 @@ jobs:
             echo "NOTHING=1" >> "$GITHUB_ENV"
             exit 0
           fi
-          git commit -m "Add the Gen1Wild mods and the Wild Green cart"
+          git commit -m "Add the mods I maintain, and the Wild Green cart"
 
       - name: Summary
         run: |
@@ -149,7 +149,7 @@ jobs:
 
           URL=$(gh pr create --repo "$UPSTREAM" --base main \
             --head "$LOGIN:$BRANCH" \
-            --title "Add the Gen1Wild mods and the Wild Green cart" \
+            --title "Add the mods I maintain, and the Wild Green cart" \
             --body-file "$GITHUB_WORKSPACE/.github/community-index-pr.md")
           echo "::notice::$URL"
           echo "Opened $URL" >> "$GITHUB_STEP_SUMMARY"
