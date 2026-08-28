@@ -183,15 +183,21 @@ jobs:
         run: |
           set -euo pipefail
           cd index
-          # A re-run cuts the branch fresh from their main again, so the push
-          # replaces what the last run put there. Fetching it first is what
-          # gives --force-with-lease something to compare against; without it
-          # the lease has no opinion and the flag is decoration.
-          git fetch --depth 1 origin "$BRANCH" || true
-          git push -u origin "$BRANCH" --force-with-lease
+          # A re-run cuts this branch fresh from their main again, so the push
+          # has to replace what the last run left. --force rather than
+          # --force-with-lease on purpose: the clone above is shallow and
+          # single-branch, so there is no remote-tracking ref for this branch
+          # for a lease to compare against, and the flag would fail rather than
+          # protect anything. Nothing but this job writes here.
+          git push -u origin "$BRANCH" --force
 
-          EXISTING=$(gh pr list --repo "$UPSTREAM" --head "$LOGIN:$BRANCH" \
-            --state open --json url --jq '.[0].url // empty')
+          # --head filters on the branch name alone (headRefName), so an
+          # owner:branch value here matches nothing and the create below would
+          # fail on a PR that is already open. The author filter is what keeps
+          # this to ours when somebody else's fork has a branch of the same
+          # name.
+          EXISTING=$(gh pr list --repo "$UPSTREAM" --head "$BRANCH" \
+            --author "$LOGIN" --state open --json url --jq '.[0].url // empty')
           if [ -n "$EXISTING" ]; then
             echo "::notice::Updated the open pull request: $EXISTING"
             echo "Updated $EXISTING" >> "$GITHUB_STEP_SUMMARY"
