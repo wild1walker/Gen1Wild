@@ -1,0 +1,155 @@
+name: Submit to the community index
+
+# These mods are listed twice: here, in this repo's own feed, and in the wider
+# community index at bryanthaboi/gen1recomp-mod-index. The second one takes a
+# pull request, and a pull request against someone else's repo needs a fork, a
+# branch on it and the PR itself -- none of which the built-in GITHUB_TOKEN can
+# do, because it is scoped to this repository and nothing else.
+#
+# So this job runs on a token you make yourself, and everything it touches it
+# touches as you: your fork, your commit, your pull request, your name on it.
+# Nothing here is opened by a bot account.
+#
+# Setup, once, and all of it works from a phone browser:
+#
+#   1. github.com/settings/tokens/new -- classic token, scope `public_repo`,
+#      which is the same narrow scope their own submission page asks for.
+#      Copy it; GitHub shows it once.
+#   2. This repo > Settings > Secrets and variables > Actions > New repository
+#      secret. Name it INDEX_PR_TOKEN, paste the token.
+#   3. Actions > Submit to the community index > Run workflow.
+#
+# After that it is step 3 on its own, any time there is something new to send:
+# a new mod folder here, an edited description, a better thumbnail. Their
+# release job picks up new *versions* by itself, so a version bump alone is
+# never a reason to run this.
+#
+# Running it is the submission: the button is the whole thing. `dry run` is
+# there for a change you want to look at first -- it does the same work, fork
+# and copy and their validator, and stops before it pushes -- but it is off by
+# default, because the usual reason to open this page is to send what is here.
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Check everything, push nothing'
+        type: boolean
+        default: false
+      branch:
+        description: 'Branch to open the pull request from'
+        type: string
+        default: 'wild-mods'
+
+# The built-in token does none of this work beyond reading this repo; the
+# fork, the branch and the pull request are all the personal token's.
+permissions:
+  contents: read
+
+concurrency:
+  group: submit
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.INDEX_PR_TOKEN }}
+      UPSTREAM: bryanthaboi/gen1recomp-mod-index
+      BRANCH: ${{ inputs.branch }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the token is there
+        run: |
+          set -euo pipefail
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "::error::No INDEX_PR_TOKEN secret. See the comment at the top" \
+                 "of .github/workflows/submit.yml for the three steps."
+            exit 1
+          fi
+
+      # Fork if there is no fork yet, and bring an old one up to date with
+      # their main first: a branch cut from a stale fork makes a diff full of
+      # other people's entries.
+      - name: Fork the community index, and sync it
+        run: |
+          set -euo pipefail
+          gh auth setup-git
+          gh repo fork "$UPSTREAM" --clone=false --default-branch-only
+          LOGIN=$(gh api /user --jq .login)
+          gh repo sync "$LOGIN/${UPSTREAM#*/}" --source "$UPSTREAM" || \
+            echo "nothing to sync, or the fork has diverged -- carrying on"
+          gh repo clone "$LOGIN/${UPSTREAM#*/}" index -- --depth 1
+          {
+            echo "LOGIN=$LOGIN"
+            echo "USER_ID=$(gh api /user --jq .id)"
+          } >> "$GITHUB_ENV"
+
+      - name: Copy this index's entries in
+        run: python3 tools/make_submission.py index | tee submission.log
+
+      # Their check, not ours, run before anything is pushed: a pull request
+      # that fails their CI wastes a maintainer's afternoon rather than a
+      # minute of this runner.
+      - name: Run their validator
+        run: |
+          set -euo pipefail
+          TARGETS=$(cd "$GITHUB_WORKSPACE" && ls -d mods/*/ carts/*/ \
+            | sed 's:/$::' | tr '\n' ' ')
+          cd index
+          node scripts/validate.mjs $TARGETS
+
+      - name: Commit as you
+        run: |
+          set -euo pipefail
+          cd index
+          # The noreply address GitHub itself hands out, so the commit is
+          # attributed to your account without putting a real address in a
+          # public log.
+          git config user.name "$LOGIN"
+          git config user.email "${USER_ID}+${LOGIN}@users.noreply.github.com"
+          git switch -c "$BRANCH"
+          git add mods carts
+          if git diff --cached --quiet; then
+            echo "::notice::Nothing to submit -- their index already matches this one."
+            echo "NOTHING=1" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          git commit -m "Add the mods I maintain, and the Wild Green cart"
+
+      - name: Summary
+        run: |
+          {
+            echo '## What would go'
+            echo '```'
+            cat submission.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Push it and open the pull request
+        if: ${{ !inputs.dry_run && env.NOTHING != '1' }}
+        run: |
+          set -euo pipefail
+          cd index
+          # A re-run cuts the branch fresh from their main again, so the push
+          # replaces what the last run put there. Fetching it first is what
+          # gives --force-with-lease something to compare against; without it
+          # the lease has no opinion and the flag is decoration.
+          git fetch --depth 1 origin "$BRANCH" || true
+          git push -u origin "$BRANCH" --force-with-lease
+
+          EXISTING=$(gh pr list --repo "$UPSTREAM" --head "$LOGIN:$BRANCH" \
+            --state open --json url --jq '.[0].url // empty')
+          if [ -n "$EXISTING" ]; then
+            echo "::notice::Updated the open pull request: $EXISTING"
+            echo "Updated $EXISTING" >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          URL=$(gh pr create --repo "$UPSTREAM" --base main \
+            --head "$LOGIN:$BRANCH" \
+            --title "Add the mods I maintain, and the Wild Green cart" \
+            --body-file "$GITHUB_WORKSPACE/.github/community-index-pr.md")
+          echo "::notice::$URL"
+          echo "Opened $URL" >> "$GITHUB_STEP_SUMMARY"
