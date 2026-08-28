@@ -1,80 +1,41 @@
-Hold **B** to run — the same speed FireRed's running shoes give you — and
-ride the **BICYCLE** at twice the speed Gen 1 gives it.
+# Gen1Sprint
 
-## Twice walking, on a button you were not using
+Hold **B** to run, at exactly the speed FireRed's running shoes give you — from
+the first step out of your bedroom. No item to find, no flag to set, nobody to
+talk to.
 
-Walking in Gen 1 is 16 frames per tile. FireRed's running shoes halve that to
-8, and that is what holding B does here — from the first step out of your
-bedroom. There is no item to find, no flag to set and nobody to talk to.
+And the **BICYCLE** goes twice as fast as Gen 1 ever let it, so it is still
+worth getting on.
 
-Eight frames per tile is not a number picked to feel right. It is a pace this
-engine has drawn since the day it booted, because it is exactly what the
-**BICYCLE** rides at. So the sprint is not a new motion the game has to learn:
-it is the bike's motion, on foot, on a button.
+## Why those speeds
 
-Everything else about a step is untouched. Encounters still roll per step, so
-running does not change how often you meet anything. Ledges, warps, collision,
-Cycling Road, the boulder push and the turn-in-place delay are all vanilla, and
-your follower keeps up on its own.
+Walking in Gen 1 is 16 frames a tile. FireRed's running shoes halve that to 8,
+which is also — exactly — what Gen 1's bicycle already rides at. So the sprint
+is not a new motion the game has to learn: it is the bike's own motion, on
+foot, on a button you were not using.
 
-Nothing else in the overworld reads B, so nothing is being taken away — but if
-you would rather keep it clear, `HOLD` moves the sprint to `SELECT`, which the
-overworld reads nowhere at all.
+Which is precisely why the bike needed a bump. Left alone it would ride at the
+speed you now get for free, and you would stop bothering. At 4 frames a tile
+the ladder is back: **16 walking, 8 running, 4 riding**, each rung twice the
+one before. That one is game feel rather than FireRed parity, and if you would
+rather have the original, `BIKE SPEED: VANILLA` puts it straight back.
 
-| Row | Values | Default |
-| --- | --- | --- |
-| `SPRINT` | on / off | on |
-| `HOLD` | `B` / `SELECT` | `B` |
-| `SPRINT SPEED` | `1.5x` / `2x` / `3x` | `2x` |
-| `BIKE SPEED` | `VANILLA` / `1.5x` / `2x` / `3x` | `2x` |
-| `SPRINT SURFING` | on / off | off |
-| `SPRINT ON BIKE` | on / off | off |
+## Nothing else moves
 
-The two `off` rows are the FireRed answer: running shoes are a thing you do on
-foot, so surfing stays at exactly the speed it has always been until you say
-otherwise.
+Encounters still roll per step, so running does not change how often you meet
+anything. Ledges, warps, collision, Cycling Road, boulders and the
+turn-in-place delay are all vanilla. Your follower keeps up on its own.
 
-## The bicycle, so it stays worth riding
+## Switches
 
-`BIKE SPEED` puts the **BICYCLE at 4 frames per tile** instead of 8, out of the
-box and with nothing held. It is the one default here that departs from vanilla
-rather than preserving it, and it exists because the sprint would otherwise
-make the bike pointless: Gen 1's bicycle is 8 frames per tile, which is exactly
-what a `2x` sprint already gives you on foot.
+The sprint and the bike are separate, either can be off, and the speeds are
+yours to pick — `1.5x`, `2x` or `3x`. If you would rather keep B free, the
+sprint moves to `SELECT`, which the overworld reads nowhere at all. Surfing
+and cycling stay at their own speeds unless you say otherwise, which is the
+FireRed answer: running shoes are a thing you do on foot.
 
-`2x` restores the ladder — **16 walking, 8 sprinting, 4 riding**, each rung
-twice the one before it. `BIKE SPEED: VANILLA` puts Gen 1's 8 back exactly.
-
-This one is game feel rather than FireRed parity, and it is worth being straight
-about which. FireRed's bicycle is `MOVE_SPEED_FAST_1` — 8 frames per tile, the
-*same constant* its running shoes use — so in FireRed the two really are the
-same speed, and the bike is the worse deal: across 425 maps, 85 allow running
-but not cycling and **none** allow cycling but not running. So 4 is not
-FireRed's ordinary bike speed; it is FireRed's Cycling Road roll
-(`MOVE_SPEED_FASTER`), borrowed because it is the speed that game does reach on
-a bicycle.
-
-## It does not cost you frames
-
-A movement mod is an easy place to make a game stutter, so this one sits on the
-engine's own seam rather than beside it. `Player:stepLength` already asks mods
-how long a step should last, through the `movement.speed` hook — the one whose
-comment reads *"lets a mod multiply or replace that (running shoes, dash,
-etc.)"*. Running shoes is precisely what this is, so nothing is patched,
-overridden or polled.
-
-That seam is a cold path. It runs **once per step**, as the step begins, not
-once per frame: four to eight calls a second while you are moving, and none at
-all while you stand still, sit in a menu or fight a battle. The link allocates
-nothing, and the option rows are read from a snapshot rebuilt only when you
-change one.
-
-Turned all the way off — `SPRINT: OFF` *and* `BIKE SPEED: VANILLA` — it goes
-further and unsubscribes the hook outright rather than returning early inside
-it. The engine only builds a context table when some mod is listening, so with
-nothing to say this mod costs precisely what it costs uninstalled. Either row
-on its own keeps the link, because dropping it would quietly take the other
-one's setting with it.
+Turned all the way off it costs exactly what it costs uninstalled — the mod
+unhooks itself rather than sitting there returning early.
 
 Runs on Red, Blue, Yellow, Gold, Silver and Crystal, and requests no
 permissions.

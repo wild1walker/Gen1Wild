@@ -1,77 +1,51 @@
 # Gen1AutoSave
 
-An autosave mod for gen1recomp that makes manual saving optional, and that is
-deliberately careful around the built-in save sync.
+Manual saving, made optional. The game saves itself on a timer, after the
+things worth saving after, and on the way out — so a bad guess in a cave never
+costs you an hour again.
 
-## What it does
+## What it saves after
 
-- **The timer counts play time, not idle time.** A long gym battle advances it,
-  so `5 MIN` means five minutes of playing rather than five minutes of standing
-  on a route. The write itself still waits for a settled overworld.
-- **Saves after things happen** — battles, catches, evolutions, hatches, trades,
-  blackouts, entering a new map.
-- **Saves when you pick QUIT**, before the confirm box — the last moment the
-  game is still running, so the upload it starts gets to finish. The engine's
-  own quit writes nothing at all: by then a write can only make a revision
-  that never finishes sending, which is half of a "played at the same time"
-  conflict.
-- **A Poke Ball that wobbles** in the top right corner of the screen when a
-  save lands, in place of a text box across the screen — the screen's corner,
-  not the playfield's, so it stays put on a widescreen window. Switchable to a
-  small `SAVED` panel, the classic text box, or off.
-- **Optional rollback backups** of recent autosaves, reachable from the START
-  menu.
+Battles, catches, evolutions, hatches, trades, blackouts and walking into a
+new area. Plus a timer that counts **play** time rather than wall-clock time,
+so `5 MIN` means five minutes of actually playing, not five minutes of
+standing on a route with the game open. The write itself waits for a quiet
+moment in the overworld.
 
-Manual saving is untouched: it writes and syncs exactly as it does without this
-mod. The only thing that happens here is the timer resetting, so an autosave
-does not land on top of a save you just made yourself.
+It also saves when you pick QUIT, before the confirm box — the last moment the
+game is still around to finish sending it anywhere.
 
-## Options
+## It tells you, quietly
 
-| Option | Default | Notes |
-| --- | --- | --- |
-| `AUTO SAVE` | on | Master switch. |
-| `INTERVAL` | 5 MIN | Play time between saves. `OFF` leaves only the event and quit saves. |
-| `AFTER EVENTS` | on | Save after battles, catches, new areas and so on. |
-| `ON QUIT` | on | Save when you pick QUIT, before leaving. |
-| `INDICATOR` | POKE BALL | `OFF`, `POKE BALL`, `SAVED TEXT`, or `TEXT BOX`. |
-| `SAVE BACKUPS` | off | Keep rollback copies. Adds `BACKUPS` to the START menu. |
-| `BACKUPS KEPT` | 5 | Ring size: 3, 5, 10 or 20. |
+When a save lands, a Poké Ball wobbles in the corner of the screen instead of
+a text box taking over the bottom of it. If you would rather have a small
+`SAVED` panel, the classic text box, or nothing at all, that is one option.
 
-If autosaving goes quiet, look for `PAUSED` rather than the usual save
-indicator: an unresolved save sync conflict holds every write until you answer
-the launcher's prompt, and this mod says so once rather than leaving you to
-guess. **MODS > SAVE SYNC**, pick a side, and saving resumes.
+Manual saving is left completely alone. It writes and syncs exactly as it does
+without this mod — the only thing that happens is the timer resetting, so an
+autosave never lands on top of a save you just made yourself.
 
-## Working with save sync
+## Rollback
 
-`Game:writeSave()` already notifies the sync engine after every successful
-write, so this mod never calls sync directly. The work is in *not* writing at
-the wrong moments: nothing happened means nothing written, a transfer in flight
-or an unresolved conflict holds the file still until sync settles, and a floor
-between writes keeps a burst of door transitions from hammering the file.
+Optional backups of recent autosaves, kept beside your save rather than in it.
+**START > BACKUPS**, pick a time, confirm. Off by default.
 
-## Backups
+## Worth knowing
 
-A backup is an engine checkpoint — the data-only progress snapshot plus your
-map, tile, facing and the RNG state — stored in mod storage, which is scoped
-per game version *and* per playthrough. It never touches `save.lua`, so keeping
-history beside the save costs no revisions and no uploads.
+The interval, the event saves, the quit save, the indicator and the backups
+are all separate switches. Link play is unaffected. It conflicts with
+`recomp-autosave` — run one autosave mod, not two.
 
-To roll back: **START > BACKUPS**, pick a time, confirm.
-
-## Compatibility
-
-- Mod API 2, `content` profile: link play is unaffected.
-- Conflicts with `recomp-autosave` — run one autosave mod, not two.
+If saving ever goes quiet, look for `PAUSED` where the indicator usually is:
+that means the launcher is holding a save-sync conflict and wants an answer.
+**MODS > SAVE SYNC**, pick a side, and saving resumes.
 
 ## Credits
 
-By **Wild**. Written for this mod rather than derived from anyone else's — it
-is built on the save, battle and map-transition hooks of
-[Pokemon Gen1Recomp](https://github.com/bryanthaboi/gen1recomp), which is what
-it listens to and all it takes from anywhere. MIT licensed.
+By **Wild**, written for this mod rather than derived from anyone else's,
+built on the save and map hooks of
+[Gen1Recomp](https://github.com/bryanthaboi/gen1recomp). MIT.
 
-**Pokémon** Red, Blue and Yellow are Nintendo / Creatures / GAME FREAK. This is
-an unofficial fan mod, distributed free, with no affiliation with or
+**Pokémon** Red, Blue and Yellow are Nintendo / Creatures / GAME FREAK. This
+is an unofficial fan mod, distributed free, with no affiliation with or
 endorsement by any of them.
