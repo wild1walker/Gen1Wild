@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-28T21:20:41Z",
+  "generated_at": "2026-08-29T00:28:19Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -22,7 +22,7 @@
       "title": "Gen1WildQOL",
       "author": "Wild",
       "summary": "The quality-of-life half of the suite in one mod: sprinting, autosave, auto continue, sound, followers, all 151, EXP share, move reminder, menu layout, the mod manager and later-generation conveniences. Every feature switches on and off by itself.",
-      "version": "1.11.1",
+      "version": "1.12.0",
       "featured": true,
       "categories": [
         "QOL",
@@ -58,30 +58,30 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_wild_qol/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.11.1",
-        "tag": "v1.11.1",
-        "name": "1.11.1",
+        "version": "1.12.0",
+        "tag": "v1.12.0",
+        "name": "1.12.0",
         "prerelease": false,
-        "published_at": "2026-08-27T21:20:15Z",
+        "published_at": "2026-08-29T00:08:11Z",
         "zip": {
-          "name": "gen1_wild_qol-1.11.1.zip",
-          "url": "https://github.com/wild1walker/Gen1WildQOL/releases/download/v1.11.1/gen1_wild_qol-1.11.1.zip",
-          "size": 749977
+          "name": "gen1_wild_qol-1.12.0.zip",
+          "url": "https://github.com/wild1walker/Gen1WildQOL/releases/download/v1.12.0/gen1_wild_qol-1.12.0.zip",
+          "size": 752709
         }
       },
       "downloads": {
-        "total": 90,
-        "as_of": "2026-08-28T21:20:39Z"
+        "total": 108,
+        "as_of": "2026-08-29T00:28:17Z"
       },
       "first_release": "2026-08-26T03:55:53Z",
-      "last_release": "2026-08-27T21:20:15Z"
+      "last_release": "2026-08-29T00:08:11Z"
     },
     {
       "id": "gen1_wild_ui",
       "title": "Gen1WildUI",
       "author": "Wild",
       "summary": "The visual half of the suite in one mod: battle backdrops, the battle intro, the battle menus, the Pokedex, the box, the party menu, the bag, an icon and a description for every item on every mart, PC and bag screen, the lift panel, menu layout and the mod manager. Every feature switches on and off by itself.",
-      "version": "1.12.0",
+      "version": "1.13.0",
       "featured": true,
       "categories": [
         "UI",
@@ -119,30 +119,30 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_wild_ui/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.12.0",
-        "tag": "v1.12.0",
-        "name": "1.12.0",
+        "version": "1.13.0",
+        "tag": "v1.13.0",
+        "name": "1.13.0",
         "prerelease": false,
-        "published_at": "2026-08-27T23:46:07Z",
+        "published_at": "2026-08-29T00:09:32Z",
         "zip": {
-          "name": "gen1_wild_ui-1.12.0.zip",
-          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.12.0/gen1_wild_ui-1.12.0.zip",
-          "size": 1077190
+          "name": "gen1_wild_ui-1.13.0.zip",
+          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.13.0/gen1_wild_ui-1.13.0.zip",
+          "size": 1083139
         }
       },
       "downloads": {
-        "total": 89,
-        "as_of": "2026-08-28T21:20:40Z"
+        "total": 107,
+        "as_of": "2026-08-29T00:28:18Z"
       },
       "first_release": "2026-08-26T03:55:54Z",
-      "last_release": "2026-08-27T23:46:07Z"
+      "last_release": "2026-08-29T00:09:32Z"
     },
     {
       "id": "gen151",
       "title": "Gen151",
       "author": "Wild",
       "summary": "Every one of the 151 obtainable renewably in one save, on one version, without trading, while every vanilla encounter keeps its exact vanilla behaviour.",
-      "version": "1.5.1",
+      "version": "1.5.2",
       "categories": [
         "CONTENT",
         "GAMEPLAY"
@@ -173,30 +173,30 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen151/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.5.1",
-        "tag": "v1.5.1",
-        "name": "1.5.1",
+        "version": "1.5.2",
+        "tag": "v1.5.2",
+        "name": "1.5.2",
         "prerelease": false,
-        "published_at": "2026-08-25T22:06:20Z",
+        "published_at": "2026-08-29T00:03:12Z",
         "zip": {
-          "name": "gen151-1.5.1.zip",
-          "url": "https://github.com/wild1walker/Gen151/releases/download/v1.5.1/gen151-1.5.1.zip",
-          "size": 67901
+          "name": "gen151-1.5.2.zip",
+          "url": "https://github.com/wild1walker/Gen151/releases/download/v1.5.2/gen151-1.5.2.zip",
+          "size": 70055
         }
       },
       "downloads": {
-        "total": 29,
-        "as_of": "2026-08-28T21:20:37Z"
+        "total": 31,
+        "as_of": "2026-08-29T00:28:15Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
-      "last_release": "2026-08-25T22:06:20Z"
+      "last_release": "2026-08-29T00:03:12Z"
     },
     {
       "id": "gen1arena",
       "title": "Gen1Arena",
       "author": "Wild",
       "summary": "2D backdrops behind battles, picked by map, tileset and how the encounter started.",
-      "version": "0.18.3",
+      "version": "0.20.1",
       "categories": [
         "ART",
         "CONTENT"
@@ -225,23 +225,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1arena/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.18.3",
-        "tag": "v0.18.3",
-        "name": "0.18.3",
+        "version": "0.20.1",
+        "tag": "v0.20.1",
+        "name": "0.20.1",
         "prerelease": false,
-        "published_at": "2026-08-25T17:34:59Z",
+        "published_at": "2026-08-29T00:00:52Z",
         "zip": {
-          "name": "gen1arena-0.18.3.zip",
-          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.18.3/gen1arena-0.18.3.zip",
-          "size": 672502
+          "name": "gen1arena-0.20.1.zip",
+          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.20.1/gen1arena-0.20.1.zip",
+          "size": 675861
         }
       },
       "downloads": {
-        "total": 215,
-        "as_of": "2026-08-28T21:20:40Z"
+        "total": 224,
+        "as_of": "2026-08-29T00:28:18Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
-      "last_release": "2026-08-25T17:34:59Z"
+      "last_release": "2026-08-29T00:00:52Z"
     },
     {
       "id": "gen1_auto_continue",
@@ -286,8 +286,8 @@
         }
       },
       "downloads": {
-        "total": 37,
-        "as_of": "2026-08-28T21:20:37Z"
+        "total": 39,
+        "as_of": "2026-08-29T00:28:15Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -297,7 +297,7 @@
       "title": "Gen1AutoSave",
       "author": "Wild",
       "summary": "Autosaves on a play-time timer and after battles, catches and new areas, with optional rollback backups.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "categories": [
         "QOL",
         "GAMEPLAY"
@@ -328,23 +328,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1autosave/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.4.0",
-        "tag": "v1.4.0",
-        "name": "1.4.0",
+        "version": "1.5.0",
+        "tag": "v1.5.0",
+        "name": "1.5.0",
         "prerelease": false,
-        "published_at": "2026-08-26T06:47:09Z",
+        "published_at": "2026-08-28T23:37:06Z",
         "zip": {
-          "name": "gen1autosave-1.4.0.zip",
-          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.4.0/gen1autosave-1.4.0.zip",
-          "size": 20554
+          "name": "gen1autosave-1.5.0.zip",
+          "url": "https://github.com/wild1walker/Gen1AutoSave/releases/download/v1.5.0/gen1autosave-1.5.0.zip",
+          "size": 21638
         }
       },
       "downloads": {
-        "total": 118,
-        "as_of": "2026-08-28T21:20:40Z"
+        "total": 121,
+        "as_of": "2026-08-29T00:28:18Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
-      "last_release": "2026-08-26T06:47:09Z"
+      "last_release": "2026-08-28T23:37:06Z"
     },
     {
       "id": "Gen1BattleUI",
@@ -393,8 +393,8 @@
         }
       },
       "downloads": {
-        "total": 15,
-        "as_of": "2026-08-28T21:20:34Z"
+        "total": 19,
+        "as_of": "2026-08-29T00:28:12Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-08-26T22:57:05Z"
@@ -449,8 +449,8 @@
         }
       },
       "downloads": {
-        "total": 36,
-        "as_of": "2026-08-28T21:20:34Z"
+        "total": 38,
+        "as_of": "2026-08-29T00:28:12Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-27T06:07:20Z"
@@ -460,7 +460,7 @@
       "title": "Gen1Dex",
       "author": "Wild",
       "summary": "The Pokédex with a POKéMON beside every entry: the party icon left of each row, a black silhouette until you have seen that species, three pages behind every entry, and an AREA screen that opens on the ones you have never met and says how to get there.",
-      "version": "1.5.1",
+      "version": "1.5.2",
       "categories": [
         "UI",
         "QOL"
@@ -499,30 +499,30 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Dex/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.5.1",
-        "tag": "v1.5.1",
-        "name": "1.5.1",
+        "version": "1.5.2",
+        "tag": "v1.5.2",
+        "name": "1.5.2",
         "prerelease": false,
-        "published_at": "2026-08-27T21:54:19Z",
+        "published_at": "2026-08-28T23:37:06Z",
         "zip": {
-          "name": "Gen1Dex-1.5.1.zip",
-          "url": "https://github.com/wild1walker/Gen1Dex/releases/download/v1.5.1/Gen1Dex-1.5.1.zip",
-          "size": 86798
+          "name": "Gen1Dex-1.5.2.zip",
+          "url": "https://github.com/wild1walker/Gen1Dex/releases/download/v1.5.2/Gen1Dex-1.5.2.zip",
+          "size": 89731
         }
       },
       "downloads": {
-        "total": 39,
-        "as_of": "2026-08-28T21:20:35Z"
+        "total": 43,
+        "as_of": "2026-08-29T00:28:13Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
-      "last_release": "2026-08-27T21:54:19Z"
+      "last_release": "2026-08-28T23:37:06Z"
     },
     {
       "id": "Gen1Follower",
       "title": "Gen1Follower",
       "author": "Wild",
       "summary": "All 251 Gen 1 and Gen 2 overworld followers, with Pokédex-proportional sizing and voxel support, and the Pokémon standing on the maps drawn from the same sheets. Built from the PokéPC Followers work by Antigravity & gamecorner33.",
-      "version": "1.3.2",
+      "version": "1.3.3",
       "categories": [
         "GAMEPLAY",
         "CONTENT",
@@ -554,23 +554,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1Follower/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.3.2",
-        "tag": "v1.3.2",
-        "name": "Gen1Follower 1.3.2",
+        "version": "1.3.3",
+        "tag": "v1.3.3",
+        "name": "Gen1Follower 1.3.3",
         "prerelease": false,
-        "published_at": "2026-08-27T21:17:25Z",
+        "published_at": "2026-08-28T23:41:53Z",
         "zip": {
-          "name": "Gen1Follower-1.3.2.zip",
-          "url": "https://github.com/wild1walker/Gen1Follower/releases/download/v1.3.2/Gen1Follower-1.3.2.zip",
-          "size": 535866
+          "name": "Gen1Follower-1.3.3.zip",
+          "url": "https://github.com/wild1walker/Gen1Follower/releases/download/v1.3.3/Gen1Follower-1.3.3.zip",
+          "size": 536578
         }
       },
       "downloads": {
-        "total": 57,
-        "as_of": "2026-08-28T21:20:35Z"
+        "total": 61,
+        "as_of": "2026-08-29T00:28:13Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
-      "last_release": "2026-08-27T21:17:25Z"
+      "last_release": "2026-08-28T23:41:53Z"
     },
     {
       "id": "Gen1MenuManager",
@@ -618,8 +618,8 @@
         }
       },
       "downloads": {
-        "total": 59,
-        "as_of": "2026-08-28T21:20:35Z"
+        "total": 61,
+        "as_of": "2026-08-29T00:28:14Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-27T00:20:17Z"
@@ -629,7 +629,7 @@
       "title": "Gen1ModernBag",
       "author": "Wild",
       "summary": "Seven inventory pockets with an icon on every row, auto-sorting, Favorites, pinned items, quick search, TM/HM tools and no capacity limit. Derived from FAFF0x's Modern Bag.",
-      "version": "1.11.0",
+      "version": "1.11.1",
       "categories": [
         "UI",
         "QOL"
@@ -664,23 +664,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_modern_bag/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.11.0",
-        "tag": "v1.11.0",
-        "name": "Gen1ModernBag 1.11.0",
+        "version": "1.11.1",
+        "tag": "v1.11.1",
+        "name": "Gen1ModernBag 1.11.1",
         "prerelease": false,
-        "published_at": "2026-08-27T23:45:27Z",
+        "published_at": "2026-08-29T00:02:06Z",
         "zip": {
-          "name": "gen1_modern_bag_v1.11.0.zip",
-          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.11.0/gen1_modern_bag_v1.11.0.zip",
-          "size": 122623
+          "name": "gen1_modern_bag_v1.11.1.zip",
+          "url": "https://github.com/wild1walker/Gen1ModernBag/releases/download/v1.11.1/gen1_modern_bag_v1.11.1.zip",
+          "size": 123129
         }
       },
       "downloads": {
-        "total": 68,
-        "as_of": "2026-08-28T21:20:38Z"
+        "total": 71,
+        "as_of": "2026-08-29T00:28:16Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
-      "last_release": "2026-08-27T23:45:27Z"
+      "last_release": "2026-08-29T00:02:06Z"
     },
     {
       "id": "gen1_mod_menu",
@@ -731,8 +731,8 @@
         }
       },
       "downloads": {
-        "total": 23,
-        "as_of": "2026-08-28T21:20:38Z"
+        "total": 25,
+        "as_of": "2026-08-29T00:28:16Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -788,8 +788,8 @@
         }
       },
       "downloads": {
-        "total": 22,
-        "as_of": "2026-08-28T21:20:36Z"
+        "total": 25,
+        "as_of": "2026-08-29T00:28:14Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-08-27T06:07:19Z"
@@ -846,8 +846,8 @@
         }
       },
       "downloads": {
-        "total": 11,
-        "as_of": "2026-08-28T21:20:36Z"
+        "total": 14,
+        "as_of": "2026-08-29T00:28:14Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-08-26T17:49:56Z"
@@ -901,8 +901,8 @@
         }
       },
       "downloads": {
-        "total": 28,
-        "as_of": "2026-08-28T21:20:38Z"
+        "total": 33,
+        "as_of": "2026-08-29T00:28:16Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -954,8 +954,8 @@
         }
       },
       "downloads": {
-        "total": 10,
-        "as_of": "2026-08-28T21:20:39Z"
+        "total": 13,
+        "as_of": "2026-08-29T00:28:17Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-26T00:29:59Z"
@@ -975,11 +975,11 @@
       "id": "wild_green",
       "title": "Wild Green",
       "author": "Wild",
-      "version": "1.23.0",
+      "version": "1.25.0",
       "featured": true,
       "summary": "The definitive way to play Red: every quality-of-life and visual upgrade in the Gen1Wild suite that still feels like Red, and all 151 catchable in one save, on one version, without trading.",
       "base": "red",
-      "seal": "sealed+",
+      "seal": "sealed",
       "shell": "#14571f",
       "tags": [
         "cart",
@@ -1001,8 +1001,8 @@
           "id": "gen1_wild_qol",
           "source": "github",
           "repo": "wild1walker/Gen1WildQOL",
-          "version": "1.11.1",
-          "sha256": "18959ac0f2a6769d1dec7246471b2b9eae9517edd512a7a425bd9bd3615f9027"
+          "version": "1.12.0",
+          "sha256": "8536dee3fc05ba7112813eeceb324b79af58e41aedd5ca48df81a12ce5b30c98"
         },
         {
           "id": "crystal_animated_sprites_with_shiny_visuals",
@@ -1015,8 +1015,8 @@
           "id": "gen1_wild_ui",
           "source": "github",
           "repo": "wild1walker/Gen1WildUI",
-          "version": "1.12.0",
-          "sha256": "c4015d0b7d9492aefe5830c75cfb85ed00b1525cbad0907462abefaaa2a4a536"
+          "version": "1.13.0",
+          "sha256": "970fae0bc8baefaaf4633fff2d7df55366a6c7bb917b43f0c026628ce72738f0"
         },
         {
           "id": "wild_green",
@@ -1040,23 +1040,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/carts/Wild@wild_green/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.23.0",
-        "tag": "v1.23.0",
-        "name": "1.23.0",
+        "version": "1.25.0",
+        "tag": "v1.25.0",
+        "name": "1.25.0",
         "prerelease": false,
-        "published_at": "2026-08-28T17:24:15Z",
+        "published_at": "2026-08-29T00:24:14Z",
         "zip": {
-          "name": "wild_green-1.23.0.g1rcart",
-          "url": "https://github.com/wild1walker/Gen1WildGreen/releases/download/v1.23.0/wild_green-1.23.0.g1rcart",
-          "size": 143967
+          "name": "wild_green-1.25.0.g1rcart",
+          "url": "https://github.com/wild1walker/Gen1WildGreen/releases/download/v1.25.0/wild_green-1.25.0.g1rcart",
+          "size": 143966
         }
       },
       "downloads": {
-        "total": 68,
-        "as_of": "2026-08-28T21:20:41Z"
+        "total": 93,
+        "as_of": "2026-08-29T00:28:19Z"
       },
       "first_release": "2026-08-28T01:22:08Z",
-      "last_release": "2026-08-28T17:24:15Z"
+      "last_release": "2026-08-29T00:24:14Z"
     }
   ]
 }
