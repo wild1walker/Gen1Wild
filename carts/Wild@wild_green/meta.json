@@ -44,8 +44,8 @@
       "id": "gen1_wild_ui",
       "source": "github",
       "repo": "wild1walker/Gen1WildUI",
-      "version": "1.16.0",
-      "sha256": "58c3a3603cc24bf94c3a056ed49cbba546d7d5f015c374ee3f88edb4cb7796e7"
+      "version": "1.16.1",
+      "sha256": "6ac53f5985742e306a56f44fcb167663d7f7f213888a8e024949561c82f47beb"
     },
     {
       "id": "wild_green",
