@@ -3,7 +3,7 @@
   "title": "Gen1MenuManager",
   "author": "Wild",
   "summary": "Rearrange the START menu and the Pokémon Center PC menu: reorder rows, hide the ones you never touch, and pin field items and moves to rows of their own.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "categories": [
     "TOOL",
     "UI",
