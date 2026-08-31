@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-31T17:43:11Z",
+  "generated_at": "2026-08-31T18:11:34Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -70,8 +70,8 @@
         }
       },
       "downloads": {
-        "total": 406,
-        "as_of": "2026-08-31T17:43:08Z"
+        "total": 410,
+        "as_of": "2026-08-31T18:11:32Z"
       },
       "first_release": "2026-08-26T03:55:53Z",
       "last_release": "2026-08-31T17:40:12Z"
@@ -81,7 +81,7 @@
       "title": "Gen1WildUI",
       "author": "Wild",
       "summary": "The visual half of the suite in one mod: battle backdrops, the battle intro, the battle menus, the Pokedex, the box, the party menu, the bag, an icon and a description for every item on every mart, PC and bag screen, the lift panel, menu layout and the mod manager. Every feature switches on and off by itself.",
-      "version": "1.22.3",
+      "version": "1.22.4",
       "featured": true,
       "categories": [
         "UI",
@@ -119,23 +119,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_wild_ui/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.22.3",
-        "tag": "v1.22.3",
-        "name": "1.22.3",
+        "version": "1.22.4",
+        "tag": "v1.22.4",
+        "name": "1.22.4",
         "prerelease": false,
-        "published_at": "2026-08-31T17:09:48Z",
+        "published_at": "2026-08-31T18:09:40Z",
         "zip": {
-          "name": "gen1_wild_ui-1.22.3.zip",
-          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.22.3/gen1_wild_ui-1.22.3.zip",
-          "size": 1177778
+          "name": "gen1_wild_ui-1.22.4.zip",
+          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.22.4/gen1_wild_ui-1.22.4.zip",
+          "size": 1179742
         }
       },
       "downloads": {
-        "total": 394,
-        "as_of": "2026-08-31T17:43:09Z"
+        "total": 397,
+        "as_of": "2026-08-31T18:11:32Z"
       },
       "first_release": "2026-08-26T03:55:54Z",
-      "last_release": "2026-08-31T17:09:48Z"
+      "last_release": "2026-08-31T18:09:40Z"
     },
     {
       "id": "gen151",
@@ -186,7 +186,7 @@
       },
       "downloads": {
         "total": 47,
-        "as_of": "2026-08-31T17:43:05Z"
+        "as_of": "2026-08-31T18:11:30Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-08-29T00:03:12Z"
@@ -237,8 +237,8 @@
         }
       },
       "downloads": {
-        "total": 360,
-        "as_of": "2026-08-31T17:43:09Z"
+        "total": 365,
+        "as_of": "2026-08-31T18:11:33Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-08-31T09:03:14Z"
@@ -287,7 +287,7 @@
       },
       "downloads": {
         "total": 46,
-        "as_of": "2026-08-31T17:43:05Z"
+        "as_of": "2026-08-31T18:11:31Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-08-23T04:49:29Z"
@@ -341,7 +341,7 @@
       },
       "downloads": {
         "total": 220,
-        "as_of": "2026-08-31T17:43:10Z"
+        "as_of": "2026-08-31T18:11:33Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-08-31T09:16:34Z"
@@ -394,7 +394,7 @@
       },
       "downloads": {
         "total": 40,
-        "as_of": "2026-08-31T17:43:02Z"
+        "as_of": "2026-08-31T18:11:28Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-08-31T16:25:18Z"
@@ -450,7 +450,7 @@
       },
       "downloads": {
         "total": 61,
-        "as_of": "2026-08-31T17:43:02Z"
+        "as_of": "2026-08-31T18:11:29Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-08-31T09:05:09Z"
@@ -512,7 +512,7 @@
       },
       "downloads": {
         "total": 80,
-        "as_of": "2026-08-31T17:43:03Z"
+        "as_of": "2026-08-31T18:11:29Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-08-31T08:54:50Z"
@@ -566,8 +566,8 @@
         }
       },
       "downloads": {
-        "total": 108,
-        "as_of": "2026-08-31T17:43:03Z"
+        "total": 109,
+        "as_of": "2026-08-31T18:11:29Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-08-31T17:38:48Z"
@@ -619,7 +619,7 @@
       },
       "downloads": {
         "total": 91,
-        "as_of": "2026-08-31T17:43:04Z"
+        "as_of": "2026-08-31T18:11:30Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-08-31T09:11:51Z"
@@ -677,7 +677,7 @@
       },
       "downloads": {
         "total": 104,
-        "as_of": "2026-08-31T17:43:06Z"
+        "as_of": "2026-08-31T18:11:31Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-08-31T09:07:57Z"
@@ -732,7 +732,7 @@
       },
       "downloads": {
         "total": 39,
-        "as_of": "2026-08-31T17:43:06Z"
+        "as_of": "2026-08-31T18:11:31Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -789,7 +789,7 @@
       },
       "downloads": {
         "total": 45,
-        "as_of": "2026-08-31T17:43:04Z"
+        "as_of": "2026-08-31T18:11:30Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-08-31T09:06:17Z"
@@ -847,7 +847,7 @@
       },
       "downloads": {
         "total": 25,
-        "as_of": "2026-08-31T17:43:04Z"
+        "as_of": "2026-08-31T18:11:30Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-08-26T17:49:56Z"
@@ -902,7 +902,7 @@
       },
       "downloads": {
         "total": 47,
-        "as_of": "2026-08-31T17:43:07Z"
+        "as_of": "2026-08-31T18:11:31Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -955,7 +955,7 @@
       },
       "downloads": {
         "total": 37,
-        "as_of": "2026-08-31T17:43:07Z"
+        "as_of": "2026-08-31T18:11:32Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-30T00:31:27Z"
@@ -975,7 +975,7 @@
       "id": "wild_green",
       "title": "Wild Green",
       "author": "Wild",
-      "version": "1.43.5",
+      "version": "1.43.6",
       "featured": true,
       "summary": "The definitive way to play Red: every quality-of-life and visual upgrade in the Gen1Wild suite that still feels like Red, and all 151 catchable in one save, on one version, without trading.",
       "base": "red",
@@ -1015,8 +1015,8 @@
           "id": "gen1_wild_ui",
           "source": "github",
           "repo": "wild1walker/Gen1WildUI",
-          "version": "1.22.3",
-          "sha256": "915b1bacc4563e64ee20fb2190439ed781bdc41238f0fd89980b8e31af2d090e"
+          "version": "1.22.4",
+          "sha256": "2148fefd221d9eda441800b7100d012c48f7ef64daee492381e28527159fe2e6"
         },
         {
           "id": "wild_green",
@@ -1040,23 +1040,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/carts/Wild@wild_green/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.43.5",
-        "tag": "v1.43.5",
-        "name": "1.43.5",
+        "version": "1.43.6",
+        "tag": "v1.43.6",
+        "name": "1.43.6",
         "prerelease": false,
-        "published_at": "2026-08-31T17:41:45Z",
+        "published_at": "2026-08-31T18:11:09Z",
         "zip": {
-          "name": "wild_green-1.43.5.g1rcart",
-          "url": "https://github.com/wild1walker/Gen1WildGreen/releases/download/v1.43.5/wild_green-1.43.5.g1rcart",
+          "name": "wild_green-1.43.6.g1rcart",
+          "url": "https://github.com/wild1walker/Gen1WildGreen/releases/download/v1.43.6/wild_green-1.43.6.g1rcart",
           "size": 143966
         }
       },
       "downloads": {
-        "total": 318,
-        "as_of": "2026-08-31T17:43:11Z"
+        "total": 320,
+        "as_of": "2026-08-31T18:11:34Z"
       },
       "first_release": "2026-08-28T01:22:08Z",
-      "last_release": "2026-08-31T17:41:45Z"
+      "last_release": "2026-08-31T18:11:09Z"
     }
   ]
 }
