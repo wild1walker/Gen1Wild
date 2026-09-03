@@ -30,7 +30,10 @@ body:
     id: game
     attributes:
       label: Which game were you playing
-      description: Pick every version you saw it in. Gold, Silver and Crystal support is new — bugs there are expected.
+      description: >
+        Pick every version you saw it in. The released suite targets Red, Blue
+        and Yellow; Gold, Silver and Crystal are the nightly channel's, so a bug
+        on one of those probably belongs there instead.
       multiple: true
       options:
         - Red
@@ -68,7 +71,7 @@ body:
       description: >
         The row in `OPTION > GEN1WILD UI` or `GEN1WILD QOL` — switching them off
         one at a time is how you find it. Leave blank if you did not get that far.
-      placeholder: BACKDROPS, or ALL 251, or UI THEME
+      placeholder: BACKDROPS, or ALL 151, or UI THEME
     validations:
       required: false
 
