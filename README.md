@@ -33,6 +33,14 @@ bundle rather than tracked as a separate release — the ones marked ‡ on the
 bundles' own feature tables — and those have no repository of their own for a
 card to point at. They ship with the bundle and nowhere else.
 
+And one mod is deliberately not listed. [Wild
+Green](https://github.com/wild1walker/Gen1MakeItGreen) — the player in green,
+the names, and `WILD GREEN VERSION` on the title screen — has its own
+repository and its own releases, but it ships in the cart and nowhere else. It
+is what makes the cart a version rather than a mod list, and a card for it
+sitting beside a cart of the same name would offer two different things under
+one word. That omission is on purpose; it is not a gap.
+
 ### The cart
 
 <p align="center">
