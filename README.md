@@ -25,8 +25,13 @@ the rest.
 ## What is in the index
 
 Three ways in. The cart is a whole game; the bundles are the suite in one card
-each; and everything in them is also listed separately, for anyone who wants
-three of these and not thirteen.
+each; and every mod they carry that is *its own mod* is also listed separately,
+for anyone who wants three of these and not thirteen.
+
+Not everything in a bundle is. A handful of features are maintained inside the
+bundle rather than tracked as a separate release — the ones marked ‡ on the
+bundles' own feature tables — and those have no repository of their own for a
+card to point at. They ship with the bundle and nowhere else.
 
 ### The cart
 
