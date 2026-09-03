@@ -166,6 +166,14 @@ end
 
 So the answer has to be **one** mod whose payload is the other four:
 
+**Download it** from the `phosphor-v<version>` release on this repository. It
+is built by `.github/workflows/phosphor.yml`, which fetches every mod at the
+version `carts/Wild@wild_green/meta.json` pins — nothing is vendored here, so
+the bundle cannot drift from the cart it claims to be. Change a pin, re-run the
+workflow, get a new zip.
+
+To build one by hand:
+
 ```sh
 python3 tools/build_phosphor.py \
   --src gen1_wild_qol=<path> --src gen1_wild_ui=<path> \
