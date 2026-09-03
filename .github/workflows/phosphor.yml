@@ -1,0 +1,129 @@
+name: Wild Green as one mod
+
+# Builds the single-mod bundle and publishes it as a release, so there is a URL
+# to hand anything that imports mod .zips but not carts.
+#
+# The sources are not vendored and not committed: every one is fetched here, at
+# the version carts/Wild@wild_green/meta.json pins, so the bundle cannot drift
+# from the cart it claims to be. Change the pin, re-run this, get a new zip.
+#
+# Tagged `phosphor-v<cart version>` rather than `v<version>`, because this repo
+# is the index and its own tags mean something else. The release is replaced in
+# place when the same cart version is rebuilt.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'carts/Wild@wild_green/meta.json'
+      - 'tools/build_phosphor.py'
+      - 'tools/phosphor_main.lua'
+      - '.github/workflows/phosphor.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phosphor
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install luajit for the loader test
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq luajit
+
+      - name: The loader does what it says
+        run: luajit tools/tests/phosphor_loader_test.lua
+
+      - name: Fetch each mod at the version the cart pins
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p .phosphor-src
+          python3 - <<'PY' > .phosphor-src/plan.sh
+          import json
+          # Where each pinned id's source lives. The three Wild mods are taken
+          # from their repository at the matching tag; the sprites mod ships
+          # .zip files in-repo rather than as release assets, so it is taken
+          # the way its author publishes it.
+          REPO = {
+              "gen1_wild_qol": ("wild1walker/Gen1WildQOL", "tag"),
+              "gen1_wild_ui": ("wild1walker/Gen1WildUI", "tag"),
+              "wild_green": ("wild1walker/Gen1MakeItGreen", "tag"),
+              "crystal_animated_sprites_with_shiny_visuals": (
+                  "distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals",
+                  "zip"),
+          }
+          cart = json.load(open("carts/Wild@wild_green/meta.json"))
+          for mod in cart["mods"]:
+              mod_id, version = mod["id"], mod["version"]
+              repo, how = REPO[mod_id]
+              if how == "tag":
+                  print('git clone --depth 1 --branch "v%s" -q '
+                        '"https://github.com/%s" ".phosphor-src/%s"'
+                        % (version, repo, mod_id))
+              else:
+                  print('git clone --depth 1 -q "https://github.com/%s" '
+                        '".phosphor-src/%s-repo"' % (repo, mod_id))
+                  print('mkdir -p ".phosphor-src/%s"' % mod_id)
+                  print('unzip -oq ".phosphor-src/%s-repo/%s_%s.zip" '
+                        '-d ".phosphor-src/%s"' % (mod_id, mod_id, version, mod_id))
+          PY
+          cat .phosphor-src/plan.sh
+          bash .phosphor-src/plan.sh
+
+      - name: Find each manifest
+        id: srcs
+        run: |
+          set -euo pipefail
+          args=""
+          for dir in .phosphor-src/*/; do
+            id="$(basename "$dir")"
+            case "$id" in *-repo) continue;; esac
+            # a zip may unpack with its own folder inside
+            manifest="$(find "$dir" -maxdepth 2 -name manifest.json | head -1)"
+            [ -n "$manifest" ] || { echo "no manifest under $dir" >&2; exit 1; }
+            args="$args --src $id=$(dirname "$manifest")"
+          done
+          echo "args=$args" >> "$GITHUB_OUTPUT"
+
+      - name: Build the bundle
+        run: |
+          set -euo pipefail
+          python3 tools/build_phosphor.py ${{ steps.srcs.outputs.args }} --out dist
+
+      - name: Publish it
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          version="$(python3 -c "import json;print(json.load(open('carts/Wild@wild_green/meta.json'))['version'])")"
+          tag="phosphor-v$version"
+          zip="$(ls dist/*.zip)"
+          sha="$(sha256sum "$zip" | cut -d' ' -f1)"
+          notes="$(printf '%s\n' \
+            "**Wild Green $version as a single importable mod.**" \
+            "" \
+            "The cart's four pinned mods, in the cart's own load order, in one" \
+            "\`.zip\` -- for anything that imports mod zips but not carts." \
+            "" \
+            "Each mod is included exactly as its author released it, keeping its" \
+            "own manifest, README and licence. \`CREDITS.md\` inside names them all." \
+            "" \
+            "\`sha256 $sha\`")"
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "$zip" --clobber
+            gh release edit "$tag" --notes "$notes"
+          else
+            gh release create "$tag" "$zip" \
+              --title "Wild Green $version (single mod)" \
+              --notes "$notes" \
+              --latest=false
+          fi
+          echo "published $tag"
