@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-07T22:20:28Z",
+  "generated_at": "2026-09-07T23:32:06Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -70,8 +70,8 @@
         }
       },
       "downloads": {
-        "total": 1293,
-        "as_of": "2026-09-07T22:20:24Z"
+        "total": 1302,
+        "as_of": "2026-09-07T23:32:04Z"
       },
       "first_release": "2026-08-26T21:34:02Z",
       "last_release": "2026-09-07T21:59:33Z"
@@ -131,8 +131,8 @@
         }
       },
       "downloads": {
-        "total": 1214,
-        "as_of": "2026-09-07T22:20:24Z"
+        "total": 1223,
+        "as_of": "2026-09-07T23:32:04Z"
       },
       "first_release": "2026-08-26T21:40:36Z",
       "last_release": "2026-09-07T09:34:45Z"
@@ -185,8 +185,8 @@
         }
       },
       "downloads": {
-        "total": 159,
-        "as_of": "2026-09-07T22:20:20Z"
+        "total": 166,
+        "as_of": "2026-09-07T23:32:02Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-09-07T22:19:59Z"
@@ -237,8 +237,8 @@
         }
       },
       "downloads": {
-        "total": 667,
-        "as_of": "2026-09-07T22:20:25Z"
+        "total": 672,
+        "as_of": "2026-09-07T23:32:05Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-09-07T00:54:53Z"
@@ -286,8 +286,8 @@
         }
       },
       "downloads": {
-        "total": 101,
-        "as_of": "2026-09-07T22:20:21Z"
+        "total": 106,
+        "as_of": "2026-09-07T23:32:03Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-09-07T01:08:10Z"
@@ -340,8 +340,8 @@
         }
       },
       "downloads": {
-        "total": 424,
-        "as_of": "2026-09-07T22:20:25Z"
+        "total": 425,
+        "as_of": "2026-09-07T23:32:05Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-09-07T06:11:49Z"
@@ -393,8 +393,8 @@
         }
       },
       "downloads": {
-        "total": 154,
-        "as_of": "2026-09-07T22:20:17Z"
+        "total": 157,
+        "as_of": "2026-09-07T23:32:00Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-09-07T00:57:05Z"
@@ -404,7 +404,7 @@
       "title": "Gen1BillsBox",
       "author": "Wild",
       "summary": "Bill's PC replaced by the box it was always standing in for: the party down the left, twenty visible slots on the right, and a cursor that picks a POKeMON up and puts it down.",
-      "version": "1.7.2",
+      "version": "1.8.1",
       "categories": [
         "UI",
         "QOL"
@@ -437,23 +437,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BillsBox/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.7.2",
-        "tag": "v1.7.2",
-        "name": "1.7.2",
+        "version": "1.8.1",
+        "tag": "v1.8.1",
+        "name": "1.8.1",
         "prerelease": false,
-        "published_at": "2026-09-07T09:32:54Z",
+        "published_at": "2026-09-07T23:06:26Z",
         "zip": {
-          "name": "Gen1BillsBox-1.7.2.zip",
-          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.7.2/Gen1BillsBox-1.7.2.zip",
-          "size": 116488
+          "name": "Gen1BillsBox-1.8.1.zip",
+          "url": "https://github.com/wild1walker/Gen1BillsBox/releases/download/v1.8.1/Gen1BillsBox-1.8.1.zip",
+          "size": 165700
         }
       },
       "downloads": {
-        "total": 132,
-        "as_of": "2026-09-07T22:20:17Z"
+        "total": 134,
+        "as_of": "2026-09-07T23:32:00Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
-      "last_release": "2026-09-07T09:32:54Z"
+      "last_release": "2026-09-07T23:06:26Z"
     },
     {
       "id": "Gen1Dex",
@@ -511,8 +511,8 @@
         }
       },
       "downloads": {
-        "total": 184,
-        "as_of": "2026-09-07T22:20:18Z"
+        "total": 188,
+        "as_of": "2026-09-07T23:32:01Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-09-07T08:05:44Z"
@@ -566,8 +566,8 @@
         }
       },
       "downloads": {
-        "total": 305,
-        "as_of": "2026-09-07T22:20:18Z"
+        "total": 307,
+        "as_of": "2026-09-07T23:32:01Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-09-07T01:15:51Z"
@@ -618,8 +618,8 @@
         }
       },
       "downloads": {
-        "total": 193,
-        "as_of": "2026-09-07T22:20:19Z"
+        "total": 195,
+        "as_of": "2026-09-07T23:32:01Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-09-07T01:01:29Z"
@@ -676,8 +676,8 @@
         }
       },
       "downloads": {
-        "total": 261,
-        "as_of": "2026-09-07T22:20:22Z"
+        "total": 266,
+        "as_of": "2026-09-07T23:32:03Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-09-07T00:58:59Z"
@@ -731,8 +731,8 @@
         }
       },
       "downloads": {
-        "total": 119,
-        "as_of": "2026-09-07T22:20:21Z"
+        "total": 121,
+        "as_of": "2026-09-07T23:32:03Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -788,8 +788,8 @@
         }
       },
       "downloads": {
-        "total": 166,
-        "as_of": "2026-09-07T22:20:19Z"
+        "total": 168,
+        "as_of": "2026-09-07T23:32:02Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-09-06T21:35:18Z"
@@ -846,8 +846,8 @@
         }
       },
       "downloads": {
-        "total": 75,
-        "as_of": "2026-09-07T22:20:20Z"
+        "total": 77,
+        "as_of": "2026-09-07T23:32:02Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-09-07T07:21:52Z"
@@ -902,7 +902,7 @@
       },
       "downloads": {
         "total": 121,
-        "as_of": "2026-09-07T22:20:22Z"
+        "as_of": "2026-09-07T23:32:03Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -955,7 +955,7 @@
       },
       "downloads": {
         "total": 88,
-        "as_of": "2026-09-07T22:20:23Z"
+        "as_of": "2026-09-07T23:32:04Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-30T00:31:27Z"
@@ -1034,8 +1034,8 @@
         }
       },
       "downloads": {
-        "total": 52,
-        "as_of": "2026-09-07T22:20:27Z"
+        "total": 58,
+        "as_of": "2026-09-07T23:32:05Z"
       },
       "first_release": "2026-09-07T02:01:22Z",
       "last_release": "2026-09-07T22:00:13Z"
@@ -1122,8 +1122,8 @@
         }
       },
       "downloads": {
-        "total": 825,
-        "as_of": "2026-09-07T22:20:28Z"
+        "total": 830,
+        "as_of": "2026-09-07T23:32:06Z"
       },
       "first_release": "2026-08-29T04:09:19Z",
       "last_release": "2026-09-07T22:00:12Z"
