@@ -3,7 +3,7 @@
   "title": "Gen1AutoContinue",
   "author": "Wild",
   "summary": "Boot to title, one press, playing. Skips the intro, the CONTINUE / NEW GAME menu and the save-info window.",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "categories": [
     "QOL",
     "UI"

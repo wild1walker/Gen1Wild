@@ -41,7 +41,7 @@ is what makes the cart a version rather than a mod list, and a card for it
 sitting beside a cart of the same name would offer two different things under
 one word. That omission is on purpose; it is not a gap.
 
-### The cart
+### The carts
 
 <p align="center">
   <a href="https://github.com/wild1walker/Gen1WildGreen"><img src="https://raw.githubusercontent.com/wild1walker/Gen1WildGreen/main/art/banner.png" alt="Wild Green Version" width="920"></a>
@@ -50,9 +50,15 @@ one word. That omission is on purpose; it is not a gap.
 | | Cart | What it is |
 |---|---|---|
 | <img src="carts/Wild@wild_green/thumbnail.png" width="54" alt=""> | **[Wild Green](https://github.com/wild1walker/Gen1WildGreen)** | Red, played as its own version, and the way I would tell anyone to play it: every quality-of-life and visual upgrade in this index that still feels like Red, and all 151 catchable in one save without trading. A [custom cart](https://github.com/bryanthaboi/gen1recomp/wiki/Guide-Custom-Carts): a fixed set of mods that plays as its own game, with its own entry in the launcher, its own cartridge and its own save slots. Plus Crystal animated sprites and [Wild Green](https://github.com/wild1walker/Gen1MakeItGreen) itself: the player in green and `WILD GREEN VERSION` on the title screen. |
+| <img src="carts/Wild@wild_crystal/thumbnail.png" width="54" alt=""> | **[Wild Crystal](https://github.com/wild1walker/Gen1WildCrystal)** | Johto, with everything the suite learned on Kanto. Crystal never needed rescuing the way Red did, so this is not a rescue — it is the two bundles brought over to a game that was already good, doing what Crystal's own menus never got around to. All 251 in one save without trading, the GS BALL handing over the CELEBI event that shipped unreachable, and Time Capsule trading with Wild Green. |
 
-A cart is not a mod pack you assemble. Two people running Wild Green are
+A cart is not a mod pack you assemble. Two people running the same cart are
 running the same game.
+
+**The two carts trade.** Not over a live cable — the engine refuses a
+cross-generation pairing — but save to save, through the Time Capsule, with the
+cartridge's own rules on the way down: no Johto POKéMON into Red, no moves Gen 1
+never had, nothing holding MAIL.
 
 ### The bundles
 
