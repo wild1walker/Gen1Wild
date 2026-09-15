@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-15T01:31:01Z",
+  "generated_at": "2026-09-15T05:12:52Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -70,8 +70,8 @@
         }
       },
       "downloads": {
-        "total": 2158,
-        "as_of": "2026-09-15T01:30:59Z"
+        "total": 2182,
+        "as_of": "2026-09-15T05:12:48Z"
       },
       "first_release": "2026-08-27T00:23:00Z",
       "last_release": "2026-09-14T00:55:23Z"
@@ -81,7 +81,7 @@
       "title": "Gen1WildUI",
       "author": "Wild",
       "summary": "The visual half of the suite in one mod: battle backdrops, the battle intro, the battle menus, the Pokedex, the box, the party menu, the bag, an icon and a description for every item on every mart, PC and bag screen, the lift panel, menu layout and the mod manager. Every feature switches on and off by itself.",
-      "version": "1.41.0",
+      "version": "1.42.0",
       "featured": true,
       "categories": [
         "UI",
@@ -119,23 +119,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1_wild_ui/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.41.0",
-        "tag": "v1.41.0",
-        "name": "1.41.0",
+        "version": "1.42.0",
+        "tag": "v1.42.0",
+        "name": "1.42.0",
         "prerelease": false,
-        "published_at": "2026-09-14T03:24:07Z",
+        "published_at": "2026-09-15T05:11:06Z",
         "zip": {
-          "name": "gen1_wild_ui-1.41.0.zip",
-          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.41.0/gen1_wild_ui-1.41.0.zip",
-          "size": 1958064
+          "name": "gen1_wild_ui-1.42.0.zip",
+          "url": "https://github.com/wild1walker/Gen1WildUI/releases/download/v1.42.0/gen1_wild_ui-1.42.0.zip",
+          "size": 1968981
         }
       },
       "downloads": {
-        "total": 2040,
-        "as_of": "2026-09-15T01:30:59Z"
+        "total": 2056,
+        "as_of": "2026-09-15T05:12:48Z"
       },
-      "first_release": "2026-08-29T16:27:27Z",
-      "last_release": "2026-09-14T03:24:07Z"
+      "first_release": "2026-08-29T16:52:00Z",
+      "last_release": "2026-09-15T05:11:06Z"
     },
     {
       "id": "gen151",
@@ -185,8 +185,8 @@
         }
       },
       "downloads": {
-        "total": 344,
-        "as_of": "2026-09-15T01:30:57Z"
+        "total": 347,
+        "as_of": "2026-09-15T05:12:45Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-09-14T00:51:14Z"
@@ -196,7 +196,7 @@
       "title": "Gen1Arena",
       "author": "Wild",
       "summary": "2D backdrops behind battles, picked by map, tileset and how the encounter started.",
-      "version": "0.34.0",
+      "version": "0.36.0",
       "categories": [
         "ART",
         "CONTENT"
@@ -225,23 +225,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1arena/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "0.34.0",
-        "tag": "v0.34.0",
-        "name": "0.34.0",
+        "version": "0.36.0",
+        "tag": "v0.36.0",
+        "name": "0.36.0",
         "prerelease": false,
-        "published_at": "2026-09-14T03:21:46Z",
+        "published_at": "2026-09-15T05:09:20Z",
         "zip": {
-          "name": "gen1arena-0.34.0.zip",
-          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.34.0/gen1arena-0.34.0.zip",
-          "size": 1243822
+          "name": "gen1arena-0.36.0.zip",
+          "url": "https://github.com/wild1walker/Gen1Arena/releases/download/v0.36.0/gen1arena-0.36.0.zip",
+          "size": 1254234
         }
       },
       "downloads": {
-        "total": 949,
-        "as_of": "2026-09-15T01:31:00Z"
+        "total": 951,
+        "as_of": "2026-09-15T05:12:49Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
-      "last_release": "2026-09-14T03:21:46Z"
+      "last_release": "2026-09-15T05:09:20Z"
     },
     {
       "id": "gen1_auto_continue",
@@ -287,7 +287,7 @@
       },
       "downloads": {
         "total": 142,
-        "as_of": "2026-09-15T01:30:57Z"
+        "as_of": "2026-09-15T05:12:45Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-09-07T01:08:10Z"
@@ -340,8 +340,8 @@
         }
       },
       "downloads": {
-        "total": 535,
-        "as_of": "2026-09-15T01:31:00Z"
+        "total": 536,
+        "as_of": "2026-09-15T05:12:50Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-09-07T06:11:49Z"
@@ -394,7 +394,7 @@
       },
       "downloads": {
         "total": 235,
-        "as_of": "2026-09-15T01:30:55Z"
+        "as_of": "2026-09-15T05:12:41Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-09-08T04:48:26Z"
@@ -450,7 +450,7 @@
       },
       "downloads": {
         "total": 195,
-        "as_of": "2026-09-15T01:30:55Z"
+        "as_of": "2026-09-15T05:12:41Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-09-08T17:04:21Z"
@@ -511,8 +511,8 @@
         }
       },
       "downloads": {
-        "total": 268,
-        "as_of": "2026-09-15T01:30:55Z"
+        "total": 269,
+        "as_of": "2026-09-15T05:12:42Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-09-11T22:30:46Z"
@@ -566,8 +566,8 @@
         }
       },
       "downloads": {
-        "total": 450,
-        "as_of": "2026-09-15T01:30:56Z"
+        "total": 453,
+        "as_of": "2026-09-15T05:12:42Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-09-07T01:15:51Z"
@@ -618,8 +618,8 @@
         }
       },
       "downloads": {
-        "total": 249,
-        "as_of": "2026-09-15T01:30:56Z"
+        "total": 250,
+        "as_of": "2026-09-15T05:12:43Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-09-07T01:01:29Z"
@@ -677,7 +677,7 @@
       },
       "downloads": {
         "total": 333,
-        "as_of": "2026-09-15T01:30:58Z"
+        "as_of": "2026-09-15T05:12:46Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-09-07T00:58:59Z"
@@ -731,8 +731,8 @@
         }
       },
       "downloads": {
-        "total": 171,
-        "as_of": "2026-09-15T01:30:58Z"
+        "total": 172,
+        "as_of": "2026-09-15T05:12:46Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -789,7 +789,7 @@
       },
       "downloads": {
         "total": 215,
-        "as_of": "2026-09-15T01:30:56Z"
+        "as_of": "2026-09-15T05:12:44Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-09-06T21:35:18Z"
@@ -847,7 +847,7 @@
       },
       "downloads": {
         "total": 113,
-        "as_of": "2026-09-15T01:30:57Z"
+        "as_of": "2026-09-15T05:12:44Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-09-07T07:21:52Z"
@@ -902,7 +902,7 @@
       },
       "downloads": {
         "total": 155,
-        "as_of": "2026-09-15T01:30:58Z"
+        "as_of": "2026-09-15T05:12:47Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -955,7 +955,7 @@
       },
       "downloads": {
         "total": 125,
-        "as_of": "2026-09-15T01:30:59Z"
+        "as_of": "2026-09-15T05:12:47Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-30T00:31:27Z"
@@ -975,7 +975,7 @@
       "id": "wild_crystal",
       "title": "Wild Crystal",
       "author": "Wild",
-      "version": "1.24.0",
+      "version": "1.25.0",
       "featured": true,
       "summary": "Johto with everything the suite learned on Kanto: the Gen1Wild suite pinned whole, all 251 catchable in one save without trading, and Time Capsule trading with Wild Green.",
       "base": "crystal",
@@ -1009,8 +1009,8 @@
           "id": "gen1_wild_ui",
           "source": "github",
           "repo": "wild1walker/Gen1WildUI",
-          "version": "1.41.0",
-          "sha256": "7ef6160ea18b7f7afc5cc2de982cf141e10ad569b556ac3121f7a711d3f764b9"
+          "version": "1.42.0",
+          "sha256": "887f17aad5ebcb86c3025b9b1ac7e7ae7001e5e287e33e09cfc2cf994fbc1aa6"
         }
       ],
       "load_order": [
@@ -1022,29 +1022,29 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/carts/Wild@wild_crystal/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.24.0",
-        "tag": "v1.24.0",
-        "name": "1.24.0",
+        "version": "1.25.0",
+        "tag": "v1.25.0",
+        "name": "1.25.0",
         "prerelease": false,
-        "published_at": "2026-09-14T03:25:16Z",
+        "published_at": "2026-09-15T05:12:07Z",
         "zip": {
-          "name": "wild_crystal-1.24.0.g1rcart",
-          "url": "https://github.com/wild1walker/Gen1WildCrystal/releases/download/v1.24.0/wild_crystal-1.24.0.g1rcart",
+          "name": "wild_crystal-1.25.0.g1rcart",
+          "url": "https://github.com/wild1walker/Gen1WildCrystal/releases/download/v1.25.0/wild_crystal-1.25.0.g1rcart",
           "size": 180920
         }
       },
       "downloads": {
-        "total": 544,
-        "as_of": "2026-09-15T01:31:01Z"
+        "total": 560,
+        "as_of": "2026-09-15T05:12:51Z"
       },
       "first_release": "2026-09-07T02:01:22Z",
-      "last_release": "2026-09-14T03:25:16Z"
+      "last_release": "2026-09-15T05:12:07Z"
     },
     {
       "id": "wild_green",
       "title": "Wild Green",
       "author": "Wild",
-      "version": "1.73.0",
+      "version": "1.74.0",
       "featured": true,
       "summary": "The definitive way to play Red: every quality-of-life and visual upgrade in the Gen1Wild suite that still feels like Red, and all 151 catchable in one save, on one version, without trading.",
       "base": "red",
@@ -1084,8 +1084,8 @@
           "id": "gen1_wild_ui",
           "source": "github",
           "repo": "wild1walker/Gen1WildUI",
-          "version": "1.41.0",
-          "sha256": "7ef6160ea18b7f7afc5cc2de982cf141e10ad569b556ac3121f7a711d3f764b9"
+          "version": "1.42.0",
+          "sha256": "887f17aad5ebcb86c3025b9b1ac7e7ae7001e5e287e33e09cfc2cf994fbc1aa6"
         },
         {
           "id": "wild_green",
@@ -1110,23 +1110,23 @@
       "description_url": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/carts/Wild@wild_green/description.md",
       "update_check": "ok",
       "latest": {
-        "version": "1.73.0",
-        "tag": "v1.73.0",
-        "name": "1.73.0",
+        "version": "1.74.0",
+        "tag": "v1.74.0",
+        "name": "1.74.0",
         "prerelease": false,
-        "published_at": "2026-09-14T03:25:15Z",
+        "published_at": "2026-09-15T05:12:01Z",
         "zip": {
-          "name": "wild_green-1.73.0.g1rcart",
-          "url": "https://github.com/wild1walker/Gen1WildGreen/releases/download/v1.73.0/wild_green-1.73.0.g1rcart",
+          "name": "wild_green-1.74.0.g1rcart",
+          "url": "https://github.com/wild1walker/Gen1WildGreen/releases/download/v1.74.0/wild_green-1.74.0.g1rcart",
           "size": 143987
         }
       },
       "downloads": {
-        "total": 1241,
-        "as_of": "2026-09-15T01:31:01Z"
+        "total": 1249,
+        "as_of": "2026-09-15T05:12:52Z"
       },
-      "first_release": "2026-08-29T23:18:03Z",
-      "last_release": "2026-09-14T03:25:15Z"
+      "first_release": "2026-08-30T00:12:19Z",
+      "last_release": "2026-09-15T05:12:01Z"
     }
   ]
 }
