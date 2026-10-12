@@ -26,8 +26,8 @@ save slots. Nothing here writes into your base Red saves. Two people running
 Wild Green are running the same game.
 
 It pins four things: **Gen1WildQOL** and **Gen1WildUI** (the two halves of the
-suite), **Crystal Animated Sprites with Shiny Visuals** (somebody else's mod,
-pinned as it is), and **Wild Green** itself, which puts the player in green and
+suite), **Crystal Animated Sprites** (somebody else's mod, pinned as it is),
+and **Wild Green** itself, which puts the player in green and
 `WILD GREEN VERSION` on the title screen. The green is derived from Red's own
 art rather than shipped, so switching back to `PLAYER = RED` gives you the
 original character with nothing to reinstall.
@@ -46,10 +46,20 @@ the cart's own page offers **Install required mods** and fetches them for you.
 No game data, no ROM bytes. You bring your own, exactly as the engine already
 asks.
 
+The animated Crystal sprites are built from **your own Pokémon Crystal ROM**
+(English, v1.0 or v1.1). Give it to the game once from **MODS > Crystal
+Animated Sprites > Details > Imported files**. Without it Wild Green still
+plays, with Red's own sprites. If you played an earlier Wild Green, delete the
+old *Crystal Animated Sprites with Shiny Visuals* from MODS: the two refuse to
+run side by side outside the cart.
+
 ## Credits
 
+- **Code-Grub**: [Crystal Animated
+  Sprites](https://github.com/Code-Grub/crystal-animated-sprites), pinned here
+  unmodified rather than forked.
 - **distilledorion-sketch**: [Crystal Animated Sprites with Shiny
   Visuals](https://github.com/distilledorion-sketch/crystal_animated_sprites_with_shiny_visuals),
-  pinned here unmodified rather than forked.
+  the animated sprites in Wild Green up to 1.75.0.
 - **Gen1Recomp**: the engine and the cart format.
 - **pret**: the disassemblies underneath all of it.
