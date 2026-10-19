@@ -211,9 +211,10 @@ def read_cart_entries():
     return read_dir(CARTS, CART_REQUIRED)
 
 
-def fetch_raw(slug, path):
-    """One file out of another repo, off whichever default branch it uses."""
-    for branch in ("main", "master"):
+def fetch_raw(slug, path, refs=("main", "master")):
+    """One file out of another repo, off whichever default branch it uses --
+    or off the first of `refs` that has it, when a caller names a tag."""
+    for branch in refs:
         url = f"https://raw.githubusercontent.com/{slug}/{branch}/{path}"
         req = urllib.request.Request(url, headers={
             "User-Agent": f"{OWNER}-mod-index",
@@ -227,7 +228,43 @@ def fetch_raw(slug, path):
             return None, f"GitHub {e.code} reading {branch}/{path}"
         except Exception as e:                               # network, DNS, ...
             return None, f"{type(e).__name__} reading {branch}/{path}"
-    return None, f"no {path} on main or master"
+    return None, f"no {path} on {' or '.join(refs)}"
+
+
+def release_games(slug, tag, mod_id):
+    """The games a release's own manifest.json says it is for, or None.
+
+    `games` is what the launcher's game filter and its GEN chip read, and like
+    the version it went stale here unwatched: Gen1Arena, Gen1Wild UI and
+    Gen1Wild QOL all shipped FireRed support and stayed listed as Gen 1 only,
+    so FIND MODS hid them from a FireRed player who picked FireRed.  So it is
+    read off the tag the feed points at, the same way the version is.
+
+    Off the tag's raw file, never the release zip: a zip fetched every hour is
+    a download counted every hour, and the feed reports those counts.  At the
+    root, or in the folder named after the mod, which is where a zip with one
+    top-level folder keeps it (Gen1ModernBag).  A manifest with no `games` is
+    the engine's legacy reading (src/mods/ModTargets.lua legacy): Gen 1, and
+    Gen 2 when it says gen2compat.
+    """
+    for path in ("manifest.json", f"{mod_id}/manifest.json"):
+        body, _ = fetch_raw(slug, path, refs=(tag,))
+        if body is None:
+            continue
+        try:
+            manifest = json.loads(body.decode("utf-8"))
+        except (ValueError, UnicodeDecodeError):
+            return None
+        if not isinstance(manifest, dict):
+            return None
+        games = manifest.get("games")
+        if isinstance(games, list) and games \
+                and all(isinstance(g, str) and g for g in games):
+            return games
+        if games is None:
+            return ["gen1", "gen2"] if manifest.get("gen2compat") else ["gen1"]
+        return None
+    return None
 
 
 def fetch_cart_json(slug):
@@ -386,10 +423,23 @@ def build():
         # So a rebuild writes the resolved version back here rather than
         # leaving a number that is right only until someone needs it.  An
         # entry that resolves nothing keeps whatever it was given by hand.
+        dirty = False
         if latest and latest.get("version") \
                 and meta.get("version") != latest["version"]:
-            synced.append((folder.name, meta["version"], latest["version"]))
+            synced.append((folder.name, "version", meta["version"],
+                           latest["version"]))
             meta["version"] = latest["version"]
+            dirty = True
+        # ...and the games, off the same release (see release_games).  An
+        # entry whose manifest cannot be read keeps what it was given.
+        games = None
+        if latest and latest.get("tag") and meta.get("github"):
+            games = release_games(meta["github"], latest["tag"], meta["id"])
+        if games and meta.get("games") != games:
+            synced.append((folder.name, "games", meta.get("games"), games))
+            meta["games"] = games
+            dirty = True
+        if dirty:
             (folder / "meta.json").write_text(
                 json.dumps(meta, indent=2, ensure_ascii=False) + "\n",
                 encoding="utf-8")
@@ -419,8 +469,8 @@ def build():
         print(f"  {folder.name:<32} {state}")
         mods.append(row)
 
-    for name, was, now in synced:
-        print(f"  synced {name}'s fallback version: {was} -> {now}")
+    for name, field, was, now in synced:
+        print(f"  synced {name}'s {field}: {was} -> {now}")
 
     # Featured first, then alphabetical inside each group.
     #

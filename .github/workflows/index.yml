@@ -74,7 +74,8 @@ jobs:
         run: |
           set -euo pipefail
           # mods/*/meta.json is in here because the build syncs each entry's
-          # fallback version to the release it resolved.  Without it CI would
+          # fallback version, and its games, to the release it resolved.
+          # Without it CI would
           # rewrite those files every hour and commit none of them, so the
           # drift would come back the moment anyone looked.
           #
