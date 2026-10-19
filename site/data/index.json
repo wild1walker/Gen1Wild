@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-19T21:06:41Z",
+  "generated_at": "2026-10-19T22:38:32Z",
   "count": 17,
   "categories": [
     "GAMEPLAY",
@@ -50,7 +50,9 @@
         "engine_internals"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2",
+        "gen3"
       ],
       "license": "MIT",
       "folder": "Wild@gen1_wild_qol",
@@ -70,8 +72,8 @@
         }
       },
       "downloads": {
-        "total": 5982,
-        "as_of": "2026-10-19T21:06:38Z"
+        "total": 5992,
+        "as_of": "2026-10-19T22:38:30Z"
       },
       "first_release": "2026-08-27T00:51:13Z",
       "last_release": "2026-10-07T09:01:29Z"
@@ -111,7 +113,9 @@
         "engine_internals"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2",
+        "gen3"
       ],
       "license": "MIT",
       "folder": "Wild@gen1_wild_ui",
@@ -131,8 +135,8 @@
         }
       },
       "downloads": {
-        "total": 5921,
-        "as_of": "2026-10-19T21:06:39Z"
+        "total": 5932,
+        "as_of": "2026-10-19T22:38:31Z"
       },
       "first_release": "2026-08-29T19:08:45Z",
       "last_release": "2026-10-08T16:26:30Z"
@@ -166,7 +170,8 @@
         "engine_internals"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2"
       ],
       "folder": "Wild@gen151",
       "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen151/thumbnail.png",
@@ -185,8 +190,8 @@
         }
       },
       "downloads": {
-        "total": 1027,
-        "as_of": "2026-10-19T21:06:36Z"
+        "total": 1028,
+        "as_of": "2026-10-19T22:38:28Z"
       },
       "first_release": "2026-08-25T07:17:06Z",
       "last_release": "2026-09-14T00:51:14Z"
@@ -218,7 +223,9 @@
         "engine_internals"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2",
+        "gen3"
       ],
       "folder": "Wild@gen1arena",
       "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@gen1arena/thumbnail.png",
@@ -237,8 +244,8 @@
         }
       },
       "downloads": {
-        "total": 2113,
-        "as_of": "2026-10-19T21:06:39Z"
+        "total": 2116,
+        "as_of": "2026-10-19T22:38:31Z"
       },
       "first_release": "2026-08-22T22:26:51Z",
       "last_release": "2026-10-08T16:25:04Z"
@@ -266,7 +273,8 @@
       "affects_link": false,
       "permissions": [],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2"
       ],
       "license": "MIT",
       "folder": "Wild@gen1_auto_continue",
@@ -286,8 +294,8 @@
         }
       },
       "downloads": {
-        "total": 381,
-        "as_of": "2026-10-19T21:06:37Z"
+        "total": 382,
+        "as_of": "2026-10-19T22:38:28Z"
       },
       "first_release": "2026-08-22T22:02:54Z",
       "last_release": "2026-09-07T01:08:10Z"
@@ -340,8 +348,8 @@
         }
       },
       "downloads": {
-        "total": 1741,
-        "as_of": "2026-10-19T21:06:40Z"
+        "total": 1744,
+        "as_of": "2026-10-19T22:38:32Z"
       },
       "first_release": "2026-08-21T07:44:31Z",
       "last_release": "2026-09-07T06:11:49Z"
@@ -373,7 +381,8 @@
         "engine_internals"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2"
       ],
       "license": "MIT",
       "folder": "Wild@Gen1BattleUI",
@@ -393,8 +402,8 @@
         }
       },
       "downloads": {
-        "total": 599,
-        "as_of": "2026-10-19T21:06:33Z"
+        "total": 601,
+        "as_of": "2026-10-19T22:38:25Z"
       },
       "first_release": "2026-08-26T06:05:35Z",
       "last_release": "2026-10-07T09:00:24Z"
@@ -430,7 +439,8 @@
         "modern_pc_ui"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2"
       ],
       "folder": "Wild@Gen1BillsBox",
       "thumbnail": "https://raw.githubusercontent.com/wild1walker/Gen1Wild/main/mods/Wild@Gen1BillsBox/thumbnail.png",
@@ -449,8 +459,8 @@
         }
       },
       "downloads": {
-        "total": 479,
-        "as_of": "2026-10-19T21:06:34Z"
+        "total": 481,
+        "as_of": "2026-10-19T22:38:25Z"
       },
       "first_release": "2026-08-23T21:59:56Z",
       "last_release": "2026-10-07T09:00:23Z"
@@ -491,7 +501,8 @@
         "pokedex_plus"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2"
       ],
       "license": "MIT",
       "folder": "Wild@Gen1Dex",
@@ -511,8 +522,8 @@
         }
       },
       "downloads": {
-        "total": 628,
-        "as_of": "2026-10-19T21:06:34Z"
+        "total": 629,
+        "as_of": "2026-10-19T22:38:26Z"
       },
       "first_release": "2026-08-24T08:08:20Z",
       "last_release": "2026-09-11T22:30:46Z"
@@ -566,8 +577,8 @@
         }
       },
       "downloads": {
-        "total": 1474,
-        "as_of": "2026-10-19T21:06:35Z"
+        "total": 1479,
+        "as_of": "2026-10-19T22:38:26Z"
       },
       "first_release": "2026-08-23T01:37:36Z",
       "last_release": "2026-09-07T01:15:51Z"
@@ -618,8 +629,8 @@
         }
       },
       "downloads": {
-        "total": 970,
-        "as_of": "2026-10-19T21:06:35Z"
+        "total": 972,
+        "as_of": "2026-10-19T22:38:27Z"
       },
       "first_release": "2026-08-22T22:39:20Z",
       "last_release": "2026-09-07T01:01:29Z"
@@ -656,7 +667,8 @@
         "modern_bag"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2"
       ],
       "license": "MIT",
       "folder": "Wild@gen1_modern_bag",
@@ -676,8 +688,8 @@
         }
       },
       "downloads": {
-        "total": 747,
-        "as_of": "2026-10-19T21:06:37Z"
+        "total": 749,
+        "as_of": "2026-10-19T22:38:29Z"
       },
       "first_release": "2026-08-23T00:21:04Z",
       "last_release": "2026-09-07T00:58:59Z"
@@ -731,8 +743,8 @@
         }
       },
       "downloads": {
-        "total": 1231,
-        "as_of": "2026-10-19T21:06:37Z"
+        "total": 1235,
+        "as_of": "2026-10-19T22:38:29Z"
       },
       "first_release": "2026-08-24T20:14:50Z",
       "last_release": "2026-08-27T00:20:44Z"
@@ -768,7 +780,8 @@
         "gen1recomp-modern-party-ui"
       ],
       "games": [
-        "gen1"
+        "gen1",
+        "gen2"
       ],
       "license": "MIT",
       "folder": "Wild@Gen1Party",
@@ -788,8 +801,8 @@
         }
       },
       "downloads": {
-        "total": 523,
-        "as_of": "2026-10-19T21:06:36Z"
+        "total": 525,
+        "as_of": "2026-10-19T22:38:27Z"
       },
       "first_release": "2026-08-24T23:24:25Z",
       "last_release": "2026-10-07T09:00:26Z"
@@ -846,8 +859,8 @@
         }
       },
       "downloads": {
-        "total": 348,
-        "as_of": "2026-10-19T21:06:36Z"
+        "total": 351,
+        "as_of": "2026-10-19T22:38:28Z"
       },
       "first_release": "2026-08-26T09:16:51Z",
       "last_release": "2026-09-07T07:21:52Z"
@@ -901,8 +914,8 @@
         }
       },
       "downloads": {
-        "total": 878,
-        "as_of": "2026-10-19T21:06:38Z"
+        "total": 879,
+        "as_of": "2026-10-19T22:38:29Z"
       },
       "first_release": "2026-08-24T08:12:29Z",
       "last_release": "2026-08-24T18:23:26Z"
@@ -954,8 +967,8 @@
         }
       },
       "downloads": {
-        "total": 1001,
-        "as_of": "2026-10-19T21:06:38Z"
+        "total": 1002,
+        "as_of": "2026-10-19T22:38:30Z"
       },
       "first_release": "2026-08-26T00:09:51Z",
       "last_release": "2026-08-30T00:31:27Z"
@@ -1034,8 +1047,8 @@
         }
       },
       "downloads": {
-        "total": 2563,
-        "as_of": "2026-10-19T21:06:40Z"
+        "total": 2568,
+        "as_of": "2026-10-19T22:38:32Z"
       },
       "first_release": "2026-09-07T02:01:22Z",
       "last_release": "2026-09-15T05:12:07Z"
@@ -1125,8 +1138,8 @@
         }
       },
       "downloads": {
-        "total": 2679,
-        "as_of": "2026-10-19T21:06:41Z"
+        "total": 2685,
+        "as_of": "2026-10-19T22:38:32Z"
       },
       "first_release": "2026-08-31T08:43:22Z",
       "last_release": "2026-10-12T23:28:39Z"
