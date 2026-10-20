@@ -165,67 +165,28 @@ differently, or not carried here at all, that request is honoured.
 Contributions are very welcome: issues, fixes, art, translations, ideas. They
 belong in the mod's own repo, behind the **source** link on its card.
 
-## Wild Green as a single mod
+## Wild Green as a single mod: discontinued
 
-A **cart** is not a **mod**. `wild_green` is a pinned list of four mods, an
-order to load them in and a shell colour; the launcher installs one by fetching
-each mod and installing it separately. Anything that imports mod `.zip`s but
-not carts — Phosphor, or `Import mod .zip` itself — has nothing to do with a
-cart file.
+There used to be a second way to get Wild Green: the cart's mods flattened
+into one importable mod `.zip` (the `phosphor-v1.0.0` release here), for
+anything that could import mods but not carts. It is retired, and the release
+stays only as an archive.
 
-And "just put all four in one zip" is not available either. The importer
-refuses that before it reads anything:
+It stopped being worth keeping. It was last built in September and still
+holds Gen1WildQOL 1.30.0, Gen1WildUI 1.27.0 and a sprite mod Wild Green no
+longer uses, and nothing rebuilt it when the cart moved on. It could not carry
+the cart's current sprite mod either: Crystal Animated Sprites reads your
+Crystal ROM and keeps its sprites under its own mod id, and inside a one-mod
+wrapper every path it serves points at a file that is not there. Even when it
+worked, it had two copies of the shared menus fighting over the same screens.
 
-```lua
-if #topDirs > 1 then
-  return nil, "the .zip must contain a single mod folder"
-end
--- src/mods/LauncherMods.lua:384
-```
+**Install Wild Green as a cart**: in the game, **MODS > FIND MODS**, on the
+carts list, or the `.g1rcart` from the
+[latest Wild Green release](https://github.com/wild1walker/Gen1WildGreen/releases/latest).
+The cart is the same mods at their current versions, with its own save slots.
 
-So the answer has to be **one** mod whose payload is the other four:
-
-**Download it** from the `phosphor-v<version>` release on this repository. It
-is built by `.github/workflows/phosphor.yml`, which fetches every mod at the
-version `carts/Wild@wild_green/meta.json` pins — nothing is vendored here, so
-the bundle cannot drift from the cart it claims to be. Change a pin, re-run the
-workflow, get a new zip.
-
-To build one by hand:
-
-```sh
-python3 tools/build_phosphor.py \
-  --src gen1_wild_qol=<path> --src gen1_wild_ui=<path> \
-  --src wild_green=<path> \
-  --src crystal_animated_sprites_with_shiny_visuals=<path> \
-  --out dist/
-```
-
-The four sit under `mods/<id>/` exactly as their authors released them — not
-merged, not edited, not repacked, each keeping its own manifest, README and
-licence — and `main.lua` runs their entry points in the cart's own order,
-handing each a `mod` rooted at its own folder.
-
-Two things that had to be worked out, both noted where they live:
-
-- **`define` assigns, it does not merge.** Options are keyed by the installed
-  mod's id, so four sub-mods share one bucket and the last `define` would throw
-  away the other three schemas along with every default in them. The loader
-  accumulates instead and re-defines the union.
-- **Keys that collide were meant to.** Both bundles carry MENU LAYOUT and MOD
-  MANAGER on purpose and already store those settings under a
-  bundle-independent id, so a shared key is the design rather than a clash.
-  First definition wins, which is the rule `claims.lua` already uses for who
-  installs them.
-
-The build refuses to run if a source folder is not the id and version the cart
-pins. It does **not** check the cart's `sha256`, and cannot: those hash the
-released `.zip`, while this builds from the repository at the matching tag —
-the same source the release was cut from, but not the same bytes.
-
-`tools/tests/phosphor_loader_test.lua` drives the loader against synthetic
-payloads: every mod runs, in order, rooted at its own folder, finding its
-siblings, with one broken payload not taking the others down.
+The build script, loader and workflow are in this repository's history, in
+the commit before the one that removed them.
 
 ## How this is written
 
