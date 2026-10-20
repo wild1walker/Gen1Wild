@@ -31,15 +31,15 @@
       "id": "gen1_wild_qol",
       "source": "github",
       "repo": "wild1walker/Gen1WildQOL",
-      "version": "1.33.0",
-      "sha256": "8c43aebbf60aa8972cd011638d6f5b0ba1853795335da395c883f806950ecd6f"
+      "version": "1.35.0",
+      "sha256": "4d35d62a62476a8818580bd47b44b62d688c935ef652678c44a1744a9e3349ef"
     },
     {
       "id": "gen1_wild_ui",
       "source": "github",
       "repo": "wild1walker/Gen1WildUI",
-      "version": "1.42.0",
-      "sha256": "887f17aad5ebcb86c3025b9b1ac7e7ae7001e5e287e33e09cfc2cf994fbc1aa6"
+      "version": "1.44.0",
+      "sha256": "d931af00a3224c150527dbdcdbe75cadf5ceca568426afc198af94d7a9a43140"
     }
   ],
   "load_order": [
